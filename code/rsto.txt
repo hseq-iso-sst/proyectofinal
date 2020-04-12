@@ -1,0 +1,93 @@
+toca tener buenas practicas a la hora de usar el for
+toca crear otra row
+placerholder, colocar ejemplos
+colocar name en los input tambien un id
+coodinador:
+cargo administrador
+crea las fichas
+identificacion, nombres, apellidos,correo,cargo, contraseña
+instructor:
+identificacion, nombres, apellidos,correo,profesión, contraseña
+aprendiz:
+identificacion, nombres, apellidos,correo,ficha, contraseña
+identificacion,nombres,cargo, profesion, editar, eliminar
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+                <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center custom-login">
+                        <h3>Listas de usuario</h3>
+                    </div>
+                    <div class="row">
+                    <div class="hpanel">
+                        <div class="panel-body">
+                            <form action="#" id="ver_user">
+                                <div class="row">
+                                  <div class="datos_user">
+                                    <h5>Datos resumen de usuario</h5>
+                                  </div>
+                                </div> 
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <h5>Identificación</h5>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h5>Nombres</h5>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h5>Cargo</h5>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h5>Profesión</h5>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h5>Editar</h5>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <h5>Eliminar</h5>
+                                    </div>
+                                </div>
+
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Identificación</h5>
+                    </div>
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Nombres</h5>
+                    </div>
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Cargo</h5>
+                    </div>
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Profesión</h5>
+                    </div>
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Editar</h5>
+                    </div>
+                    <div class="col-md-2 clm_ver_user">
+                        <h5>Eliminar</h5>
+                    </div>
+
+            <div class="content-ver_user container">
+                <h3 class="text-center">Listas de usuario</h3>
+                <div class="row">
+                    <h5>Datos resumen de usuario</h5>
+                </div>
+<div class="form-row">
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Identificación</th>
+                                <th>Nombres</th>
+                            </tr>
+                        </thead>
+                    </table>
+            </div>
+        </div>
+            </div>
+
+#1b2a47

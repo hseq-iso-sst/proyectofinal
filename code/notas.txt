@@ -1,0 +1,12 @@
+*toca quitar el boton icon nalika-menu-task(ok)
+*como arregla la clase dropdown-header-top ya que esta no queda completa
+*en la foto de perfil cuando se tenga la opcion mi perfil, redireccionar aya
+*el footer no queda al 100 %
+*background a la tabla (ok)
+*colocar el action en el formulario y el method (ok)
+*no repetir el name, cambiar el de actualizar(ok)
+*quitar el eliminar y colocar desactivar(ok)
+*gestor de base de datos,poo,mvc,la diferencia entre mysqllite y pdo (ok)
+*hacer pruebas requiere, include para evitar tanto codigo a la hora de repetir trozos de codigo.
+*en el botón editar redireccionar a lista de usuarios
+

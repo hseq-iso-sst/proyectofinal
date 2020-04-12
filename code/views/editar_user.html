@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Editar Usuarios</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo/logov2.png">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.css">
+    <link rel="stylesheet" href="../css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="../css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <!-- cabeza del NAV -->
+            <div class="sidebar-header">
+                <a href="../index.html"><img class="main-logo" src="../img/logo/logov2.png" alt="Logo" /></a>
+                <strong><img src="../img/logo/logov2.png" alt="Logo" /></strong>
+            </div>
+            <!-- PERFIL -->
+            <div class="nalika-profile">
+                <div class="profile-dtl">
+                    <a href="#"><img class="perfil" src="../img/notification/Captura.PNG" alt="Foto de perfil" /></a>
+                    <h2>Jasmin <span class="min-dtn">Fuquen</span></h2>
+                </div>
+            </div>
+            <!-- DESPLEGABLE DEL NAV -->
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="index.html">
+                                <i class="icon nalika-user icon-wrap"></i>
+                                <span class="mini-click-non">Usuarios
+                                </span>
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="registro_user" href="registro_user.html"><span
+                                            class="mini-sub-pro">Registrar Usuarios</span></a></li>
+                                <li><a title="ver_user" href="ver_user.html"><span class="mini-sub-pro">Lista de
+                                            Usuarios</span></a></li>
+
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a class="has-arrow" href="index.html">
+                                <i class="icon nalika-home icon-wrap"></i>
+                                <span class="mini-click-non">Formularios
+                                </span>
+                            </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="sst" href="../views/sst.html"><span class="mini-sub-pro">SST</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- tipo tablet -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="../index.html"><img class="main-logo" src="../img/logo/logov2.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu tipo table total-->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <!-- boton para ocultar nav en escritorio -->
+                                            <button type="button" id="sidebarCollapse"
+                                                class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                                <i class="icon nalika-menu-task"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <!-- Barra buscar en escritorio-->
+                                    <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n hd-search-rp">
+                                            <div class="breadcome-heading">
+                                                <form role="search" class="">
+                                                    <input type="text" placeholder="Buscar..." class="form-control">
+                                                    <a href=""><i class="fa fa-search"></i></a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- menu tablet informativo -->
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <!-- boton mensajes -->
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" data-toggle="dropdown" role="button"
+                                                        aria-expanded="false" class="nav-link dropdown-toggle"><i
+                                                            class="icon nalika-mail" aria-hidden="true"></i><span
+                                                            class="indicator-ms"></span></a>
+                                                    <div role="menu"
+                                                        class="author-message-top dropdown-menu animated zoomIn">
+                                                        <div class="message-single-top">
+                                                            <h1>Mensajes</h1>
+                                                        </div>
+                                                        <ul class="message-menu">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="message-img">
+                                                                        <img src="../img/contact/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="message-content">
+                                                                        <span class="message-date">16 Sept</span>
+                                                                        <h2>Advanda Cro</h2>
+                                                                        <p>Please done this project as soon possible.
+                                                                        </p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="message-view">
+                                                            <a href="#">Ver Todos los Mensajes</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <!-- boton notificaciones -->
+                                                <li class="nav-item"><a href="#" data-toggle="dropdown" role="button"
+                                                        aria-expanded="false" class="nav-link dropdown-toggle"><i
+                                                            class="icon nalika-alarm" aria-hidden="true"></i><span
+                                                            class="indicator-nt"></span></a>
+                                                    <div role="menu"
+                                                        class="notification-author dropdown-menu animated zoomIn">
+                                                        <div class="notification-single-top">
+                                                            <h1>Notificaciones</h1>
+                                                        </div>
+                                                        <ul class="notification-menu">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="notification-icon">
+                                                                        <i class="icon nalika-tick"
+                                                                            aria-hidden="true"></i>
+                                                                    </div>
+                                                                    <div class="notification-content">
+                                                                        <span class="notification-date">16 Sept</span>
+                                                                        <h2>Advanda Cro</h2>
+                                                                        <p>Please done this project as soon possible.
+                                                                        </p>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="notification-view">
+                                                            <a href="#">Ver Todas las Notificaciones</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button"
+                                                        aria-expanded="false" class="nav-link dropdown-toggle">
+                                                        <i class="icon nalika-user"></i>
+                                                        <span class="admin-name">Admin</span>
+                                                        <i class="icon nalika-down-arrow nalika-angle-dw"></i>
+                                                    </a>
+                                                    <ul role="menu"
+                                                        class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                        <li><a href="../views/registro.html"><span
+                                                                    class="icon nalika-home author-log-ic"></span>
+                                                                Registro</a>
+                                                        </li>
+                                                        <li><a href="#"><span
+                                                                    class="icon nalika-user author-log-ic"></span> Mi
+                                                                Perfil</a>
+                                                        </li>
+                                                        <li><a href="../views/lock.html"><span
+                                                                    class="icon nalika-diamond author-log-ic"></span>
+                                                                Bloquear</a>
+                                                        </li>
+                                                        <li><a href="#"><span
+                                                                    class="icon nalika-settings author-log-ic"></span>Configuraciones</a>
+                                                        </li>
+                                                        <li><a href="../views/login.html"><span
+                                                                    class="icon nalika-unlocked author-log-ic"></span>Cerrar
+                                                                sesión</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Tablet -->
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="mobile-menu">
+                                <nav id="dropdown">
+                                    <ul class="mobile-menu-nav">
+                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">USUARIOS<span
+                                                    class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            <ul id="Pagemob" class="collapse dropdown-header-top">
+                                                <li><a href="registro_user.html">Registrar Usuarios</a>
+                                                </li>
+                                                <li><a href="ver_user.html">Lista de Usuarios</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">FORMULARIO<span
+                                                    class="admin-project-icon nalika-icon nalika-down-arrow"></span></a>
+                                            <ul id="Pagemob" class="collapse dropdown-header-top">
+                                                <li><a href="sst.html">SST</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenedor -->
+        </div>
+        <div class="section-content container-fluid">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="text-center custom-login">
+                    <h3>Editar Usuario</h3>
+                </div>
+                <div class="row">
+                    <div class="hpanel">
+                        <div class="panel-body">
+                            <form action="#" id="loginForm">
+                                <div class="row">
+                                    <div class="datos_user">
+                                        <h5>DATOS DEL USUARIO</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Identificación</label>
+                                            <input type="number" class="form-control" name="editar_identificacion_user"
+                                                id="identificacion_user" value="1075685565" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Nombres</label>
+                                            <input type="text" class="form-control" name="editar_nombres_user"
+                                                id="nombres_user" value="Jasmin Rocio" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Apellidos</label>
+                                            <input type="text" class="form-control" name="editar_apellidos_user"
+                                                id="apellidos_user" value="Fuquen Colmenares" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" name="editar_email_user" id="email_user"
+                                                value="jasminfuquen@gmail.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Cargo</label>
+                                            <select class="form-control" name="editar_cargo_user" id="cargo_user" required>
+                                                <option>Aprendiz</option>
+                                                <option></option>
+                                                <option>Coordinador</option>
+                                                <option>Instructor</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Profesión</label>
+                                            <select class="form-control" name="editar_profesion_user" id="profesion_user"
+                                                required>
+                                                <option>ADSI</option>
+                                                <option></option>
+                                                <option>HSEQ</option>
+                                                <option>TH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Ficha</label>
+                                            <select class="form-control" name="editar_ficha_aprendiz" id="ficha_aprendiz"
+                                                required>
+                                                <option>1804520 (ADSI)</option>
+                                                <option></option>
+                                                <option>1964358 (HSEQ)</option>
+                                                <option>1234567 (TH)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" name="editar_password" id="password"
+                                                value="********" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-danger"><a href="ver_user.html">Cancelar</a></button>
+                                    <button class="btn btn-success loginbtn">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>
+        <!-- footer -->
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2020 <a href="../index.html">HSEQ ( ISO-SST )</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- redes sociales -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="profile-social-dtl">
+                            <ul class="dtl-social">
+                                <li><a href="#"><i class="icon nalika-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon nalika-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon nalika-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery
+		============================================ -->
+    <script src="../js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+            ============================================ -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- wow JS
+            ============================================ -->
+    <script src="../js/wow.min.js"></script>
+    <!-- price-slider JS
+            ============================================ -->
+    <script src="../js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+            ============================================ -->
+    <script src="../js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+            ============================================ -->
+    <script src="../js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+            ============================================ -->
+    <script src="../js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+            ============================================ -->
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+            ============================================ -->
+    <script src="../js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+            ============================================ -->
+    <script src="../js/metisMenu/metisMenu.min.js"></script>
+    <script src="../js/metisMenu/metisMenu-active.js"></script>
+    <!-- sparkline JS
+            ============================================ -->
+    <script src="../js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="../js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+            ============================================ -->
+    <script src="../js/calendar/moment.min.js"></script>
+    <script src="../js/calendar/fullcalendar.min.js"></script>
+    <script src="../js/calendar/fullcalendar-active.js"></script>
+    <!-- float JS
+            ============================================ -->
+    <script src="../js/flot/jquery.flot.js"></script>
+    <script src="../js/flot/jquery.flot.resize.js"></script>
+    <script src="../js/flot/curvedLines.js"></script>
+    <script src="../js/flot/flot-active.js"></script>
+    <!-- plugins JS
+            ============================================ -->
+    <script src="../js/plugins.js"></script>
+    <!-- main JS
+            ============================================ -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
