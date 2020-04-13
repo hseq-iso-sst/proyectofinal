@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Registrar Usuarios</title>
+    <title>Editar Empresa</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -301,92 +301,82 @@
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
             <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="text-center custom-login">
-                    <h3>Registro de Usuario</h3>
+                    <h3>Editar Empresa</h3>
                 </div>
                 <div class="row">
                     <div class="hpanel">
                         <div class="panel-body">
-                            <form action="#" id="loginForm" method="#">
+                            <form action="#" id="loginForm">
                                 <div class="row">
                                     <div class="datos_user">
-                                        <h5>DATOS DEL USUARIO</h5>
+                                        <h5>DATOS DE LA EMPRESA</h5>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label>Identificación</label>
-                                            <input type="number" class="form-control" name="identificacion_user"
-                                                id="identificacion_user" placeholder="Ej: 1075685565" required>
+                                            <input type="number" class="form-control" name="editar_identificacion_user"
+                                                id="identificacion_user" value="1075685565" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Nombres</label>
-                                            <input type="text" class="form-control" name="nombres_user"
-                                                id="nombres_user" placeholder="Ej: Jasmin Rocio" required>
+                                            <input type="text" class="form-control" name="editar_nombres_user"
+                                                id="nombres_user" value="Jasmin Rocio" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label>Apellidos</label>
-                                            <input type="text" class="form-control" name="apellidos_user"
-                                                id="apellidos_user" placeholder="Ej: Fuquen Colmenares" required>
+                                            <input type="text" class="form-control" name="editar_apellidos_user"
+                                                id="apellidos_user" value="Fuquen Colmenares" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" name="email_user" id="email_user"
-                                                placeholder="Ej: jasminfuquen@gmail.com" required>
+                                            <input type="email" class="form-control" name="editar_email_user" id="email_user"
+                                                value="jasminfuquen@gmail.com" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
                                             <label>Cargo</label>
-                                            <select class="form-control" name="cargo_user" id="cargo_user" required>
+                                            <select class="form-control" name="editar_cargo_user" id="cargo_user" required>
+                                                <option>Aprendiz</option>
                                                 <option></option>
                                                 <option>Coordinador</option>
                                                 <option>Instructor</option>
-                                                <option>Aprendiz</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label>Teléfono</label>
-                                            <input type="number" class="form-control" name="telefono_user"
-                                                id="telefono_user" placeholder="Ej: 3132834058" required>
+                                            <label>Profesión</label>
+                                            <select class="form-control" name="editar_profesion_user" id="profesion_user"
+                                                required>
+                                                <option>ADSI</option>
+                                                <option></option>
+                                                <option>HSEQ</option>
+                                                <option>TH</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <label>Fichas asignar</label>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                <input type="checkbox" name="ficha_aprendiz1" id="ficha_aprendiz1">
-                                                <label>1964358 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz2" id="ficha_aprendiz2">
-                                                <label>1804521 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz3" id="ficha_aprendiz3">
-                                                <label>1234567 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz4" id="ficha_aprendiz4">
-                                                <label>1968493 (HSEQ)</label>
-                                            </div>
-                                            </div>
-                                            <!--<select class="form-control" name="ficha_aprendiz" id="ficha_aprendiz"
+                                            <label>Ficha</label>
+                                            <select class="form-control" name="editar_ficha_aprendiz" id="ficha_aprendiz"
                                                 required>
+                                                <option>1804520 (ADSI)</option>
                                                 <option></option>
                                                 <option>1964358 (HSEQ)</option>
-                                                <option>1804521 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                            </select> -->
+                                                <option>1234567 (TH)</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label>Password</label>
-                                            <input type="password" class="form-control" name="password" id="password"
-                                                placeholder="*******" required>
+                                            <input type="password" class="form-control" name="editar_password" id="password"
+                                                value="********" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button class="btn btn-success loginbtn">Registrar</button>
-                                    <button class="btn btn-danger">Cancelar</button>
+                                    <button class="btn btn-danger"><a href="ver_user.html">Cancelar</a></button>
+                                    <button class="btn btn-success loginbtn">Actualizar</button>
                                 </div>
                             </form>
                         </div>
@@ -474,5 +464,4 @@
             ============================================ -->
     <script src="../js/main.js"></script>
 </body>
-
 </html>

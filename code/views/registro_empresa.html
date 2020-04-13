@@ -4,9 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Registrar Usuarios</title>
+    <title>Registro de Empresas</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/style_wizard.css">
+
     <!-- favicon
 		============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="../img/logo/logov2.png">
@@ -297,104 +301,86 @@
             </div>
             <!-- Contenedor -->
         </div>
-        <div class="section-content container-fluid">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-            <div class="col-md-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="text-center custom-login">
-                    <h3>Registro de Usuario</h3>
-                </div>
-                <div class="row">
-                    <div class="hpanel">
-                        <div class="panel-body">
-                            <form action="#" id="loginForm" method="#">
-                                <div class="row">
-                                    <div class="datos_user">
-                                        <h5>DATOS DEL USUARIO</h5>
-                                    </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                        <h2 id="heading">Seguridad y Salud en el trabajo</h2>
+                        <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account"><strong>Account</strong></li>
+                                <li id="personal"><strong>Personal</strong></li>
+                                <li id="payment"><strong>Image</strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> <br> <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
                                     <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label>Identificación</label>
-                                            <input type="number" class="form-control" name="identificacion_user"
-                                                id="identificacion_user" placeholder="Ej: 1075685565" required>
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Account Information:</h2>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Nombres</label>
-                                            <input type="text" class="form-control" name="nombres_user"
-                                                id="nombres_user" placeholder="Ej: Jasmin Rocio" required>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 1 - 4</h2>
                                         </div>
-                                    </div>
+                                    </div> <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email Id" /> <label class="fieldlabels">Username: *</label> <input type="text" name="uname" placeholder="UserName" /> <label class="fieldlabels">Password: *</label> <input type="password" name="pwd" placeholder="Password" /> <label class="fieldlabels">Confirm Password: *</label> <input type="password" name="cpwd" placeholder="Confirm Password" />
+                                </div> <input type="button" name="next" class="next action-button" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
                                     <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label>Apellidos</label>
-                                            <input type="text" class="form-control" name="apellidos_user"
-                                                id="apellidos_user" placeholder="Ej: Fuquen Colmenares" required>
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Personal Information:</h2>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Email</label>
-                                            <input type="email" class="form-control" name="email_user" id="email_user"
-                                                placeholder="Ej: jasminfuquen@gmail.com" required>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 2 - 4</h2>
                                         </div>
-                                    </div>
+                                    </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
                                     <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label>Cargo</label>
-                                            <select class="form-control" name="cargo_user" id="cargo_user" required>
-                                                <option></option>
-                                                <option>Coordinador</option>
-                                                <option>Instructor</option>
-                                                <option>Aprendiz</option>
-                                            </select>
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Image Upload:</h2>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Teléfono</label>
-                                            <input type="number" class="form-control" name="telefono_user"
-                                                id="telefono_user" placeholder="Ej: 3132834058" required>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 3 - 4</h2>
                                         </div>
-                                    </div>
+                                    </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
+                                </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
                                     <div class="row">
-                                        <div class="form-group col-md-6">
-                                            <label>Fichas asignar</label>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                <input type="checkbox" name="ficha_aprendiz1" id="ficha_aprendiz1">
-                                                <label>1964358 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz2" id="ficha_aprendiz2">
-                                                <label>1804521 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz3" id="ficha_aprendiz3">
-                                                <label>1234567 (HSEQ)</label>
-                                                <input type="checkbox" name="ficha_aprendiz4" id="ficha_aprendiz4">
-                                                <label>1968493 (HSEQ)</label>
-                                            </div>
-                                            </div>
-                                            <!--<select class="form-control" name="ficha_aprendiz" id="ficha_aprendiz"
-                                                required>
-                                                <option></option>
-                                                <option>1964358 (HSEQ)</option>
-                                                <option>1804521 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                                <option>1234567 (HSEQ)</option>
-                                            </select> -->
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Finish:</h2>
                                         </div>
-                                        <div class="form-group col-md-6">
-                                            <label>Password</label>
-                                            <input type="password" class="form-control" name="password" id="password"
-                                                placeholder="*******" required>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 4 - 4</h2>
+                                        </div>
+                                    </div> <br><br>
+                                    <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> <img src="../img/visto-bueno-png-2.png" class="fit-image"> </div>
+                                    </div> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <button class="btn btn-success loginbtn">Registrar</button>
-                                    <button class="btn btn-danger">Cancelar</button>
-                                </div>
-                            </form>
-                        </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
         </div>
+    
         <!-- footer -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
@@ -473,6 +459,10 @@
     <!-- main JS
             ============================================ -->
     <script src="../js/main.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../js/prueba.js"></script>
+
 </body>
 
 </html>

@@ -3675,7 +3675,15 @@ th.fc-day-header.fc-widget-header {
 }
 .section-content{
     color: #152036;
-    height: 110vw; /* este es el que desborda el contenido */
+    height: 141vw; /* este es el que desborda el contenido */
+}
+.contenido h2{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+.section-content .admin .iconos-hseq a img{
+    height: 235px;
+    width: 235px;
 }
 #sidebar .sidebar-header .main-logo{
     height: 100px;
@@ -3745,3 +3753,17 @@ th.fc-day-header.fc-widget-header {
         height: 5hv;
         width: 5vh;
     }
+.contenedor-visitas{
+    margin-top: 30px;
+    margin-bottom: 25vh;
+}
+.contenedor-visitas h2{
+    margin-bottom: 60px;
+}
+.contenedor-visitas a {
+    padding: 100px;
+}
+.contenedor-visitas a img{
+    height: 200px;
+    width: 200px;
+}
