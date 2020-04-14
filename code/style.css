@@ -3767,3 +3767,10 @@ th.fc-day-header.fc-widget-header {
     height: 200px;
     width: 200px;
 }
+
+/*---------------------- ESTILO IMAGENES HSEQ MODULOS -----------------------------*/
+/*-----------------------------Camilo Chavez---------------------------------------*/
+
+.icon-hseq .iconos-hseq{
+    background: #808080;
+}
