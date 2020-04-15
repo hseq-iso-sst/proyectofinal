@@ -1,0 +1,19 @@
+logo
+html
+                    <div class="navbar-brand">
+                        <!-- Logo icon -->
+                        <div class="logo-icon">
+                        <a href="index.html">
+                            <!-- Dark Logo icon -->
+                            <img src="./assets/images/logov4.png" alt="homepage" class="dark-logo" />
+                            ISO-SST
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                        </a>
+                    </div>
+                </div>
+css
+                .navbar-brand .logo-icon a .dark-logo{
+    height: 55px;
+    width: 50px;
+}

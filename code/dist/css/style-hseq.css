@@ -1,0 +1,9 @@
+.navbar-brand .logo-icon a .dark-logo{
+padding-top: 5vh;
+    height: 20vh;
+    width: 10vw;
+}
+.nav-item .nav-link img{
+    height: 53px;
+    width: 53px;
+}
