@@ -7,6 +7,19 @@ padding-top: 5vh;
     height: 53px;
     width: 53px;
 }
+.ver-empresas .lista-empresas .icono{
+    text-align: center;
+}
+.ver-empresas nav{
+    opacity: 50%;
+}
+.ver-empresas h2{
+   justify-content: center;
+}
+.ver-empresas .lista-empresas .encabezado{
+    background: linear-gradient(to right,#8971ea,#7f72ea,#7574ea,#6a75e9,#5f76e8);
+    color: #fff!important;
+}
 .hpanel .panel-body-user {
     background: rgb(245, 244, 244);
     border-radius: 2px;

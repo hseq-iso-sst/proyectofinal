@@ -125,20 +125,6 @@
         <!-- ============================================================== -->
         <ul class="navbar-nav float-right">
             <!-- ============================================================== -->
-            <!-- Search -->
-            <!-- ============================================================== -->
-            <li class="nav-item d-none d-md-block">
-                <a class="nav-link" href="javascript:void(0)">
-                    <form>
-                        <div class="customize-input">
-                            <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search"
-                                placeholder="Buscar" aria-label="Search">
-                            <i class="form-control-icon" data-feather="search"></i>
-                        </div>
-                    </form>
-                </a>
-            </li>
-            <!-- ============================================================== -->
             <!-- User profile and search -->
             <!-- ============================================================== -->
             <li class="nav-item dropdown">
@@ -240,14 +226,23 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-7 align-self-center">
-                    <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Buenos Días Jasmin!</h3>
+                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Empresas</h4>
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item"><a href="index.html">Inicio</a>
-                                </li>
+                                <li class="breadcrumb-item"><a href="index.html" class="text-muted">Inicio</a></li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page">Empresas</li>
                             </ol>
                         </nav>
+                    </div>
+                </div>
+                <div class="col-5 align-self-center">
+                    <div class="customize-input float-right">
+                        <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                            <option selected>Aug 19</option>
+                            <option value="1">July 19</option>
+                            <option value="2">Jun 19</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -258,7 +253,93 @@
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
-        <div class="container-fluid">
+        <div class="container-fluid ver-empresas">
+            <div class="row">
+                <h2 class="col-md-6">Lista Empresas</h2>
+            <!-- Search -->
+            <!-- ============================================================== -->
+            <form>
+                <div class="customize-input">
+                    <i class="form-control-icon" data-feather="search"></i>
+                    <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search"
+                        placeholder="Buscar" aria-label="Search">
+                </div>
+            </form>         
+            <!-- ============================================================== -->
+            </div>
+            <table class="table table-bordered lista-empresas">
+                <thead>
+                    <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
+                    <tr class="head_tabla encabezado">
+                        <th>Identificación</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th class="icono">Editar</th>
+                        <th class="icono">Desactivar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12345678634</td>
+                        <td>Ab Inbev</td>
+                        <td>calidad@abinbev.co</td>
+                        <td>82345734</td>
+                        <td class="icono"><a href="editar_empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>1075668134</td>
+                        <td>Alpina S.A</td>
+                        <td>calidad@alpina.co</td>
+                        <td>49823740</td>
+                        <td class="icono"><a href="editar_empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>107068973</td>
+                        <td>Algarra S.A</td>
+                        <td>calidad@algarra.co</td>
+                        <td>45678688</td>
+                        <td class="icono"><a href="editar_empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
+                </tbody>
+              </table>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
