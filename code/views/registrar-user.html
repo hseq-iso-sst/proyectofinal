@@ -54,232 +54,337 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                        <a href="../index.html">
-                            <!-- Dark Logo icon -->
-                            <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
-                            <!--End Logo icon -->
-                            <!-- Logo text -->
-                        </a>
+                            <a href="../index.html">
+                                <!-- Dark Logo icon -->
+                                <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
+                                <!--End Logo icon -->
+                                <!-- Logo text -->
+                            </a>
+                        </div>
                     </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ti-more"></i></a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
                 <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Toggle which is visible on mobile only -->
-                <!-- ============================================================== -->
-                <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Logo -->
-    <!-- ============================================================== -->
-    <div class="navbar-collapse collapse" id="navbarSupportedContent">
-        <!-- ============================================================== -->
-        <!-- toggle and nav items -->
-        <!-- ============================================================== -->
-        <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
-            <!-- Notification -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)" id="bell"
-                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span><i data-feather="bell" class="svg-icon"></i></span>
-                    <span class="badge badge-primary notify-no rounded-circle">1</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
-                    <ul class="list-style-none">
-                        <li>
-                            <div class="message-center notifications position-relative">
-                                <!-- Message -->
-                                <a href="javascript:void(0)"
-                                    class="message-item d-flex align-items-center border-bottom px-3 py-2">
-                                    <div class="btn btn-danger rounded-circle btn-circle"><i data-feather="airplay"
-                                            class="text-white"></i></div>
-                                    <div class="w-75 d-inline-block v-middle pl-2">
-                                        <h6 class="message-title mb-0 mt-1">Luanch Admin</h6>
-                                        <span class="font-12 text-nowrap d-block text-muted">Just see
-                                            the my new
-                                            admin!</span>
-                                        <span class="font-12 text-nowrap d-block text-muted">9:30 AM</span>
-                                    </div>
-                                </a>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge badge-danger notify-no rounded-circle">1</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="message-center notifications position-relative">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <div class="btn btn-danger rounded-circle btn-circle"><i
+                                                        data-feather="airplay" class="text-white"></i></div>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Luanch Admin</h6>
+                                                    <span class="font-12 text-nowrap d-block text-muted">Just see
+                                                        the my new
+                                                        admin!</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
+                                            <strong>Check all notifications</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </li>
-                        <li>
-                            <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
-                                <strong>Check all notifications</strong>
-                                <i class="fa fa-angle-right"></i>
+                        <!-- End Notification -->
+                        <!-- ============================================================== -->
+                        <!-- create new -->
+                        <!-- ============================================================== -->
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Buscar" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
                             </a>
                         </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span
+                                        class="text-dark">Jasmin
+                                        Fuquen</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Mi Perfil
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Configuración de Cuenta</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="./views/login.html"><i data-feather="power"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Cerrar Sesión</a>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
                     </ul>
                 </div>
-            </li>
-            <!-- End Notification -->
-            <!-- ============================================================== -->
-            <!-- create new -->
-            <!-- ============================================================== -->
-        </ul>
-        <!-- ============================================================== -->
-        <!-- Right side toggle and nav items -->
-        <!-- ============================================================== -->
-        <ul class="navbar-nav float-right">
-            <!-- ============================================================== -->
-            <!-- Search -->
-            <!-- ============================================================== -->
-            <li class="nav-item d-none d-md-block">
-                <a class="nav-link" href="javascript:void(0)">
-                    <form>
-                        <div class="customize-input">
-                            <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search"
-                                placeholder="Buscar" aria-label="Search">
-                            <i class="form-control-icon" data-feather="search"></i>
-                        </div>
-                    </form>
-                </a>
-            </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <img src="../assets/images/users/perfil.PNG" alt="user" class="rounded-circle" width="40">
-                    <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span class="text-dark">Jasmin
-                            Fuquen</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
-                    <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
-                            class="svg-icon mr-2 ml-1"></i>
-                        Mi Perfil
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
-                            class="svg-icon mr-2 ml-1"></i>
-                        Configuración de Cuenta</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./views/login.html"><i data-feather="power"
-                            class="svg-icon mr-2 ml-1"></i>
-                        Cerrar Sesión</a>
-                </div>
-            </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
-        </ul>
-    </div>
-    </nav>
-    </header>
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <aside class="left-sidebar" data-sidebarbg="skin6">
-        <!-- Sidebar scroll-->
-        <div class="scroll-sidebar" data-sidebarbg="skin6">
-            <!-- Sidebar navigation-->
-            <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                    <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../index.html"
-                            aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                class="hide-menu">Dashboard</span></a>
-                    </li>
-                    <li class="list-divider"></li>
-                    <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#"
-                            aria-expanded="false"><i data-feather="users" class="feather-icon"></i><span
-                                class="hide-menu">Usuarios</span></a>
-                        <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                            <li class="sidebar-item"><a href="registrar-user.html" class="sidebar-link"><span
-                                        class="hide-menu"> Registrar Usuarios
-                                    </span></a>
-                            </li>
-                            <li class="sidebar-item"><a href="ver-user.html" class="sidebar-link"><span
-                                        class="hide-menu"> Lista de Usuarios
-                                    </span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
-                            class="hide-menu">Empresas</span></a>
-                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="registrar-empresa.html" class="sidebar-link"><span
-                                    class="hide-menu">Registrar empresas
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="ver-empresa.html" class="sidebar-link"><span
-                                    class="hide-menu">Lista de empresas
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"><a href="visitas.html" class="sidebar-link"><span
-                            class="hide-menu">Visitas
-                        </span></a>
-                </li>
-
-                    </ul>
-                </li>
-                </ul>
             </nav>
-            <!-- End Sidebar navigation -->
-        </div>
-        <!-- End Sidebar scroll-->
-    </aside>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
-    <div class="page-wrapper">
+        </header>
         <!-- ============================================================== -->
-        <!-- Bread crumb and right sidebar toggle -->
+        <!-- End Topbar header -->
         <!-- ============================================================== -->
-        <div class="page-breadcrumb">
-            <div class="row">
-                <div class="col-7 align-self-center">
-                    <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Buenos Días Jasmin!</h3>
-                    <div class="d-flex align-items-center">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item"><a href="index.html">Inicio</a>
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li class="list-divider"></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
+                                    data-feather="users" class="feather-icon"></i><span
+                                    class="hide-menu">Usuarios</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="registrar-user.html" class="sidebar-link"><span
+                                            class="hide-menu"> Registrar Usuarios
+                                        </span></a>
                                 </li>
-                            </ol>
-                        </nav>
+                                <li class="sidebar-item"><a href="ver-user.html" class="sidebar-link"><span
+                                            class="hide-menu"> Lista de Usuarios
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
+                                    class="hide-menu">Empresas</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="registrar-empresa.html" class="sidebar-link"><span
+                                            class="hide-menu">Registrar empresas
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="ver-empresa.html" class="sidebar-link"><span
+                                            class="hide-menu">Lista de empresas
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="visitas.html" class="sidebar-link"><span
+                                            class="hide-menu">Visitas
+                                        </span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-7 align-self-center">
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Buenos Días Jasmin!</h3>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="index.html">Inicio</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6 text-center">
+                            <div class="text-center custom-login">
+                                <h3>Registro de Usuario</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                    <div class="hpanel">
+                                        <div class="panel-body-user shadow-lg">
+                                            <form action="#" id="loginForm" method="#">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                                        <div class="datos_user">
+                                                            <h5>DATOS DEL USUARIO</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Identificación</label>
+                                                            <input type="number" class="form-control"
+                                                                name="identificacion_user" id="identificacion_user"
+                                                                placeholder="Ej: 1075685565" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Nombres</label>
+                                                            <input type=" text" class="form-control" name="nombres_user"
+                                                                id="nombres_user" placeholder="Ej: Jasmin Rocio"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Apellidos</label>
+                                                            <input type=" text" class="form-control"
+                                                                name="apellidos_user" id="apellidos_user"
+                                                                placeholder="Ej: Fuquen Colmenares" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Email</label>
+                                                            <input type=" email" class="form-control" name="email_user"
+                                                                id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                    <label>Cargo</label>
+                                                    <select class=" form-control" name="cargo_user" id="cargo_user"
+                                                            required>
+                                                            <option></option>
+                                                            <option>Coordinador</option>
+                                                            <option>Instructor</option>
+                                                            <option>Aprendiz</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                    <label>Teléfono</label>
+                                                    <input type=" number" class="form-control" name="telefono_user"
+                                                            id="telefono_user" placeholder="Ej: 3132834058" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Fichas asignar</label>
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-sm-6 col-xs-12 col-lg-12">
+                                                                    <input type="checkbox" name="ficha_aprendiz1"
+                                                                        id="ficha_aprendiz1">
+                                                                    <label>1964358 (HSEQ)</label>
+                                                                    <input type="checkbox" name="ficha_aprendiz2"
+                                                                        id="ficha_aprendiz2">
+                                                                    <label>1804521 (HSEQ)</label>
+                                                                    <input type="checkbox" name="ficha_aprendiz3"
+                                                                        id="ficha_aprendiz3">
+                                                                    <label>1234567 (HSEQ)</label>
+                                                                    <input type="checkbox" name="ficha_aprendiz4"
+                                                                        id="ficha_aprendiz4">
+                                                                    <label>1968493 (HSEQ)</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Password</label>
+                                                            <input type="password" class="form-control" name="password"
+                                                                id="password" placeholder="*******" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <button class="btn btn-success loginbtn">Registrar</button>
+                                                    <button class="btn btn-danger">Cancelar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center text-muted">
+                <h6>Contactenos</h6>
+                <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
+                <a href="https://github.com/" class="icon-social-github">GitHub</a>
+                <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
+                <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Container fluid  -->
-        <!-- ============================================================== -->
-        <div class="container-fluid">
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-center text-muted">
-            <h6>Contactenos</h6>
-            <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
-            <a href="https://github.com/" class="icon-social-github">GitHub</a>
-            <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
-            <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
     </div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
