@@ -37,3 +37,26 @@ padding-top: 5vh;
 .navbar-collapse{
     background-color: #6a75e9;
 }
+
+
+/*-------------actualizacion camilo index carousel--------*/
+
+.a .hero{
+    padding-top: 300px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+.a .hero h1{
+    background: #6d74e9;
+    text-decoration: none;
+    color:#fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 20px;
+   margin:auto;
+   margin-top: 30px;
+
+}
+/*-----------------hasta aqui :)------------- */
