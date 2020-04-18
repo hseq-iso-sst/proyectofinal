@@ -61,10 +61,10 @@ padding-top: 5vh;
 }
 
 .articulo{
-    width: 45%;
+    width: 240px;
     background: #fff;
     border-radius: 10px;
-    padding: 45px 60px 45px 60px;
+    padding: 45px 30px 45px 30px;
     transition: 0.4s;
     box-shadow: 0 1px 3px rgba(17,29,48, .26);
     margin: 0px 0px 40px 0px; 
@@ -83,9 +83,6 @@ padding-top: 5vh;
     width: 150px;
     height: 150px;
     text-align: center;
-   
-    
-    
 }
 
 .articulo a h3{
@@ -98,7 +95,6 @@ padding-top: 5vh;
     padding: 5px 3px;
     width: 120px;
     margin:auto;
-
 }
 
 .articulo>p{
@@ -121,5 +117,28 @@ padding-top: 5vh;
     color:#1f92de;
     transition: color .5s;
 }
+/* query para responsive */
+@media screen and (max-width:1221px){
+    .articulo{
+        width: 24%;
+    }
+}
+@media screen and (max-width:1065px){
+    .articulo{
+        width: 45%;
+    }
+}
+@media screen and (max-width:765px){
+    .articulo{
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
 
 /*-----------------hasta aqui :)------------- */
