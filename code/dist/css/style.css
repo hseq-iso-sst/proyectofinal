@@ -6091,7 +6091,7 @@ button.bg-purple:focus {
   padding-left: 0.5rem !important; }
 
 .p-3 {
-  padding: 1rem !important; }
+  padding: rem !important; }
 
 .pt-3,
 .py-3 {
@@ -8517,7 +8517,7 @@ strong {
   margin-bottom: 10px;
   font-size: 0.8rem;
   padding: 10px 20px; }
-
+/*sytiles de logos*/
 .auth-wrapper {
   min-height: 100vh; }
   .auth-wrapper .auth-box {
@@ -8529,9 +8529,10 @@ strong {
       background-size: cover;
       background-position: center center;
       min-height: 300px; }
+      
   .auth-wrapper #recoverform {
     display: none; }
-
+/*fin sytiles de logos*/
 .bg-facebook {
   background-color: #3b5a9a; }
 
