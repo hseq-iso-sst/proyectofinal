@@ -215,3 +215,12 @@ p {
     width: 100%;
     object-fit: cover
 }
+.body-empresa{
+    background-color: #fff;
+}
+.body-empresa .card{
+    background-color: #fff;
+}
+.body-empresa .card .form-card{
+    background-color: #fff;
+}
