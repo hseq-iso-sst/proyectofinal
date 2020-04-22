@@ -30,6 +30,9 @@ padding-top: 5vh;
 .hpanel .panel-body-user form{
     margin: 10px;
 }
+.hpanel .panel-body-user form h5{
+color: #7f72ea;
+}
 .custom-login h3{
     color: #6a75e9;
 }
