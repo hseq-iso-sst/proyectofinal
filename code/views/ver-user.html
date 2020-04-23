@@ -260,21 +260,16 @@
             <!-- ============================================================== -->
             <div class="container-fluid ver-empresas">
                 <div class="row">
-                    <h2 class="col-md-9">Lista Usuarios</h2>
+                    <h2 class="col-md-6">Lista Usuarios</h2>
                     <!-- Search -->
                     <!-- ============================================================== -->
-                    <div class="col-md-3">
-                        <form>
-                            <a href="#">
-                                <div class="customize-input">
-                                    <span>
-                                    <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                        type="search" placeholder="Buscar" aria-label="Search">
-                                </span>
-                                </div>
-                            </a>
-                        </form>
-                    </div>
+                    <form class="col-md-3 offset-md-3">
+                        <div class="customize-input ">
+                            <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search"
+                                placeholder="Buscar" aria-label="Search">
+                        </div>
+                </form>         
+                
                 </div>
                 <!-- ============================================================== -->
                 <table class="table table-bordered lista-empresas">
@@ -285,13 +280,8 @@
                             <th>Nombres</th>
                             <th>Dependencia</th>
                             <th>Cargo</th>
-                            <td class="icono"><a href="editar_empresa.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
+                            <th>Editar</th>
+                            <th>Desactivar</th>
                         </tr>
                     </thead>
                     <tbody>
