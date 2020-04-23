@@ -281,10 +281,10 @@
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
                                     <ul id="progressbar">
-                                        <li class="active" id="account"><strong>Account</strong></li>
-                                        <li id="personal"><strong>Personal</strong></li>
-                                        <li id="payment"><strong>Image</strong></li>
-                                        <li id="confirm"><strong>Finish</strong></li>
+                                        <li class="active" id="account"><strong>Sección 1</strong></li>
+                                        <li id="personal"><strong>Sección 2</strong></li>
+                                        <li id="payment"><strong>Sección 3</strong></li>
+                                        <li id="confirm"><strong>Registro completo</strong></li>
                                     </ul>
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated"
@@ -297,14 +297,37 @@
                                                     <h2 class="fs-title">Información de la empresa:</h2>
                                                 </div>
                                             </div>
-                                            <label class="fieldlabels">Email: *</label>
-                                            <input type="email" name="email" placeholder="Email Id" />
-                                            <label class="fieldlabels">Username:*</label>
-                                            <input type="text" name="uname" placeholder="UserName" />
-                                            <label class="fieldlabels">Password: *</label>
-                                            <input type="password" name="pwd" placeholder="Password" />
-                                            <label class="fieldlabels">Confirm Password:*</label>
-                                            <input type="password" name="cpwd" placeholder="Confirm Password" />
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Tipo de Documento</label>
+                                                    <select class="form-control" name="tipo_identificacion"
+                                                        id="tipo_identificacion" required>
+                                                        <option></option>
+                                                        <option>NIT</option>
+                                                        <option>C.C</option>
+                                                        <option>C.E</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">N° Identificación</label>
+                                                    <input type="text" name="id_empresa" placeholder="12345678" required/>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Razón Social</label>
+                                                    <input type="text" name="nombre_empresa" placeholder="Prueba S.A" required/>
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Departamento</label>
+                                                    <select class="form-control" name="departamento"
+                                                        id="departamento" required>
+                                                        <option></option>
+                                                        <option>Bogóta</option>
+                                                        <option>Cundinamarca</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <input type="button" name="next" class="next action-button" value="Next" />
                                     </fieldset>
@@ -325,7 +348,8 @@
                                             <input type="text" name="phno_2" placeholder="Alternate Contact No." />
                                         </div>
                                         <input type="button" name="next" class="next action-button" value="Next" />
-                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
@@ -344,7 +368,8 @@
                                             <input type="text" name="phno_2" placeholder="Alternate Contact No." />
                                         </div>
                                         <input type="button" name="next" class="next action-button" value="Next" />
-                                        <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
