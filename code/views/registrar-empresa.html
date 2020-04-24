@@ -17,7 +17,6 @@
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
     <!-- widzar -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="../dist/css/style_wizard_registrouser.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -27,8 +26,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
     <link rel="stylesheet" href="../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="../wizard/style_wizard.css">
 </head>
 
 <body>
@@ -283,7 +280,7 @@
                                     <ul id="progressbar">
                                         <li class="active" id="account"><strong>Sección 1</strong></li>
                                         <li id="personal"><strong>Sección 2</strong></li>
-                                        <li id="payment"><strong>Sección 3</strong></li>
+                                        <li id="personal"><strong>Sección 3</strong></li>
                                         <li id="confirm"><strong>Registro completo</strong></li>
                                     </ul>
                                     <div class="progress">
@@ -369,47 +366,134 @@
                                             </div>
                                         </div>
                                         <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
-                                        <!-- <input type="button" name="next" class="next action-button" value="Next" /> -->
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <h2 class="fs-title">Personal Information:</h2>
+                                                    <h2 class="fs-title">Información de la empresa:</h2>
                                                 </div>
                                             </div>
-                                            <label class="fieldlabels">First Name: *</label>
-                                            <input type="text" name="fname" placeholder="First Name" />
-                                            <label class="fieldlabels">Last Name: *</label>
-                                            <input type="text" name="lname" placeholder="Last Name" />
-                                            <label class="fieldlabels">Contact No.: *</label>
-                                            <input type="text" name="phno" placeholder="Contact No." />
-                                            <label class="fieldlabels">Alternate Contact No.: *</label>
-                                            <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Actividad Economica principal</label>
+                                                    <input type="text" name="act_principal" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Código actividad Economica principal</label>
+                                                    <input type="text" name="co_act_principal" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Actividad Economica Secundaria</label>
+                                                    <input type="text" name="act_secundaria_2" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Codigo actividad Economica secundaria</label>
+                                                    <input type="text" name="co_act_secundaria_2" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Nombre de contacto de la empresa</label>
+                                                    <input type="text" name="nombre_contacto" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Cargo del contacto de la empresa</label>
+                                                    <input type="text" name="cargo_contacto" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Correo Electronico del contacto de la empresa</label>
+                                                    <input type="email" name="correo_contacto" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Correo electronico del representante de la empresa</label>
+                                                    <input type="text" name="correo_representante" required />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <label class="fieldlabels">Nivel de riesgo de la empresa</label>
+                                                    <select class="form-control" name="riesgo_empresa" id="riesgo_empresa" required>
+                                                        <option></option>
+                                                        <option>I (Riesgo mínimo)</option>
+                                                        <option>II (Riesgo bajo)</option>
+                                                        <option>III (Riesgo medio)</option>
+                                                        <option>IV (Riesgo alto)</option>
+                                                        <option>V (Riesgo máximo)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <input type="button" name="next" class="next action-button" value="Next" />
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                            value="Previous" />
+                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
+                                        <button type="submit" name="previous" class="previous action-button-previous"
+                                        value="Previous"> Anterior</button>
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="row">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <h2 class="fs-title">Personal Information:</h2>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Número total de trabajadores en la empresa</label>
+                                                    <input type="number" name="nro_trabajadores" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Número de trabajadores dependientes</label>
+                                                    <input type="number" name="nro_trabajadores_dependientes" required />
                                                 </div>
                                             </div>
-                                            <label class="fieldlabels">First Name: *</label>
-                                            <input type="text" name="fname" placeholder="First Name" />
-                                            <label class="fieldlabels">Last Name: *</label>
-                                            <input type="text" name="lname" placeholder="Last Name" />
-                                            <label class="fieldlabels">Contact No.: *</label>
-                                            <input type="text" name="phno" placeholder="Contact No." />
-                                            <label class="fieldlabels">Alternate Contact No.: *</label>
-                                            <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Número de trabajadores indendientes afiliados a la empresa</label>
+                                                    <input type="number" name="nro_trabajadores_independientes" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">La empresa tiene una o más sedes</label>
+                                                    <select class="form-control" name="sedes"
+                                                        id="sedes"required>
+                                                        <option></option>
+                                                        <option>Si</option>
+                                                        <option>No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">¿Cuantas sedes tiene?</label>
+                                                    <input type="number" name="nro_sedes" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Departamento de la sede</label>
+                                                    <select class="form-control" name="departamento_Sede"
+                                                        id="departamento_Sede"required>
+                                                        <option></option>
+                                                        <option>Cundinamarca</option>
+                                                        <option>Bogotá</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Ciudad de la sede</label>
+                                                    <select class="form-control" name="ciudad_sede"
+                                                        id="ciudad_sede"required>
+                                                        <option></option>
+                                                        <option>Chía</option>
+                                                        <option>Bogotá</option>
+                                                        <option>Zipaquirá</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Prima cotización mensual</label>
+                                                    <input type="number" name="prima_empresa" required />
+                                                </div>
+                                            </div>
                                         </div>
-                                        <input type="button" name="next" class="next action-button" value="Next" />
-                                        <input type="button" name="previous" class="previous action-button-previous"
-                                            value="Previous" />
+                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
+                                        <button type="submit" name="previous" class="previous action-button-previous"
+                                        value="Previous"> Anterior</button>
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
@@ -419,7 +503,7 @@
                                                     EXITO!</strong></h2> <br>
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
-                                                    <img src="../widzar/img/visto-bueno-png-2.png" class="fit-image">
+                                                    <img src="../wizard/img/visto-bueno-png-2.png" class="fit-image">
                                                 </div>
                                             </div>
                                             <br>
