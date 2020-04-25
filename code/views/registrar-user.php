@@ -16,6 +16,9 @@
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <!-- css mdb -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -196,7 +199,7 @@
                                     data-feather="users" class="feather-icon"></i><span
                                     class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="registrar-user.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="registrar-user.php" class="sidebar-link"><span
                                             class="hide-menu"> Registrar Usuarios
                                         </span></a>
                                 </li>
@@ -249,7 +252,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Registrar Usuarios</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a href="registrar-user.php">Registrar Usuarios</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -271,7 +274,7 @@
                                 <h3>Registro de Usuario</h3>
                             </div>
                             <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
                                             <form action="#" id="loginForm" method="#">
@@ -284,13 +287,13 @@
                                                     </div>
                                                     </div>
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Identificación</label>
                                                             <input type="number" class="form-control"
-                                                                name="identificacion_user" id="identificacion_user"
+                                                                name="id_user" id="id_user"
                                                                 placeholder="Ej: 1075685565" required>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Nombres</label>
                                                             <input type=" text" class="form-control" name="nombres_user"
                                                                 id="nombres_user" placeholder="Ej: Jasmin Rocio"
@@ -298,31 +301,31 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Apellidos</label>
                                                             <input type=" text" class="form-control"
                                                                 name="apellidos_user" id="apellidos_user"
                                                                 placeholder="Ej: Fuquen Colmenares" required>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Email</label>
-                                                            <input type=" email" class="form-control" name="email_user"
+                                                            <input type="email" class="form-control" name="email_user"
                                                                 id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Cargo</label>
                                                             <select class=" form-control" name="cargo_user"
                                                                 id="cargo_user" required>
                                                                 <option></option>
-                                                                <option>Coordinador</option>
-                                                                <option>Instructor</option>
-                                                                <option>Aprendiz</option>
+                                                                <option value="1">Coordinador</option>
+                                                                <option value="2">Instructor</option>
+                                                                <option value="3">Aprendiz</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Teléfono</label>
                                                             <input type=" number" class="form-control"
                                                                 name="telefono_user" id="telefono_user"
@@ -330,36 +333,19 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <div class="form-row">
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                                                     <label>Fichas Asignadas</label>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div
-                                                                        class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                                        <input type="checkbox" name="ficha_aprendiz1"
-                                                                            id="ficha_aprendiz1">
-                                                                        <label>1964358 (HSEQ)</label>
-                                                                        <input type="checkbox" name="ficha_aprendiz2"
-                                                                            id="ficha_aprendiz2">
-                                                                        <label>1804521 (HSEQ)</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div
-                                                                        class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                                        <input type="checkbox" name="ficha_aprendiz3"
-                                                                            id="ficha_aprendiz3">
-                                                                        <label>1234567 (HSEQ)</label>
-                                                                        <input type="checkbox" name="ficha_aprendiz4"
-                                                                            id="ficha_aprendiz4">
-                                                                        <label>1968493 (HSEQ)</label>
-                                                                    </div>
-                                                                </div>
+                                                                    <select class="selectpicker" name="ficha_asignada" multiple>
+                                                                        <option value="1">1864320 (HSEQ)</option>
+                                                                        <option value="2">1984756 (HSEQ)</option>
+                                                                        <option value="3">1946573 (HSEQ)</option>
+                                                                        <option value="4">1949463 (HSEQ)</option>
+                                                                         </select>                                                                                                                                                                                                       </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Password</label>
                                                             <input type="password" class="form-control" name="password"
                                                                 id="password" placeholder="*******" required>
@@ -420,7 +406,9 @@
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-
+<!-- js mdb -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> 
 </body>
 
 </html>
