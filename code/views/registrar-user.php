@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
     <!-- css mdb -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -252,7 +253,8 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a href="registrar-user.php">Registrar Usuarios</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
+                                            href="registrar-user.php">Registrar Usuarios</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -277,21 +279,20 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                            <form action="#" id="loginForm" method="#">
+                                            <form action="../controllers/insertUsers.php" id="loginForm" method="POST">
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                                             <div class="datos_user">
                                                                 <h5>DATOS DEL USUARIO</h5>
                                                             </div>
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Identificación</label>
-                                                            <input type="number" class="form-control"
-                                                                name="id_user" id="id_user"
-                                                                placeholder="Ej: 1075685565" required>
+                                                            <input type="number" class="form-control" name="id_user"
+                                                                id="id_user" placeholder="Ej: 1075685565" required>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Nombres</label>
@@ -335,14 +336,16 @@
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <div class="form-row">
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                                <div
+                                                                    class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                                                     <label>Fichas Asignadas</label>
-                                                                    <select class="selectpicker" name="ficha_asignada" multiple>
+                                                                    <select class="selectpicker" name="ficha_asignada"
+                                                                        multiple required>
                                                                         <option value="1">1864320 (HSEQ)</option>
                                                                         <option value="2">1984756 (HSEQ)</option>
                                                                         <option value="3">1946573 (HSEQ)</option>
                                                                         <option value="4">1949463 (HSEQ)</option>
-                                                                         </select>                                                                                                                                                                                                       </div>
+                                                                    </select> </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
@@ -352,7 +355,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="text-center">
-                                                        <button class="btn btn-success loginbtn">Registrar</button>
+                                                        <button type="submit"
+                                                            class="btn btn-success loginbtn">Registrar</button>
                                                         <button class="btn btn-danger">Cancelar</button>
                                                     </div>
                                                 </div>
@@ -406,9 +410,9 @@
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-<!-- js mdb -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> 
+    <!-- js mdb -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 </body>
 
 </html>
