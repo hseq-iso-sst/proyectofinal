@@ -21,7 +21,6 @@ padding-top: 5vh;
     color: #fff!important;
 }
 .hpanel .panel-body-user {
-    background: rgb(245, 244, 244);
     border-radius: 2px;
     margin-top: 10px;
     padding: 15px;
@@ -30,6 +29,9 @@ padding-top: 5vh;
 }
 .hpanel .panel-body-user form{
     margin: 10px;
+}
+.hpanel .panel-body-user form h5{
+color: #7f72ea;
 }
 .custom-login h3{
     color: #6a75e9;
@@ -150,3 +152,9 @@ padding-top: 5vh;
 
 
 /*-----------------hasta aqui :)------------- */
+/*Search botón 
+.ver-empresas .buscar{
+    position: relative;
+    text-align: end;
+}
+Fin Search botón */

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
-    <title>Listas de empresa</title>
+    <title>Registrar Usuarios</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -16,6 +16,10 @@
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <!-- css mdb -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -127,6 +131,20 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-right">
                         <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Buscar" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
@@ -230,24 +248,15 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Usuarios</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Registrar Usuarios</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html" class="text-muted">Inicio</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Usuarios</li>
+                                    <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
+                                            href="registrar-user.php">Registrar Usuarios</a></li>
                                 </ol>
                             </nav>
-                        </div>
-                    </div>
-                    <div class="col-5 align-self-center">
-                        <div class="customize-input float-right">
-                            <select
-                                class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
-                                <option selected>Aug 19</option>
-                                <option value="1">July 19</option>
-                                <option value="2">Jun 19</option>
-                            </select>
                         </div>
                     </div>
                 </div>
@@ -258,108 +267,110 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid ver-empresas">
-                <div class="row">
-                    <h2 class="col-md-6">Lista Usuarios</h2>
-                    <!-- Search -->
-                    <!-- ============================================================== -->
-                    <form class="col-md-3 offset-md-3">
-                        <div class="customize-input ">
-                            <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search"
-                                placeholder="Buscar" aria-label="Search">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div
+                            class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
+                            <div class="text-center custom-login">
+                                <h3>Registro de Usuario</h3>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                    <div class="hpanel">
+                                        <div class="panel-body-user shadow">
+                                            <form action="../controllers/insertUsers.php" id="loginForm" method="POST">
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                                            <div class="datos_user">
+                                                                <h5>DATOS DEL USUARIO</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Identificación</label>
+                                                            <input type="number" class="form-control" name="id_user"
+                                                                id="id_user" placeholder="Ej: 1075685565" required>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Nombres</label>
+                                                            <input type=" text" class="form-control" name="nombres_user"
+                                                                id="nombres_user" placeholder="Ej: Jasmin Rocio"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Apellidos</label>
+                                                            <input type=" text" class="form-control"
+                                                                name="apellidos_user" id="apellidos_user"
+                                                                placeholder="Ej: Fuquen Colmenares" required>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Email</label>
+                                                            <input type="email" class="form-control" name="email_user"
+                                                                id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Cargo</label>
+                                                            <select class=" form-control" name="cargo_user"
+                                                                id="cargo_user" required>
+                                                                <option></option>
+                                                                <option value="1">Coordinador</option>
+                                                                <option value="2">Instructor</option>
+                                                                <option value="3">Aprendiz</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Teléfono</label>
+                                                            <input type=" number" class="form-control"
+                                                                name="telefono_user" id="telefono_user"
+                                                                placeholder="Ej: 3132834058" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <div class="form-row">
+                                                                <div
+                                                                    class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                                    <label>Fichas Asignadas</label>
+                                                                    <select class="selectpicker" name="ficha_asignada"
+                                                                        multiple required>
+                                                                        <option value="1">1864320 (HSEQ)</option>
+                                                                        <option value="2">1984756 (HSEQ)</option>
+                                                                        <option value="3">1946573 (HSEQ)</option>
+                                                                        <option value="4">1949463 (HSEQ)</option>
+                                                                    </select> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Password</label>
+                                                            <input type="password" class="form-control" name="password"
+                                                                id="password" placeholder="*******" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <button type="submit"
+                                                            class="btn btn-success loginbtn">Registrar</button>
+                                                        <button class="btn btn-danger">Cancelar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                </form>         
-                
+                    </div>
                 </div>
-                <!-- ============================================================== -->
-                <table class="table table-bordered lista-empresas">
-                    <thead>
-                        <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
-                        <tr class="head_tabla encabezado">
-                            <th>Identificación</th>
-                            <th>Nombres</th>
-                            <th>Dependencia</th>
-                            <th>Cargo</th>
-                            <th>Editar</th>
-                            <th>Desactivar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1127621913</td>
-                            <td>Valerie Tovar</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>1000089458</td>
-                            <td>Daniel Garzon</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>18274897443</td>
-                            <td>Lizeth Urrego</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>173434757363</td>
-                            <td>Jasmin Fuquen</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
             <!-- footer -->
+            <!-- ============================================================== -->
             <!-- ============================================================== -->
             <footer class="footer text-center text-muted">
                 <h6>Contactenos</h6>
@@ -368,13 +379,17 @@
                 <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
                 <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
             </footer>
-            <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
     </div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
@@ -395,7 +410,9 @@
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-
+    <!-- js mdb -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 </body>
 
 </html>
