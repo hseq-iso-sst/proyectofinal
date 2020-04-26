@@ -16,6 +16,7 @@
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -205,7 +206,7 @@
 
                 </div>
                 <!-- ============================================================== -->
-                <table class="table table-bordered lista-empresas">
+                <table class="table table-bordered lista-empresas" id="tbl_users">
                     <thead>
                         <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
                         <tr class="head_tabla encabezado">
@@ -335,13 +336,18 @@
     <script src="../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
     <script src="../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../assets/extra-libs/c3/c3.min.js"></script>
     <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-
+    <script>
+        $(document).ready( function () {
+                $('#tbl_users').DataTable();
+        } );
+    </script>
 </body>
 
 </html>

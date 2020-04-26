@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
-    <title>Registrar Empresa</title>
+    <title>Editar Empresa</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -17,8 +17,9 @@
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
     <!-- widzar -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="../dist/css/style_wizard_registrouser.css">
+    <link rel="stylesheet" href="../widzar/style_wizard.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,6 +27,8 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
     <link rel="stylesheet" href="../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../wizard/style_wizard.css">
 </head>
 
 <body>
@@ -58,7 +61,7 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                            <a href="../index.html">
+                            <a href="../index.php">
                                 <!-- Dark Logo icon -->
                                 <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
                                 <!--End Logo icon -->
@@ -166,7 +169,7 @@
                                         class="svg-icon mr-2 ml-1"></i>
                                     Configuración de Cuenta</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html"><i data-feather="power"
+                                <a class="dropdown-item" href="./views/login.html"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Cerrar Sesión</a>
                             </div>
@@ -184,57 +187,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar" data-sidebarbg="skin6">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../index.html"
-                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Dashboard</span></a>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
-                                    data-feather="users" class="feather-icon"></i><span
-                                    class="hide-menu">Usuarios</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="registrar-user.php" class="sidebar-link"><span
-                                            class="hide-menu"> Registrar Usuarios
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ver-user.html" class="sidebar-link"><span
-                                            class="hide-menu"> Lista de Usuarios
-                                        </span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
-                                    class="hide-menu">Empresas</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="registrar-empresa.html" class="sidebar-link"><span
-                                            class="hide-menu">Registrar empresas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ver-empresa.html" class="sidebar-link"><span
-                                            class="hide-menu">Lista de empresas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="visitas.html" class="sidebar-link"><span
-                                            class="hide-menu">Visitas
-                                        </span></a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
+        <?php include_once('../menu.php');?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -248,13 +201,13 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Registrar Empresa</h3>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Editar Empresa</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Home</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="registrar-empresa.html" class="text-muted">Registrar Empresa</a></li>
+                                            href="editar-empresa.html" class="text-muted">Editar Empresa</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -271,7 +224,7 @@
                 <div class="row justify-content-center body-empresa shadow">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <h2 id="heading">REGISTRE LA EMPRESA DESEADA</h2>
+                            <h2 id="heading">EDITAR DATOS DE EMPRESA</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
                             <form id="msform">
                                 <div
@@ -280,7 +233,7 @@
                                     <ul id="progressbar">
                                         <li class="active" id="account"><strong>Sección 1</strong></li>
                                         <li id="personal"><strong>Sección 2</strong></li>
-                                        <li id="personal"><strong>Sección 3</strong></li>
+                                        <li id="payment"><strong>Sección 3</strong></li>
                                         <li id="confirm"><strong>Registro completo</strong></li>
                                     </ul>
                                     <div class="progress">
@@ -298,7 +251,7 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Tipo de Documento</label>
                                                     <select class="form-control" name="tipo_identificacion"
-                                                        id="tipo_identificacion"required>
+                                                        id="tipo_identificacion" required>
                                                         <option></option>
                                                         <option>NIT</option>
                                                         <option>C.C</option>
@@ -307,203 +260,75 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">N° Identificación</label>
-                                                    <input type="text" name="id_empresa" required />
+                                                    <input type="text" name="id_empresa" placeholder="12345678" readonly/>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Razón Social</label>
-                                                    <input type="text" name="nombre_empresa" required />
+                                                    <input type="text" name="nombre_empresa" placeholder="Prueba S.A" required/>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento</label>
-                                                    <select class="form-control" name="departamento" id="departamento"
-                                                        required>
+                                                    <select class="form-control" name="departamento"
+                                                        id="departamento" required>
                                                         <option></option>
                                                         <option>Bogóta</option>
                                                         <option>Cundinamarca</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Ciudad</label>
-                                                    <select class="form-control" name="ciudad" id="ciudad" required>
-                                                        <option></option>
-                                                        <option>Bogóta</option>
-                                                        <option>Chía</option>
-                                                        <option>Zipaquirá</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Dirección</label>
-                                                    <input type="text" name="direccion_empresa" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Teléfono</label>
-                                                    <input type="number" name="telefono_empresa" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Celular</label>
-                                                    <input type="number" name="celular_empresa" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Sucursal</label>
-                                                    <select class="form-control" name="sucursal" id="sucursal" required>
-                                                        <option></option>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">N° Sucursales</label>
-                                                    <input type="number" name="nro_sucursal" required />
-                                                </div>
-                                            </div>
                                         </div>
-                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <h2 class="fs-title">Información de la empresa:</h2>
+                                                    <h2 class="fs-title">Personal Information:</h2>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Actividad Economica principal</label>
-                                                    <input type="text" name="act_principal" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Código actividad Economica principal</label>
-                                                    <input type="text" name="co_act_principal" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Actividad Economica Secundaria</label>
-                                                    <input type="text" name="act_secundaria_2" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Codigo actividad Economica secundaria</label>
-                                                    <input type="text" name="co_act_secundaria_2" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Nombre de contacto de la empresa</label>
-                                                    <input type="text" name="nombre_contacto" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Cargo del contacto de la empresa</label>
-                                                    <input type="text" name="cargo_contacto" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Correo Electronico del contacto de la empresa</label>
-                                                    <input type="email" name="correo_contacto" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Correo electronico del representante de la empresa</label>
-                                                    <input type="text" name="correo_representante" required />
-                                                </div>
-                                            </div>
+                                            <label class="fieldlabels">First Name: *</label>
+                                            <input type="text" name="fname" placeholder="First Name" />
+                                            <label class="fieldlabels">Last Name: *</label>
+                                            <input type="text" name="lname" placeholder="Last Name" />
+                                            <label class="fieldlabels">Contact No.: *</label>
+                                            <input type="text" name="phno" placeholder="Contact No." />
+                                            <label class="fieldlabels">Alternate Contact No.: *</label>
+                                            <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
                                             <div class="row">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                    <label class="fieldlabels">Nivel de riesgo de la empresa</label>
-                                                    <select class="form-control" name="riesgo_empresa" id="riesgo_empresa" required>
-                                                        <option></option>
-                                                        <option>I (Riesgo mínimo)</option>
-                                                        <option>II (Riesgo bajo)</option>
-                                                        <option>III (Riesgo medio)</option>
-                                                        <option>IV (Riesgo alto)</option>
-                                                        <option>V (Riesgo máximo)</option>
-                                                    </select>
+                                                    <h2 class="fs-title">Personal Information:</h2>
                                                 </div>
                                             </div>
+                                            <label class="fieldlabels">First Name: *</label>
+                                            <input type="text" name="fname" placeholder="First Name" />
+                                            <label class="fieldlabels">Last Name: *</label>
+                                            <input type="text" name="lname" placeholder="Last Name" />
+                                            <label class="fieldlabels">Contact No.: *</label>
+                                            <input type="text" name="phno" placeholder="Contact No." />
+                                            <label class="fieldlabels">Alternate Contact No.: *</label>
+                                            <input type="text" name="phno_2" placeholder="Alternate Contact No." />
                                         </div>
-                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
-                                        <button type="submit" name="previous" class="previous action-button-previous"
-                                        value="Previous"> Anterior</button>
-                                    </fieldset>
-                                    <fieldset>
-                                        <div class="form-card">
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Número total de trabajadores en la empresa</label>
-                                                    <input type="number" name="nro_trabajadores" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Número de trabajadores dependientes</label>
-                                                    <input type="number" name="nro_trabajadores_dependientes" required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Número de trabajadores indendientes afiliados a la empresa</label>
-                                                    <input type="number" name="nro_trabajadores_independientes" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">La empresa tiene una o más sedes</label>
-                                                    <select class="form-control" name="sedes"
-                                                        id="sedes"required>
-                                                        <option></option>
-                                                        <option>Si</option>
-                                                        <option>No</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">¿Cuantas sedes tiene?</label>
-                                                    <input type="number" name="nro_sedes" required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Departamento de la sede</label>
-                                                    <select class="form-control" name="departamento_Sede"
-                                                        id="departamento_Sede"required>
-                                                        <option></option>
-                                                        <option>Cundinamarca</option>
-                                                        <option>Bogotá</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Ciudad de la sede</label>
-                                                    <select class="form-control" name="ciudad_sede"
-                                                        id="ciudad_sede"required>
-                                                        <option></option>
-                                                        <option>Chía</option>
-                                                        <option>Bogotá</option>
-                                                        <option>Zipaquirá</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Prima cotización mensual</label>
-                                                    <input type="number" name="prima_empresa" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
-                                        <button type="submit" name="previous" class="previous action-button-previous"
-                                        value="Previous"> Anterior</button>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">
                                             <br>
                                             <br>
-                                            <h2 class="purple-text text-center"><strong>¡EMPRESA REGISTRADA CON
-                                                    EXITO!</strong></h2> <br>
+                                            <h2 class="purple-text text-center"><strong>¡EMPRESA ACTUALIZADA EXITOSAMENTE!</strong></h2> <br>
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
-                                                    <img src="../wizard/img/visto-bueno-png-2.png" class="fit-image">
+                                                    <img src="../widzar/img/visto-bueno-png-2.png" class="fit-image">
                                                 </div>
                                             </div>
                                             <br>

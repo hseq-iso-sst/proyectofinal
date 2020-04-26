@@ -8,17 +8,17 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
-    <title>Visita 2</title>
+    <title>Visita 1</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/style_wizard-visita.css">
     <!-- widzar -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="../dist/css/style_wizard-visita.css">
     <!-- <link rel="stylesheet" href="../widzar/style_wizard.css"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,9 +41,9 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="registrar-empresa.html" class="text-muted">Visita 2</a></li>
+                                            href="visitas.php" class="text-muted">Visitas</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -60,16 +60,16 @@
                 <div class="row justify-content-center body-empresa shadow">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <h2 id="heading">VISITA N°2</h2>
+                            <h2 id="heading">VISITA N°1</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
                             <form id="msform">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
                                     <ul id="progressbar">
-                                        <li class="active" id="account"><strong>Account</strong></li>
-                                        <li id="personal"><strong>Personal</strong></li>
-                                        <li id="payment"><strong>Image</strong></li>
+                                        <li class="active" id="confirm"><strong>Account</strong></li>
+                                        <li id="confirm"><strong>Personal</strong></li>
+                                        <li id="confirm"><strong>Image</strong></li>
                                         <li id="confirm"><strong>Finish</strong></li>
                                     </ul>
                                     <div class="progress">
@@ -88,7 +88,7 @@
                                                         <thead >
                                                             <tr>
                                                                 <th rowspan="2"></th>
-                                                                <th colspan="4">CRITERIOS DE EVALUACION</td>
+                                                                <th colspan="4">CRITERIOS DE EVALUACION </td>
                                                                 <th colspan="2">Si es COMPLETO o NA = 1 o Si es INCOMPLETO/ o NC = 0</th>
                                                                 
                                                             </thead>
@@ -293,8 +293,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+                                       
                                         <input type="button" name="next" class="next action-button" value="Siguiente"/>
+                                         <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="col-12">
@@ -399,6 +400,7 @@
                                         </div>
                                         
                                         <input type="button" name="next" class="next action-button" value="Siguiente" />
+                                        <input type="button" name="previous" class="previous action-button-previous" value="Anterior" />
                                     </fieldset>
                                     <fieldset>
                                         <div class="form-card">

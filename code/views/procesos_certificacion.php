@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
-    <title>Editar Usuario</title>
+    <title>Certificacion</title>
     <!-- Custom CSS -->
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                            <a href="../index.html">
+                            <a href="../index.php">
                                 <!-- Dark Logo icon -->
                                 <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
                                 <!--End Logo icon -->
@@ -180,57 +180,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin6">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar" data-sidebarbg="skin6">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="../index.html"
-                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Dashboard</span></a>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
-                                    data-feather="users" class="feather-icon"></i><span
-                                    class="hide-menu">Usuarios</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="registrar-user.html" class="sidebar-link"><span
-                                            class="hide-menu"> Registrar Usuarios
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ver-user.html" class="sidebar-link"><span
-                                            class="hide-menu"> Lista de Usuarios
-                                        </span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
-                                    class="hide-menu">Empresas</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="registrar-empresa.html" class="sidebar-link"><span
-                                            class="hide-menu">Registrar empresas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ver-empresa.html" class="sidebar-link"><span
-                                            class="hide-menu">Lista de empresas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="visitas.html" class="sidebar-link"><span
-                                            class="hide-menu">Visitas
-                                        </span></a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
+        <?php include_once('../menu.php');?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -244,143 +194,191 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Registrar Usuarios</h4>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Procesos de Certificacion
+                        </h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../index.html" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Editar Usuario</li>
+                                    <li class="breadcrumb-item"><a href="../index.php">Inicio</a>
+                                    </li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-------------*INICIO DEL WRAPPER DE CERTIFICADOS CAMILO*------>
+
+            <div id="certificado">
+                <div class="container-fluid bg-cambio  text-center">
+                    <div class="formula">
+                        <table class="table table-bordered">
+                            <thead >
+                                <tr>
+                                    <th scope="col-sm-12">La empresa esta certificada o en proceso de certificación
+                                        en alguna de las siguientes normas.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                                    value="option1">
+                                                <label class="form-check-label" for="inlineCheckbox1">ISO 9001</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">ISO 14001</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">ISO 45001</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">RUC/Norsok</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">BASC</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                                    value="option2">
+                                                <label class="form-check-label" for="inlineCheckbox2">OTRO</label>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td><b>RESULTADOS DE LA EVALUACION DEL SISTEMA DE GESTION EN SEGURIDAD Y SALUD EN EL
+                                            TRABAJO - PYMES
+                                            a) Alto = Mayor o igual a 20 puntos: la empresa tiene una buena gestión del
+                                            SG-SST con oportunidades de mejora
+                                            b) Medio = De 13 a 19 puntos: la empresa realiza algunas actividades del
+                                            SG-SST pero debe aplicar acciones correctivas
+                                            c) Bajo = Menor o igual a 12 puntos: la empresa requiere dar prioridad a la
+                                            gestión del SG-SST</b> </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="row ">
+                                                <div class="col">
+                                                    <div class="row text-center">
+                                                        <label for="First name"
+                                                            class="col-sm-2 col-form-label">Resultado de la evaluación
+                                                            Inicial</label>
+
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <input type="number" class="form-control col-sm-1">
+
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">ALTO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">MEDIO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">BAJO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </td>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="row ">
+                                                <div class="col">
+                                                    <div class="row text-center">
+
+                                                        <label for="First name"
+                                                            class="col-sm-2 col-form-label">Resultado de la evaluación
+                                                            final</label>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <input type="number" class="form-control col-sm-1">
+
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">ALTO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">MEDIO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                        <label for="First name"
+                                                            class="col-sm-1 col-form-label">BAJO</label>
+                                                        <div class=""></div>
+                                                        <input type="number" class="form-control col-sm-1">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="form-group row text-center">
+                                                <label for="exampleFormControlTextarea1"class="col-sm-2 col-form-label">Observaciones iniciales</label>
+                                                <textarea class="form-control col-sm-9" id="exampleFormControlTextarea1"></textarea>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="form-group row text-center">
+                                                <label for="exampleFormControlTextarea1"class="col-sm-2 col-form-label">Observaciones al final del periodo evaluado</label>
+                                                <textarea class="form-control col-sm-9" id="exampleFormControlTextarea1"></textarea>
+                                            </div>
+                                        </form>
+                                    </td>
+                                </tr>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!------*FINAL DEL WRAPPER CERTIDICADOS*------>
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
-                            <div class="text-center custom-login">
-                                <h3>Editar Usuario</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                    <div class="hpanel">
-                                        <div class="panel-body-user shadow">
-                                            <form action="#" id="loginForm" method="#">
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                            <div class="datos_user">
-                                                                <h5>DATOS DEL USUARIO</h5>
-                                                            </div>
-                                                    </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Identificación</label>
-                                                            <input type="number" class="form-control"
-                                                                name="identificacion_user" id="identificacion_user"
-                                                                placeholder="Ej: 1075685565" readonly>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Nombres</label>
-                                                            <input type=" text" class="form-control" name="nombres_user"
-                                                                id="nombres_user" placeholder="Ej: Jasmin Rocio"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Apellidos</label>
-                                                            <input type=" text" class="form-control"
-                                                                name="apellidos_user" id="apellidos_user"
-                                                                placeholder="Ej: Fuquen Colmenares" required>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Email</label>
-                                                            <input type=" email" class="form-control" name="email_user"
-                                                                id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Cargo</label>
-                                                            <select class=" form-control" name="cargo_user"
-                                                                id="cargo_user" required>
-                                                                <option></option>
-                                                                <option>Coordinador</option>
-                                                                <option>Instructor</option>
-                                                                <option>Aprendiz</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Teléfono</label>
-                                                            <input type=" number" class="form-control"
-                                                                name="telefono_user" id="telefono_user"
-                                                                placeholder="Ej: 3132834058" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <div class="form-row">
-                                                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                                    <label>Fichas Asignadas</label>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div
-                                                                        class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                                        <input type="checkbox" name="ficha_aprendiz1"
-                                                                            id="ficha_aprendiz1">
-                                                                        <label>1964358 (HSEQ)</label>
-                                                                        <input type="checkbox" name="ficha_aprendiz2"
-                                                                            id="ficha_aprendiz2">
-                                                                        <label>1804521 (HSEQ)</label>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-row">
-                                                                    <div
-                                                                        class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                                        <input type="checkbox" name="ficha_aprendiz3"
-                                                                            id="ficha_aprendiz3">
-                                                                        <label>1234567 (HSEQ)</label>
-                                                                        <input type="checkbox" name="ficha_aprendiz4"
-                                                                            id="ficha_aprendiz4">
-                                                                        <label>1968493 (HSEQ)</label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
-                                                            <label>Password</label>
-                                                            <input type="password" class="form-control" name="password"
-                                                                id="password" placeholder="*******" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-center">
-                                                        <button class="btn btn-success loginbtn">Registrar</button>
-                                                        <button class="btn btn-danger">Cancelar</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- footer -->
+
             <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center text-muted">
                 <h6>Contactenos</h6>
@@ -389,17 +387,13 @@
                 <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
                 <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
             </footer>
+            <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Container fluid  -->
+        <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
     </div>
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>

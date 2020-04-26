@@ -54,7 +54,7 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <!-- Dark Logo icon -->
                                 <img src="assets/images/logov2.png" alt="homepage" class="dark-logo" />
                                 <!--End Logo icon -->
@@ -162,7 +162,7 @@
                                         class="svg-icon mr-2 ml-1"></i>
                                     Configuración de Cuenta</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="views/login.html"><i data-feather="power"
+                                <a class="dropdown-item" href="views/login.php"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Cerrar Sesión</a>
                             </div>
@@ -192,7 +192,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Inicio</a>
+                                    <li class="breadcrumb-item"><a href="index.php">Inicio</a>
                                     </li>
                                 </ol>
                             </nav>

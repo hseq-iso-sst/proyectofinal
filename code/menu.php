@@ -1,3 +1,6 @@
+<?php 
+    require_once('config.php');
+?>
 <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -7,7 +10,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php "
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a>
                         </li>
@@ -17,11 +20,11 @@
                                     data-feather="users" class="feather-icon"></i><span
                                     class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="views/registrar-user.php"
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/registrar-user.php"
                                         class="sidebar-link"><span class="hide-menu"> Registrar Usuarios
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="views/ver-user.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/ver-user.php" class="sidebar-link"><span
                                             class="hide-menu"> Lista de Usuarios
                                         </span></a>
                                 </li>
@@ -31,17 +34,20 @@
                                 aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
                                     class="hide-menu">Empresas</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="views/registrar-empresa.html"
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/registrar-empresa.php"
                                         class="sidebar-link"><span class="hide-menu">Registrar empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="views/ver-empresa.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/ver-empresa.php" class="sidebar-link"><span
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="views/visitas.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/visitas.php" class="sidebar-link"><span
                                             class="hide-menu">Visitas
                                         </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
+                                    class="hide-menu">Certificados</span></a>
                                 </li>
 
                             </ul>
