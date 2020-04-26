@@ -226,6 +226,10 @@
                                             class="hide-menu">Visitas
                                         </span></a>
                                 </li>
+                                <li class="sidebar-item"><a href="views/procesos_certificacion.html" class="sidebar-link"><span
+                                    class="hide-menu">Certificados
+                                </span></a>
+                                </li>
 
                             </ul>
                         </li>
