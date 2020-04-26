@@ -339,7 +339,7 @@
                                                                 <div
                                                                     class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                                                     <label>Fichas Asignadas</label>
-                                                                    <select class="selectpicker" name="ficha_asignada"
+                                                                    <select class="selectpicker" name="ficha_asignada[]"
                                                                         multiple required>
                                                                         <option value="1">1864320 (HSEQ)</option>
                                                                         <option value="2">1984756 (HSEQ)</option>

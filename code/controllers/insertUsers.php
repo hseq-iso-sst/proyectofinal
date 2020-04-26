@@ -8,8 +8,13 @@
     $email_user=$_POST['email_user'];
     $cargo_user=$_POST['cargo_user'];
     $telefono_user=$_POST['telefono_user'];
-    $ficha_asignada=$_POST['ficha_asignada'];
+    $ficha_asignada="";
+    foreach($_POST['ficha_asignada'] as $key => $value){
+        $ficha_asignada.=$value.",";
+    }
+    //$ficha_asignada=$_POST['ficha_asignada'];
     $password=$_POST['password'];
+    $ficha_asignada=substr($ficha_asignada,0,strlen($ficha_asignada)-1);
 
     if (strlen($id_user)>0 && strlen($nombres_user)>0 && strlen($apellidos_user)>0 && strlen($email_user)>0 && strlen($cargo_user)>0 && strlen($telefono_user)>0 && strlen($ficha_asignada)>0 && strlen($password)>0 ){
         $passmd=md5($password);
@@ -17,7 +22,7 @@
         $result=$objetoConsultas->insertUsers($id_user, $nombres_user, $apellidos_user, $email_user, $cargo_user, $telefono_user, $ficha_asignada, $passmd);
     }
     else{
-        echo "<script>alert('PORFAVOR COMPLETE TODOS LOS CAMPOS')</script>";
+        echo "<script>alert('POR FAVOR COMPLETE TODOS LOS CAMPOS')</script>";
         echo '<script>location.href="../views/registrar-user.php"</script>';
     }
 

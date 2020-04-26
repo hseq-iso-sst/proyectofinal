@@ -4,7 +4,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2020 a las 17:24:20
+-- Tiempo de generación: 26-04-2020 a las 21:41:03
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -57,8 +57,8 @@ CREATE TABLE `registro_usuario` (
   `apellidos_user` varchar(100) NOT NULL,
   `email_user` varchar(100) NOT NULL,
   `cargo_user` int(1) NOT NULL,
-  `telefono_user` int(15) NOT NULL,
-  `ficha_asignada` int(1) NOT NULL,
+  `telefono_user` varchar(15) NOT NULL,
+  `ficha_asignada` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -67,10 +67,13 @@ CREATE TABLE `registro_usuario` (
 --
 
 INSERT INTO `registro_usuario` (`id_user`, `nombres_user`, `apellidos_user`, `email_user`, `cargo_user`, `telefono_user`, `ficha_asignada`, `password`) VALUES
-(8, 'nm', 'prueba', 'p@gmail.com', 1, 9, 4, '202cb962ac59075b964b07152d234b70'),
-(145, 'prueba', 'FUQUEN', 'nj@sdka', 3, 321, 3, '202cb962ac59075b964b07152d234b70'),
-(1234, 'JASMIN', 'FUQUEN', 'j@gmail.com', 3, 123, 1, '123'),
-(1075685565, 'Jasmin Rocio', 'Fuquen Colmenares', 'jasminfuquen@gmail.com', 2, 2147483647, 2, '202cb962ac59075b964b07152d234b70');
+(678, 'fhjj', 'jjj', 'jjj@gmil.com', 1, '456789', '1,4', 'b3275960d68fda9d831facc0426c3bbc'),
+(8789, 'prueba', 'prueba', 'prueba@gmail.com', 2, '890', '1,4', '202cb962ac59075b964b07152d234b70'),
+(123456, '123456', '123456', '123123@mail.com', 2, '123345', '1,2,3,4', 'e10adc3949ba59abbe56e057f20f883e'),
+(20477775, 'janrth', 'colmenars', 'j@gmail.com', 2, '56789', '3', '202cb962ac59075b964b07152d234b70'),
+(123458765, 'pepito', '1', 'pepito@gmail.com', 2, '543', '1,4', '202cb962ac59075b964b07152d234b70'),
+(1075668168, 'Alex', 'Gomez', 'alexj2030@gmail.com', 2, '2147483647', '4', '202cb962ac59075b964b07152d234b70'),
+(1075685565, 'Jasmin Rocio', 'Fuquen Colmenares', 'jasminfuquen@gmail.com', 1, '2147483647', '1', 'e67c10a4c8fbfc0c400e047bb9a056a1');
 
 --
 -- Índices para tablas volcadas
@@ -87,18 +90,7 @@ ALTER TABLE `fichas`
 --
 ALTER TABLE `registro_usuario`
   ADD PRIMARY KEY (`id_user`),
-  ADD UNIQUE KEY `ficha_asignada` (`ficha_asignada`),
   ADD UNIQUE KEY `email_user` (`email_user`);
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `registro_usuario`
---
-ALTER TABLE `registro_usuario`
-  ADD CONSTRAINT `registro_usuario_ibfk_1` FOREIGN KEY (`ficha_asignada`) REFERENCES `fichas` (`ficha_asignada`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
