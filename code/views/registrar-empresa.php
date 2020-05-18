@@ -135,7 +135,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item d-none d-md-block">
                             <a class="nav-link" href="javascript:void(0)">
-                                <form>
+                                <form id= "form-buscar">
                                     <div class="customize-input">
                                         <input class="form-control custom-shadow custom-radius border-0 bg-white"
                                             type="search" placeholder="Buscar" aria-label="Search">
@@ -223,7 +223,7 @@
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                             <h2 id="heading">REGISTRE LA EMPRESA DESEADA</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
-                            <form id="msform">
+                            <form id="form-empresa" class="wizard">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
