@@ -17,13 +17,13 @@ p {
     font-weight: normal
 }
 
-.wizard {
+#msform {
     text-align: center;
     position: relative;
     margin-top: 20px
 }
 
-.wizard fieldset {
+#msform fieldset {
     background: white;
     border: 0 none;
     border-radius: 0.5rem;
@@ -38,12 +38,12 @@ p {
     text-align: left
 }
 
-.wizard fieldset:not(:first-of-type) {
+#msform fieldset:not(:first-of-type) {
     display: none
 }
 
-.wizard input,
-.wizard textarea {
+#msform input,
+#msform textarea {
     padding: 8px 15px 8px 15px;
     border: 1px solid rgba(228, 228, 228, 0.836);
     border-radius: 0px;
@@ -58,8 +58,8 @@ p {
     letter-spacing: 1px
 }
 
-.wizard input:focus,
-.wizard textarea:focus {
+#msform input:focus,
+#msform textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -67,7 +67,7 @@ p {
     outline-width: 0
 }
 
-.wizard .action-button {
+#msform .action-button {
     width: 100px;
     background: #1b2a47;
     font-weight: bold;
@@ -80,12 +80,12 @@ p {
     float: right
 }
 
-.wizard .action-button:hover,
-.wizard .action-button:focus {
+#msform .action-button:hover,
+#msform .action-button:focus {
     background-color: #1b2a47;
 }
 
-.wizard .action-button-previous {
+#msform .action-button-previous {
     width: 100px;
     background: #f86503;
     font-weight: bold;
@@ -98,8 +98,8 @@ p {
     float: right
 }
 
-.wizard .action-button-previous:hover,
-.wizard .action-button-previous:focus {
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
     background-color: #000000
 }
 
