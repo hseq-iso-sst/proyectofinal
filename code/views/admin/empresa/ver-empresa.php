@@ -7,15 +7,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
     <title>Listas de empresa</title>
     <!-- Custom CSS -->
-    <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
-    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <link href="../../../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,9 +54,9 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                        <a href="../index.php">
+                        <a href="../../../index.php">
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
+                            <img src="../../../assets/images/logov2.png" alt="homepage" class="dark-logo" />
                             <!--End Logo icon -->
                             <!-- Logo text -->
                         </a>
@@ -130,7 +130,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    <img src="../assets/images/users/perfil.PNG" alt="user" class="rounded-circle" width="40">
+                    <img src="../../../assets/images/users/perfil.PNG" alt="user" class="rounded-circle" width="40">
                     <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span class="text-dark">Jasmin
                             Fuquen</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
                 </a>
@@ -162,7 +162,7 @@
     <!-- ============================================================== -->
     <!-- Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
-    <?php include_once('../menu.php');?>
+    <?php include_once('../../../menu.php');?>
     <!-- ============================================================== -->
     <!-- End Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
@@ -229,7 +229,7 @@
                         <td>Ab Inbev</td>
                         <td>calidad@abinbev.co</td>
                         <td>82345734</td>
-                        <td class="icono"><a href="editar-empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
                         <td class="icono"><a href="">
                             <label class="interruptor">
                                <input type="checkbox">
@@ -244,7 +244,7 @@
                         <td>Alpina S.A</td>
                         <td>calidad@alpina.co</td>
                         <td>49823740</td>
-                        <td class="icono"><a href="editar-empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
                         <td class="icono"><a href="">
                             <label class="interruptor">
                                <input type="checkbox">
@@ -259,7 +259,7 @@
                         <td>Algarra S.A</td>
                         <td>calidad@algarra.co</td>
                         <td>45678688</td>
-                        <td class="icono"><a href="editar-empresa.html" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
                         <td class="icono"><a href="">
                             <label class="interruptor">
                                <input type="checkbox">
@@ -306,25 +306,25 @@
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
     </div>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <script src="../dist/js/app-style-switcher.js"></script>
-    <script src="../dist/js/feather.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="../../../dist/js/app-style-switcher.js"></script>
+    <script src="../../../dist/js/feather.min.js"></script>
+    <script src="../../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
+    <script src="../../../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
-    <script src="../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
 
 </body>
 

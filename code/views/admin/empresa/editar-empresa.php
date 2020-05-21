@@ -7,28 +7,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
     <title>Editar Empresa</title>
     <!-- Custom CSS -->
-    <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
-    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <link href="../../../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
     <!-- widzar -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="../widzar/style_wizard.css">
+    <link rel="stylesheet" href="../../../widzar/style_wizard.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <link rel="stylesheet" href="../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="../wizard/style_wizard.css">
+    <link rel="stylesheet" href="../../../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../../../wizard/style_wizard.css">
 </head>
 
 <body>
@@ -61,9 +61,9 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                            <a href="../index.php">
+                            <a href="../../../index.php">
                                 <!-- Dark Logo icon -->
-                                <img src="../assets/images/logov2.png" alt="homepage" class="dark-logo" />
+                                <img src="../../../assets/images/logov2.png" alt="homepage" class="dark-logo" />
                                 <!--End Logo icon -->
                                 <!-- Logo text -->
                             </a>
@@ -153,7 +153,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="../assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                <img src="../../../assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
                                     width="40">
                                 <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span
                                         class="text-dark">Jasmin
@@ -187,7 +187,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <?php include_once('../menu.php');?>
+        <?php include_once('../../../menu.php');?>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -205,7 +205,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
                                             href="editar-empresa.html" class="text-muted">Editar Empresa</a></li>
                                 </ol>
@@ -328,7 +328,7 @@
                                             <h2 class="purple-text text-center"><strong>¡EMPRESA ACTUALIZADA EXITOSAMENTE!</strong></h2> <br>
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
-                                                    <img src="../widzar/img/visto-bueno-png-2.png" class="fit-image">
+                                                    <img src="../../../widzar/img/visto-bueno-png-2.png" class="fit-image">
                                                 </div>
                                             </div>
                                             <br>
@@ -359,28 +359,28 @@
             <!-- ============================================================== -->
         </div>
     </div>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <script src="../dist/js/app-style-switcher.js"></script>
-    <script src="../dist/js/feather.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="../../../dist/js/app-style-switcher.js"></script>
+    <script src="../../../dist/js/feather.min.js"></script>
+    <script src="../../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
+    <script src="../../../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
-    <script src="../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
-    <script src="../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../wizard/prueba.js"></script>
+    <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="../../../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../../wizard/prueba.js"></script>
 </body>
 
 </html>
