@@ -51,7 +51,7 @@
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
-        <?php include_once('menu.php');?>
+        <?php include_once('menuins.php');?>
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
@@ -66,7 +66,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.php">Inicio</a>
+                                    <li class="breadcrumb-item"><a href="indexins.php">Inicio</a>
                                     </li>
                                 </ol>
                             </nav>

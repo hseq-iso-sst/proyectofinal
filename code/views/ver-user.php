@@ -1,3 +1,8 @@
+<?php
+require_once("../models/conexion.php");
+require_once("../models/consultasUsuario.php");
+require_once("../controllers/cargarUsuarios.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +18,7 @@
     <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style-hseq.css">
@@ -186,7 +192,7 @@
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
+             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
@@ -194,97 +200,59 @@
             <!-- ============================================================== -->
             <div class="container-fluid ver-empresas">
                 <div class="row">
-                    <h2 class="col-md-6">Lista Usuarios</h2>
+                    <h2 class="col-md-9">Lista Usuarios</h2>
                     <!-- Search -->
                     <!-- ============================================================== -->
-                    <form class="col-md-3 offset-md-3">
-                        <div class="customize-input ">
-                            <input class="form-control custom-shadow custom-radius border-0 bg-white" type="search" placeholder="Buscar" aria-label="Search">
-                        </div>
-                    </form>
-
+                    <div class="col-md-3">
+                        <form>
+                            <a href="#">
+                                <div class="customize-input">
+                                    <span>
+                                    <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                        type="search" placeholder="Buscar" aria-label="Search">
+                                </span>
+                                </div>
+                            </a>
+                        </form>
+                    </div>
                 </div>
                 <!-- ============================================================== -->
-                <table class="table table-bordered lista-empresas">
+              <?php
+                cargarU();
+              ?>
+              
+                <!-- <table id="verUsuarios" class="table table-bordered lista-empresas">
                     <thead>
-                        <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
                         <tr class="head_tabla encabezado">
                             <th>Identificación</th>
                             <th>Nombres</th>
+                            <th>Apellidos</th>
                             <th>Cargo</th>
-                            <th>Email</th>
-                            <th>Teléfono</th>
-                            <th>Editar</th>
-                            <th>Inactivar</th>
-                            
+                            <th>telefono</th>
+                            <td>Estado</td>
+                            <td>Editar</td>
+                            <td>Eliminar</td>
+                                    
                         </tr>
                     </thead>
                     <tbody>
-                        <?php 
-                            include_once('../controllers/UsersController.php');
-                            include_once('../models/usuario.php');
-                            $objUser=new UsuarioController();
-                            $usuarios=$objUser->ListarUsuarios();
-                            foreach($usuarios as $user) {
-
-                        ?>
-                        <tr>
-                            <td><?php echo $user->id; ?></td>
-                            <td><?php echo $user->getNombres(); ?></td>
-                            <td><?php echo $user->cargo; ?></td>
-                            <td><?php echo $user->email; ?></td>
-                            <td><?php echo $user->telefono; ?></td>
-                            <td class="icono"><a href="edit-user.php?id=<?php echo $user->id; ?>>" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <?php } ?>
-                        <!-- <tr>
-
-                            <td>1000089458</td>
-                            <td>Daniel Garzon</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>18274897443</td>
-                            <td>Lizeth Urrego</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>173434757363</td>
-                            <td>Jasmin Fuquen</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr> -->
+                    <tr>
+                        <td>12345678634</td>
+                        <td>Lizeth</td>
+                        <td>Urrego</td>
+                        <td>Administrador</td>
+                        <td>12467889</td>
+                        <td>Activo</td>
+                        <td class="icono"><a href="editar-user.php" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
                     </tbody>
-                </table>
+                </table> -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-end">
                         <li class="page-item">

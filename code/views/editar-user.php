@@ -1,3 +1,10 @@
+<?php
+require_once("../models/conexion.php");
+require_once("../models/consultasUsuario.php");
+require_once("../controllers/cargarUsuario.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -203,8 +210,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="registrar-user.php">Registrar Usuarios</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Editar Usuario</li>
                                 </ol>
                             </nav>
                         </div>
@@ -220,34 +226,38 @@
             <div class="container-fluid">
                 <div class="container">
                     <div class="row">
-                        <div
-                            class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
+                        <div class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
                             <div class="text-center custom-login">
-                                <h3>Registro de Usuario</h3>
+                                <h3>Editar de Usuario</h3>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                            <form action="../controllers/insertarUsuario.php" id="loginForm" method="POST" enctype="multipart/form-data">
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                            <div class="datos_user">
-                                                                <h5>DATOS DEL USUARIO</h5>
-                                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                                        <div class="datos_user">
+                                                            <h5>DATOS DEL USUARIO</h5>
                                                         </div>
                                                     </div>
+                                                </div>
+
+
+                                                <?php
+                                                     seleccionarUsuario();
+                                                ?>
+                                                <!-- <form action="../controllers/insertarUsuario.php" id="loginForm" method="POST">
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Identificación</label>
-                                                            <input type="number" class="form-control" name="id_user"
-                                                                id="id_user" placeholder="Ej: 1075685565" required>
+                                                            <input type="number" class="form-control" name="identificacion"
+                                                                id="identificacion" placeholder="Ej: 1075685565" required>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Nombres</label>
-                                                            <input type=" text" class="form-control" name="nombres_user"
-                                                                id="nombres_user" placeholder="Ej: Jasmin Rocio"
+                                                            <input type=" text" class="form-control" name="nombres"
+                                                                id="nombres" placeholder="Ej: Jasmin Rocio"
                                                                 required>
                                                         </div>
                                                     </div>
@@ -255,31 +265,31 @@
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Apellidos</label>
                                                             <input type=" text" class="form-control"
-                                                                name="apellidos_user" id="apellidos_user"
+                                                                name="apellidos" id="apellidos"
                                                                 placeholder="Ej: Fuquen Colmenares" required>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Email</label>
-                                                            <input type="email" class="form-control" name="email_user"
-                                                                id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
+                                                            <input type="email" class="form-control" name="email"
+                                                                id="email" placeholder="Ej: jasminfuquen@gmail.com"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Cargo</label>
-                                                            <select class=" form-control" name="cargo_user"
-                                                                id="cargo_user" required>
+                                                            <select class=" form-control" name="cargo"
+                                                                id="cargo" required>
                                                                 <option></option>
-                                                                <option value="Coordinador">Coordinador</option>
-                                                                <option value="Instructor">Instructor</option>
-                                                                <option value="Aprendiz">Aprendiz</option>
+                                                                <option value="coordinador">Coordinador</option>
+                                                                <option value="2">Instructor</option>
+                                                                <option value="3">Aprendiz</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Teléfono</label>
                                                             <input type=" number" class="form-control"
-                                                                name="telefono_user" id="telefono_user"
+                                                                name="telefono" id="telefono"
                                                                 placeholder="Ej: 3132834058" required>
                                                         </div>
                                                     </div>
@@ -287,36 +297,34 @@
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <div class="form-row">
                                                                 <div
-                                                                class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                                    class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                                                     <label>Fichas Asignadas</label>
-                                                                    <select class="selectpicker" name="ficha_user[]"
-                                                                        multiple required>
+                                                                    <select class="form-control" name="fichas_asignadas"
+                                                                         required>
                                                                         <option></option> 
-                                                                        <option value="1864320 (HSEQ)">1864320 (HSEQ)</option>
-                                                                        <option value="1984756 (HSEQ)">1984756 (HSEQ)</option>
-                                                                        <option value="1946573 (HSEQ)">1946573 (HSEQ)</option>
-                                                                        <option value="1949463 (HSEQ)">1949463 (HSEQ)</option>
-                                                                    </select> </div>
+                                                                        <option value="1">1864320 (HSEQ)</option>
+                                                                        <option value="2">1984756 (HSEQ)</option>
+                                                                        <option value="3">1946573 (HSEQ)</option>
+                                                                        <option value="4">1949463 (HSEQ)</option>
+                                                                    </select> 
+                                                                    
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Foto</label>
-                                                            <input type="file" class="form-control" name="img_user"
-                                                                id="img_user" placeholder="Inserte Imagen" required>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Password</label>
-                                                            <input type="password" class="form-control" name="password_user"
-                                                                id="password_user" placeholder="*******" required>
+                                                            <input type="password" class="form-control" name="pass"
+                                                                id="pass" placeholder="*******" required>
                                                         </div>
                                                     </div>
                                                     <div class="text-center">
                                                         <button type="submit"
-                                                            class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="registrar-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            class="btn btn-success loginbtn">Actualizar</button>
+                                                        <button class="btn btn-danger">Cancelar</button>
                                                     </div>
-                                                </div>
-                                            </form>
+                                               </form> -->
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <!-- footer -->
+                  <!-- footer -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <footer class="footer text-center text-muted">
