@@ -267,7 +267,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento</label>
-                                                    <select class="form-control" name="departamento" id="departamento"
+                                                    <select class="form-control" name="departamento_empresa" id="departamento_empresa"
                                                         required>
                                                         <option></option>
                                                         <option>Bogóta</option>
@@ -278,7 +278,7 @@
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Ciudad</label>
-                                                    <select class="form-control" name="ciudad" id="ciudad" required>
+                                                    <select class="form-control" name="ciudad_empresa" id="ciudad_empresa" required>
                                                         <option></option>
                                                         <option>Bogóta</option>
                                                         <option>Chía</option>
@@ -337,11 +337,11 @@
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Actividad Economica Secundaria</label>
-                                                    <input type="text" name="act_secundaria_2" required />
+                                                    <input type="text" name="act_secundaria" required />
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Codigo actividad Economica secundaria</label>
-                                                    <input type="text" name="co_act_secundaria_2" required />
+                                                    <input type="text" name="co_act_secundaria" required />
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -416,7 +416,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento de la sede</label>
-                                                    <select class="form-control" name="departamento_Sede"
+                                                    <select class="form-control" name="departamento_sede"
                                                         id="departamento_Sede"required>
                                                         <option></option>
                                                         <option>Cundinamarca</option>
