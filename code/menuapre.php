@@ -20,11 +20,11 @@
                                 aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
                                     class="hide-menu">Empresas</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/registrar-empresa.php"
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/empresa/registrar-empresa.php"
                                         class="sidebar-link"><span class="hide-menu">Registrar empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/ver-empresa.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/empresa/ver-empresa.php" class="sidebar-link"><span
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>

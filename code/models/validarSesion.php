@@ -30,7 +30,7 @@ class validarSesion{
                      }
                      if($f['cargo_user']=="Instructor"){
                         echo "<script>alert('Bienvenido INSTRUCTOR')</script>";
-                        echo '<script>location.href="../indexins,php"</script>';
+                        echo '<script>location.href="../indexins.php"</script>';
                      }
                      if($f['cargo_user']=="Aprendiz"){
                         echo "<script>alert('Bienvenido APRENDIZ')</script>";
