@@ -56,8 +56,20 @@ class validarSesion{
             }
         }
         
-    }
-
+        public function cerrarSesion(){
+        $modelo= new conexion();
+        $conexion= $modelo->get_conexion();
     
+        session_start();
+        session_destroy();
+    
+        echo "<script>alert('Sesión Cerrada Correctamente')</script>";
+        echo '<script>location.href="../views/login.php"</script>';
+    }
+        
+    }
+    
+    
+ 
 
 ?>
