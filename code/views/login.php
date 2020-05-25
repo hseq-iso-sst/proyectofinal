@@ -62,12 +62,12 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="text-dark" for="password_user">Clave</label>
-                                        <input class="form-control" id="password_user" type="password_user" name="password_user"
-                                            placeholder="Ingrese su clave">
+                                        <input class="form-control" id="password_user"  type="password" name="password_user"
+                                            placeholder="***********">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center">
-                                <button>Iniciar Sesiòn</button>
+                                <button>Iniciar Sesión</button>
                                     <!-- <a href="#" type="submit" class="btn btn-block btn-dark">Iniciar Sesiòn</a> -->
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
