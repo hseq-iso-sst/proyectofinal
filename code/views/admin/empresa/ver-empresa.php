@@ -43,7 +43,8 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-            <nav class="navbar top-navbar navbar-expand-md">
+        <?php include_once('../../../nav.php');?>
+            <!-- <nav class="navbar top-navbar navbar-expand-md"> -->
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- This is for the sidebar toggle which is visible on mobile only -->
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
@@ -144,7 +145,7 @@
                             class="svg-icon mr-2 ml-1"></i>
                         Configuración de Cuenta</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./views/login.html"><i data-feather="power"
+                    <a class="dropdown-item" href=".,/views/login."><i data-feather="power"
                             class="svg-icon mr-2 ml-1"></i>
                         Cerrar Sesión</a>
                 </div>
