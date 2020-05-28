@@ -7,9 +7,7 @@ function cargarU(){
 
     if(!isset($result)) {
     echo '<h2>No hay usuarios Registrados</h2>';
-}
-
-else{
+    }else{
     echo'
     <table id="verUsuarios" class="table table-bordered lista-empresas">
     <thead>
@@ -44,8 +42,9 @@ else{
     }
     echo '</tbody> </table>';
 
+    }
 }
-}
+
     
 
 

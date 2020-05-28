@@ -143,46 +143,6 @@
                                 </a></td>
                         </tr>
                         <?php } ?>
-                        <!-- <tr>
-
-                            <td>1000089458</td>
-                            <td>Daniel Garzon</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>18274897443</td>
-                            <td>Lizeth Urrego</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr>
-                        <tr>
-                            <td>173434757363</td>
-                            <td>Jasmin Fuquen</td>
-                            <td>UX</td>
-                            <td>Desarrollador Front</td>
-                            <td class="icono"><a href="edit-user.html" class="fas fa-edit"></a></td>
-                            <td class="icono"><a href="">
-                                    <label class="interruptor">
-                                        <input type="checkbox">
-                                        <span class="deslizadora"></span>
-                                    </label>
-                                </a></td>
-                        </tr> -->
                     </tbody>
                 </table>
                 <nav aria-label="Page navigation example">
