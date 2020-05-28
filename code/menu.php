@@ -49,9 +49,11 @@
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
                                     class="hide-menu">Certificados</span></a>
                                 </li>
+                               
 
                             </ul>
                         </li>
+                       
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
