@@ -50,24 +50,25 @@
                         </div>
                         <h2 class="mt-3 text-center">Iniciar Sesion</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
-                        <form class="mt-4">
+                        <form class="mt-4" action="../controllers/iniciarSesion.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="uname">Usuario</label>
-                                        <input class="form-control" id="uname" type="text"
-                                            placeholder="Ingrese cu correo">
+                                        <label class="text-dark" for="uname" >E-mail</label>
+                                        <input class="form-control" id="email_user"  name="email_user" type="text"
+                                            placeholder="Ingrese su correo">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="pwd">Clave</label>
-                                        <input class="form-control" id="pwd" type="password"
-                                            placeholder="Ingrese su clave">
+                                        <label class="text-dark" for="password_user">Clave</label>
+                                        <input class="form-control" id="password_user"  type="password" name="password_user"
+                                            placeholder="***********">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center">
-                                    <a href="../index.html" type="submit" class="btn btn-block btn-dark">Iniciar Sesiòn</a>
+                                <button>Iniciar Sesión</button>
+                                    <!-- <a href="#" type="submit" class="btn btn-block btn-dark">Iniciar Sesiòn</a> -->
                                 </div>
                                 <div class="col-lg-12 text-center mt-5">
                                       <a href="#" class="text-danger">¿Olvidaste tu cuenta o contraseña?</a>
