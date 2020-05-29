@@ -42,6 +42,25 @@ class consultaFichas{
                 }
             }
         }
+        //////////////////////consulta////////////////////////////
+        public function cargarFicha(){
+            $f=null;
+         
+             $modelo = new Conexion();
+             $conexion = $modelo->get_conexion();
+         
+             $sql= "SELECT * FROM ficha";
+             $statement = $conexion->prepare($sql);
+             $statement->execute();
+         
+             while($result = $statement->fetch()){
+                $f[] = $result;
+            }
+            return $f;
+         }
+
+        
+        /////////////////////fin de la consulta///////////////////////////
 }
 
 ?>

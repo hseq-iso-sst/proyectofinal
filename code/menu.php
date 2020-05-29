@@ -24,7 +24,7 @@
                                             class="hide-menu"> Fichas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/ficha/verFicha.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/listarFichas.php" class="sidebar-link"><span
                                             class="hide-menu"> Listar Fichas
                                         </span></a>
                                 </li>
