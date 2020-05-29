@@ -156,4 +156,18 @@ class EmpresaModel
         }
         return $id;
     }
+    public function cargarEmpresas(){
+        $f=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        $sql ="SELECT * FROM empresa";
+        $statement=$conexion->prepare($sql);
+        $statement->execute();
+   
+        while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+     
+    }
 }

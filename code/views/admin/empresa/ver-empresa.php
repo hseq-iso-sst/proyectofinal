@@ -1,3 +1,9 @@
+<?php
+require_once("../../../models/conexion.php");
+require_once("../../../models/admin/empresa/EmpresaModel.php");
+require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,34 +97,8 @@
              </div>
 
             <!-- ============================================================== -->
-            <table class="table table-bordered lista-empresas">
-                <thead>
-                    <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
-                    <tr class="head_tabla encabezado">
-                        <th>Identificación</th>
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Teléfono</th>
-                        <th class="icono">Editar</th>
-                        <th class="icono">Desactivar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>12345678634</td>
-                        <td>Ab Inbev</td>
-                        <td>calidad@abinbev.co</td>
-                        <td>82345734</td>
-                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
-                        <td class="icono"><a href="">
-                            <label class="interruptor">
-                               <input type="checkbox">
-                                <span class="deslizadora"></span>
-                             </label>
-                        </a></td>
-                    </tr>
-                </tbody>
-              </table>
+            <?php cargarEmpresa();
+            ?>
         </div>
         <!-- ============================================================== -->
         <!-- End Container fluid  -->
