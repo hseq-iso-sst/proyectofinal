@@ -18,7 +18,6 @@ function cargarEmpresa(){
             <th>Nombre</th>
             <th>Correo</th>
             <th class="icono">Editar</th>
-            <th class="icono">Desactivar</th>
         </tr>
     </thead>
     <tbody>

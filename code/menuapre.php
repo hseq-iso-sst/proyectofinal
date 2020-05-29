@@ -20,11 +20,11 @@
                                 aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
                                     class="hide-menu">Empresas</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/empresa/registrar-empresa.php"
+                                <li class="sidebar-item"><a href="<?php echo constant('URL_V_ADMIN_EMPRESA');?>registrar-empresa.php"
                                         class="sidebar-link"><span class="hide-menu">Registrar empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/empresa/ver-empresa.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL_V_ADMIN_EMPRESA');?>ver-empresa.php" class="sidebar-link"><span
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
@@ -36,6 +36,20 @@
                                     class="hide-menu">Certificados</span></a>
                                 </li>
 
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
+                                    class="hide-menu">Auditorias</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/index.php"
+                                        class="sidebar-link"><span class="hide-menu">Registrar Auditorias
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/ListarAuditoria.php" class="sidebar-link"><span
+                                            class="hide-menu">Lista Auditorias
+                                        </span></a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
