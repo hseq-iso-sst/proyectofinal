@@ -58,9 +58,53 @@ class consultaFichas{
             }
             return $f;
          }
-
-        
         /////////////////////fin de la consulta///////////////////////////
+                
+/////////////////////fin de la consulta///////////////////////////
+/////////////////////actualizar de la ficha///////////////////////////
+public function cargarFichas($doc){
+    $f=null;
+
+    $modelo = new Conexion();
+    $conexion = $modelo->get_conexion();
+
+    $sql= "SELECT * FROM ficha WHERE id_ficha = :id_ficha";
+    $statement = $conexion->prepare($sql);
+    $statement->bindParam(":id_ficha", $doc);
+    $statement->execute();
+
+    while($result = $statement->fetch()){
+        $f[] = $result;
+    }
+    return $f;
+}
+
+public function modificarFicha($id_ficha, $nombre_ficha, $fecha_inicio, $fecha_fin){
+    $modelo = new Conexion();
+    $conexion = $modelo->get_conexion();
+
+    $sql = "UPDATE ficha SET id_ficha=:id_ficha, nombre_ficha=:nombre_ficha, fecha_inicio=:fecha_inicio, fecha_fin=:fecha_fin WHERE id_ficha=:id_ficha";
+    
+    $statement = $conexion->prepare($sql);
+   
+    $statement->bindParam(':id_ficha',$id_ficha);
+    $statement->bindParam(':nombre_ficha',$nombre_ficha);
+    $statement->bindParam(':fecha_inicio',$fecha_inicio);
+    $statement->bindParam(':fecha_fin',$fecha_fin);
+   
+
+    if (!$statement) {
+        return "Error al Actualizar Ficha";
+    }
+    else{
+        $statement->execute();
+        echo "<script>alert('Ficha Actualizada Correctamente')</script>";
+        echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
+    }
+
+}
+
+/////////////////////actualizar de la ficha///////////////////////////
 }
 
 ?>
