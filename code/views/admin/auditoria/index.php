@@ -1,3 +1,10 @@
+<?php 
+    require_once('../../../models/conexion.php');
+    include_once('../../../models/ConsultarDatos.php');
+    $datos=new ConsultarDatos();
+    $empresas=$datos->consultar_empresas();
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -202,9 +209,9 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../index.php" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="registrar-user.php">Registrar Auditoria</a></li>
+                                            href="#">Registrar Auditoria</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -230,54 +237,54 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                        <form action="<?php echo constant('URL_C_ADMIN'); ?>auditoria/auditoria.php" method="POST">
+                                        <form action="../../../controllers/admin/auditoria/insertarAuditoria.php" method="POST">
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
                                                             <div class="datos_user">
-                                                                <h5>DATOS DEL LA AUDITORIA</h5>
+                                                                <h5>DATOS DE LA AUDITORIA</h5>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Identificación de la auditoria</label>
-                                                            <input type="number" class="form-control" name="id_auditoria"
-                                                                id="id_auditoria" placeholder="Ej: 1075685565" required>
+                                                            <label>Identificacion Empresa</label>
+                                                            <select class="selectpicker" name="id_empresa" id="id_empresa"
+                                                                         required>
+                                                                        <option value="">--Seleccione--</option> 
+                                                                            <?php 
+                                                                                foreach($empresas as $item){
+                                                                                    echo '<option value="'.$item['id_empresa'].'">'.$item['nombre_empresa'].'</option>';
+                                                                                }
+                                                                            ?>
+
+                                                                    </select> 
                                                         </div>
+                                                        <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                        <label>Status </label>
+                                                            <select class="selectpicker" name="status" id="status"
+                                                                         required>
+                                                                        <option >--Seleccione--</option>
+                                                                        <option >Proceso</option>
+                                                                        <option >Finalizado</option>  
+                                                                            
+
+                                                                    </select> 
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Puntaje</label>
-                                                            <input type="number" class="form-control" name="puntaje"
-                                                                id="puntaje" placeholder="Ej: 05"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <div class="form-row">
-                                                                <div
-                                                                class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
-                                                                    <label>Identificacion Empresa</label>
-                                                                    <select class="selectpicker" name="id_empresa" id="id_empresa"
-                                                                        multiple required>
-                                                                        <option></option> 
-                                                                        <option value="BD">Empresa Traida de BD</option>
-                                                                        <option value="BD2">Empresa Traida de BD 2</option>
-                                                                        <option value="BD3">Empresa Traida de BD 3</option>
-                                                                        <option value="BD4">Empresa Traida de BD 4</option>
-                                                                    </select> </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Status</label>
-                                                            <input type="text" class="form-control" name="status"
-                                                                id="status" placeholder="1" required>
+                                                            <input type="text" class="form-control" name="puntaje" readonly="readonly"
+                                                                id="puntaje" placeholder=" " required>
                                                         </div>
                                                     </div>
                                                     <div class="text-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="registrar-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                     </div>
                                                 </div>
                                             </form>
