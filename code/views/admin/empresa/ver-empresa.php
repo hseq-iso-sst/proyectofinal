@@ -71,7 +71,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
                                 <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
-                                <li class="breadcrumb-item text-muted active" aria-current="page">Empresas</li>
+                                <li class="breadcrumb-item text-muted active" aria-current="page"><a href="ver-empresa.php">Empresas</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -109,36 +109,6 @@
                         <td>Ab Inbev</td>
                         <td>calidad@abinbev.co</td>
                         <td>82345734</td>
-                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
-                        <td class="icono"><a href="">
-                            <label class="interruptor">
-                               <input type="checkbox">
-                                <span class="deslizadora"></span>
-                             </label>
-                        </a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>1075668134</td>
-                        <td>Alpina S.A</td>
-                        <td>calidad@alpina.co</td>
-                        <td>49823740</td>
-                        <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
-                        <td class="icono"><a href="">
-                            <label class="interruptor">
-                               <input type="checkbox">
-                                <span class="deslizadora"></span>
-                             </label>
-                        </a></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>107068973</td>
-                        <td>Algarra S.A</td>
-                        <td>calidad@algarra.co</td>
-                        <td>45678688</td>
                         <td class="icono"><a href="editar-empresa.php" class="fas fa-edit"></a></td>
                         <td class="icono"><a href="">
                             <label class="interruptor">
