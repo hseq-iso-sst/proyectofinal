@@ -28,7 +28,7 @@
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/visitas.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/visitas.php" class="sidebar-link"><span
                                             class="hide-menu">Visitas
                                         </span></a>
                                 </li>
