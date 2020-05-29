@@ -133,7 +133,26 @@ class Consultas{
     }
 
   }
+// ++++++++++++llamodo de los datos para inicio de sesion+++++++
+//   public function validarperfil($email_user){
+//       $resultado= null;
+//       $modelo = new Conexion();
+//     $conexion = $modelo->get_conexion();
 
+//     $sql="SELECT * FROM usuario WHERE email_user=:email_user";
+//         $result=$conexion->prepare($sql);
+//         $result->bindParam(":email_user",$email_user);
+//         $result->execute();
+
+//         while($f=$result->fetch()){
+//             $resultado[]=$f;
+//             return $resultado;
+
+
+//         }
+
+//   }
+// ++++++++++++fin llamodo de los datos para inicio de sesion+++++++
 }
 
 ?>

@@ -101,7 +101,7 @@
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
                                 Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda..
                             </p>
-                            <a href="views/visitas.html">
+                            <a href="views/visitas.php">
                                 <h3>Seguridad </h3>
                             </a>
                         </div>

@@ -17,6 +17,20 @@
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
+                                    data-feather="cloud" class="feather-icon"></i><span
+                                    class="hide-menu">Fichas</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/regFicha.php" class="sidebar-link"><span
+                                            class="hide-menu"> Fichas
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/listarFichas.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Fichas
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
                                     data-feather="users" class="feather-icon"></i><span
                                     class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -49,9 +63,11 @@
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
                                     class="hide-menu">Certificados</span></a>
                                 </li>
+                               
 
                             </ul>
                         </li>
+                       
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

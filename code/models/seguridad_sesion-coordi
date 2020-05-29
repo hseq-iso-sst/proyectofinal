@@ -12,12 +12,4 @@ if ($_SESSION['cargo_user']!='Coordinador'){
     echo '<script>location.href="../views/login.php"</script>';
 }
 
-if ($_SESSION['cargo_user']!='Instructor'){
-    echo "<script>alert('Notiene permiso para acceder')</script>";
-    echo '<script>location.href="../views/login.php"</script>';
-}
-if ($_SESSION['cargo_user']!='Aprendiz'){
-    echo "<script>alert('Notiene permiso para acceder')</script>";
-    echo '<script>location.href="../views/login.php"</script>';
-}
 ?>

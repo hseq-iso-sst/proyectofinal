@@ -5,7 +5,6 @@
             $password_user="";
             $host="localhost";
             $db="hseq";
-
             $conexion= new PDO("mysql:host=$host; dbname=$db;", $email_user, $password_user);
             return $conexion;
         }

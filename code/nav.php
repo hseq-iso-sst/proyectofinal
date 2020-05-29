@@ -121,7 +121,7 @@
                                         class="svg-icon mr-2 ml-1"></i>
                                     Configuración de Cuenta</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<?php echo constant('URL');?>./controllers/cerrarSesion.php"><i data-feather="power"
+                                <a class="dropdown-item" href="<?php echo constant('URL');?>./views/login.php"><i data-feather="power"
                                         class="svg-icon mr-2 ml-1"></i>
                                     Cerrar Sesión</a>
                             </div>

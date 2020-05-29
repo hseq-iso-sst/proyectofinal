@@ -1,3 +1,12 @@
+<?php 
+    require_once('../../../models/conexion.php');
+    include_once('../../../models/ConsultarDatos.php');
+    $datos=new ConsultarDatos();
+    $departamentos=$datos->get_departamentos();
+    $ciudades=$datos->get_ciudades();
+    $actividades=$datos->get_actividades_economicas();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,7 +103,7 @@
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                             <h2 id="heading">REGISTRE LA EMPRESA DESEADA</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
-                            <form id="msform">
+                            <form id="msform" action="../../../controllers/admin/empresa/insertar-empresa.php" method="POST" class="wizard">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
@@ -118,8 +127,8 @@
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Tipo de Documento</label>
-                                                    <select class="form-control" name="tipo_identificacion"
-                                                        id="tipo_identificacion"required>
+                                                    <select class="form-control" name="tipo_documento"
+                                                        id="tipo_documento"required>
                                                         <option></option>
                                                         <option>NIT</option>
                                                         <option>C.C</option>
@@ -140,20 +149,33 @@
                                                     <label class="fieldlabels">Departamento</label>
                                                     <select class="form-control" name="departamento_empresa" id="departamento_empresa"
                                                         required>
-                                                        <option></option>
-                                                        <option>Bogóta</option>
-                                                        <option>Cundinamarca</option>
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($departamentos as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Ciudad</label>
+<<<<<<< HEAD
                                                     <select class="form-control" name="ciudad_empresa" id="ciudad_empresa" required>
                                                         <option></option>
                                                         <option>Bogóta</option>
                                                         <option>Chía</option>
                                                         <option>Zipaquirá</option>
+=======
+                                                    <select class="form-control" name="ciudad" id="ciudad" required>
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($ciudades as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
+>>>>>>> fd86cbc2327111eca36945b198af5d5beeab667e
                                                     </select>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -174,7 +196,7 @@
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Sucursal</label>
-                                                    <select class="form-control" name="sucursal" id="sucursal" required>
+                                                    <select class="form-control" name="sucursal" id="sucursal">
                                                         <option></option>
                                                         <option>Si</option>
                                                         <option>No</option>
@@ -182,7 +204,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">N° Sucursales</label>
-                                                    <input type="number" name="nro_sucursal" required />
+                                                    <input type="number" name="nro_sucursal"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,8 +218,9 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 form-group">
                                                     <label class="fieldlabels">Actividad Economica principal</label>
+<<<<<<< HEAD
                                                     <input type="text" name="act_principal" required />
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -213,6 +236,29 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Codigo actividad Economica secundaria</label>
                                                     <input type="text" name="co_act_secundaria" required />
+=======
+                                                    <select class="form-control" name="id_actividad" id="id_actividad" required>
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($actividades as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
+                                                    </select>
+
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Actividad Economica secundaria</label>
+                                                    <select class="form-control" name="id_actividad_2" id="id_actividad_2">
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($actividades as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
+                                                    </select>
+
+>>>>>>> fd86cbc2327111eca36945b198af5d5beeab667e
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -240,11 +286,11 @@
                                                     <label class="fieldlabels">Nivel de riesgo de la empresa</label>
                                                     <select class="form-control" name="riesgo_empresa" id="riesgo_empresa" required>
                                                         <option></option>
-                                                        <option>I (Riesgo mínimo)</option>
-                                                        <option>II (Riesgo bajo)</option>
-                                                        <option>III (Riesgo medio)</option>
-                                                        <option>IV (Riesgo alto)</option>
-                                                        <option>V (Riesgo máximo)</option>
+                                                        <option value="I (Riesgo mínimo)" >I (Riesgo mínimo)</option>
+                                                        <option value="II (Riesgo bajo)">II (Riesgo bajo)</option>
+                                                        <option value="III (Riesgo medio)">III (Riesgo medio)</option>
+                                                        <option value="IV (Riesgo alto)">IV (Riesgo alto)</option>
+                                                        <option value="V (Riesgo máximo)">V (Riesgo máximo)</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -267,13 +313,13 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Número de trabajadores indendientes afiliados a la empresa</label>
+                                                    <label class="fieldlabels">Número de trabajadores indendientes</label>
                                                     <input type="number" name="nro_trabajadores_independientes" required />
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">La empresa tiene una o más sedes</label>
                                                     <select class="form-control" name="sedes"
-                                                        id="sedes"required>
+                                                        id="sedes" required>
                                                         <option></option>
                                                         <option>Si</option>
                                                         <option>No</option>
@@ -283,15 +329,26 @@
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">¿Cuantas sedes tiene?</label>
-                                                    <input type="number" name="nro_sedes" required />
+                                                    <input type="number" name="nro_sedes"/>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento de la sede</label>
+<<<<<<< HEAD
                                                     <select class="form-control" name="departamento_sede"
                                                         id="departamento_Sede"required>
                                                         <option></option>
                                                         <option>Cundinamarca</option>
                                                         <option>Bogotá</option>
+=======
+                                                    <select class="form-control" name="departamento_Sede"
+                                                        id="departamento_Sede">
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($departamentos as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
+>>>>>>> fd86cbc2327111eca36945b198af5d5beeab667e
                                                     </select>
                                                 </div>
                                             </div>
@@ -299,11 +356,13 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Ciudad de la sede</label>
                                                     <select class="form-control" name="ciudad_sede"
-                                                        id="ciudad_sede"required>
-                                                        <option></option>
-                                                        <option>Chía</option>
-                                                        <option>Bogotá</option>
-                                                        <option>Zipaquirá</option>
+                                                        id="ciudad_sede">
+                                                        <option selected value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($ciudades as $item){
+                                                                echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
                                                     </select>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -312,7 +371,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" name="next" class="next action-button" value="Next"> Siguiente</button>
+                                        <button type="submit" name="save" class="next action-button" value="save"> Finalizar</button>
                                         <button type="submit" name="previous" class="previous action-button-previous"
                                         value="Previous"> Anterior</button>
                                     </fieldset>
@@ -371,6 +430,7 @@
     <script src="../../../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../../../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../../../wizard/prueba.js"></script>
+    <script src="../../../dist/js/admin.empresa.js"></script>
 </body>
 
 </html>
