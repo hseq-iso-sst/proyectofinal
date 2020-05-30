@@ -91,4 +91,14 @@ class ConsultarDatos
         
         return $contactos;
     }
+    function get_requisito($id_requisito)
+    {
+        $conexion = $this->db->get_conexion();
+        $sql = "SELECT id_requisito,nombre_requisito FROM requisito WHERE status_requisto=1";
+        $result = $conexion->prepare($sql);
+        $result->execute();
+        $requisitos = $result->fetchAll();
+        return $requisitos;
+    }
 }
+?>

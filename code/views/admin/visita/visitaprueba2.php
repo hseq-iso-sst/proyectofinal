@@ -1,9 +1,3 @@
-<?php 
-    require_once('../../../models/conexion.php');
-    require_once('../../../models/admin/visita/consultasRequisitos.php');
-    require_once('../../../controllers/admin/visita/cargarRequisitos.php');
-    $id_visita=$_GET['id_visita'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,9 +60,9 @@
                 <div class="row justify-content-center body-empresa shadow">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <h2 id="heading">VISITA N°<?php echo $id_visita;?></h2>
+                            <h2 id="heading">VISITA N°<?php echo $id_visita=$_GET['id_visita'];?></h2> 
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
-                            <form  action="../../../controllers/admin/visita/insertarEvaluacion.php" method="POST" id="msform">
+                            <form id="msform">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
@@ -88,19 +82,111 @@
                                                 <div class="card-body">
                                                     <h4 class="card-title">CRITERIOS DE EVALUACIÓN DEL SISTEMA DE GESTION EN SEGURIDAD Y SALUD EN EL TRABAJO - PYMES</h4>
                                                     <h6>Escriba el valor correspondiente en la columna "criterios de calificación" de acuerdo con el grado de desarrollo de la empresa en el ítem a calificar teniendo en cuenta los siguientes rangos: SI Cumple completamente con el criterio enunciado o No Aplica (1 punto),  Si No Cumple comple completamente o o No cumple (NC) con el criterio enunciado (0 puntos)</h6>
-                                                    <input type="hidden" name="id_visita" value="<?php echo $id_visita;?>">
                                                 </div>
                                                 <div class="table-responsive">
                                                     <table class="table table-bordered">
-                                                    <?php
-                                                        cargarRequi();
-                                                    ?>
+                                                        <thead >
+                                                            <tr>
+                                                                <th rowspan="2"></th>
+                                                                <th colspan="4">CRITERIOS DE EVALUACION </td>
+                                                                <th colspan="2">Si es COMPLETO o NA = 1 o Si es INCOMPLETO/ o NC = 0</th>
+                                                                
+                                                            </thead>
+                                                            <thead >
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <td>Fecha Evaluación Inicial</td>
+                                                                    <td><input id="date" type="date"></td>
+                                                                    <td>Fecha al final del periodo</td>
+                                                                    <td><input id="date" type="date"></td>
+                                                                    <td>Evaluación Inicial</td>
+                                                                    <td>Evaluación al final del periodo </td>
+                                                                    
+                                                                   
+                                                                </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td colspan="4">Tiene definida una Política del SG-SST y esta alineada con la metas objetivos e indicadores de gestión; fue diseñada de manera participativa con los trabajadores. Evidencie registros.</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                    </select>
+                                                                </td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                        </select>
+                                                                    </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">2</th>
+                                                                        <td colspan="4">La empresa cuenta con un Sistema de Gestión de la Seguridad y Salud en el Trabajo (SG-SST) según lo definido en la Ley 1562 del 2012 y especifico según el decreto 1443 de 2014 </td>
+                                                                        <td> <select class="">
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option></td>
+                                                                        <td> <select class="">
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">3</th>
+                                                                    <td colspan="4">La empresa dispone del Reglamento de Higiene y Seguridad y cuenta con los Procedimientos para Tareas de Alto Riesgo (TAR) que requiera (ejemplos: Reglamentos legales y técnicos; Reglamento Técnico Eléctrico - RETIE, Trabajo en Alturas, entre otros o que le aplique al sector económico) </td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">4</th>
+                                                                    <td colspan="4">Otro reglamento técnico que le aplique a la empresa, escríbalo.</td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">5</th>
+                                                                        <td colspan="4">¿Existe evidencia que en la empresa funcione el Comité de Convivencia y el  Comité Paritario de Seguridad y Salud en el Trabajo (antes COPASO), o si la empresa tiene menos de 10 trabajadores exista el Vigía SST, se encuentra capacitado en SG-SST?</td>
+                                                                        <td> <select class="">
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option></td>
+                                                                        <td> <select class="">
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">6</th>
+                                                                    <td colspan="4">La empresa cuenta con Brigadas de Emergencia (Primeros Auxilios) e incluye a los contratistas</td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                    <th scope="row">7</th>
+                                                                    <td colspan="4">Dispone de Procedimientos Operativos Normalizados (PON´s)  para asegurar la continuidad de los procesos de la organización, incluye a los contratistas y partes interesadas</td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                    <td> <select class="">
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option></td>
+                                                                  </tr>
+                                                        </tbody>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit"
-                                                            class="btn btn-success loginbtn">Registrar</button>
+                                        
                                         <input type="button" name="next" class="next action-button" value="Siguiente" />
                                     </fieldset>
                                     <fieldset>
