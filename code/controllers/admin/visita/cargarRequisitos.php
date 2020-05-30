@@ -1,5 +1,5 @@
 <?php
-
+    $n= 0;
 function cargarRequi(){
 
     $consultas =new consultas();
@@ -45,9 +45,9 @@ function cargarRequi(){
                                                              
                                                             </tr>
                                                                 '
-                                                                ;                                                                                    
+                                                              ;                                                                             
     echo '</tbody>';
-
+                                                                                                                                                   
     }
 }
 

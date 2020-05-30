@@ -6,13 +6,13 @@ class Consultas{
             $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         
-                $sql ="INSERT INTO evaluacion_visita (id_visita, id_requisito, evaluacion, comentario) VALUES (:id_visita, :id_requisito, :evaluacion, :comentario)";
+                $sql ="INSERT INTO evaluacion_visita (id_visita, id_requisito, evaluacion, comentario) VALUES (:id_visita, :id_requisito, :'.$f["id_requisito"].', :comentario)";
                 
                 $statement = $conexion->prepare($sql);
             
                 $statement->bindParam(':id_visita',$id_visita);
                 $statement->bindParam(':id_requisito',$f);
-                $statement->bindParam(':evaluacion',$evaluacion);
+                $statement->bindParam(':'.$f["id_requisito"].'',$evaluacion);
                 $statement->bindParam(':comentario',$comentario);
             
                 if (!$statement) {

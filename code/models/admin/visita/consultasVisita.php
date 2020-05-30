@@ -16,14 +16,14 @@ class Consultas{
             echo "<script>alert('Múmero de auditoría inválido')</script>";
             echo '<script>location.href="../../../views/admin/visita/visitas.php"</script>';
         }else{
-        //     $modelo = new Conexion();
-        //     $conexion = $modelo->get_conexion();
-        //     $sql ="SELECT * FROM usuario WHERE id_user!=:id_usuario";
-        //     $result = $conexion->prepare($sql);
-        //     $result->bindParam(':id_usuario',$id_usuario);
+            // $modelo = new Conexion();
+            // $conexion = $modelo->get_conexion();
+            // $sql ="SELECT * FROM usuario WHERE id_user!=:id_usuario";
+            // $result = $conexion->prepare($sql);
+            // $result->bindParam(':id_usuario',$id_user);
 
-        //     $result ->execute();
-        //     $s = $result->fetch();
+            // $result ->execute();
+            // $s = $result->fetch();
 
         // if($s){
         //     echo "<script>alert('Usuario no válido')</script>";
@@ -67,7 +67,6 @@ class Consultas{
 
         }  
         }
-
-}
+    }
 }
 ?>

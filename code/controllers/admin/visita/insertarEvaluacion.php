@@ -6,7 +6,7 @@ require_once('../../../models/admin/visita/consultasRequisitos.php');
 
 $id_visita=$_POST['id_visita'];
 $id_requisito=$_POST['id_requisito'];
-$evaluacion=$_POST['evaluacion'];
+$evaluacion=$_POST[''.$f["id_requisito"].''];
 $comentario=$_POST['comentario'];
 
 if (strlen($id_visita)>0 && strlen($id_requisito)>0 && strlen($evaluacion) >0){
