@@ -118,5 +118,22 @@ class ConsultarDatos
         $requisitos = $result->fetchAll();
         return $requisitos;
     }
+    public function cargarFicha(){
+        $f=null;
+     
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion();
+     
+         $sql= "SELECT * FROM ficha";
+         $statement = $conexion->prepare($sql);
+         $statement->execute();
+     
+         while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+     }
+    
 }
+
 ?>
