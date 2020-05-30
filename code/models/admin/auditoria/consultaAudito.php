@@ -105,28 +105,28 @@ public function modificarAuditorias($status){
 }
 
 /////////////////////actualizar de la ficha///////////////////////////
-/////////////////////eliminar de la ficha///////////////////////////
-public function eliminarFicha($idEliminar){
+/////////////////////eliminar de la auditria///////////////////////////
+public function eliminarAuditoria($idEliminar){
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
   
-    $sql= "DELETE FROM ficha WHERE id_ficha=:id_ficha";
+    $sql= "DELETE FROM auditoria WHERE id_auditoria=:id_auditoria";
     $statement = $conexion->prepare($sql);
-    $statement->bindParam(":id_ficha", $idEliminar);
+    $statement->bindParam(":id_auditoria", $idEliminar);
   
     if(!$statement){
         echo "<script>alert('ERROR AL ELIMINAR')</script>";
-        echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
+        echo '<script>location.href="../../../views/admin/auditoria/ListaAuditoria.php"</script>';
    
       }else{
           $statement->execute();
-          echo "<script>alert('Ficha Eliminada Correctamente')</script>";
-          echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
+          echo "<script>alert('Auditoria Eliminada Correctamente')</script>";
+          echo '<script>location.href="../../../views/admin/auditoria/ListarAuditoria.php"</script>';
   
       }
   
     }
-    /////////////////////fin eliminar de la ficha///////////////////////////
+    /////////////////////fin eliminar de la auditoria///////////////////////////
 }
 
 ?>

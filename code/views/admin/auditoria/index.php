@@ -137,7 +137,7 @@
                                                             <select class="selectpicker" name="status" id="status"
                                                                          required>
                                                                         <option >--Seleccione--</option>
-                                                                        <option >Proceso</option>
+                                                                        <option >En Proceso</option>
                                                                         <option >Finalizado</option>  
                                                                             
 
@@ -145,12 +145,7 @@
                                                         </div>
                                                         </div>
                                                     </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Puntaje</label>
-                                                            <input type="text" class="form-control" name="puntaje" readonly="readonly"
-                                                                id="puntaje" placeholder=" " required>
-                                                        </div>
+                                                    
                                                     </div>
                                                     <div class="text-center">
                                                         <button type="submit"
