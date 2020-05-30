@@ -160,7 +160,7 @@ class EmpresaModel
         $f=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
-        $sql ="SELECT * FROM empresa";
+        $sql ="SELECT * FROM empresa NATURAL JOIN contacto";
         $statement=$conexion->prepare($sql);
         $statement->execute();
    
