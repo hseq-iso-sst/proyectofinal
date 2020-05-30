@@ -30,7 +30,7 @@ function cargarEmpresa(){
         <td>'.$f["nombre_empresa"].'</td>
         <td>'.$f["correo_representante"].'</td>
         <td>'.$f["telefono_contacto"].'</td>
-        <td class="icono"><a href="editar-empresa.php?id_usuario='.$f["id_empresa"].'" class="fas fa-edit"></a></td>
+        <td class="icono"><a href="editar-empresa.php?id_empresa='.$f["id_empresa"].'" class="fas fa-edit"></a></td>
      
     </tr>
         ';
