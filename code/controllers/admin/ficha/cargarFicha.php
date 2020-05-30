@@ -20,7 +20,7 @@ else{
             <th>Fecha_Inicicio</th>
             <th>Fecha_Fin</th>   
             <th>Editar</th>  
-            <th>Eliminar</th>   
+            <th>Eliminar</th>      
         </tr>
      </thead>
      <tbody>
@@ -32,8 +32,8 @@ else{
         <td>'.$f["nombre_ficha"].'</td>
         <td>'.$f["fecha_inicio"].'</td>
         <td>'.$f["fecha_fin"].'</td>
-        <td class="icono"><a href="editar-user.php?id_ficha='.$f["id_ficha"].'" class="fas fa-edit"></a></td>
-        <td class="icono"><a href="editar-user.php?id_ficha='.$f["id_ficha"].'" class="fas fa-edit"></a></td>
+        <td class="icono"><a href="../../../views/admin/ficha/editFicha.php?id_ficha='.$f["id_ficha"].'" class="fas fa-edit"></a></td>
+        <td class="icono"><a href="../../../controllers/admin/ficha/eliminar.php?id_fichaE='.$f["id_ficha"].'" class="fas fa-eraser"></a></td>
      
     </tr>
         ';

@@ -9,6 +9,24 @@ class ConsultarDatos
     {
         $this->db = new Conexion();
     }
+    function consultar_empresas($id = null)
+    {
+        $conexion = $this->db->get_conexion();
+        if (isset($id)) {
+            $sql = "SELECT *  FROM empresa where id_empresa=:id";
+            $result = $conexion->prepare($sql);
+            $result->bindParam(':id', $id);
+            $result->execute();
+            $empresas = $result->fetch(PDO::FETCH_ASSOC);
+        } else {
+            $sql = "SELECT * FROM empresa order by id_empresa";
+            $result = $conexion->prepare($sql);
+            $result->execute();
+            $empresas = $result->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        return $empresas;
+    }
     function get_departamentos()
     {
         $conexion = $this->db->get_conexion();
