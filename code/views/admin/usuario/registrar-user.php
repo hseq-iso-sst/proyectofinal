@@ -166,7 +166,7 @@
                                                                 <div
                                                                 class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                                                     <label>Fichas Asignadas</label>
-                                                                    <select class="selectpicker" name="ficha_user" id="ficha_user"  required>
+                                                                    <select class="selectpicker" name="ficha_user" id="ficha_user" multiple required>
                                                                      <option selected value="">Seleccione...</option>
                                                                      <?php 
                                                                       foreach($f as $item){
