@@ -109,4 +109,31 @@ class ConsultarDatos
         
         return $contactos;
     }
+    function get_requisito($id_requisito)
+    {
+        $conexion = $this->db->get_conexion();
+        $sql = "SELECT id_requisito,nombre_requisito FROM requisito WHERE status_requisto=1";
+        $result = $conexion->prepare($sql);
+        $result->execute();
+        $requisitos = $result->fetchAll();
+        return $requisitos;
+    }
+    public function cargarFicha(){
+        $f=null;
+     
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion();
+     
+         $sql= "SELECT * FROM ficha";
+         $statement = $conexion->prepare($sql);
+         $statement->execute();
+     
+         while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+     }
+    
 }
+
+?>

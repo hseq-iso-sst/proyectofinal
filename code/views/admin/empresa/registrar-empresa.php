@@ -147,7 +147,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento</label>
-                                                    <select class="form-control" name="departamento" id="departamento"
+                                                    <select class="form-control" name="departamento_empresa" id="departamento_empresa"
                                                         required>
                                                         <option selected value="">Seleccione...</option>
                                                         <?php 
