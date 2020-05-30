@@ -137,7 +137,7 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#consultarEmpresa').DataTable();
+            $('#verEmpresa').DataTable();
         });
     </script>
 </body>
