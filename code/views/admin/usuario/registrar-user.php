@@ -160,11 +160,9 @@
                                                                 placeholder="Ej: 3132834058" required>
                                                         </div>
                                                     </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <div class="form-row">
-                                                                <div
-                                                                class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                  
+                                                        <div class="form-row">
+                                                                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                                     <label>Fichas Asignadas</label>
                                                             
                                                      <select class="selectpicker" name="ficha_user[]" id="ficha_user" multiple required>
@@ -176,17 +174,19 @@
                                                         ?>
                                                                     </select> 
                                                             </div>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Foto</label>
-                                                            <input type="file" class="form-control" name="img_user"
-                                                                id="img_user" placeholder="Inserte Imagen" required>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Password</label>
                                                             <input type="password" class="form-control" name="password_user"
                                                                 id="password_user" placeholder="*******" required>
                                                         </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                            <label>Foto</label>
+                                                            <input type="file" class="form-control" name="img_user"
+                                                                id="img_user" placeholder="Inserte Imagen" required>
+                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="text-center">
                                                         <button type="submit"

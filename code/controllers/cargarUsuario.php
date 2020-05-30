@@ -86,7 +86,7 @@ if (isset($_GET['id_usuario'])){
          </div>
          <div class="text-center">
              <button type="submit" class="btn btn-success">Actualizar</button>
-             <a href="../views/ver-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+             <a href="../../../views/admin/usuario/ver-user.php" type="submit" class="btn btn-danger">Cancelar</a>
          </div>
      </div>
  </form>
