@@ -186,4 +186,59 @@ class EmpresaModel
         }
         return $f;
     }
+    function modificar_contacto($datos,$id_empresa){
+        $conexion = $this->db->get_conexion();
+        $sentenciaSql = $conexion->prepare("UPDATE contacto SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_contacto,celular=: celular_contacto WHERE id=:id_empresa");
+        $sentenciaSql->bindParam(':id', $id_empresa);
+        $sentenciaSql->bindParam(':nombre', $datos['nombre_contacto']);
+        $sentenciaSql->bindParam(':cargo', $datos['cargo_contacto']);
+        $sentenciaSql->bindParam(':correo', $datos['correo_contacto']);
+        $sentenciaSql->bindParam(':telefono', $datos['telefono_empresa']);
+        $sentenciaSql->bindParam(':celular', $datos['celular_empresa']);
+
+        if (!$sentenciaSql) {
+            echo "<script>alert('Error al Editar los parametros para crear contacto')</script>";
+        } else {
+            if ($sentenciaSql->execute()) {
+                return $conexion->lastInsertId();
+            } else {
+                return 0;
+            }
+        }
     }
+    function modificar_sede($datos,$id_empresa){
+        $conexion = $this->db->get_conexion();
+        $sentenciaSql = $conexion->prepare("UPDATE sede SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_contacto,celular=: celular_contacto WHERE id=:id_empresa");
+        $sentenciaSql->bindParam(':id', $id_empresa);
+        $sentenciaSql->bindParam(':ciudad', $datos['ciudad_sede']);
+        $sentenciaSql->bindParam(':departamento', $datos['departamento_Sede']);
+        if (!$sentenciaSql) {
+            echo "<script>alert('Error al cargar los parametros para crear sede')</script>";
+        }else {
+            if ($sentenciaSql->execute()) {
+                return $conexion->lastInsertId();
+            } else {
+                return 0;
+            }
+        }
+    }
+    function modificar_actividades_empresa($datos,$id_empresa){
+        $conexion = $this->db->get_conexion();
+        $id[] = array();
+        foreach ($datos as $key => $val) {
+            $sentenciaSql = $conexion->prepare("UPDATE actividad_empresa SET empresa=:id_empresa,actividad=:id_actividado WHERE emppresa=:id_empresa");
+            $sentenciaSql->bindParam(':empresa', $id_empresa);
+            $sentenciaSql->bindParam(':actividad', $val['id_actividad']);
+            if (!$sentenciaSql) {
+                echo "<script>alert('Error al editar los parametros para crear actividades empresa')</script>";
+            } else {
+                if ($sentenciaSql->execute()) {
+                    $id[] = $conexion->lastInsertId();
+                } else {
+                    return 0;
+                }
+            }
+        }
+        return $id;
+    }
+}
