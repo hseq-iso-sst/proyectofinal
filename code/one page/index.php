@@ -16,11 +16,11 @@
 <body>
 
     <header id="header-home">
-        <div class="container-fluid">
+        <div class="container-fluid N">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-3 col-sm-12 col-lg-4 logo text-center">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="img/logov2.png" alt="IMAGEN LOGO">
                         </a>
                     </div>
@@ -43,16 +43,16 @@
                 <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/hero1.png" alt="imagen Brujula">
+                            <img src="img/hero1.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/hero2.png" alt="imagen Brujula">
+                            <img src="img/hero2.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
 
                         </div>
                         <div class="carousel-item">
-                            <img src="img/hero3.png" alt="imagen Brujula">
+                            <img src="img/hero3.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
 
                         </div>

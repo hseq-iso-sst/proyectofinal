@@ -22,6 +22,14 @@
 </head>
 
 <body>
+    <style>
+        .p-3 img{
+            width:150px;
+        }
+
+
+    </style>
+
     <div class="main-wrapper">
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
@@ -46,9 +54,9 @@
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
-                            <img src="../assets/images/big/logovhseq.png" alt="wrapkit">
+                            <img src="../one page/img/logov2.png" alt="logo-empresa">
                         </div>
-                        <h2 class="mt-3 text-center">Iniciar Sesion</h2>
+                        <h2 class=" text-center">Iniciar Sesion</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
                         <form class="mt-4" action="../controllers/iniciarSesion.php" method="POST">
                             <div class="row">

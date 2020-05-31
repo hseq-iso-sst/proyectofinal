@@ -11,7 +11,6 @@ body{
 header {
     width: 100%;
     background: rgb(5, 21, 54)center no-repeat;
-    background-size: cover;
 }
 
 #header-home .logo img {
@@ -22,7 +21,11 @@ header {
 header .nav {
     justify-content: flex-end;
     align-items: center;
+    
 
+}
+header .N{
+    background: rgb(5, 21, 54)center no-repeat;
 }
 
 header .nav ul {
@@ -52,15 +55,16 @@ header .nav ul li a:hover {
 
 .hero img {
     width: 100%;
-
+   
 }
 
 .hero {
- 
+   
     text-align: center;
     padding-top: 0px;
-
+    
 }
+
 
 .hero h1 {
     color: #ffffff;
@@ -68,7 +72,9 @@ header .nav ul li a:hover {
     position: relative;
     bottom: 400px;
 }
-
+.hero button a{
+    color: #fff;
+}
 .hero button {
     background: #fe8725;
     color: rgb(255, 255, 255);
