@@ -109,7 +109,7 @@ class EmpresaModel
                 } else {
                     echo "<script>alert('Error al guardar la empresa en la BD')</script>";
                 }
-                //echo '<script>location.href="../../../views/admin/empresa/registrar-empresa.php"</script>';
+                echo '<script>location.href="../../../views/admin/auditoria/index.php"</script>';
             }
         }
     }
@@ -243,10 +243,10 @@ class EmpresaModel
         $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
         $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
 
-        echo "<pre>";
-        print_r($sentenciaSql->debugDumpParams());
-        echo "</pre>";
-        die();
+        // echo "<pre>";
+        // print_r($sentenciaSql->debugDumpParams());
+        // echo "</pre>";
+        // die();
         
 
         if (!$sentenciaSql) {

@@ -17,7 +17,7 @@ padding-top: 5vh;
    justify-content: center;
 }
 .ver-empresas .lista-empresas .encabezado{
-    background: linear-gradient(to right,#8971ea,#7f72ea,#7574ea,#6a75e9,#5f76e8);
+    background:linear-gradient(to right,#2202a1,#13038d,#05016e,#010a69,#010f57);
     color: #fff!important;
 }
 .hpanel .panel-body-user {
@@ -37,7 +37,7 @@ color: #7f72ea;
     color: #6a75e9;
 }
 .navbar-collapse{
-    background-color: #6a75e9;
+    background:linear-gradient(to right,#2202a1,#13038d,#05016e,#010a69,#010f57);
 }
 
 

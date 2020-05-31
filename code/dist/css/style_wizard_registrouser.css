@@ -69,7 +69,7 @@ p {
 
 #msform .action-button {
     width: 100px;
-    background: #1b2a47;
+    background:#05016e;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -87,7 +87,7 @@ p {
 
 #msform .action-button-previous {
     width: 100px;
-    background: #f86503;
+    background:#ff7300;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -200,7 +200,7 @@ p {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #1b2a47;
+    background: #05016e;
 }
 
 .progress {

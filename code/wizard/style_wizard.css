@@ -63,13 +63,13 @@ p {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #1b2a47;
+    border: 1px solid #010a36;
     outline-width: 0
 }
 
 #msform .action-button {
     width: 100px;
-    background: #1b2a47;
+    background: #010a36;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -82,7 +82,7 @@ p {
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-    background-color: #1b2a47;
+    background-color: #010a36;
 }
 
 #msform .action-button-previous {
@@ -111,14 +111,14 @@ p {
 
 .fs-title {
     font-size: 25px;
-    color: #1b2a47;
+    color: #010a36;
     margin-bottom: 15px;
     font-weight: normal;
     text-align: left
 }
 
 .purple-text {
-    color: #1b2a47;
+    color: #010a36;
     font-weight: normal
 }
 
@@ -142,7 +142,7 @@ p {
 }
 
 #progressbar .active {
-    color: #1b2a47;
+    color: #010a36;
 }
 
 #progressbar li {
@@ -200,7 +200,7 @@ p {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #1b2a47;
+    background: #010a36;
 }
 
 .progress {
