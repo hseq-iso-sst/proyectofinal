@@ -65,10 +65,7 @@ if (isset($_GET['id_usuario'])){
                          multiple required>
                          
                              <option selected value="'.$f['ficha_user'].'">'.$f['ficha_user'].'</option>
-                             <option value="1984756 (HSEQ)">1984755 (HSEQ)</option>
-                             <option value="1984756 (HSEQ)">1984756 (HSEQ)</option>
-                             <option value="1946573 (HSEQ)">1946573 (HSEQ)</option>
-                             <option value="1949463 (HSEQ)">1949463 (HSEQ)</option>
+                            
                          </select> 
                     </div>
                  </div>
