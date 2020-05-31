@@ -66,7 +66,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <button class="btn " data-toggle="modal" data-target="#camilo">INGRESAR</button>
+                <button class="btn " data-toggle="modal" data-target="#camilo"> <a href="../views/login.php">INGRESAR</a> </button>
             </div>
         </div>
     </header>
