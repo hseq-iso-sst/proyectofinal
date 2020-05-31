@@ -11,7 +11,7 @@ function cargarAuditori(){
 
 else{
     echo'
-    <table id="verFichas" class="table table-bordered lista-auditorias">
+    <table id="verAuditoria" class="table table-bordered lista-auditorias">
     <thead>
         <!-- <caption> <b> Datos Resumen de Auditoria </b></caption> -->
         <tr class="head_tabla encabezado">
