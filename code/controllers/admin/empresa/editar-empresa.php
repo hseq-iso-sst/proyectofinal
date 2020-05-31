@@ -36,4 +36,4 @@ foreach ($_POST as $key => $val) {
 require_once('../../../models/conexion.php');
 require_once('../../../models/admin/empresa/EmpresaModel.php');
 $empresa_model=new EmpresaModel();
-$empresa_model->guardar_empresa($contacto,$sede,$empresa,$actividades);
+$empresa_model->modificar_empresa($contacto,$sede,$empresa,$actividades);

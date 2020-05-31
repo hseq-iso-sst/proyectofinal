@@ -206,6 +206,48 @@ class EmpresaModel
             }
         }
     }
+    function modificar_empresa($datos_contacto, $datos_sede, $datos_empresa, $actividades){
+        $conexion = $this->db->get_conexion();
+        $sentenciaSql = $conexion->prepare("UPDATE empresa SET tipo_documento=:tipo_documento,id_empresa=.:id_empresa,nombre_empresa=:nombre_empresa,departamento_empresa=:departamento,ciudad_empresa=:ciudad,direccion_empresa=:direccion_empresa,sucursal=:sucursal,nro_sucursal=:nro_sucursal,correo_representante=:correo_representante,riesgo_empresa=:riesgo_empresa,nro_trabajadores=:nro_trabajadores,nro_trabajadores_dependientes=:nro_trabajadores_dependientes,nro_trabajadores_independientes=:nro_trabajadores_independientes,sedes=:sedes,nro_sedes=:nro_sedes,prima_empresa=:prima_empresa WHERE id=:id_empresa");
+
+        $sentenciaSql->bindParam(':tipo_documento', $datos_empresa['tipo_documento']);
+        $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
+        $sentenciaSql->bindParam(':nombre_empresa', $datos_empresa['nombre_empresa']);
+        $sentenciaSql->bindParam(':departamento_empresa', $datos_empresa['departamento']);
+        $sentenciaSql->bindParam(':ciudad_empresa', $datos_empresa['ciudad']);
+        $sentenciaSql->bindParam(':direccion_empresa', $datos_empresa['direccion_empresa']);
+        $sentenciaSql->bindParam(':sucursal', $datos_empresa['sucursal']);
+        $sentenciaSql->bindParam(':nro_sucursal', $datos_empresa['nro_sucursal']);
+        $sentenciaSql->bindParam(':correo_representante', $datos_empresa['correo_representante']);
+        $sentenciaSql->bindParam(':riesgo_empresa', $datos_empresa['riesgo_empresa']);
+        $sentenciaSql->bindParam(':nro_trabajadores', $datos_empresa['nro_trabajadores']);
+        $sentenciaSql->bindParam(':nro_trabajadores_dependientes', $datos_empresa['nro_trabajadores_dependientes']);
+        $sentenciaSql->bindParam(':nro_trabajadores_independientes', $datos_empresa['nro_trabajadores_independientes']);
+        $sentenciaSql->bindParam(':sedes', $datos_empresa['sedes']);
+        $sentenciaSql->bindParam(':nro_sedes', $datos_empresa['nro_sedes']);
+        $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
+        
+        if (!$sentenciaSql) {
+            echo "<script>alert('Error al cargar los parametros para editar empresa')</script>";
+        } else {
+            if ($sentenciaSql->execute()) {
+                 // guardar contactos
+                $id_contacto = $this->guardar_contacto($datos_contacto,$datos_empresa['id_empresa']);
+                echo ($id_contacto==0)?"<script>alert('Error al editar el contacto de la empresa')</script>":"";
+                // guardar sedes
+                $id_sede = $this->guardar_sede($datos_sede,$datos_empresa['id_empresa']);
+                echo ($id_sede==0)?"<script>alert('Error al editar la sede de la empresa')</script>":"";
+                //guardar actividades   
+                $actividades_empresa = $this->guardar_actividades_empresa($actividades, $datos_empresa['id_empresa']);
+                if (count($actividades_empresa) > 0) {
+                    echo "<script>alert('EMPRESA EDITADA EXITOSAMENTE')</script>";
+                }
+            } else {
+                echo "<script>alert('Error al guardar la actualizacion de empresa en la BD')</script>";
+            }
+            echo '<script>location.href="../../../views/admin/empresa/editar-empresa.php"</script>';
+        }
+    }
     function modificar_sede($datos,$id_empresa){
         $conexion = $this->db->get_conexion();
         $sentenciaSql = $conexion->prepare("UPDATE sede SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_contacto,celular=: celular_contacto WHERE id=:id_empresa");
@@ -213,7 +255,7 @@ class EmpresaModel
         $sentenciaSql->bindParam(':ciudad', $datos['ciudad_sede']);
         $sentenciaSql->bindParam(':departamento', $datos['departamento_Sede']);
         if (!$sentenciaSql) {
-            echo "<script>alert('Error al cargar los parametros para crear sede')</script>";
+            echo "<script>alert('Error al cargar los parametros para editar sede')</script>";
         }else {
             if ($sentenciaSql->execute()) {
                 return $conexion->lastInsertId();
@@ -230,7 +272,7 @@ class EmpresaModel
             $sentenciaSql->bindParam(':empresa', $id_empresa);
             $sentenciaSql->bindParam(':actividad', $val['id_actividad']);
             if (!$sentenciaSql) {
-                echo "<script>alert('Error al editar los parametros para crear actividades empresa')</script>";
+                echo "<script>alert('Error al editar los parametros para editar actividades empresa')</script>";
             } else {
                 if ($sentenciaSql->execute()) {
                     $id[] = $conexion->lastInsertId();
