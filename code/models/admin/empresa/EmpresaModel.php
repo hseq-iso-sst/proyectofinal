@@ -109,7 +109,7 @@ class EmpresaModel
                 } else {
                     echo "<script>alert('Error al guardar la empresa en la BD')</script>";
                 }
-                echo '<script>location.href="../../../views/admin/empresa/registrar-empresa.php"</script>';
+                //echo '<script>location.href="../../../views/admin/empresa/registrar-empresa.php"</script>';
             }
         }
     }
@@ -188,7 +188,7 @@ class EmpresaModel
     }
     function modificar_contacto($datos,$id_empresa){
         $conexion = $this->db->get_conexion();
-        $sentenciaSql = $conexion->prepare("UPDATE contacto SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_contacto,celular=: celular_contacto WHERE id=:id_empresa");
+        $sentenciaSql = $conexion->prepare("UPDATE contacto SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_empresa,celular=: celular_empresa WHERE id=:id_empresa");
         $sentenciaSql->bindParam(':id', $id_empresa);
         $sentenciaSql->bindParam(':nombre', $datos['nombre_contacto']);
         $sentenciaSql->bindParam(':cargo', $datos['cargo_contacto']);
@@ -207,11 +207,26 @@ class EmpresaModel
         }
     }
     function modificar_empresa($datos_contacto, $datos_sede, $datos_empresa, $actividades){
+
         $conexion = $this->db->get_conexion();
-        $sentenciaSql = $conexion->prepare("UPDATE empresa SET tipo_documento=:tipo_documento,id_empresa=.:id_empresa,nombre_empresa=:nombre_empresa,departamento_empresa=:departamento,ciudad_empresa=:ciudad,direccion_empresa=:direccion_empresa,sucursal=:sucursal,nro_sucursal=:nro_sucursal,correo_representante=:correo_representante,riesgo_empresa=:riesgo_empresa,nro_trabajadores=:nro_trabajadores,nro_trabajadores_dependientes=:nro_trabajadores_dependientes,nro_trabajadores_independientes=:nro_trabajadores_independientes,sedes=:sedes,nro_sedes=:nro_sedes,prima_empresa=:prima_empresa WHERE id=:id_empresa");
+        $sentenciaSql = $conexion->prepare("UPDATE empresa SET tipo_documento=:tipo_documento,
+        nombre_empresa=:nombre_empresa,
+        departamento_empresa=:departamento,
+        ciudad_empresa=:ciudad,
+        direccion_empresa=:direccion_empresa,
+        sucursal=:sucursal,
+        nro_sucursal=:nro_sucursal,
+        correo_representante=:correo_representante,
+        riesgo_empresa=:riesgo_empresa,
+        nro_trabajadores=:nro_trabajadores,
+        nro_trabajadores_dependientes=:nro_trabajadores_dependientes,
+        nro_trabajadores_independientes=:nro_trabajadores_independientes,
+        sedes=:sedes,
+        nro_sedes=:nro_sedes,
+        prima_empresa=:prima_empresa 
+        WHERE id_empresa=:id_empresa");
 
         $sentenciaSql->bindParam(':tipo_documento', $datos_empresa['tipo_documento']);
-        $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
         $sentenciaSql->bindParam(':nombre_empresa', $datos_empresa['nombre_empresa']);
         $sentenciaSql->bindParam(':departamento_empresa', $datos_empresa['departamento']);
         $sentenciaSql->bindParam(':ciudad_empresa', $datos_empresa['ciudad']);
@@ -226,7 +241,14 @@ class EmpresaModel
         $sentenciaSql->bindParam(':sedes', $datos_empresa['sedes']);
         $sentenciaSql->bindParam(':nro_sedes', $datos_empresa['nro_sedes']);
         $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
+        $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
+
+        echo "<pre>";
+        print_r($sentenciaSql->debugDumpParams());
+        echo "</pre>";
+        die();
         
+
         if (!$sentenciaSql) {
             echo "<script>alert('Error al cargar los parametros para editar empresa')</script>";
         } else {
@@ -245,7 +267,7 @@ class EmpresaModel
             } else {
                 echo "<script>alert('Error al guardar la actualizacion de empresa en la BD')</script>";
             }
-            echo '<script>location.href="../../../views/admin/empresa/editar-empresa.php"</script>';
+//echo '<script>location.href="../../../views/admin/empresa/ver-empresa.php"</script>';
         }
     }
     function modificar_sede($datos,$id_empresa){
