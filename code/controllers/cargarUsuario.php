@@ -65,10 +65,7 @@ if (isset($_GET['id_usuario'])){
                          multiple required>
                          
                              <option selected value="'.$f['ficha_user'].'">'.$f['ficha_user'].'</option>
-                             <option value="1984756 (HSEQ)">1984755 (HSEQ)</option>
-                             <option value="1984756 (HSEQ)">1984756 (HSEQ)</option>
-                             <option value="1946573 (HSEQ)">1946573 (HSEQ)</option>
-                             <option value="1949463 (HSEQ)">1949463 (HSEQ)</option>
+                            
                          </select> 
                     </div>
                  </div>
@@ -86,7 +83,7 @@ if (isset($_GET['id_usuario'])){
          </div>
          <div class="text-center">
              <button type="submit" class="btn btn-success">Actualizar</button>
-             <a href="../views/ver-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+             <a href="../../../views/admin/usuario/ver-user.php" type="submit" class="btn btn-danger">Cancelar</a>
          </div>
      </div>
  </form>

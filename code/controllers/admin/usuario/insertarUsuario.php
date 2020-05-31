@@ -10,10 +10,10 @@ $apellidos_user=$_POST['apellidos_user'];
 $email_user=$_POST['email_user'];
 $cargo_user=$_POST['cargo_user'];
 $telefono_user=$_POST['telefono_user'];
-$ficha_user=$_POST['ficha_user'];
-    // foreach($_POST['ficha_user'] as $key => $value){
-    //     $ficha_user.=$value.",";
-    // }
+$ficha_user="";
+    foreach($_POST['ficha_user'] as $key => $value){
+        $ficha_user.=$value.",";
+    }
 $password_user=$_POST['password_user'];
 $estado="Activo";
 
