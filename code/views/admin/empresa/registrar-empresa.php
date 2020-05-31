@@ -129,7 +129,7 @@
                                                     <label class="fieldlabels">Tipo de Documento</label>
                                                     <select class="form-control" name="tipo_documento"
                                                         id="tipo_documento"required>
-                                                        <option></option>
+                                                        <option value=""></option>
                                                         <option value="NIT">NIT</option>
                                                         <option value="C.C">C.C</option>
                                                         <option value="C.E">C.E</option>
@@ -147,7 +147,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento</label>
-                                                    <select class="form-control" name="departamento_empresa" id="departamento_empresa"
+                                                    <select class="form-control" name="departamento" id="departamento"
                                                         required>
                                                         <option selected value="">Seleccione...</option>
                                                         <?php 
@@ -189,7 +189,7 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Sucursal</label>
                                                     <select class="form-control" name="sucursal" id="sucursal">
-                                                        <option></option>
+                                                        <option value=""></option>
                                                         <option value="Si">Si</option>
                                                         <option value="No">No</option>
                                                     </select>
@@ -294,7 +294,7 @@
                                                     <label class="fieldlabels">La empresa tiene una o más sedes</label>
                                                     <select class="form-control" name="sedes"
                                                         id="sedes" required>
-                                                        <option></option>
+                                                        <option value=""></option>
                                                         <option value="Si">Si</option>
                                                         <option value="No">No</option>
                                                     </select>

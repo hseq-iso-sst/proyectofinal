@@ -2,17 +2,20 @@
     padding: 0;
     margin: 0;
 }
-
+html{
+    scroll-behavior:smooth ;
+}
+body{
+    overflow-x: hidden;
+}
 header {
     width: 100%;
-
-    padding-top: 10px;
     background: rgb(5, 21, 54)center no-repeat;
     background-size: cover;
 }
 
 #header-home .logo img {
-    width: 130px;
+    width: 100px;
 
 }
 
@@ -35,12 +38,17 @@ header .nav ul li {
 
 header .nav ul li a {
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
+    transition: .3s;
     padding: 6px 12px;
     margin: 0 4px;
     text-decoration: none;
     text-transform: uppercase;
 }
+header .nav ul li a:hover {
+    color: #ff7e27;
+}
+
 
 .hero img {
     width: 100%;
@@ -48,9 +56,9 @@ header .nav ul li a {
 }
 
 .hero {
-    padding-top: 300px;
+ 
     text-align: center;
-    padding-top: 40px;
+    padding-top: 0px;
 
 }
 

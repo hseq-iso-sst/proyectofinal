@@ -112,7 +112,7 @@
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                             <h2 id="heading">ACTUALICE LA EMPRESA DESEADA</h2>
                             <p>Actualice los campos deseados del formulario para ir al siguiente paso</p>
-                            <form id="msform" action="../../../controllers/admin/empresa/insertar-empresa.php" method="POST" class="wizard">
+                            <form id="msform" action="../../../controllers/admin/empresa/editar-empresa.php" method="POST" class="wizard">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
