@@ -18,8 +18,10 @@
     <title>Registrar Auditoria</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
@@ -80,9 +82,9 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="#">Registrar Auditoria</a></li>
+                                            >Registrar Auditoria</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -192,6 +194,7 @@
     <!--This page JavaScript -->
     <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
     <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
@@ -200,6 +203,12 @@
     <!-- js mdb -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#verAuditoria').DataTable();
+        });
+    </script>
+
 </body>
 
 </html>

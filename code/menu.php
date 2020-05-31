@@ -34,11 +34,11 @@
                                     data-feather="users" class="feather-icon"></i><span
                                     class="hide-menu">Usuarios</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/registrar-user.php"
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/usuario/registrar-user.php"
                                         class="sidebar-link"><span class="hide-menu"> Registrar Usuarios
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/ver-user.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/usuario/ver-user.php" class="sidebar-link"><span
                                             class="hide-menu"> Lista de Usuarios
                                         </span></a>
                                 </li>
@@ -56,7 +56,7 @@
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/visitas.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/visitas.php" class="sidebar-link"><span
                                             class="hide-menu">Visitas
                                         </span></a>
                                 </li>

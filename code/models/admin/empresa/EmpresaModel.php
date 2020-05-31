@@ -160,7 +160,7 @@ class EmpresaModel
         $f=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
-        $sql ="SELECT * FROM empresa";
+        $sql ="SELECT * FROM empresa NATURAL JOIN contacto";
         $statement=$conexion->prepare($sql);
         $statement->execute();
    
@@ -170,4 +170,20 @@ class EmpresaModel
         return $f;
      
     }
-}
+    public function cargarEmprEdit($doc){
+        $f=null;
+    
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+    
+        $sql= "SELECT * FROM empresa WHERE id_empresa = :id_empresa";
+        $statement = $conexion->prepare($sql);
+        $statement->bindParam(":id_empresa", $doc);
+        $statement->execute();
+    
+        while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+    }
+    }

@@ -91,9 +91,7 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid ver-empresas">
-            <div class="row">
-                <h2 class="col-md-6">Lista Empresas</h2>        
-                
+            <div class="row">                
              </div>
 
             <!-- ============================================================== -->
@@ -137,8 +135,8 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#consultarEmpresa').DataTable();
-        });
+            $('#verEmpresa').DataTable();
+            });
     </script>
 </body>
 

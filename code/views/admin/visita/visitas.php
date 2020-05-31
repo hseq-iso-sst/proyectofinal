@@ -7,26 +7,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logov2.png">
-    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
-    <title>Registrar Fichas</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
+    <title>Visitas</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=".../../dist/css/style-hseq.css">
-    <!-- css mdb -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
+    <!-- widzar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="../../../dist/css/style_wizard_registrouser.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <link rel="stylesheet" href="../../../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -70,72 +69,75 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Registrar Fichas</h4>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Visitas</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            >Registrar Fichas</a></li>
+                                            href="registrar-empresa.php" class="text-muted">Visitas</a></li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
                 <div class="container">
                     <div class="row">
                         <div
                             class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
                             <div class="text-center custom-login">
-                                <h3>Registro Fichas</h3>
+                                <h3>Nueva Visita</h3>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                            <form action="../../../controllers/admin/ficha/insertarFicha.php" id="loginForm" method="POST" enctype="multipart/form-data">
+                                            <form action="../../../controllers/admin/visita/insertarVisita.php" id="loginForm" method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                            
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Número de auditoria</label>
+                                                            <input type="number" class="form-control" name="id_auditoria"
+                                                                id="id_auditoria" required>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Nro de Documento Responsable</label>
+                                                            <input type="number" class="form-control" name="id_usuario"
+                                                                id="id_usuario" placeholder="Ej: 1127621913"
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Id Ficha</label>
-                                                            <input type="number" class="form-control" name="id_ficha"
-                                                                id="id_ficha" placeholder="Digite el id de la ficha" required>
+                                                            <label>Nro de visita</label>
+                                                            <input type="number" class="form-control"
+                                                                name="nro_visita" id="nro_visita" required>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Nombre Ficha</label>
-                                                            <input type="text" class="form-control" name="nombre_ficha"
-                                                                id="nombre_ficha" placeholder="Digite el Nombre" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Fecha Inicio</label>
-                                                            <input type="date" class="form-control" name="fecha_inicio"
-                                                                id="fecha_inicio" placeholder="Seleccione fecha" required>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Fecha Fin</label>
-                                                            <input type="date" class="form-control" name="fecha_fin"
-                                                                id="fecha_fin" placeholder="Seleccione fecha" required>
+                                                            <input type="date" class="form-control" name="fecha_ini"
+                                                                id="fecha_ini" required>
                                                         </div>
                                                     </div>
-                                                    <div class="text-center">
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                                                            <label>Fecha Fin</label>
+                                                            <input type="date" class="form-control" name="fecha_fin"
+                                                                id="fecha_fin" required>
+                                                        </div>
+                                                        <div class="col text-center align-self-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="registrar-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </form>
@@ -147,21 +149,17 @@
                     </div>
                 </div>
             </div>
+             <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <!-- ============================================================== -->
             <?php include_once('../../../footer.php');?>
+            <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
     </div>
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
@@ -182,9 +180,9 @@
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
-    <!-- js mdb -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="../../../https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../../../https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../../wizard/prueba.js"></script>
 </body>
 
 </html>

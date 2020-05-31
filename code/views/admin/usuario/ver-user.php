@@ -1,14 +1,14 @@
 <?php
-require_once("../../../models/conexion.php");
-require_once("../../../models/admin/ficha/consultaFicha.php");
-require_once("../../../controllers/admin/ficha/cargarFicha.php");
+require_once("../../../models/admin/usuario/conexion.php");
+require_once("../../../models/admin/usuario/consultasUsuario.php");
+require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="0=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
@@ -19,7 +19,6 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    
     
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
@@ -72,17 +71,17 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Ficha</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Usuarios</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Lista Ficha</li>
+                                    <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Usuarios</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-                    
+                  
                 </div>
             </div>
              <!-- ============================================================== -->
@@ -93,18 +92,63 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
             <!-- ============================================================== -->
             <div class="container-fluid ver-empresas">
                 <div class="row">
-                    
+                
                     <!-- Search -->
                     <!-- ============================================================== -->
                     
                 </div>
                 <!-- ============================================================== -->
               <?php
-                cargarFicha();
+                cargarU();
               ?>
-              <!-- ============================================================== -->
-                
-                
+              
+                <!-- <table id="verUsuarios" class="table table-bordered lista-empresas">
+                    <thead>
+                        <tr class="head_tabla encabezado">
+                            <th>Identificación</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Cargo</th>
+                            <th>telefono</th>
+                            <td>Estado</td>
+                            <td>Editar</td>
+                            <td>Eliminar</td>
+                                    
+                        </tr>
+                    </thead>
+                    <!--  <tbody>
+                    <tr>
+                        <td>12345678634</td>
+                        <td>Lizeth</td>
+                        <td>Urrego</td>
+                        <td>Administrador</td>
+                        <td>12467889</td>
+                        <td>Activo</td>
+                        <td class="icono"><a href="editar-user.php" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
+                    </tbody>
+                </table> -->
+                <!-- <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav> -->
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
@@ -126,7 +170,7 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-    </div>
+        </div>
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -140,17 +184,17 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
     <script src="../../../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
     <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('#verFichas').DataTable();
-        });
+        $(document).ready( function () {
+                $('#verUsuarios').DataTable();
+        } );
     </script>
 
 </body>
