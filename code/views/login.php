@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
-    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
+    <title>Login</title>
     <!-- Custom CSS -->
     <link href="../dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -42,26 +42,28 @@
             style="background:url(../assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box row">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../assets/images/big/pintura3.png);">
+                <button type="button" class="btn btn-warning"> <a href="../one page/index.php">Inicio</a></button>
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
                             <img src="../assets/images/big/logovhseq.png" alt="wrapkit">
                         </div>
-                        <h2 class="mt-3 text-center">Iniciar Sesion</h2>
+                       
+                        <h2 class="mt-3 text-center">Iniciar Sesión</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
                         <form class="mt-4" action="../controllers/iniciarSesion.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="uname" >E-mail</label>
+                                        <label class="text-dark" for="uname" >Usuario</label>
                                         <input class="form-control" id="email_user"  name="email_user" type="text"
                                             placeholder="Ingrese su correo">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="password_user">Clave</label>
+                                        <label class="text-dark" for="password_user">Contraseña</label>
                                         <input class="form-control" id="password_user"  type="password" name="password_user"
                                             placeholder="***********">
                                     </div>
