@@ -22,6 +22,23 @@
 </head>
 
 <body>
+    <style>
+        .p-3 img{
+            width:150px;
+        }
+        .B1{
+            background:#fe8725;
+            margin:10px;
+            padding:8px 12px;
+            border-radius:50px;
+        }
+        .B1 a{
+            color:#fff;
+        }
+    
+
+    </style>
+
     <div class="main-wrapper">
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
@@ -42,15 +59,14 @@
             style="background:url(../assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box row">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../assets/images/big/pintura3.png);">
-                <button type="button" class="btn btn-warning"> <a href="../one page/index.php">Inicio</a></button>
+                <button type="button" class="btn B1"> <a href="../one page/index.php">Inicio</a></button>
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
-                            <img src="../assets/images/big/logovhseq.png" alt="wrapkit">
+                            <img src="../one page/img/logov2.png" alt="logo-empresa">
                         </div>
-                       
-                        <h2 class="mt-3 text-center">Iniciar Sesión</h2>
+                        <h2 class=" text-center">Iniciar Sesion</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
                         <form class="mt-4" action="../controllers/iniciarSesion.php" method="POST">
                             <div class="row">
