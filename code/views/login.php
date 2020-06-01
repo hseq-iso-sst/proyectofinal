@@ -30,11 +30,25 @@
             background:#fe8725;
             margin:10px;
             padding:8px 12px;
-            border-radius:50px;
+            border-radius:60px;
         }
         .B1 a{
-            color:#fff;
+            color:#000;
         }
+        .B1:hover{
+            background: #F5F51B;
+        }
+        .dos button {
+            background:#fe8725;
+            margin:10px;
+            padding:8px 12px;
+            border-radius:10px;
+        }
+        .dos button:hover{
+            background: #F5F51B;
+        }
+       
+        
     
 
     </style>
@@ -66,30 +80,30 @@
                         <div class="text-center">
                             <img src="../one page/img/logov2.png" alt="logo-empresa">
                         </div>
-                        <h2 class=" text-center">Iniciar Sesion</h2>
+                        <h2 class=" text-center">Iniciar Sesión</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
                         <form class="mt-4" action="../controllers/iniciarSesion.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="uname" >Usuario</label>
+                                        <label class=".text-dark" for="uname" >Usuario</label>
                                         <input class="form-control" id="email_user"  name="email_user" type="text"
                                             placeholder="Ingrese su correo">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="text-dark" for="password_user">Contraseña</label>
+                                        <label class=".text-dark" for="password_user">Contraseña</label>
                                         <input class="form-control" id="password_user"  type="password" name="password_user"
                                             placeholder="***********">
                                     </div>
                                 </div>
-                                <div class="col-lg-12 text-center">
-                                <button>Iniciar Sesión</button>
+                                <div class="col-lg-12 text-center dos">
+                                <button >Iniciar Sesión</button>
                                     <!-- <a href="#" type="submit" class="btn btn-block btn-dark">Iniciar Sesiòn</a> -->
                                 </div>
-                                <div class="col-lg-12 text-center mt-5">
-                                      <a href="#" class="text-danger">¿Olvidaste tu cuenta o contraseña?</a>
+                                <div class="col-lg-12 text-center mt-5 go">
+                                      <a href="#" class="text-warning">¿Olvidaste tu cuenta o contraseña?</a>
                                 </div>
                             </div>
                         </form>
