@@ -70,7 +70,7 @@
                                     class="hide-menu">Auditorias</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/index.php"
-                                        class="sidebar-link"><span class="hide-menu">Registrar Auditorias
+                                        class="sidebar-link"><span class="hide-menu">Registro de Auditoría
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/ListarAuditoria.php" class="sidebar-link"><span

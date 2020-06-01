@@ -45,14 +45,15 @@ if (isset($_GET['id_auditoria'])){
             
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-            <label>Status </label>
-            <input type="text" class="form-control" value="'.$f['status'].'" name="id_empresa" readonly="readonly
-                 id="id_empresa"  >
+            <label>Estado</label>
+            <select class="  form-control" name="status"
+                     id="status" required>
+                     <option value="'.$f['status'].'">'.$f['status'].'</option>
+                     <option value="En Proceso">En Proceso</option>
+                     <option value="Finalizado">Finalizado</option>
+                 </select>
             
-                            
-
-                    </select> 
-            </div>
+        </div>
         </div>
         <div class="text-center">
                  <button type="submit"

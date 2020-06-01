@@ -20,7 +20,7 @@ else{
             <th>Id empresa</th>
             <th>Estado</th>   
             <th>Editar</th>  
-            <th>Eliminar</th>      
+              
         </tr>
      </thead>
      <tbody>
@@ -33,7 +33,7 @@ else{
         <td>'.$f["id_empresa"].'</td>
         <td>'.$f["status"].'</td>
         <td class="icono"><a href="../../../views/admin/auditoria/edit.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
-        <td class="icono"><a href="../../../controllers/admin/auditoria/eliminar.php?id_auditoriaE='.$f["id_auditoria"].'" class="fas fa-eraser"></a></td>
+        
      
     </tr>
         ';

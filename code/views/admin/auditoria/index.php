@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
-    <title>Registrar Auditoria</title>
+    <title>Registro de auditoría </title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -78,13 +78,13 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate font-weight-medium mb-1">Registrar Auditoria</h4>
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Registro de auditoría </h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            >Registrar Auditoria</a></li>
+                                            >Registro de auditoría </a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -103,7 +103,7 @@
                         <div
                             class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
                             <div class="text-center custom-login">
-                                <h3>Registro de Auditoria</h3>
+                                <h3>Registro de Auditoría</h3>
                                 <h4><?php echo (isset($mensaje)) ? $mensaje : ''; ?></h4>
                             </div>
                             <div class="row">
@@ -112,16 +112,12 @@
                                         <div class="panel-body-user shadow">
                                         <form action="../../../controllers/admin/auditoria/insertarAuditoria.php" method="POST">
                                                 <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-                                                            <div class="datos_user">
-                                                                <h5>DATOS DE LA AUDITORIA</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-row">
+                                                    <div class="row " >
+                                                        
+                                                    
+                                                    <div class="form-row" >
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Identificacion Empresa</label>
+                                                            <label>Identificación Empresa</label>
                                                             <select class="selectpicker" name="id_empresa" id="id_empresa"
                                                                          required>
                                                                         <option value="">--Seleccione--</option> 
@@ -130,18 +126,6 @@
                                                                                     echo '<option value="'.$item['id_empresa'].'">'.$item['nombre_empresa'].'</option>';
                                                                                 }
                                                                             ?>
-
-                                                                    </select> 
-                                                        </div>
-                                                        <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                        <label>Status </label>
-                                                            <select class="selectpicker" name="status" id="status"
-                                                                         required>
-                                                                        <option >--Seleccione--</option>
-                                                                        <option >En Proceso</option>
-                                                                        <option >Finalizado</option>  
-                                                                            
 
                                                                     </select> 
                                                         </div>

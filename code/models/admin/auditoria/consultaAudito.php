@@ -2,7 +2,7 @@
 
 class consultaAuditoria{
    
-        public function inserAuditoria($id_auditoria, $puntaje, $id_empresa, $status){
+        public function inserAuditoria($id_empresa ){
 
             $modelo = new Conexion();
             $conexion = $modelo->get_conexion();
@@ -19,13 +19,12 @@ class consultaAuditoria{
                 $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
 
-                $sql="INSERT INTO auditoria(id_auditoria, puntaje, id_empresa, status) 
-                VALUES(:id_auditoria, :puntaje, :id_empresa, :status)";
+                $sql="INSERT INTO auditoria( id_empresa ) 
+                VALUES(:id_empresa )";
                 $sentenciaSql = $conexion->prepare($sql);
-                $sentenciaSql->bindParam(':id_auditoria',$id_auditoria);
-                $sentenciaSql->bindParam(':puntaje',$puntaje);
+                
                 $sentenciaSql->bindParam(':id_empresa',$id_empresa);
-                $sentenciaSql->bindParam(':status',$status);
+              
               
                 if (!$sentenciaSql) {
                     return "Error al cargar los parametros";
@@ -79,7 +78,7 @@ public function cargarAutorias($doc){
     return $f;
 }
 
-public function modificarAuditorias($status){
+public function modificarAuditorias($id_auditoria, $puntaje, $id_empresa, $status){
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
 
@@ -105,27 +104,27 @@ public function modificarAuditorias($status){
 }
 
 /////////////////////actualizar de la ficha///////////////////////////
-/////////////////////eliminar de la auditria///////////////////////////
-public function eliminarAuditoria($idEliminar){
-    $modelo = new Conexion();
-    $conexion = $modelo->get_conexion();
+// /////////////////////eliminar de la auditria///////////////////////////
+// public function eliminarAuditoria($idEliminar){
+//     $modelo = new Conexion();
+//     $conexion = $modelo->get_conexion();
   
-    $sql= "DELETE FROM auditoria WHERE id_auditoria=:id_auditoria";
-    $statement = $conexion->prepare($sql);
-    $statement->bindParam(":id_auditoria", $idEliminar);
+//     $sql= "DELETE FROM auditoria WHERE id_auditoria=:id_auditoria";
+//     $statement = $conexion->prepare($sql);
+//     $statement->bindParam(":id_auditoria", $idEliminar);
   
-    if(!$statement){
-        echo "<script>alert('ERROR AL ELIMINAR')</script>";
-        echo '<script>location.href="../../../views/admin/auditoria/ListaAuditoria.php"</script>';
+//     if(!$statement){
+//         echo "<script>alert('ERROR AL ELIMINAR')</script>";
+//         echo '<script>location.href="../../../views/admin/auditoria/ListaAuditoria.php"</script>';
    
-      }else{
-          $statement->execute();
-          echo "<script>alert('Auditoria Eliminada Correctamente')</script>";
-          echo '<script>location.href="../../../views/admin/auditoria/ListarAuditoria.php"</script>';
+//       }else{
+//           $statement->execute();
+//           echo "<script>alert('Auditoria Eliminada Correctamente')</script>";
+//           echo '<script>location.href="../../../views/admin/auditoria/ListarAuditoria.php"</script>';
   
-      }
+//       }
   
-    }
+//     }
     /////////////////////fin eliminar de la auditoria///////////////////////////
 }
 
