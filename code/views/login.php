@@ -27,11 +27,11 @@
             width:150px;
         }
         .B1{
-            background:#fe8725;
+            background:#F4F1ED;
             margin:10px;
             padding:8px 12px;
-            border-radius:60px;
-        }
+            border-radius:5px;
+        } 
         .B1 a{
             color:#000;
         }
@@ -39,11 +39,11 @@
             background: #F5F51B;
         }
         .dos button {
-            background:#fe8725;
+            background:#F4F1ED;
             margin:10px;
             padding:8px 12px;
             border-radius:10px;
-        }
+        } 
         .dos button:hover{
             background: #F5F51B;
         }
@@ -73,7 +73,7 @@
             style="background:url(../assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box row">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../assets/images/big/pintura3.png);">
-                <button type="button" class="btn B1"> <a href="../one page/index.php">Inicio</a></button>
+                <button  class="border border-warning B1"> <a href="../one page/index.php">Inicio</a></button>
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
@@ -99,7 +99,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 text-center dos">
-                                <button >Iniciar Sesión</button>
+                                <button class="border border-warning">Iniciar Sesión</button>
                                     <!-- <a href="#" type="submit" class="btn btn-block btn-dark">Iniciar Sesiòn</a> -->
                                 </div>
                                 <div class="col-lg-12 text-center mt-5 go">
