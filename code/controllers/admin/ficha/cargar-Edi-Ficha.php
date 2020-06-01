@@ -40,6 +40,15 @@ if (isset($_GET['id_ficha'])){
                 id="fecha_fin" placeholder="Seleccione fecha" required>
             </div>
                 </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                 <label>Estado</label>
+                 <select class="  form-control" name="estado_ficha"
+                     id="cargo_user" required>
+                     <option value="'.$f['estado_ficha'].'">'.$f['estado_ficha'].'</option>
+                     <option value="Activo">Activo</option>
+                     <option value="Inactivo">Inactivo</option>
+                 </select>
+             </div>
         <div class="text-center">
                  <button type="submit"
                 class="btn btn-success loginbtn">Actualizar</button>
