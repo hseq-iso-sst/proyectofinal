@@ -185,8 +185,8 @@
                 <div class="row col-sm-12 col-md-12 col-lg-12">
                     <p>
                         <b>CONTACTENOS</b><br>
-                        TEL:5420963<br>
-                        E-MAIL:iso-sst@gmail.com<br>
+                        TEL: +57 3102418260<br>
+                        E-MAIL: jcchavez623@misena.edu.co<br>
                         DIRECCION: SENA Cl.25#11-135,chia-cundinamarca CLL 4 Nº 5-80 <br>
                     </p>
                 </div>
