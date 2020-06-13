@@ -5,32 +5,6 @@ class Consultas{
     public function insertarVisita($id_auditoria, $id_user, $nro_visita, $fecha_ini, $fecha_fin){
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
-        $sql ="SELECT * FROM auditoria WHERE id_auditoria!=:id_auditoria";
-        $result = $conexion->prepare($sql);
-        $result->bindParam(':id_auditoria',$id_auditoria);
-
-        $result ->execute();
-        $p = $result->fetch();
-
-        if($p){
-            echo "<script>alert('Múmero de auditoría inválido')</script>";
-            echo '<script>location.href="../../../views/admin/visita/visitas.php"</script>';
-        // }else{
-        //     $modelo = new Conexion();
-        //     $conexion = $modelo->get_conexion();
-        //     $sql ="SELECT * FROM usuario WHERE id_user!=:id_user";
-        //     $result = $conexion->prepare($sql);
-        //     $result->bindParam(':id_user',$id_user);
-
-        //     $result ->execute();
-        //     $s = $result->fetch();
-
-        // if($s){
-        //     echo "<script>alert('Usuario no válido')</script>";
-        //     echo '<script>location.href="../../../views/admin/visita/visitas.php"</script>';
-        }else{
-        $modelo = new Conexion();
-        $conexion = $modelo->get_conexion();
         $sql ="SELECT * FROM visita WHERE id_auditoria=:id_auditoria AND nro_visita=:nro_visita";
         $result = $conexion->prepare($sql);
         $result->bindParam(':nro_visita',$nro_visita);
@@ -42,7 +16,7 @@ class Consultas{
         if ($f) {
             echo "<script>alert('Número de visita existente')</script>";
             echo '<script>location.href="../../../views/admin/visita/visitas.php"</script>';
-        }else{        
+        }else{     
             $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         
@@ -66,7 +40,6 @@ class Consultas{
                 }
 
             }
-        }  
     }
     public function cargarVisita(){
         $f=null;

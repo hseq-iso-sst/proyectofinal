@@ -33,7 +33,7 @@ else{
         <td>'.$f["puntaje"].'</td>
         <td>'.$f["id_empresa"].'</td>
         <td>'.$f["status"].'</td>}
-        <td class="icono"><a href="../../../views/admin/visita/visitas.php" class="fas fa-edit"></a></td>
+        <td class="icono"><a href="../../../views/admin/visita/visitas.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         <td class="icono"><a href="../../../views/admin/auditoria/edit.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         
      

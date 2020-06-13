@@ -18,6 +18,7 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
@@ -134,6 +135,9 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
+        $(document).ready( function () {
+                $('#verVis').DataTable();
+        } );
     </script>
 </body>
 
