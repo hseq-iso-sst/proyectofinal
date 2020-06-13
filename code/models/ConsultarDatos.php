@@ -88,8 +88,28 @@ class ConsultarDatos
             $result->execute();
             $sedes = $result->fetchAll();
         }
-        
+
         return $sedes;
+    }
+    function get_sedes_empresa($id_empresa)
+    {
+        $conexion = $this->db->get_conexion();
+        $sql = "SELECT id_sede,departamento_sede,ciudad_sede FROM sede where id_empresa=:id_empresa";
+        $result = $conexion->prepare($sql);
+        $result->bindParam(':id_empresa', $id_empresa);
+        $result->execute();
+        $sedes = $result->fetch(PDO::FETCH_ASSOC);
+        return $sedes;
+    }
+    function get_contacto_empresa($id_empresa)
+    {
+        $conexion = $this->db->get_conexion();
+        $sql = "SELECT * FROM contacto where id_empresa=:id_empresa";
+        $result = $conexion->prepare($sql);
+        $result->bindParam(':id_empresa', $id_empresa);
+        $result->execute();
+        $contactos = $result->fetch(PDO::FETCH_ASSOC);
+        return $contactos;
     }
     function get_contactos($id_contacto = null)
     {
@@ -106,7 +126,7 @@ class ConsultarDatos
             $result->execute();
             $contactos = $result->fetchAll();
         }
-        
+
         return $contactos;
     }
     function get_requisito($id_requisito)
@@ -118,5 +138,20 @@ class ConsultarDatos
         $requisitos = $result->fetchAll();
         return $requisitos;
     }
+    public function cargarFicha()
+    {
+        $f = null;
+
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+
+        $sql = "SELECT * FROM ficha";
+        $statement = $conexion->prepare($sql);
+        $statement->execute();
+
+        while ($result = $statement->fetch()) {
+            $f[] = $result;
+        }
+        return $f;
+    }
 }
-?>

@@ -1,32 +1,28 @@
 <?php
-require_once("../../../models/conexion.php");
-require_once("../../../models/admin/ficha/consultaFicha.php");
-require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
+require_once("../../../models/admin/usuario/conexion.php");
+require_once("../../../models/admin/usuario/consultasUsuario.php");
+require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="0=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logov2.png">
-    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
-    <title>Editar Fichas</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
+    <title>Listas de empresa</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=".../../dist/css/style-hseq.css">
-    <!-- css mdb -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,13 +44,12 @@ require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+            <?php include_once('../../../nav.php'); ?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -76,50 +71,90 @@ require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate font-weight-medium mb-1">Editar Fichas</h4>
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Lista Usuarios</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            >Editar Fichas</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Usuarios</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
+                  
                 </div>
             </div>
-            <!-- ============================================================== -->
+             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row">
-                        <div
-                            class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
-                            <div class="text-center custom-login">
-                                <h3>Editar Fichas</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
-                                    <div class="hpanel">
-                                        <div class="panel-body-user shadow">
-                                                <?php
-                                                     seleccionarFicha();
-                                                ?> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container-fluid ver-empresas">
+                <div class="row">
+                
+                    <!-- Search -->
+                    <!-- ============================================================== -->
+                    
                 </div>
+                <!-- ============================================================== -->
+              <?php
+                cargarU();
+              ?>
+              
+                <!-- <table id="verUsuarios" class="table table-bordered lista-empresas">
+                    <thead>
+                        <tr class="head_tabla encabezado">
+                            <th>Identificación</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Cargo</th>
+                            <th>telefono</th>
+                            <td>Estado</td>
+                            <td>Editar</td>
+                            <td>Eliminar</td>
+                                    
+                        </tr>
+                    </thead>
+                    <!--  <tbody>
+                    <tr>
+                        <td>12345678634</td>
+                        <td>Lizeth</td>
+                        <td>Urrego</td>
+                        <td>Administrador</td>
+                        <td>12467889</td>
+                        <td>Activo</td>
+                        <td class="icono"><a href="editar-user.php" class="fas fa-edit"></a></td>
+                        <td class="icono"><a href="">
+                            <label class="interruptor">
+                               <input type="checkbox">
+                                <span class="deslizadora"></span>
+                             </label>
+                        </a></td>
+                    </tr>
+                    </tbody>
+                </table> -->
+                <!-- <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav> -->
             </div>
-            <!-- footer -->
             <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center text-muted">
                 <h6>Contactenos</h6>
@@ -128,18 +163,14 @@ require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
                 <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
                 <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
             </footer>
+            <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Container fluid  -->
+        <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
-    </div>
+        </div>
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -153,15 +184,19 @@ require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
     <script src="../../../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
     <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
-    <!-- js mdb -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script>
+        $(document).ready( function () {
+                $('#verUsuarios').DataTable();
+        } );
+    </script>
+
 </body>
 
 </html>

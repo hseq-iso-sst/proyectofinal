@@ -72,7 +72,7 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-md-4">
-                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Empresas</h4>
+                    <h4 class="page-title text-truncate font-weight-medium mb-1">Lista Empresas</h4>
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
@@ -91,9 +91,7 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid ver-empresas">
-            <div class="row">
-                <h2 class="col-md-6">Lista Empresas</h2>        
-                
+            <div class="row">                
              </div>
 
             <!-- ============================================================== -->
@@ -138,7 +136,7 @@ require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
     <script>
         $(document).ready(function() {
             $('#verEmpresa').DataTable();
-        });
+            });
     </script>
 </body>
 

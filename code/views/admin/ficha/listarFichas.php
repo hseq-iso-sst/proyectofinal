@@ -4,7 +4,7 @@ require_once("../../../models/admin/ficha/consultaFicha.php");
 require_once("../../../controllers/admin/ficha/cargarFicha.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,8 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    
     
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
@@ -70,12 +72,12 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Ficha</h4>
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Lista Ficha</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Ficha</li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Lista Ficha</li>
                                 </ol>
                             </nav>
                         </div>
@@ -91,21 +93,10 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
             <!-- ============================================================== -->
             <div class="container-fluid ver-empresas">
                 <div class="row">
-                    <h2 class="col-md-9">Lista Ficha</h2>
+                    
                     <!-- Search -->
                     <!-- ============================================================== -->
-                    <div class="col-md-3">
-                        <form>
-                            <a href="#">
-                                <div class="customize-input">
-                                    <span>
-                                    <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                        type="search" placeholder="Buscar" aria-label="Search">
-                                </span>
-                                </div>
-                            </a>
-                        </form>
-                    </div>
+                    
                 </div>
                 <!-- ============================================================== -->
               <?php
@@ -113,21 +104,7 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
               ?>
               <!-- ============================================================== -->
                 
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                        </li>
-                        <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+                
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
@@ -164,11 +141,17 @@ require_once("../../../controllers/admin/ficha/cargarFicha.php");
     <!--This page JavaScript -->
     <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
     <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#verFichas').DataTable();
+        });
+    </script>
 
 </body>
 

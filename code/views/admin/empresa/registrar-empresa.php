@@ -78,7 +78,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Registrar Empresa</h3>
+                        <h3 class="page-title text-truncate font-weight-medium mb-1">Registrar Empresa</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
@@ -129,10 +129,10 @@
                                                     <label class="fieldlabels">Tipo de Documento</label>
                                                     <select class="form-control" name="tipo_documento"
                                                         id="tipo_documento"required>
-                                                        <option></option>
-                                                        <option>NIT</option>
-                                                        <option>C.C</option>
-                                                        <option>C.E</option>
+                                                        <option value=""></option>
+                                                        <option value="NIT">NIT</option>
+                                                        <option value="C.C">C.C</option>
+                                                        <option value="C.E">C.E</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -147,7 +147,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Departamento</label>
-                                                    <select class="form-control" name="departamento_empresa" id="departamento_empresa"
+                                                    <select class="form-control" name="departamento" id="departamento"
                                                         required>
                                                         <option selected value="">Seleccione...</option>
                                                         <?php 
@@ -189,9 +189,9 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Sucursal</label>
                                                     <select class="form-control" name="sucursal" id="sucursal">
-                                                        <option></option>
-                                                        <option>Si</option>
-                                                        <option>No</option>
+                                                        <option value=""></option>
+                                                        <option value="Si">Si</option>
+                                                        <option value="No">No</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -294,9 +294,9 @@
                                                     <label class="fieldlabels">La empresa tiene una o más sedes</label>
                                                     <select class="form-control" name="sedes"
                                                         id="sedes" required>
-                                                        <option></option>
-                                                        <option>Si</option>
-                                                        <option>No</option>
+                                                        <option value=""></option>
+                                                        <option value="Si">Si</option>
+                                                        <option value="No">No</option>
                                                     </select>
                                                 </div>
                                             </div>

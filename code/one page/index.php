@@ -16,11 +16,11 @@
 <body>
 
     <header id="header-home">
-        <div class="container-fluid">
+        <div class="container-fluid N">
             <div class="container">
                 <div class="row ">
                     <div class="col-md-3 col-sm-12 col-lg-4 logo text-center">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="img/logov2.png" alt="IMAGEN LOGO">
                         </a>
                     </div>
@@ -43,16 +43,16 @@
                 <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/hero1.png" alt="imagen Brujula">
+                            <img src="img/hero1.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/hero2.png" alt="imagen Brujula">
+                            <img src="img/hero2.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
 
                         </div>
                         <div class="carousel-item">
-                            <img src="img/hero3.png" alt="imagen Brujula">
+                            <img src="img/hero3.png" alt="imagen hero1">
                             <h1>Salud Seguridad Medio Ambiente<br> y Calidad</h1>
 
                         </div>
@@ -66,7 +66,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <button class="btn " data-toggle="modal" data-target="#camilo">INGRESAR</button>
+                <button class="btn " data-toggle="modal" data-target="#camilo"> <a href="../views/login.php">INGRESAR</a> </button>
             </div>
         </div>
     </header>
@@ -185,8 +185,8 @@
                 <div class="row col-sm-12 col-md-12 col-lg-12">
                     <p>
                         <b>CONTACTENOS</b><br>
-                        TEL:5420963<br>
-                        E-MAIL:iso-sst@gmail.com<br>
+                        TEL: +57 3102418260<br>
+                        E-MAIL: jcchavez623@misena.edu.co<br>
                         DIRECCION: SENA Cl.25#11-135,chia-cundinamarca CLL 4 Nº 5-80 <br>
                     </p>
                 </div>

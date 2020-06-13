@@ -1,3 +1,9 @@
+<?php 
+    require_once('../../../models/conexion.php');
+    include_once('../../../models/ConsultarDatos.php');
+    $datos=new ConsultarDatos();
+    $f=$datos->cargarFicha();   
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,16 +13,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logov2.png">
-    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
-    <title>Registrar Fichas</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
+    <title>Registrar Usuarios</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href=".../../dist/css/style-hseq.css">
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
     <!-- css mdb -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet"
@@ -48,7 +53,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+            <?php include_once('../../../nav.php');?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -70,13 +75,13 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate font-weight-medium mb-1">Registrar Fichas</h4>
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Registrar Usuarios</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Home</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            >Registrar Fichas</a></li>
+                                            href="registrar-user.php">Registrar Usuarios</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -95,47 +100,98 @@
                         <div
                             class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
                             <div class="text-center custom-login">
-                                <h3>Registro Fichas</h3>
+                                <h3>Registro de Usuario</h3>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                            <form action="../../../controllers/admin/ficha/insertarFicha.php" id="loginForm" method="POST" enctype="multipart/form-data">
+                                            <form action="../../../controllers/admin/usuario/insertarUsuario.php" id="loginForm" method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <div class="row">
                                                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                                                            <div class="datos_user">
+                                                                <h5>DATOS DEL USUARIO</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Identificación</label>
+                                                            <input type="number" class="form-control" name="id_user"
+                                                                id="id_user" placeholder="Ej: 1075685565" required>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Nombres</label>
+                                                            <input type=" text" class="form-control" name="nombres_user"
+                                                                id="nombres_user" placeholder="Ej: Jasmin Rocio"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Apellidos</label>
+                                                            <input type=" text" class="form-control"
+                                                                name="apellidos_user" id="apellidos_user"
+                                                                placeholder="Ej: Fuquen Colmenares" required>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Email</label>
+                                                            <input type="email" class="form-control" name="email_user"
+                                                                id="email_user" placeholder="Ej: jasminfuquen@gmail.com"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Cargo</label>
+                                                            <select class=" form-control" name="cargo_user"
+                                                                id="cargo_user" required>
+                                                                <option></option>
+                                                                <option value="Coordinador">Coordinador</option>
+                                                                <option value="Instructor">Instructor</option>
+                                                                <option value="Aprendiz">Aprendiz</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Teléfono</label>
+                                                            <input type=" number" class="form-control"
+                                                                name="telefono_user" id="telefono_user"
+                                                                placeholder="Ej: 3132834058" required>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                        <div class="form-row">
+                                                                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                                    <label>Fichas Asignadas</label>
                                                             
+                                                     <select class="selectpicker" name="ficha_user[]" id="ficha_user" multiple required>
+                                                                     <option selected value="">Seleccione...</option>
+                                                                     <?php 
+                                                                      foreach($f as $item){
+                                                                     echo '<option value="'.$item[1].'">'.$item[0].'</option>';
+                                                            }
+                                                        ?>
+                                                                    </select> 
+                                                            </div>
+                                                            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Password</label>
+                                                            <input type="password" class="form-control" name="password_user"
+                                                                id="password_user" placeholder="*******" required>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Id Ficha</label>
-                                                            <input type="number" class="form-control" name="id_ficha"
-                                                                id="id_ficha" placeholder="Digite el id de la ficha" required>
                                                         </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Nombre Ficha</label>
-                                                            <input type="text" class="form-control" name="nombre_ficha"
-                                                                id="nombre_ficha" placeholder="Digite el Nombre" required>
+                                                        <div class="form-row">
+                                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                                                            <label>Foto</label>
+                                                            <input type="file" class="form-control" name="img_user"
+                                                                id="img_user" placeholder="Inserte Imagen" required>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Fecha Inicio</label>
-                                                            <input type="date" class="form-control" name="fecha_inicio"
-                                                                id="fecha_inicio" placeholder="Seleccione fecha" required>
-                                                        </div>
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Fecha Fin</label>
-                                                            <input type="date" class="form-control" name="fecha_fin"
-                                                                id="fecha_fin" placeholder="Seleccione fecha" required>
-                                                        </div>
+                                                        
                                                     </div>
                                                     <div class="text-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="registrar-user.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                     </div>
                                                 </div>
                                             </form>
@@ -150,7 +206,13 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
-            <?php include_once('../../../footer.php');?>
+            <footer class="footer text-center text-muted">
+                <h6>Contactenos</h6>
+                <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
+                <a href="https://github.com/" class="icon-social-github">GitHub</a>
+                <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
+                <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
+            </footer>
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
