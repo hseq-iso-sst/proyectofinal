@@ -60,6 +60,10 @@
                                             class="hide-menu">Visitas
                                         </span></a>
                                 </li>
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/ver-visitas.php" class="sidebar-link"><span
+                                            class="hide-menu">Lista de visitas
+                                        </span></a>
+                                </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
                                     class="hide-menu">Certificados</span></a>
                                 </li>

@@ -18,7 +18,8 @@ else{
             <th>Id Auditoria</th>
             <th>Puntaje</th>
             <th>Id empresa</th>
-            <th>Estado</th>   
+            <th>Estado</th> 
+            <th>Visita 2</th>  
             <th>Editar</th>  
             <th>Eliminar</th>      
         </tr>
@@ -31,7 +32,8 @@ else{
         <td>'.$f["id_auditoria"].'</td>
         <td>'.$f["puntaje"].'</td>
         <td>'.$f["id_empresa"].'</td>
-        <td>'.$f["status"].'</td>
+        <td>'.$f["status"].'</td>}
+        <td class="icono"><a href="../../../views/admin/visita/visitas.php" class="fas fa-edit"></a></td>
         <td class="icono"><a href="../../../views/admin/auditoria/edit.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         <td class="icono"><a href="../../../controllers/admin/auditoria/eliminar.php?id_auditoriaE='.$f["id_auditoria"].'" class="fas fa-eraser"></a></td>
      
