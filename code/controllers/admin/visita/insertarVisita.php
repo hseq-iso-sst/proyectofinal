@@ -5,15 +5,15 @@ require_once('../../../models/admin/visita/consultasVisita.php');
 
 
 $id_auditoria=$_POST['id_auditoria'];
-$id_usuario=$_POST['id_usuario'];
+$id_user=$_POST['id_user'];
 $nro_visita=$_POST['nro_visita'];
 $fecha_ini=$_POST['fecha_ini'];
 $fecha_fin=$_POST['fecha_fin'];
 
 
-if (strlen($id_auditoria)>0 && strlen($id_usuario)>0 && strlen($nro_visita) >0 && strlen($fecha_ini)>0 && strlen($fecha_fin)>0){
+if (strlen($id_auditoria)>0 && strlen($id_user)>0 && strlen($nro_visita) >0 && strlen($fecha_ini)>0 && strlen($fecha_fin)>0){
     $objetoConsultas =new Consultas();
-    $result = $objetoConsultas->insertarVisita($id_auditoria, $id_usuario, $nro_visita, $fecha_ini, $fecha_fin);
+    $result = $objetoConsultas->insertarVisita($id_auditoria, $id_user, $nro_visita, $fecha_ini, $fecha_fin);
 }
 else{
     echo "<script>alert('Completar todos los Campos')</script>";

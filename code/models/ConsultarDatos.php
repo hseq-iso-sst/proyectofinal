@@ -138,6 +138,31 @@ class ConsultarDatos
         $requisitos = $result->fetchAll();
         return $requisitos;
     }
+    // function get_usuario()
+    // {
+    //     $conexion = $this->db->get_conexion();
+    //     $sql = "SELECT id_user,nombres_user FROM usuario";
+    //     $result = $conexion->prepare($sql);
+    //     $result->execute();
+    //     $user = $result->fetchAll();
+    //     return $user;
+    // }
+    public function get_usuario()
+    {
+        $f = null;
+
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+
+        $sql = "SELECT id_user,nombres_user FROM usuario";
+        $statement = $conexion->prepare($sql);
+        $statement->execute();
+
+        while ($result = $statement->fetch()) {
+            $f[] = $result;
+        }
+        return $f;
+    }
     public function cargarFicha()
     {
         $f = null;

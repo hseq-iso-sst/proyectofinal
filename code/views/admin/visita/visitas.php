@@ -1,3 +1,10 @@
+<?php 
+    require_once('../../../models/conexion.php');
+    include_once('../../../models/ConsultarDatos.php');
+    $datos=new ConsultarDatos();
+    $f=$datos->get_usuario();
+    $id_auditoria=$_GET['id_auditoria'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,33 +112,42 @@
                                                     <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Número de auditoria</label>
-                                                            <input type="number" class="form-control" name="id_auditoria"
-                                                                id="id_auditoria" required>
+                                                            <input type="number" class="form-control" name="id_auditoria" value="<?php echo $id_auditoria;?>" readonly>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Nro de Documento Responsable</label>
-                                                            <input type="number" class="form-control" name="id_usuario"
-                                                                id="id_usuario" placeholder="Ej: 1127621913"
+                                                            <select class="form-control" name="id_user" id="id_user"
                                                                 required>
+                                                                <option selected value="">Seleccione...</option>
+                                                                <?php 
+                                                                    foreach($f as $item){
+                                                                        echo '<option value="'.$item[0].'">'.$item[0].'-'.$item[1].'</option>';
+                                                                    }
+                                                                ?>
+                                                        </select>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Nro de visita</label>
-                                                            <input type="number" class="form-control"
-                                                                name="nro_visita" id="nro_visita" required>
-                                                        </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Fecha Inicio</label>
                                                             <input type="date" class="form-control" name="fecha_ini"
                                                                 id="fecha_ini" required>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-row">
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
                                                             <label>Fecha Fin</label>
                                                             <input type="date" class="form-control" name="fecha_fin"
                                                                 id="fecha_fin" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Nro de visita</label><br>
+                                                                    <select class="select" name="nro_visita"
+                                                                     required>
+                                                                        <option></option> 
+                                                                        <option value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                    </select> 
                                                         </div>
                                                         <div class="col text-center align-self-center">
                                                         <button type="submit"

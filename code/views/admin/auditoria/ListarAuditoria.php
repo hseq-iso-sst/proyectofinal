@@ -145,7 +145,7 @@ require_once("../../../controllers/admin/auditoria/cargarAuditoriasL.php");
     <script src="../../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../../dist/js/custom.min.js"></script>
-    script src="../../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
     <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>

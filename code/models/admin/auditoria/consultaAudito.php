@@ -37,7 +37,7 @@ class consultaAuditoria{
                         echo "<script>alert('Error al guardar la auditoria en la BD')</script>";
                         
                     }
-                    echo '<script>location.href="../../../views/admin/auditoria/index.php"</script>';
+                    echo '<script>location.href="../../../views/admin/visita/visitas.php?id_auditoria='.$conexion->lastInsertId().'"</script>';
                 }
             }
         }
