@@ -73,7 +73,7 @@
             style="background:url(../assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box row">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../assets/images/big/pintura3.png);">
-                <button  class="border border-warning B1"> <a href="../one page/index.php">Inicio</a></button>
+                <button  class="border border-warning B1"> <a href="../one_page/index.php">Inicio</a></button>
                 </div>
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
