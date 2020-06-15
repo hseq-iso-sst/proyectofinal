@@ -7,15 +7,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logov2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
     <title>Visitas</title>
     <!-- Custom CSS -->
-    <link href="../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
-    <link href="../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="../dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../dist/css/style-hseq.css">
+    <link href="../../../dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../nav.php'); ?>
+        <?php include_once('../../../nav.php'); ?>
     </header>
     <!-- ============================================================== -->
     <!-- End Topbar header -->
@@ -51,7 +51,7 @@
     <!-- ============================================================== -->
     <!-- Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
-    <?php include_once('../menu.php');?>
+    <?php include_once('../../../menu.php');?>
     <!-- ============================================================== -->
     <!-- End Left Sidebar - style you can find in sidebar.scss  -->
     <!-- ============================================================== -->
@@ -65,23 +65,14 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-7 align-self-center">
-                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Visitas</h4>
+                    <h4 class="page-title text-truncate font-weight-medium mb-1">Visitas</h4>
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item"><a href="../index.php" class="text-muted">Home</a></li>
+                                <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
                                 <li class="breadcrumb-item text-muted active" aria-current="page">Visitas</li>
                             </ol>
                         </nav>
-                    </div>
-                </div>
-                <div class="col-5 align-self-center">
-                    <div class="customize-input float-right">
-                        <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
-                            <option selected>Aug 19</option>
-                            <option value="1">July 19</option>
-                            <option value="2">Jun 19</option>
-                        </select>
                     </div>
                 </div>
             </div>
@@ -106,26 +97,13 @@
                         </div>
                         <div class="col-lg-4 col-md-12">
                             <div class="card">
-                                <img class="card-img-top img-fluid" src="../assets/images/big/visita1.png"
+                                <img class="card-img-top img-fluid" src="../../../assets/images/big/visita1.png"
                                     alt="Card image cap">
                                 <div class="card-body">
                                     <h4 class="card-title">Visita 1</h4>
                                     <p class="card-text">Some quick example text to build on the card title and make
                                         up the bulk of the card's content.</p>
-                                    <a href="visita1.php" class="btn btn-primary">Ingresar</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <!-- Card -->
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="../assets/images/big/visita1.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Visita 2</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.</p>
-                                    <a href="visita2.php" class="btn btn-primary">Ingresar</a>
+                                    <a href="../auditoria/index.php" class="btn btn-primary">Ingresar</a>
                                 </div>
                             </div>
                         </div>
@@ -141,13 +119,7 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
-        <footer class="footer text-center text-muted">
-            <h6>Contactenos</h6>
-            <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
-            <a href="https://github.com/" class="icon-social-github">GitHub</a>
-            <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
-            <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
-        </footer>
+        <?php include_once('../../../footer.php'); ?>
         <!-- ============================================================== -->
         <!-- End footer -->
         <!-- ============================================================== -->
@@ -156,25 +128,25 @@
     <!-- End Page wrapper  -->
     <!-- ============================================================== -->
     </div>
-    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- apps -->
     <!-- apps -->
-    <script src="../dist/js/app-style-switcher.js"></script>
-    <script src="../dist/js/feather.min.js"></script>
-    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="../dist/js/sidebarmenu.js"></script>
+    <script src="../../../dist/js/app-style-switcher.js"></script>
+    <script src="../../../dist/js/feather.min.js"></script>
+    <script src="../../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="../dist/js/custom.min.js"></script>
+    <script src="../../../dist/js/custom.min.js"></script>
     <!--This page JavaScript -->
-    <script src="../assets/extra-libs/c3/d3.min.js"></script>
-    <script src="../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="../assets/libs/chartist/dist/chartist.min.js"></script>
-    <script src="../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-    <script src="../dist/js/pages/dashboards/dashboard1.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
+    <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
 
 </body>
 
