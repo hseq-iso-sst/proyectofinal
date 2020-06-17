@@ -2,6 +2,9 @@
 require_once("../../../models/admin/usuario/conexion.php");
 require_once("../../../models/admin/usuario/consultasUsuario.php");
 require_once("../../../controllers/admin/usuario/cargarUsuario.php");
+include_once('../../../models/ConsultarDatos.php');
+$datos=new ConsultarDatos();
+$fichas=$datos->cargarFicha();   
 ?>
 
 
@@ -116,7 +119,7 @@ require_once("../../../controllers/admin/usuario/cargarUsuario.php");
 
 
                                                 <?php
-                                                     seleccionarUsuario();
+                                                     seleccionarUsuario($fichas);
                                                 ?>
                                                 <!-- <form action="../../../controllers/insertarUsuario.php" id="loginForm" method="POST">
                                                     <div class="form-row">
