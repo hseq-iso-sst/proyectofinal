@@ -1,5 +1,5 @@
 <?php
-//var_dump($_POST);
+var_dump($_POST);
 $requeridos = array(
     'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'telefono_empresa', 'celular_empresa', 'sucursal', 'nro_sucursal', 'id_actividad', 'nombre_contacto', 'cargo_contacto', 'correo_contacto', 'correo_representante', 'riesgo_empresa', 'nro_trabajadores',
     'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'prima_empresa'
