@@ -169,7 +169,7 @@
                                                                      <option selected value="">Seleccione...</option>
                                                                      <?php 
                                                                       foreach($f as $item){
-                                                                     echo '<option value="'.$item[1].'">'.$item[0].'</option>';
+                                                                     echo '<option value="'.$item[0].'">'.$item[0].'-'.$item[1].'</option>';
                                                             }
                                                         ?>
                                                                     </select> 

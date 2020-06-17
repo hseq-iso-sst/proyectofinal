@@ -1,11 +1,11 @@
 <?php
 
-function seleccionarUsuario(){
+function seleccionarUsuario($fichas){
 if (isset($_GET['id_usuario'])){
  $consultas =new Consultas();
  $id_usuario=$_GET['id_usuario'];
  $result =$consultas->cargarUsuario($id_usuario);
-   
+// var_dump($fichas);
  
  foreach($result as $f){
      echo'
@@ -59,16 +59,17 @@ if (isset($_GET['id_usuario'])){
              <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                  <div class="form-row">
                      <div
-                     class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
+                     class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                      <label>Fichas Asignadas</label>
-                     <select class="selectpicker" name="ficha_user[]"
-                         multiple required>
-                         
-                             <option selected value="'.$f['ficha_user'].'">'.$f['ficha_user'].'</option>
-                             <option value="1984756 (HSEQ)">1984755 (HSEQ)</option>
-                             <option value="1984756 (HSEQ)">1984756 (HSEQ)</option>
-                             <option value="1946573 (HSEQ)">1946573 (HSEQ)</option>
-                             <option value="1949463 (HSEQ)">1949463 (HSEQ)</option>
+                     <select class="selectpicker1" name="ficha_user[]" id="ficha_user"
+                         requiredS
+                         <option selected value=">Selecione.../option> ';
+                         foreach($fichas as $item){
+                            $selected="";
+                            $selected=($ficha['id_ficha']==$f['ficha_user'])?"selected":"";
+                            echo '<option '.$selected.' value="'.$item['id_ficha'].'">'.$item['id_ficha'].'-'.$item['nombre_ficha'].'</option>';
+                         }
+                         echo '   
                          </select> 
                     </div>
                  </div>
