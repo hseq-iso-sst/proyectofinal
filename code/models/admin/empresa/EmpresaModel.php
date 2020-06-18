@@ -89,7 +89,7 @@ class EmpresaModel
             $sentenciaSql->bindParam(':nro_sedes', $datos_empresa['nro_sedes']);
             //$sentenciaSql->bindParam(':id_sede', $datos_empresa['id_sede']);
             $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
-            
+
             if (!$sentenciaSql) {
                 echo "<script>alert('Error al cargar los parametros para crear empresa')</script>";
             } else {
@@ -186,15 +186,16 @@ class EmpresaModel
         }
         return $f;
     }
-    function modificar_contacto($datos,$id_empresa){
+    function modificar_contacto($datos,$id_contacto){
         $conexion = $this->db->get_conexion();
-        $sentenciaSql = $conexion->prepare("UPDATE contacto SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_empresa,celular=: celular_empresa WHERE id=:id_empresa");
-        $sentenciaSql->bindParam(':id', $id_empresa);
+        $sentenciaSql = $conexion->prepare("UPDATE contacto SET nombre_contacto=:nombre,cargo_contacto=:cargo ,correo_contacto=:correo,telefono_contacto=:telefono,celular_contacto=:celular WHERE id_contacto=:id");
+                                            // UPDATE `contacto` SET `nombre_contacto` = 'pepito1', `cargo_contacto` = 'calidad1', `correo_contacto` = 'pepito1@gmail.com', `telefono_contacto` = '1234', `celular_contacto` = '12345' WHERE `contacto`.`id_contacto` = 6;
+        $sentenciaSql->bindParam(':id', $id_contacto);
         $sentenciaSql->bindParam(':nombre', $datos['nombre_contacto']);
         $sentenciaSql->bindParam(':cargo', $datos['cargo_contacto']);
         $sentenciaSql->bindParam(':correo', $datos['correo_contacto']);
-        $sentenciaSql->bindParam(':telefono', $datos['telefono_empresa']);
-        $sentenciaSql->bindParam(':celular', $datos['celular_empresa']);
+        $sentenciaSql->bindParam(':telefono', $datos['telefono_contacto']);
+        $sentenciaSql->bindParam(':celular', $datos['celular_contacto']);
 
         if (!$sentenciaSql) {
             echo "<script>alert('Error al Editar los parametros para crear contacto')</script>";
@@ -225,7 +226,7 @@ class EmpresaModel
         nro_sedes=:nro_sedes,
         prima_empresa=:prima_empresa 
         WHERE id_empresa=:id_empresa");
-
+        
         $sentenciaSql->bindParam(':tipo_documento', $datos_empresa['tipo_documento']);
         $sentenciaSql->bindParam(':nombre_empresa', $datos_empresa['nombre_empresa']);
         $sentenciaSql->bindParam(':departamento_empresa', $datos_empresa['departamento']);
@@ -270,12 +271,13 @@ class EmpresaModel
 //echo '<script>location.href="../../../views/admin/empresa/ver-empresa.php"</script>';
         }
     }
-    function modificar_sede($datos,$id_empresa){
+    function modificar_sede($datos,$id_sede){
         $conexion = $this->db->get_conexion();
-        $sentenciaSql = $conexion->prepare("UPDATE sede SET id=:id_empresa,nombre=:nombre_contacto,cargo=: cargo_contacto,correo=: correo_contacto,telefono=: telefono_contacto,celular=: celular_contacto WHERE id=:id_empresa");
-        $sentenciaSql->bindParam(':id', $id_empresa);
+        $sentenciaSql = $conexion->prepare("UPDATE sede SET departamento_sede=:departamento,ciudad_sede=:ciudad WHERE id=:id_sede");
+                                           // UPDATE `sede` SET `departamento_sede` = '11', `ciudad_sede` = '11001' WHERE `sede`.`id_sede` = 3;
+        $sentenciaSql->bindParam(':id', $id_sede);
         $sentenciaSql->bindParam(':ciudad', $datos['ciudad_sede']);
-        $sentenciaSql->bindParam(':departamento', $datos['departamento_Sede']);
+        $sentenciaSql->bindParam(':departamento', $datos['departamento_sede']);
         if (!$sentenciaSql) {
             echo "<script>alert('Error al cargar los parametros para editar sede')</script>";
         }else {
