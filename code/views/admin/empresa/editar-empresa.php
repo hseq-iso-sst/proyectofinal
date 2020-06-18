@@ -280,6 +280,10 @@
                                                     <input type="text" name="nombre_contacto" value="<?php echo $datos["contacto"]["nombre_contacto"];?>"required />
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <label class="fieldlabels">Id Contacto</label>
+                                                    <input type="text" name="id_contacto" value="<?php echo $datos["contacto"]["id_contacto"];?>"required readonly="readonly" />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Cargo del contacto de la empresa</label>
                                                     <input type="text" name="cargo_contacto" value="<?php echo $datos["contacto"]["cargo_contacto"];?>" required />
                                                 </div>
@@ -328,6 +332,10 @@
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Número de trabajadores indendientes</label>
                                                     <input type="number" name="nro_trabajadores_independientes" value="<?php echo $datos["empresa"]["nro_trabajadores_independientes"];?>" required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <label class="fieldlabels">Id sede</label>
+                                                    <input type="text" name="id_sede" value="<?php echo $datos["sedes"]["id_sede"];?>"required readonly="readonly" />
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">La empresa tiene una o más sedes</label>

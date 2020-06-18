@@ -45,12 +45,22 @@
                     <div class="col-7 align-self-center">
                         <h3 class="page-title text-truncate font-weight-medium mb-1">Visitas</h3>
                         <div class="d-flex align-items-center">
+<<<<<<< HEAD
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
                                 <li class="breadcrumb-item"><a href="http://localhost/proyectofinal/code/index.php" class="text-muted">Inicio</a></li>
                                 <li class="breadcrumb-item text-muted active" aria-current="page"><a href="ver-visitas.php">Visitas</a></li>
                             </ol>
                         </nav>
+=======
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
+                                            href="ver-visitas.php" class="text-muted">Visitas</a></li>
+                                </ol>
+                            </nav>
+>>>>>>> 6a3fc04d32fd78c0002fe99e06da8318130cc607
                         </div>
                     </div>
                 </div>

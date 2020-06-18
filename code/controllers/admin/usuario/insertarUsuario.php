@@ -3,7 +3,7 @@
 require_once('../../../models/admin/usuario/conexion.php');
 require_once('../../../models/admin/usuario/consultasUsuario.php');
 
-
+//var_dump($_POST);
 $id_user=$_POST['id_user'];
 $nombres_user=$_POST['nombres_user'];
 $apellidos_user=$_POST['apellidos_user'];
@@ -25,7 +25,7 @@ if (strlen($id_user)>0 && strlen($nombres_user)>0 && strlen($apellidos_user) >0 
   
     if ($_FILES["img_user"]["error"]>0) {//ese file depende del name del input del registrar//
         echo "<script>alert('Seleccione una imagen')</script>";
-        echo "<script>location.href='../../../views/admin/usuario/registrar-user.php'</script>";
+        echo "<script>location.href='../../../views/admin/usuario/ver-user.php'</script>";
     }
     else{
         if (in_array($_FILES['img_user']['type'], $FORMATO) && $_FILES['img_user']['size'] <= LIMITE *2000) {
@@ -54,7 +54,6 @@ if (strlen($id_user)>0 && strlen($nombres_user)>0 && strlen($apellidos_user) >0 
     }
 }else{
     echo "<script>alert('Completar todos los Campos')</script>";
-    echo '<script>location.href="../../../views/admin/usuario/registrar-user.php"</script>';
-
+    echo '<script>window.history.back();</script>';
 } 
 ?>
