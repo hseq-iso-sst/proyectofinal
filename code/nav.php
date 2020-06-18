@@ -110,8 +110,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="<?php echo constant('URL');?>./assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
-                                    width="40">
+                                
+                                <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                    width="40">  
+
                                     <?php perfil(); ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">

@@ -78,7 +78,7 @@
                 <div class="col-lg-5 col-md-7 bg-white">
                     <div class="p-3">
                         <div class="text-center">
-                            <img src="../one page/img/logov2.png" alt="logo-empresa">
+                            <img src="../one_page/img/logov2.png" alt="logo-empresa">
                         </div>
                         <h2 class=" text-center">Iniciar Sesión</h2>
                         <p class="text-center">Ingrese su dirección de correo electrónico y contraseña</p>
