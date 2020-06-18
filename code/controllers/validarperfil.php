@@ -10,8 +10,8 @@
        foreach ($result as $f) {
 
            echo '
-           <img src="'.$f['img_user'].'" alt="" class="rounded-circle"
-                 width="40">
+            <img src="'.$f['img_user'].'" alt="" class="rounded-circle"
+                    width="40">
         
            <span class="ml-2 d-none d-lg-inline-block"><span>hola</span> <span
            class="text-dark">'.$f['nombres_user'].'  '.$f['apellidos_user'].'

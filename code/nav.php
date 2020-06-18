@@ -111,8 +111,8 @@
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 
-                                <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
-                                    width="40">  
+                                <!-- <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                    width="40">   -->
 
                                     <?php perfil(); ?>
                             </a>
