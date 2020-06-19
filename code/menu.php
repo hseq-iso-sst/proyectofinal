@@ -21,7 +21,7 @@
                                     class="hide-menu">Fichas</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                             <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/regFicha.php" class="sidebar-link"><span
-                                            class="hide-menu"> Fichas
+                                            class="hide-menu"> Registrar Fichas
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/listarFichas.php" class="sidebar-link"><span
