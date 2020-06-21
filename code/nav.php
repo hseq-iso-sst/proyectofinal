@@ -2,7 +2,7 @@
  require_once('config.php');
  require_once('models/conexion.php');
  require_once('models/validarSesion.php');
- require_once('models/consultasUsuario.php');
+ require_once('models/admin/usuario/consultasUsuario.php');
  require_once('controllers/validarperfil.php');
  require_once('models/seguridad_sesion-coordi.php');
 ?>
@@ -111,8 +111,8 @@
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 
-                                <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
-                                    width="40">  
+                                <!-- <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                    width="40">   -->
 
                                     <?php perfil(); ?>
                             </a>

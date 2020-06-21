@@ -1,6 +1,7 @@
-<!-- ?php
+<?php
+require_once('config.php');
 require_once('models/seguridad_sesion-coordi.php');
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -48,7 +49,9 @@ require_once('models/seguridad_sesion-coordi.php');
         <header class="topbar" data-navbarbg="skin6">
         <!-- ============================================================== -->
         <!-- NAV -->
+        
         <?php include_once('nav.php');?>
+
         <!-- ============================================================== -->
         </header>
         <!-- ============================================================== -->

@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/admin/usuario/conexion.php");
+require_once("../../../models/conexion.php");
 require_once("../../../models/admin/usuario/consultasUsuario.php");
 require_once("../../../controllers/admin/usuario/cargarUsuario.php");
 include_once('../../../models/ConsultarDatos.php');
