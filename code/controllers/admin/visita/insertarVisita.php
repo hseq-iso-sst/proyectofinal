@@ -20,4 +20,4 @@ else{
     echo '<script>location.href="../views/visitas.php"</script>';
 
 } 
-?>
+?> 

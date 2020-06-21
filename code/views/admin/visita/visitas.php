@@ -110,9 +110,10 @@
                                             <form action="../../../controllers/admin/visita/insertarVisita.php" id="loginForm" method="POST" enctype="multipart/form-data">
                                                 <div class="form-group">
                                                     <div class="form-row">
-                                                        <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                                                            <label>Número de auditoria</label>
-                                                            <input type="number" class="form-control" name="id_auditoria" value="<?php echo $id_auditoria;?>" readonly>
+                                                     <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                                                            <label>Número de auditoría</label>
+                                                            <input type=" number" class="form-control"
+                                                                name="id_auditoria" value="<?php echo $id_auditoria;?>" readonly>
                                                         </div>
                                                         <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
                                                             <label>Nro de Documento Responsable</label>

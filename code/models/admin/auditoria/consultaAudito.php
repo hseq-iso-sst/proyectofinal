@@ -48,11 +48,13 @@ class consultaAuditoria{
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-             $sql= "SELECT * FROM auditoria";
-             $statement = $conexion->prepare($sql);
-             $statement->execute();
-         
-             while($result = $statement->fetch()){
+            $sql= "SELECT Au.id_auditoria, Au.puntaje, Em.nombre_empresa, Au.status FROM  auditoria Au 
+            INNER JOIN empresa Em ON Au.id_empresa = Em.id_empresa";
+            $statement = $conexion->prepare($sql);
+            $statement->bindParam(":id_auditoria", $doc);
+            $statement->execute();
+
+            while($result = $statement->fetch()){
                 $f[] = $result;
             }
             return $f;

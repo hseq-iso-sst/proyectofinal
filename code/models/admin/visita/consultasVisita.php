@@ -45,14 +45,18 @@ class Consultas{
         $f=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
-        $sql ="SELECT * FROM visita";
-        $statement=$conexion->prepare($sql);
-        $statement->execute();
-   
-        while($result = $statement->fetch()){
-            $f[] = $result;
-        }
-        return $f;
+        $sql= "SELECT Em.nombre_empresa, Vi.id_auditoria, Us.nombres_user, Vi.nro_visita, Vi.fecha_ini, Vi.fecha_fin FROM  visita Vi 
+            INNER JOIN auditoria Au ON Vi.id_auditoria = Au.id_auditoria
+            INNER JOIN empresa Em ON Au.id_empresa = Em.id_empresa
+            INNER JOIN usuario Us ON Vi.id_user = Us.id_user";
+            $statement = $conexion->prepare($sql);
+            $statement->bindParam(":id_auditoria", $doc);
+            $statement->execute();
+
+            while($result = $statement->fetch()){
+                $f[] = $result;
+            }
+            return $f;
      }
 }
 ?>

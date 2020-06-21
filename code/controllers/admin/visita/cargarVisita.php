@@ -13,7 +13,7 @@ function cargarV(){
     <thead>
         <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
         <tr class="head_tabla encabezado">
-            <th>Id visita</th>
+            <th>Empresa</th>
             <th>Número de auditoría</th>
             <th>Responsable</th>
             <th>Número de visita</th>
@@ -29,13 +29,13 @@ function cargarV(){
     foreach($result as $f){
         echo'
         <tr>
-        <td>'.$f["id_visita"].'</td>
+        <td>'.$f["nombre_empresa"].'</td>
         <td>'.$f["id_auditoria"].'</td>
-        <td>'.$f["id_user"].'</td>
+        <td>'.$f["nombres_user"].'</td>
         <td>'.$f["nro_visita"].'</td>
         <td>'.$f["fecha_ini"].'</td>
         <td>'.$f["fecha_fin"].'</td>
-        <td class="icono"><a href="editar-user.php?id_usuario='.$f["id_user"].'" class="fas fa-edit"></a></td>
+        <td class="icono"></td>
      
     </tr>
         ';

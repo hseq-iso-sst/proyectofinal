@@ -9,44 +9,36 @@ function cargarRequi(){
     echo '<h2>No hay requsisitos activos</h2>';
     }else{
     echo'
-    <thead >
-                                                            <tr>
-                                                                <th rowspan="2"></th>
-                                                                <th colspan="5">CRITERIOS DE EVALUACION </td>
-                                                                <th colspan="2">Si es COMPLETO o NA = 1 o Si es
-                                                                    INCOMPLETO/ o NC = 0</th>
-
-                                                                </thead>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th rowspan="2"></th>
-                                                                        <th colspan="5"></th>
-                                                                        <th>Evaluación</th>
-                                                                        <th>Comentario</th>
-                                                                    </tr>
-
-                                                                </thead>
-                                                                <tbody>
-                                                                    ';
-                                                                    foreach($result as $f)
-                                                                    echo'
-                                                                    <tr>
-                                                                        <td>'.$f["id_requisito"].'</td>
-                                                                        <td colspan="5">'.$f["nombre_requisito"].'
-                                                                        </td>
-                                                                        <td>
-                                                                            <select class="form-control" name="'.$f["
-                                                                                id_requisito"].'">
-                                                                                <option value="0">0</option>
-                                                                                <option value="1">1</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td>
-                                                                            <input type="text" name="comentario" />
-                                                                        </td>
-
-                                                                    </tr>
-                                                                    '
+    <thead>
+				<tr>
+                    <th colspan="5">CRITERIOS DE EVALUACION </th>
+                    <th colspan="2">COMPLETO = Cumple </br> INCOMPLETO = No cumple</th>
+				</tr>
+                
+			</thead>
+            <tbody>
+            <td colspan="2"><input type="file" name="foto" class=" " /></td>
+            ';
+            foreach($result as $f)
+            echo'
+				<tr>
+                  
+                   
+                    <td colspan="5">'.$f["nombre_requisito"].'</td>
+                    <td colspan="2">
+                        <select class="form-control" name="requisito['.$f["id_requisito"].']">
+                                <option value="0">No cumple</option>
+                                <option value="1">Cumple</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="5"><input type="text" placeholder="Comentario" name="comentario['.$f["id_requisito"].']" /></td>
+                    
+                  
+                </tr>
+			  '
                                                                     ;
     echo '</tbody>';
                                                                                                                                                    
