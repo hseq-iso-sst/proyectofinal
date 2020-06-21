@@ -1,5 +1,10 @@
 <?php
  require_once('config.php');
+ require_once('models/conexion.php');
+ require_once('models/validarSesion.php');
+ require_once('models/admin/usuario/consultasUsuario.php');
+ require_once('controllers/validarperfil.php');
+ require_once('models/seguridad_sesion-coordi.php');
 ?>
 
 <nav class="navbar top-navbar navbar-expand-md">
@@ -105,11 +110,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <img src="<?php echo constant('URL');?>./assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
-                                    width="40">
-                                <span class="ml-2 d-none d-lg-inline-block"><span>Hola,</span> <span
-                                        class="text-dark">Jasmin
-                                        Fuquen</span> <i data-feather="chevron-down" class="svg-icon"></i></span>
+                                
+                                <!-- <img src="assets/images/users/perfil.PNG" alt="user" class="rounded-circle"
+                                    width="40">   -->
+
+                                    <?php perfil(); ?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                                 <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"

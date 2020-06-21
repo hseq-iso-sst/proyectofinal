@@ -72,11 +72,11 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-md-4">
-                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Lista Visitas</h4>
+                    <h4 class="page-title text-truncate font-weight-medium mb-1">Lista Visitas</h4>
                     <div class="d-flex align-items-center">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="http://localhost/proyectofinal/code/index.php" class="text-muted">Inicio</a></li>
                                 <li class="breadcrumb-item text-muted active" aria-current="page"><a href="ver-empresa.php">Empresas</a></li>
                             </ol>
                         </nav>

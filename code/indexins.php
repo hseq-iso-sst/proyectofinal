@@ -74,9 +74,6 @@
                     </div>
                 </div>
             </div>
-
-
-
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -101,7 +98,7 @@
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
                                 Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda..
                             </p>
-                            <a href="views/visitas.php">
+                            <a href="views/admin/visita/visitas-general.php">
                                 <h3>Seguridad </h3>
                             </a>
                         </div>

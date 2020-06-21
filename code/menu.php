@@ -17,11 +17,11 @@
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="#" aria-expanded="false"><i
-                                    data-feather="cloud" class="feather-icon"></i><span
+                                    data-feather="grid" class="feather-icon"></i><span
                                     class="hide-menu">Fichas</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                             <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/regFicha.php" class="sidebar-link"><span
-                                            class="hide-menu"> Fichas
+                                            class="hide-menu"> Registrar Fichas
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/ficha/listarFichas.php" class="sidebar-link"><span
@@ -56,34 +56,31 @@
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/visitas.php" class="sidebar-link"><span
-                                            class="hide-menu">Visitas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/ver-visitas.php" class="sidebar-link"><span
-                                            class="hide-menu">Lista de visitas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
-                                    class="hide-menu">Certificados</span></a>
-                                </li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="book" class="feather-icon"></i><span
                                     class="hide-menu">Auditorias</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/index.php"
-                                        class="sidebar-link"><span class="hide-menu">Registro de Auditoría
-                                        </span></a>
-                                </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/ListarAuditoria.php" class="sidebar-link"><span
                                             class="hide-menu">Lista Auditorias
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
-                       
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                    class="hide-menu">Visitas</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/ver-visitas.php" class="sidebar-link"><span
+                                            class="hide-menu">Lista de visitas
+                                        </span></a>
+                                </li>
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
+                                    class="hide-menu">Certificados</span></a>
+                            </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

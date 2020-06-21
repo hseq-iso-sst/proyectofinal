@@ -1,5 +1,5 @@
 <?php
-require_once("../../../models/admin/usuario/conexion.php");
+require_once("../../../models/conexion.php");
 require_once("../../../models/admin/usuario/consultasUsuario.php");
 require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
 ?>
@@ -116,7 +116,7 @@ require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
                                     
                         </tr>
                     </thead>
-                    <!--  <tbody>
+                    <!-  <tbody>
                     <tr>
                         <td>12345678634</td>
                         <td>Lizeth</td>

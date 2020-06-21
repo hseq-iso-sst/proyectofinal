@@ -10,7 +10,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo constant('URL');?>index.php"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo constant('URL');?>indexapren.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a>
                         </li>
@@ -28,28 +28,29 @@
                                             class="hide-menu">Lista de empresas
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/visitas.php" class="sidebar-link"><span
-                                            class="hide-menu">Visitas
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
-                                    class="hide-menu">Certificados</span></a>
-                                </li>
-
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
                                     class="hide-menu">Auditorias</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/index.php"
-                                        class="sidebar-link"><span class="hide-menu">Registrar Auditorias
-                                        </span></a>
-                                </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/ListarAuditoria.php" class="sidebar-link"><span
                                             class="hide-menu">Lista Auditorias
                                         </span></a>
                                 </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
+                                    class="hide-menu">Visitas</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/visita/ver-visitas.php" class="sidebar-link"><span
+                                            class="hide-menu">Lista de visitas
+                                        </span></a>
+                                </li>
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
+                                    class="hide-menu">Certificados</span></a>
+                            </li>
                             </ul>
                         </li>
                     </ul>

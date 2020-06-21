@@ -2,7 +2,7 @@
 
 function cargarU(){
 
-    $consultas =new consultas();
+    $consultas =new Consultas();
     $result = $consultas->cargarUsers();
 
     if(!isset($result)) {

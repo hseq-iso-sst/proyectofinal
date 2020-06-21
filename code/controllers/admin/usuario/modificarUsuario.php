@@ -1,7 +1,7 @@
 <?php
 
 
-require_once('../../../models/admin/usuario/conexion.php');
+require_once('../../../models/conexion.php');
 require_once('../../../models/admin/usuario/consultasUsuario.php');
 
 $consultas= new Conexion();

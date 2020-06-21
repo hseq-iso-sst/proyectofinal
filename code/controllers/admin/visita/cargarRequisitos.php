@@ -17,7 +17,11 @@ function cargarRequi(){
                 
 			</thead>
             <tbody>
+<<<<<<< HEAD
             <td colspan="2"><input type="file" name="foto" class=" " /></td>
+=======
+           
+>>>>>>> d04502b203dc66240ed70a136865fbf22042722d
             ';
             foreach($result as $f)
             echo'

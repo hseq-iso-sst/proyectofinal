@@ -51,36 +51,36 @@ class Consultas{
     }
 
     public function cargarUsers(){
-     $f=null;
-     $modelo = new Conexion();
-     $conexion = $modelo->get_conexion();
-     $sql ="SELECT * FROM usuario";
-     $statement=$conexion->prepare($sql);
-     $statement->execute();
-
-     while($result = $statement->fetch()){
-         $f[] = $result;
-     }
-     return $f;
-  
-    }
+        $f=null;
+        $modelo = new Conexion();
+        $conexion = $modelo->get_conexion();
+        $sql ="SELECT * FROM usuario";
+        $statement=$conexion->prepare($sql);
+        $statement->execute();
+   
+        while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+     
+       }
 
     public function cargarUsuario($doc){
-    $f=null;
-
-     $modelo = new Conexion();
-     $conexion = $modelo->get_conexion();
-
-     $sql= "SELECT * FROM usuario WHERE id_user = :id_user";
-     $statement = $conexion->prepare($sql);
-     $statement->bindParam(":id_user", $doc);
-     $statement->execute();
-
-     while($result = $statement->fetch()){
-        $f[] = $result;
-    }
-    return $f;
- }
+        $f=null;
+    
+         $modelo = new Conexion();
+         $conexion = $modelo->get_conexion();
+    
+         $sql= "SELECT * FROM usuario WHERE id_user = :id_user";
+         $statement = $conexion->prepare($sql);
+         $statement->bindParam(":id_user", $doc);
+         $statement->execute();
+    
+         while($result = $statement->fetch()){
+            $f[] = $result;
+        }
+        return $f;
+     }
 
   public function modificarUsuario($id_user, $nombres_user, $apellidos_user, $email_user, $cargo_user, $telefono_user, $ficha_user, $estado_user){
     $modelo = new Conexion();
@@ -133,27 +133,29 @@ class Consultas{
     }
 
   }
+  //++++++++++++llamado de los datos para inicio de sesion+++++++
+public function validarperfil($email_user){
+    $resultado= null;
+    $modelo = new Conexion();
+  $conexion = $modelo->get_conexion();
+
+  $sql="SELECT * FROM usuario WHERE email_user=:email_user";
+      $result=$conexion->prepare($sql);
+      $result->bindParam(":email_user",$email_user);
+      $result->execute();
+
+      while($f=$result->fetch()){
+          $resultado[]=$f;
+          return $resultado;
+
+
+      }
+
+}
+//++++++++++++fin llamado de los datos para inicio de sesion+++++++
 }
 
-//   public function validarperfil($email_user){
-//       $resultado= null;
-//       $modelo = new Conexion();
-//     $conexion = $modelo->get_conexion();
 
-//     $sql="SELECT * FROM usuario WHERE email_user=:email_user";
-//         $result=$conexion->prepare($sql);
-//         $result->bindParam(":email_user",$email_user);
-//         $result->execute();
-
-//         while ($f = $result->fetch()){
-//             $resultado[]= $f;
-//     }
-//             return $resultado;
-
-
-//         }
-
-//   }
 
 
 ?> 

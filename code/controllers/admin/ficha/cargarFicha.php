@@ -17,7 +17,7 @@ else{
         <tr class="head_tabla encabezado">
             <th>Id_Ficha</th>
             <th>Nombres_Ficha</th>
-            <th>Fecha_Inicicio</th>
+            <th>Fecha_Inicio</th>
             <th>Fecha_Fin</th>
             <th>Estado</th>   
             <th>Editar</th>  

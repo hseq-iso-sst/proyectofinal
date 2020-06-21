@@ -1,3 +1,7 @@
+<?php
+require_once('config.php');
+require_once('models/seguridad_sesion-coordi.php');
+?> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -45,7 +49,9 @@
         <header class="topbar" data-navbarbg="skin6">
         <!-- ============================================================== -->
         <!-- NAV -->
+        
         <?php include_once('nav.php');?>
+
         <!-- ============================================================== -->
         </header>
         <!-- ============================================================== -->
@@ -101,7 +107,7 @@
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
                                 Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda..
                             </p>
-                            <a href="views/visitas.php">
+                            <a href="views/admin/visita/visitas-general.php">
                                 <h3>Seguridad </h3>
                             </a>
                         </div>
