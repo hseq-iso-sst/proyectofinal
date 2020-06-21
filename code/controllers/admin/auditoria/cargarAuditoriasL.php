@@ -29,13 +29,8 @@ function cargarAuditori(){
         <tr>
         <td>'.$f["id_auditoria"].'</td>
         <td>'.$f["puntaje"].'</td>
-<<<<<<< HEAD
         <td>'.$f["nombre_empresa"].'</td>
-        <td>'.$f["status"].'</td>}
-=======
-        <td>'.$f["id_empresa"].'</td>
         <td>'.$f["status"].'</td>
->>>>>>> d04502b203dc66240ed70a136865fbf22042722d
         <td class="icono"><a href="../../../views/admin/visita/visitas.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         <td class="icono"><a href="../../../views/admin/auditoria/edit.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         

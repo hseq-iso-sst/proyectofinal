@@ -37,8 +37,3 @@ require_once('../../../models/conexion.php');
 require_once('../../../models/admin/empresa/EmpresaModel.php');
 $empresa_model=new EmpresaModel();
 $empresa_model->guardar_empresa($contacto,$sede,$empresa,$actividades);
-/* 
-var_dump($empresa);
-var_dump($contacto);
-var_dump($actividades);
-var_dump($sede); */
