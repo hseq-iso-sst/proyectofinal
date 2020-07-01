@@ -10,7 +10,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo constant('URL');?>index.php"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo constant('URL');?>views/admin/principal/index.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a>
                         </li>
@@ -76,7 +76,7 @@
                                             class="hide-menu">Lista de visitas
                                         </span></a>
                                 </li>
-                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/procesos_certificacion.php" class="sidebar-link"><span
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/certificaciones/procesos_certificacion.php" class="sidebar-link"><span
                                     class="hide-menu">Certificados</span></a>
                             </li>
                             </ul>
