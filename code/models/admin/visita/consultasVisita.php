@@ -1,6 +1,6 @@
 <?php
 
-class Consultas{
+class consultasVisita{
 
     public function insertarVisita($id_auditoria, $id_user, $nro_visita, $fecha_ini, $fecha_fin){
         $modelo = new Conexion();
@@ -41,7 +41,7 @@ class Consultas{
 
             }
     }
-    public function cargarVisita(){
+    public function cargarVisitas(){
         $f=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();

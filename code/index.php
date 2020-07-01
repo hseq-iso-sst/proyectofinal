@@ -1,6 +1,6 @@
 <?php
 require_once('config.php');
-require_once('models/seguridad_sesion-coordi.php');
+// require_once('models/seguridad_sesion-coordi.php');
 ?> 
 <!DOCTYPE html>
 <html lang="es">
