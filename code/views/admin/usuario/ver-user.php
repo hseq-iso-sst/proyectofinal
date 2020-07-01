@@ -193,8 +193,12 @@ require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
         $(document).ready( function () {
-                $('#verUsuarios').DataTable();
-        } );
+                $('#verUsuarios').DataTable({
+                "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
     </script>
 
 </body>
