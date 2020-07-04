@@ -75,7 +75,7 @@ require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page">Usuarios</li>
                                 </ol>
                             </nav>
@@ -193,8 +193,12 @@ require_once("../../../controllers/admin/usuario/cargarUsuarios.php");
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
     <script>
         $(document).ready( function () {
-                $('#verUsuarios').DataTable();
-        } );
+                $('#verUsuarios').DataTable({
+                "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
     </script>
 
 </body>

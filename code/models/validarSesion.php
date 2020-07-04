@@ -26,15 +26,15 @@ class validarSesion{
                  if($f['estado_user']== "Activo"){
                      if($f['cargo_user']=="Coordinador"){
                         echo "<script>alert('Bienvenido COORDINADOR')</script>";
-                        echo '<script>location.href="../index.php"</script>';
+                        echo '<script>location.href="../views/admin/principal/index.php"</script>';
                      }
                      if($f['cargo_user']=="Instructor"){
                         echo "<script>alert('Bienvenido INSTRUCTOR')</script>";
-                        echo '<script>location.href="../indexins.php"</script>';
+                        echo '<script>location.href="../views/admin/instruc/principl/indexins.php"</script>';
                      }
                      if($f['cargo_user']=="Aprendiz"){
                         echo "<script>alert('Bienvenido APRENDIZ')</script>";
-                        echo '<script>location.href="indexapren.php"</script>';
+                        echo '<script>location.href="../views/admin/aprend/principal/indexapren.php"</script>';
                      }
 
                  }

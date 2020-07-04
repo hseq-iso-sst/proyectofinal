@@ -1,10 +1,9 @@
 <?php
-require_once("../../../models/conexion.php");
-require_once("../../../models/admin/visita/consultasVisita.php");
-require_once("../../../controllers/admin/visita/cargarVisita.php");
-?>
+require_once('../../../config.php');
+require_once('../../../models/seguridad_sesion-coordi.php');
+?> 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,13 +12,11 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
-    <title>Listas de Visita</title>
+    <title>HSEQ (ISO - SST)</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
     <link href="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    
     <!-- Custom CSS -->
     <link href="../../../dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../../dist/css/style-hseq.css">
@@ -44,23 +41,23 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-            <?php include_once('../../../nav.php'); ?>
+        <!-- ============================================================== -->
+        <!-- NAV -->
+        
+        <?php include_once('../../../nav.php');?>
+
+        <!-- ============================================================== -->
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
         <?php include_once('../../../menu.php');?>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
@@ -71,60 +68,79 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate font-weight-medium mb-1">Lista Visitas</h4>
+                        <h3 class="page-title text-truncate font-weight-medium mb-1">Administrador</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Visitas</li>
+                                    <li class="breadcrumb-item"><a href="index.php">Inicio</a>
+                                    </li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-             <!-- ============================================================== -->
+
+
+
+            <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid ver-empresas">
-                <div class="row">
-                    
-                    <!-- Search -->
-                    <!-- ============================================================== -->
-                    <div class="col-md-3">
-                        <form>
+            <!----------------< CAMILO LO HIZO >------------------>
+            <!-- ======================NO TIENE BOOTSTRAP======================================== -->
+
+            <section id="tramites" class="about-us">
+                <div class="contenedor1">
+                    <div class="contenedor-articulo text-center">
+
+                        <div class="articulo">
+                            <img src="../../../assets/images/icons-hseq/salud.PNG" alt="Salud">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
+                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
                             <a href="#">
-                                <div class="customize-input">
-                                    
-                                </div>
+                                <h3>Salud</h3>
                             </a>
-                        </form>
+                        </div>
+                        <div class="articulo ">
+                            <img src="../../../assets/images/icons-hseq/seguridad.PNG" alt="Seguridad">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
+                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda..
+                            </p>
+                            <a href="../../../views/admin/visita/visitas-general.php">
+                                <h3>Seguridad </h3>
+                            </a>
+                        </div>
+                        <div class="articulo ">
+                            <img src="../../../assets/images/icons-hseq/medio-ambiente.PNG" alt="Ambiente">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
+                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
+                            <a href="#">
+                                <h3>Ambiente</h3>
+                            </a>
+                        </div>
+                        <div class="articulo ">
+                            <img src="../../../assets/images/icons-hseq/calidad.PNG" alt="Calidad">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
+                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
+                            <a href="#">
+                                <h3>Calidad</h3>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <?php cargarV();
-                ?>
-              <!-- ============================================================== -->
-                
-                
-            </div>
-            <!-- ============================================================== -->
+            </section>
+
+            <!--============================< HASTA AQUI :)>==================================-->
+
+
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center text-muted">
-                <h6>Contactenos</h6>
-                <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
-                <a href="https://github.com/" class="icon-social-github">GitHub</a>
-                <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
-                <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
-            </footer>
+            <?php include_once('../../../footer.php'); ?>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -133,6 +149,8 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
+
+
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -144,23 +162,14 @@ require_once("../../../controllers/admin/visita/cargarVisita.php");
     <script src="../../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
     <script src="../../../assets/extra-libs/c3/d3.min.js"></script>
     <script src="../../../assets/extra-libs/c3/c3.min.js"></script>
-    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="../../../assets/libs/chartist/dist/chartist.min.js"></script>
     <script src="../../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
     <script src="../../../assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="../../../dist/js/pages/dashboards/dashboard1.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#verVis').DataTable({
-                "language": {
-                "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-                }
-            });
-        });
-    </script>
 
 </body>
 

@@ -12,7 +12,7 @@ $fecha_fin=$_POST['fecha_fin'];
 
 
 if (strlen($id_auditoria)>0 && strlen($id_user)>0 && strlen($nro_visita) >0 && strlen($fecha_ini)>0 && strlen($fecha_fin)>0){
-    $objetoConsultas =new Consultas();
+    $objetoConsultas =new consultasVisita();
     $result = $objetoConsultas->insertarVisita($id_auditoria, $id_user, $nro_visita, $fecha_ini, $fecha_fin);
 }
 else{

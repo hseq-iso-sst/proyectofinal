@@ -2,8 +2,8 @@
 
 function cargarV(){
 
-    $consultas =new consultas();
-    $result = $consultas->cargarVisita();
+    $consultas =new consultasVisita();
+    $result = $consultas->cargarVisitas();
 
     if(!isset($result)) {
     echo '<h2>No hay visitas para mostrar</h2>';
