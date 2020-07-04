@@ -2,7 +2,7 @@
 
 class Consultas{
 
-    public function insertarEvaluacion($id_visita, $id_requisito, $evaluacion, $comentario, $rutaimg){     
+    public function insertarEvaluacion($id_visita, $id_requisito, $evaluacion, $comentario){     
             $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         

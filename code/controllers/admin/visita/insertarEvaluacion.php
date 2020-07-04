@@ -2,11 +2,7 @@
 
 require_once('../../../models/conexion.php');
 require_once('../../../models/admin/visita/consultasEvaluacion.php');
-<<<<<<< HEAD
 require_once('../../../controllers/admin/visita/cargarRequisitos.php');
-=======
-
->>>>>>> d04502b203dc66240ed70a136865fbf22042722d
 
 $id_visita=$_POST['id_visita'];
 $requisitos=$_POST['requisito'];
