@@ -8,7 +8,7 @@ $id_visita=$_POST['id_visita'];
 $requisitos=$_POST['requisito'];
 $comentarios=$_POST['comentario'];
 $resultado=0;
-for($i=1;$i<=22;$i++){
+for($i=1;$i<=21;$i++){
      if (strlen($id_visita)>0 && strlen($requisitos[$i])>0){
       
                         if ($resultado) {
@@ -16,11 +16,10 @@ for($i=1;$i<=22;$i++){
                                 $resultado = $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i],);
                             
                         }else{
-
                                 echo "<script>alert('Llene todos los campos')</script>";
                                 echo "<script>window.history.back();</script>";
-    }
- 
+                        }
+        } 
 }
 
     if($resultado==0){
