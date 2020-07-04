@@ -12,7 +12,7 @@ function cargarRequi(){
     <thead>
 				<tr>
                     <th colspan="5">CRITERIOS DE EVALUACION </th>
-                    <th colspan="2">COMPLETO = Cumple </br> INCOMPLETO = No cumple</th>
+                    <th colspan="3">COMPLETO = Cumple </br> INCOMPLETO = No cumple</th>
 				</tr>
                 
 			</thead>
@@ -25,7 +25,7 @@ function cargarRequi(){
                   
                    
                     <td colspan="5">'.$f["nombre_requisito"].'</td>
-                    <td colspan="2">
+                    <td colspan="3">
                         <select class="form-control" name="requisito['.$f["id_requisito"].']">
                                 <option value="0">No cumple</option>
                                 <option value="1">Cumple</option>
