@@ -48,7 +48,7 @@ class consultaAuditoria{
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-            $sql= "SELECT Au.id_auditoria, Au.puntaje, Em.nombre_empresa, Au.status FROM  auditoria Au 
+            $sql= "SELECT Au.id_auditoria, Au.puntaje_1, Au.puntaje_2, Em.nombre_empresa, Au.status FROM  auditoria Au 
             INNER JOIN empresa Em ON Au.id_empresa = Em.id_empresa";
             $statement = $conexion->prepare($sql);
             $statement->bindParam(":id_auditoria", $doc);
