@@ -2,7 +2,7 @@
 
 class Consultas{
 
-    public function insertarEvaluacion($id_visita, $id_requisito, $evaluacion, $comentario, $rutaimg){     
+    public function insertarEvaluacion($id_visita, $id_requisito, $evaluacion, $comentario){     
             $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         
@@ -14,7 +14,6 @@ class Consultas{
                 $statement->bindParam(':requisito',$id_requisito);
                 $statement->bindParam(':evaluacion',$evaluacion);
                 $statement->bindParam(':comentario',$comentario);
-                $statement->bindParam(':archivo',$rutaimg);
 
             
                 if (!$statement) {

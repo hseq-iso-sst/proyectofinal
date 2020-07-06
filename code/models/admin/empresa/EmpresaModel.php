@@ -62,11 +62,11 @@ class EmpresaModel
             $conexion = $this->db->get_conexion();
             $sql = "INSERT INTO empresa(tipo_documento, id_empresa, nombre_empresa, departamento_empresa,ciudad_empresa,
                                             direccion_empresa,sucursal,nro_sucursal,correo_representante,
-                                            riesgo_empresa,nro_trabajadores,nro_trabajadores_dependientes,nro_trabajadores_independientes,
+                                            riesgo_empresa,certificaciones,nro_trabajadores,nro_trabajadores_dependientes,nro_trabajadores_independientes,
                                             sedes,nro_sedes,prima_empresa) 
                                     VALUES(:tipo_documento, :id_empresa, :nombre_empresa, :departamento_empresa,:ciudad_empresa,
                                             :direccion_empresa,:sucursal,:nro_sucursal,:correo_representante,
-                                            :riesgo_empresa,:nro_trabajadores,:nro_trabajadores_dependientes,:nro_trabajadores_independientes,
+                                            :riesgo_empresa,:certificaciones,:nro_trabajadores,:nro_trabajadores_dependientes,:nro_trabajadores_independientes,
                                             :sedes,:nro_sedes,:prima_empresa)";
 
             $sentenciaSql = $conexion->prepare($sql);
@@ -82,6 +82,7 @@ class EmpresaModel
             //$sentenciaSql->bindParam(':id_contacto', $datos_empresa['id_contacto']);
             $sentenciaSql->bindParam(':correo_representante', $datos_empresa['correo_representante']);
             $sentenciaSql->bindParam(':riesgo_empresa', $datos_empresa['riesgo_empresa']);
+            $sentenciaSql->bindParam(':certificaciones', $datos_empresa['certificaciones']);
             $sentenciaSql->bindParam(':nro_trabajadores', $datos_empresa['nro_trabajadores']);
             $sentenciaSql->bindParam(':nro_trabajadores_dependientes', $datos_empresa['nro_trabajadores_dependientes']);
             $sentenciaSql->bindParam(':nro_trabajadores_independientes', $datos_empresa['nro_trabajadores_independientes']);

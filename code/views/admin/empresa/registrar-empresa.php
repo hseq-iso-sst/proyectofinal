@@ -256,7 +256,7 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Nivel de riesgo de la empresa</label>
                                                     <select class="form-control" name="riesgo_empresa" id="riesgo_empresa" required>
                                                         <option></option>
@@ -265,6 +265,17 @@
                                                         <option value="III (Riesgo medio)">III (Riesgo medio)</option>
                                                         <option value="IV (Riesgo alto)">IV (Riesgo alto)</option>
                                                         <option value="V (Riesgo máximo)">V (Riesgo máximo)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Certificaciones</label>
+                                                    <select class="form-control" name="certificaciones" id="certificaciones" required>
+                                                        <option></option>
+                                                        <option value="ISO 9001" >ISO 9001</option>
+                                                        <option value="ISO 14001">ISO 14001</option>
+                                                        <option value="ISO 45001">ISO 45001</option>
+                                                        <option value="RUC/Norsok">RUC/Norsok</option>
+                                                        <option value="BASC">BASC</option>
                                                     </select>
                                                 </div>
                                             </div>
