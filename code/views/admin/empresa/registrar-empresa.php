@@ -271,6 +271,7 @@
                                                     <label class="fieldlabels">Certificaciones</label>
                                                     <select class="form-control" name="certificaciones" id="certificaciones" required>
                                                         <option></option>
+                                                        <option>Ninguna</option>
                                                         <option value="ISO 9001" >ISO 9001</option>
                                                         <option value="ISO 14001">ISO 14001</option>
                                                         <option value="ISO 45001">ISO 45001</option>
