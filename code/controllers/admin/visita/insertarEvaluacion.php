@@ -21,10 +21,10 @@ for($i=1;$i<=21;$i++){
 }
 
     if($resultado==0){
-            echo "<script>alert('se registro la evalucion de los requisitos')</script>";
+            echo "<script>alert('se registro la evaluacion de los requisitos correctamente')</script>";
             echo '<script>location.href = "../../../views/procesos_certificacion.php"</script>';
         }else{
-            echo "<script>alert('Ocurrio un error al guardar los requisitos')</script>";
+            echo "<script>alert('Ocurrio un error al guardar la evaluacion de los requisitos')</script>";
             echo '<script>window.history.back();</script>'; 
         }
 ?>
