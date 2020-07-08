@@ -66,22 +66,13 @@
                 <div class="row justify-content-center body-empresa shadow">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <h2 id="heading">VISITA N°<?php echo $id_visita;?></h2>
+                            <h2 id="heading">VISITA</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
                             <form  action="../../../controllers/admin/visita/insertarEvaluacion.php" method="POST" enctype="multipart/form-data" id="msform"> 
-                                <div
-                                    class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
+                                <div class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
-                                    <ul id="progressbar">
-                                        <li class="active" id="confirm"><strong>Account</strong></li>
-                                        <li id="confirm"><strong>Personal</strong></li>
-                                        <li id="confirm"><strong>Image</strong></li>
-                                        <li id="confirm"><strong>Finish</strong></li>
-                                    </ul>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                            role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div> <br> <!-- fieldsets -->
+                                    
+                                     <!-- fieldsets -->
                                     <fieldset>
                                         <div class="col-12">
                                             <div class="card">
@@ -99,9 +90,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit"
-                                                            class="btn btn-success loginbtn">Registrar</button>
-                                        <input type="button" name="next" class="next action-button" value="Siguiente" />
+                                        <button type="submit"   class="btn btn-success loginbtn">Registrar</button>
+                                        
                                     </fieldset>
                                     <fieldset>
                                         <div class="col-12">
