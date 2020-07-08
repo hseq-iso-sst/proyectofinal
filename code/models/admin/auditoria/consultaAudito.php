@@ -80,16 +80,17 @@ public function cargarAutorias($doc){
     return $f;
 }
 
-public function modificarAuditorias($id_auditoria, $puntaje, $id_empresa, $status){
+public function modificarAuditorias($id_auditoria, $puntaje_1, $puntaje_2,$id_empresa, $status){
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
 
-    $sql = "UPDATE auditoria SET id_auditoria=:id_auditoria, puntaje=:puntaje, id_empresa=:id_empresa, status=:status WHERE id_auditoria=:id_auditoria";
+    $sql = "UPDATE auditoria SET id_auditoria=:id_auditoria, puntaje_1=:puntaje_1, puntaje_2=:puntaje_2,id_empresa=:id_empresa, status=:status WHERE id_auditoria=:id_auditoria";
     
     $statement = $conexion->prepare($sql);
    
     $statement->bindParam(':id_auditoria',$id_auditoria);
-    $statement->bindParam(':puntaje',$puntaje);
+    $statement->bindParam(':puntaje_1',$puntaje_1);
+    $statement->bindParam(':puntaje_2',$puntaje_2);
     $statement->bindParam(':id_empresa',$id_empresa);
     $statement->bindParam(':status',$status);
    

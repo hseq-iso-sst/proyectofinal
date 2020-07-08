@@ -58,3 +58,16 @@ $(function() {
     });
     
 });
+
+
+function alertGuardado(){
+    Swal.fire({
+        icon: 'erro',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        timer: 3000, 
+        showConfirmButton: false,
+        
+      })
+
+}
