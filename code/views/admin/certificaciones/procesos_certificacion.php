@@ -13,7 +13,7 @@ require_once("../../../controllers/admin/certificaciones/cargarCert.php");
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
-    <title>Puntage Empresa</title>
+    <title>Puntaje Empresa</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -70,7 +70,7 @@ require_once("../../../controllers/admin/certificaciones/cargarCert.php");
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate font-weight-medium mb-1">Puntage Empresa
+                        <h3 class="page-title text-truncate font-weight-medium mb-1">Puntaje Empresa
                         </h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
