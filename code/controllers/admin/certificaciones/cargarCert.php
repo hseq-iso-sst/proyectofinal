@@ -20,7 +20,7 @@ else{
             <style>
             h2 { color: #ef5827; }
             </style>
-            <h2 class="purple-text text-center" ><strong>¡Puntage Obtenido!</strong></h2> <br>
+            <h2 class="purple-text text-center" ><strong>¡Puntaje Obtenido!</strong></h2> <br>
             <div class="row justify-content-center">
             <div class="col-3">
                        
