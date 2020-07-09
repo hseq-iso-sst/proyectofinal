@@ -1,3 +1,8 @@
+<?php
+require_once("../../../models/conexion.php");
+require_once("../../../models/admin/certificaciones/consultaPuntageVisita.php");
+require_once("../../../controllers/admin/certificaciones/cargarCert.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +13,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
-    <title>Certificacion</title>
+    <title>Puntage Empresa</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -65,7 +70,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate font-weight-medium mb-1">Procesos de Certificacion
+                        <h3 class="page-title text-truncate font-weight-medium mb-1">Puntage Empresa
                         </h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
@@ -82,153 +87,9 @@
             <!-------------*INICIO DEL WRAPPER DE CERTIFICADOS CAMILO*------>
 
             <div id="certificado">
-                <div class="container-fluid bg-cambio  text-center">
-                    <div class="formula">
-                        <table class="table table-bordered">
-                            <thead >
-                                <tr>
-                                    <th scope="col-sm-12">La empresa esta certificada o en proceso de certificación
-                                        en alguna de las siguientes normas.</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                                    value="option1">
-                                                <label class="form-check-label" for="inlineCheckbox1">ISO 9001</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">ISO 14001</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">ISO 45001</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">RUC/Norsok</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">BASC</label>
-                                            </div>
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                                    value="option2">
-                                                <label class="form-check-label" for="inlineCheckbox2">OTRO</label>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-
-                                    <td><b>RESULTADOS DE LA EVALUACION DEL SISTEMA DE GESTION EN SEGURIDAD Y SALUD EN EL
-                                            TRABAJO - PYMES
-                                            a) Alto = Mayor o igual a 20 puntos: la empresa tiene una buena gestión del
-                                            SG-SST con oportunidades de mejora
-                                            b) Medio = De 13 a 19 puntos: la empresa realiza algunas actividades del
-                                            SG-SST pero debe aplicar acciones correctivas
-                                            c) Bajo = Menor o igual a 12 puntos: la empresa requiere dar prioridad a la
-                                            gestión del SG-SST</b> </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <div class="row ">
-                                                <div class="col">
-                                                    <div class="row text-center">
-                                                        <label for="First name"
-                                                            class="col-sm-2 col-form-label">Resultado de la evaluación
-                                                            Inicial</label>
-
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <input type="number" class="form-control col-sm-1">
-
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">ALTO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">MEDIO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">BAJO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </form>
-                                    </td>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <div class="row ">
-                                                <div class="col">
-                                                    <div class="row text-center">
-
-                                                        <label for="First name"
-                                                            class="col-sm-2 col-form-label">Resultado de la evaluación
-                                                            final</label>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <input type="number" class="form-control col-sm-1">
-
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">ALTO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">MEDIO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                        <label for="First name"
-                                                            class="col-sm-1 col-form-label">BAJO</label>
-                                                        <div class=""></div>
-                                                        <input type="number" class="form-control col-sm-1">
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <div class="form-group row text-center">
-                                                <label for="exampleFormControlTextarea1"class="col-sm-2 col-form-label">Observaciones iniciales</label>
-                                                <textarea class="form-control col-sm-9" id="exampleFormControlTextarea1"></textarea>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <form>
-                                            <div class="form-group row text-center">
-                                                <label for="exampleFormControlTextarea1"class="col-sm-2 col-form-label">Observaciones al final del periodo evaluado</label>
-                                                <textarea class="form-control col-sm-9" id="exampleFormControlTextarea1"></textarea>
-                                            </div>
-                                        </form>
-                                    </td>
-                                </tr>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <?php
+                PuntageVista();
+              ?>
             </div>
 
 
