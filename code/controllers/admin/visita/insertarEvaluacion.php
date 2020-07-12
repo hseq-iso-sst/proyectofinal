@@ -22,9 +22,10 @@ for($i=1;$i<=21;$i++){
 
     if($resultado==0){
             echo "<script>alert('se registro la evaluacion de los requisitos correctamente')</script>";
-            echo '<script>location.href = "../../../views/admin/certificaciones/procesos_certificacion.php"</script>';
+            echo '<script>location.href = "../../../views/admin/certificaciones/procesos_certificacion.php?id_visita='.$id_visita.'"</script>';
         }else{
             echo "<script>alert('Ocurrio un error al guardar la evaluacion de los requisitos')</script>";
             echo '<script>window.history.back();</script>'; 
         }
 ?>
+ 
