@@ -105,7 +105,7 @@ class EmpresaModel
                     $actividades_empresa = $this->guardar_actividades_empresa($actividades, $datos_empresa['id_empresa']);
                     //echo ($actividades_empresa=0)?"<script>alert('Error al crear las actividades de la empresa')</script>":"";
                     if (count($actividades_empresa) > 0) {
-                        echo "<script>alert('EMPRESA REGISTRADA EXITOSAMENTE')</script>";
+                        echo "<script>alert('Empresa registrada correctamente.)</script>";
                     }
                 } else {
                     echo "<script>alert('Error al guardar la empresa en la BD')</script>";
@@ -264,7 +264,7 @@ class EmpresaModel
                 //guardar actividades   
                 $actividades_empresa = $this->guardar_actividades_empresa($actividades, $datos_empresa['id_empresa']);
                 if (count($actividades_empresa) > 0) {
-                    echo "<script>alert('EMPRESA EDITADA EXITOSAMENTE')</script>";
+                    echo "<script>alert('Empresa editada correctamente.')</script>";
                 }
             } else {
                 echo "<script>alert('Error al guardar la actualizacion de empresa en la BD')</script>";
