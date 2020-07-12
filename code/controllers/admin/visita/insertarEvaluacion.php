@@ -11,7 +11,7 @@ for($i=1;$i<=21;$i++){
      if (strlen($id_visita)>0 && strlen($requisitos[$i])>0){
       
                                 $objetoConsultas =new Consultas();
-                                $resultado+= $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i],);
+                                $resultado+= $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i]);
                             
                             }else{
                                 echo "<script>alert('Llene todos los campos')</script>";
@@ -22,7 +22,7 @@ for($i=1;$i<=21;$i++){
 
     if($resultado==0){
             echo "<script>alert('se registro la evaluacion de los requisitos correctamente')</script>";
-            echo '<script>location.href = "../../../views/procesos_certificacion.php"</script>';
+            echo '<script>location.href = "../../../views/admin/certificaciones/procesos_certificacion.php"</script>';
         }else{
             echo "<script>alert('Ocurrio un error al guardar la evaluacion de los requisitos')</script>";
             echo '<script>window.history.back();</script>'; 
