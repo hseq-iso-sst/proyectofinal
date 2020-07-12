@@ -28,6 +28,9 @@ class EmpresaModel
     }
     function guardar_contacto($datos,$id_empresa)
     {
+        // echo "<pre>";
+        // print_r($datos);
+        // echo "</pre>";
         $conexion = $this->db->get_conexion();
         $sql = "INSERT INTO contacto(id_empresa,nombre_contacto, cargo_contacto, correo_contacto, telefono_contacto,celular_contacto) 
                                 VALUES(:id,:nombre, :cargo, :correo, :telefono,:celular)";
@@ -161,7 +164,14 @@ class EmpresaModel
         $f=null;
         $modelo = new Conexion();
         $conexion = $modelo->get_conexion();
-        $sql ="SELECT * FROM empresa NATURAL JOIN contacto";
+        //$sql ="SELECT * FROM empresa NATURAL JOIN contacto";
+
+        $sql ="
+        select * from empresa e 
+        inner join 
+        ( select max(id_contacto) as conctato_reciente, id_empresa, telefono_contacto, nombre_contacto from contacto group by id_empresa ) as tabla
+        on tabla.id_empresa = e.id_empresa order by e.nombre_empresa        
+        ";
         $statement=$conexion->prepare($sql);
         $statement->execute();
    
@@ -210,24 +220,35 @@ class EmpresaModel
     }
     function modificar_empresa($datos_contacto, $datos_sede, $datos_empresa, $actividades){
 
+
         $conexion = $this->db->get_conexion();
-        $sentenciaSql = $conexion->prepare("UPDATE empresa SET tipo_documento=:tipo_documento,
-        nombre_empresa=:nombre_empresa,
-        departamento_empresa=:departamento,
-        ciudad_empresa=:ciudad,
-        direccion_empresa=:direccion_empresa,
-        sucursal=:sucursal,
-        nro_sucursal=:nro_sucursal,
-        correo_representante=:correo_representante,
-        riesgo_empresa=:riesgo_empresa,
-        nro_trabajadores=:nro_trabajadores,
-        nro_trabajadores_dependientes=:nro_trabajadores_dependientes,
-        nro_trabajadores_independientes=:nro_trabajadores_independientes,
-        sedes=:sedes,
-        nro_sedes=:nro_sedes,
-        prima_empresa=:prima_empresa 
-        WHERE id_empresa=:id_empresa");
-        
+$sql = "
+
+UPDATE empresa SET 
+tipo_documento=:tipo_documento, 
+nombre_empresa=:nombre_empresa, 
+departamento_empresa=:departamento_empresa, 
+ciudad_empresa=:ciudad_empresa,
+direccion_empresa=:direccion_empresa, 
+sucursal=:sucursal, 
+nro_sucursal=:nro_sucursal, 
+correo_representante=:correo_representante,
+riesgo_empresa=:riesgo_empresa,
+nro_trabajadores=:nro_trabajadores,
+nro_trabajadores_dependientes=:nro_trabajadores_dependientes,
+nro_trabajadores_independientes=:nro_trabajadores_independientes, 
+sedes=:sedes,
+nro_sedes=:nro_sedes, 
+prima_empresa=:prima_empresa 
+WHERE id_empresa=:id_empresa";
+
+// echo "<pre>";
+// print_r($datos_empresa);
+// echo "</pre>";
+// die();
+
+        $sentenciaSql = $conexion->prepare($sql);
+
         $sentenciaSql->bindParam(':tipo_documento', $datos_empresa['tipo_documento']);
         $sentenciaSql->bindParam(':nombre_empresa', $datos_empresa['nombre_empresa']);
         $sentenciaSql->bindParam(':departamento_empresa', $datos_empresa['departamento']);
@@ -245,16 +266,12 @@ class EmpresaModel
         $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
         $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
 
-        // echo "<pre>";
-        // print_r($sentenciaSql->debugDumpParams());
-        // echo "</pre>";
-        // die();
-        
 
         if (!$sentenciaSql) {
             echo "<script>alert('Error al cargar los parametros para editar empresa')</script>";
         } else {
             if ($sentenciaSql->execute()) {
+                
                  // guardar contactos
                 $id_contacto = $this->guardar_contacto($datos_contacto,$datos_empresa['id_empresa']);
                 echo ($id_contacto==0)?"<script>alert('Error al editar el contacto de la empresa')</script>":"";
@@ -263,13 +280,15 @@ class EmpresaModel
                 echo ($id_sede==0)?"<script>alert('Error al editar la sede de la empresa')</script>":"";
                 //guardar actividades   
                 $actividades_empresa = $this->guardar_actividades_empresa($actividades, $datos_empresa['id_empresa']);
-                if (count($actividades_empresa) > 0) {
+
+                if (is_array($actividades_empresa)) {
+                // if (count($actividades_empresa) > 0) {
                     echo "<script>alert('EMPRESA EDITADA EXITOSAMENTE')</script>";
                 }
             } else {
                 echo "<script>alert('Error al guardar la actualizacion de empresa en la BD')</script>";
             }
-//echo '<script>location.href="../../../views/admin/empresa/ver-empresa.php"</script>';
+echo '<script>location.href="../../../views/admin/empresa/ver-empresa.php"</script>';
         }
     }
     function modificar_sede($datos,$id_sede){

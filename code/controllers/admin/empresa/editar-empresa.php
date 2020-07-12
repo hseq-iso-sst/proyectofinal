@@ -1,5 +1,7 @@
 <?php
-var_dump($_POST);
+
+//die('Llega hasta aqui');
+//  var_dump($_POST);
 $requeridos = array(
     'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'telefono_empresa', 'celular_empresa', 'sucursal', 'nro_sucursal', 'id_actividad', 'nombre_contacto', 'cargo_contacto', 'correo_contacto', 'correo_representante', 'riesgo_empresa', 'nro_trabajadores',
     'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'prima_empresa'
@@ -35,5 +37,6 @@ foreach ($_POST as $key => $val) {
 }
 require_once('../../../models/conexion.php');
 require_once('../../../models/admin/empresa/EmpresaModel.php');
+
 $empresa_model=new EmpresaModel();
 $empresa_model->modificar_empresa($contacto,$sede,$empresa,$actividades);

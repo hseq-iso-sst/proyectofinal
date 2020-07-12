@@ -143,15 +143,15 @@
                                                         id="tipo_documento" required>
                                                         <option value="">Seleccione</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="NIT"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="NIT")?"Selected":""; ?>>
                                                             NIT</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="C.C"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="C.C")?"Selected":""; ?>>
                                                             C.C</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="C.E"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="C.E")?"Selected":""; ?>>
                                                             C.E</option>
                                                     </select>
@@ -513,7 +513,7 @@
                                         <div class="form-card">
                                             <br>
                                             <br>
-                                            <h2 class="purple-text text-center"><strong>¡EMPRESA REGISTRADA CON
+                                            <h2 class="purple-text text-center"><strong>¡EMPRESA ACTUALIZADA CON
                                                     EXITO!</strong></h2> <br>
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
