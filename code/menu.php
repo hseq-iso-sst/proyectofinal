@@ -12,7 +12,7 @@
                     <ul id="sidebarnav">
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="<?php echo constant('URL');?>views/admin/principal/index.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Dashboard</span></a>
+                                    class="hide-menu">INICIO</span></a>
                         </li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Servicios</span></li>
