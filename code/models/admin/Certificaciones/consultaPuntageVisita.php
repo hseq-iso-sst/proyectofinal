@@ -5,14 +5,13 @@
       
         public function PuntageVsita(){
             $f=null;
-         
+            
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-             $sql= "SELECT sum(evaluacion) from evaluacion_visita WHERE id_visita =19";
+             $sql= "SELECT id_visita, sum(evaluacion) from evaluacion_visita WHERE id_visita =id_visita";
              $statement = $conexion->prepare($sql);
              $statement->execute();
-         
              while($result = $statement->fetch()){
                 $f[] = $result;
                 if ($result >=2) {
@@ -27,7 +26,6 @@
             
             return $f;
          }
-         
          
     //      public function cargarEmpresa(){
     //         $f=null;
