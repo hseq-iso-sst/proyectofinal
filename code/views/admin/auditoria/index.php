@@ -129,6 +129,7 @@
 
                                                                     </select> 
                                                         </div>
+                                                        <h4>Nota: Si desea realizar la auditoría en otro momento, por favor dar click en cancelar.</h4>
                                                         </div>
                                                     </div>
                                                     
@@ -136,7 +137,7 @@
                                                     <div class="text-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                     </div>
                                                 </div>
                                             </form>

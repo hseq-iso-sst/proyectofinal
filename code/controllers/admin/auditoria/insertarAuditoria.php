@@ -15,7 +15,7 @@ if ( strlen($id_empresa)>0 ){
     $result = $objetoConsultas->inserAuditoria($id_empresa);
 
     }else{
-                    echo "<script>alert('Por favor complete los campos')</script>";
+                    echo "<script>alert('POR FAVOR COMPLETE LOS CAMPOS')</script>";
                     echo "<script>location.href='../../../views/admin/auditoria/index.php'</script>";  
 }
            

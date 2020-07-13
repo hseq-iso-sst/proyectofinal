@@ -62,6 +62,10 @@
                                 aria-expanded="false"><i data-feather="book" class="feather-icon"></i><span
                                     class="hide-menu">Auditorias</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/index.php" class="sidebar-link"><span
+                                            class="hide-menu">Programar auditoría
+                                        </span></a>
+                                </li>
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/auditoria/ListarAuditoria.php" class="sidebar-link"><span
                                             class="hide-menu">Lista Auditorias
                                         </span></a>

@@ -24,7 +24,7 @@ if (strlen($id_user)>0 && strlen($nombres_user)>0 && strlen($apellidos_user) >0 
     $FORMATO= unserialize(ARREGLO);
   
     if ($_FILES["img_user"]["error"]>0) {//ese file depende del name del input del registrar//
-        echo "<script>alert('Seleccione una imagen')</script>";
+        echo "<script>alert('SELECCIONE UNA IMAGEN')</script>";
         echo "<script>location.href='../../../views/admin/usuario/ver-user.php'</script>";
     }
     else{
@@ -40,20 +40,20 @@ if (strlen($id_user)>0 && strlen($nombres_user)>0 && strlen($apellidos_user) >0 
                     $result = $objetoConsultas->insertarUsuario($id_user, $nombres_user, $apellidos_user, $email_user, $cargo_user, $telefono_user, $ficha_user, $rutaImg, $passmd);
                 }
                 else{
-                    echo "<script>alert('Error al cargar la Foto')</script>";
+                    echo "<script>alert('ERROR AL CARGAR LA FOTO')</script>";
                     echo "<script>location.href='../../../views/admin/usuario/registrar-user.php'</script>";  
                 }
             }else{
-                echo "<script>alert('Ya existe la imagen con este nombre')</script>";
+                echo "<script>alert('YA EXISTE LA IMAGEN CON ESTE NOMBRE')</script>";
                 echo "<script>location.href='../../../views/admin/usuario/registrar-user.php'</script>";
         }
     }else{
-            echo "<script>alert('Tamaño y/o tipo de imagen incorrecto')</script>";
+            echo "<script>alert('TAMAÑO Y/O TIPO DE IMAGEN INCORRECTO')</script>";
             echo "<script>location.href='../../../views/admin/usuario/registrar-user.php'</script>";
         }
     }
 }else{
-    echo "<script>alert('Completar todos los Campos')</script>";
+    echo "<script>alert('COMPLETAR TODOS LOS CAMPOS')</script>";
     echo '<script>window.history.back();</script>';
 } 
 ?>

@@ -15,9 +15,10 @@ function cargarEmpresa(){
         <!-- <caption> <b> Datos resumen de empresas </b></caption> -->
         <tr class="head_tabla encabezado">
             <th>Identificación</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Telefono</th>
+            <th>Nombre de la Empresa</th>
+            <th>Correo de la Empresa</th>
+            <th>Nombre contacto</th>
+            <th>Teléfono contacto</th>
             <th class="icono">Editar</th>
         </tr>
     </thead>
@@ -26,9 +27,10 @@ function cargarEmpresa(){
     foreach($result as $f){
         echo'
         <tr>
-        <td>'.$f["id_empresa"].'</td>
+        <td>'.$f["tipo_documento"] . ' - ' . $f["id_empresa"].'</td>
         <td>'.$f["nombre_empresa"].'</td>
         <td>'.$f["correo_representante"].'</td>
+        <td>'.$f["nombre_contacto"].'</td>
         <td>'.$f["telefono_contacto"].'</td>
         <td class="icono"><a href="editar-empresa.php?id_empresa='.$f["id_empresa"].'" class="fas fa-edit"></a></td>
      

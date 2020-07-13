@@ -2,7 +2,6 @@
 
 class consultaPuntageVisita{
 
-  
     public function PuntageVsita($doc){
         $f=null;
         

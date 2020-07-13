@@ -143,15 +143,15 @@
                                                         id="tipo_documento" required>
                                                         <option value="">Seleccione</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="NIT"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="NIT")?"Selected":""; ?>>
                                                             NIT</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="C.C"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="C.C")?"Selected":""; ?>>
                                                             C.C</option>
                                                         <option
-                                                            value="<?php echo $datos["empresa"]["tipo_documento"];?>"
+                                                            value="C.E"
                                                             <?php echo ($datos["empresa"]["tipo_documento"]=="C.E")?"Selected":""; ?>>
                                                             C.E</option>
                                                     </select>
@@ -217,27 +217,13 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Teléfono</label>
-                                                    <input type="number" name="telefono_empresa"
-                                                        value="<?php echo $datos["contacto"]["telefono_contacto"];?>"
-                                                        required />
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Celular</label>
-                                                    <input type="number" name="celular_empresa"
-                                                        value="<?php echo $datos["contacto"]["celular_contacto"];?>"
-                                                        required />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Sucursal</label>
                                                     <select class="form-control" name="sucursal" id="sucursal">
                                                         <option value=""></option>
-                                                        <option value="<?php echo $datos["empresa"]["sucursal"];?>"
+                                                        <option value="Si"
                                                             <?php echo ($datos["empresa"]["sucursal"]=="Si")?"Selected":""; ?>>
                                                             Si</option>
-                                                        <option value="<?php echo $datos["empresa"]["sucursal"];?>"
+                                                        <option value="No"
                                                             <?php echo ($datos["empresa"]["sucursal"]=="No")?"Selected":""; ?>>
                                                             No</option>
                                                     </select>
@@ -246,6 +232,48 @@
                                                     <label class="fieldlabels">N° Sucursales</label>
                                                     <input type="number" name="nro_sucursal"
                                                         value="<?php echo $datos["empresa"]["nro_sucursal"];?>" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 form-group">
+                                                    <label class="fieldlabels">Actividad Economica principal</label>
+                                                    <select class="form-control" name="id_actividad" id="id_actividad"
+                                                        required>
+                                                        <option value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($actividades as $item){
+                                                                $temp="";
+                                                                if($datos["empresa"]["id_actividad"]==$item[0]){
+                                                                    $temp="selected";
+                                                                }else{
+                                                                    $temp="";
+                                                                }
+                                                                echo '<option '.$temp.' value="'.$item[0].'">'.$item[1].'</option>';
+                                                            }
+                                                        ?>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Actividad Economica secundaria</label>
+                                                    <select class="form-control" name="id_actividad2"
+                                                        id="id_actividad2">
+                                                        <option value="">Seleccione...</option>
+                                                        <?php 
+                                                            foreach($actividades as $item){
+                                                                if(isset($datos["empresa"]["id_actividad2"])){
+                                                                    $temp="";
+                                                                    if($datos["empresa"]["id_actividad2"]==$item[0]){
+                                                                        $temp="selected";
+                                                                    }else{
+                                                                        $temp="";
+                                                                    }
+                                                                    echo '<option '.$temp.' value="'.$item[0].'">'.$item[1].'</option>';
+                                                                }else{
+                                                                    echo '<option value="'.$item[0].'">'.$item[1].'</option>';
+                                                                }
+                                                            }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -260,69 +288,27 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 form-group">
-                                                    <label class="fieldlabels">Actividad Economica principal</label>
-                                                    <select class="form-control" name="id_actividad" id="id_actividad"
-                                                        required>
-                                                        <option value="">Seleccione...</option>
-                                                        <?php 
-                                                            foreach($actividades as $item){
-                                                                $temp="";
-                                                                if($datos["actividades"][0]["id_actividad"]==$item[0]){
-                                                                    $temp="selected";
-                                                                }else{
-                                                                    $temp="";
-                                                                }
-                                                                echo '<option '.$temp.' value="'.$item[0].'">'.$item[1].'</option>';
-                                                            }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Actividad Economica secundaria</label>
-                                                    <select class="form-control" name="id_actividad_2"
-                                                        id="id_actividad_2">
-                                                        <option value="">Seleccione...</option>
-                                                        <?php 
-                                                            foreach($actividades as $item){
-                                                                if(isset($datos["actividades"][1]["id_actividad"])){
-                                                                    $temp="";
-                                                                    if($datos["actividades"][1]["id_actividad"]==$item[0]){
-                                                                        $temp="selected";
-                                                                    }else{
-                                                                        $temp="";
-                                                                    }
-                                                                    echo '<option '.$temp.' value="'.$item[0].'">'.$item[1].'</option>';
-                                                                }else{
-                                                                    echo '<option value="'.$item[0].'">'.$item[1].'</option>';
-                                                                }
-                                                            }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <!-- <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Id Contacto</label>
                                                     <input type="text" name="id_contacto"
                                                         value="<?php echo $datos["contacto"]["id_contacto"];?>" required
                                                         readonly="readonly" />
-                                                </div>
+                                                </div> -->
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Nombre de contacto de la empresa</label>
                                                     <input type="text" name="nombre_contacto"
                                                         value="<?php echo $datos["contacto"]["nombre_contacto"];?>"
                                                         required />
                                                 </div>
-                                            </div>    
-                                                <div class="row">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label class="fieldlabels">Cargo del contacto de la
                                                             empresa</label>
                                                         <input type="text" name="cargo_contacto"
                                                             value="<?php echo $datos["contacto"]["cargo_contacto"];?>"
                                                             required />
                                                     </div>
+                                            </div>    
+                                                <div class="row">
                                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label class="fieldlabels">Correo Electronico del contacto de la
                                                             empresa</label>
@@ -330,15 +316,29 @@
                                                             value="<?php echo $datos["contacto"]["correo_contacto"];?>"
                                                             required />
                                                     </div>
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Teléfono</label>
+                                                    <input type="number" name="telefono_empresa"
+                                                        value="<?php echo $datos["contacto"]["telefono_contacto"];?>"
+                                                        required />
+                                                </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Celular</label>
+                                                    <input type="number" name="celular_empresa"
+                                                        value="<?php echo $datos["contacto"]["celular_contacto"];?>"
+                                                        required />
+                                                </div>
+                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label class="fieldlabels">Correo electronico del representante
                                                             de la empresa</label>
                                                         <input type="text" name="correo_representante"
                                                             value="<?php echo $datos["empresa"]["correo_representante"];?>"
                                                             required />
                                                     </div>
+                                            </div>
+                                                <div class="row">
                                                     <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                         <label class="fieldlabels">Certificaciones</label>
                                                         <select class="form-control" name="certificaciones"
@@ -346,33 +346,31 @@
                                                             <option></option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="Ninguna")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="Ninguna">
                                                                 Ninguna</option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="ISO 9001")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="ISO 9001">
                                                                 ISO 9001</option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="ISO 14001")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="ISO 14001">
                                                                 ISO 14001</option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="ISO 45001")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="ISO 45001">
                                                                 ISO 45001</option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="RUC/Norsok")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="RUC/Norsok">
                                                                 RUC/Norsok</option>
                                                             <option
                                                                 <?php echo ($datos["empresa"]["certificaciones"]=="BASC")?"Selected":""; ?>
-                                                                value="<?php echo $datos["empresa"]["certificaciones"];?>">
+                                                                value="BASC">
                                                                 BASC</option>
                                                         </select>
                                                     </div>
-                                                </div>    
-                                                    <div class="row">
-                                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                             <label class="fieldlabels">Nivel de riesgo de la
                                                                 empresa</label>
                                                             <select class="form-control" name="riesgo_empresa"
@@ -380,35 +378,27 @@
                                                                 <option></option>
                                                                 <option
                                                                     <?php echo ($datos["empresa"]["riesgo_empresa"]=="I (Riesgo mínimo)")?"Selected":""; ?>
-                                                                    value="<?php echo $datos["empresa"]["riesgo_empresa"];?>">
+                                                                    value="I (Riesgo mínimo)">
                                                                     I (Riesgo mínimo)</option>
                                                                 <option
                                                                     <?php echo ($datos["empresa"]["riesgo_empresa"]=="II (Riesgo bajo)")?"Selected":""; ?>
-                                                                    value="<?php echo $datos["empresa"]["riesgo_empresa"];?>">
+                                                                    value="II (Riesgo bajo)">
                                                                     II (Riesgo bajo)</option>
                                                                 <option
                                                                     <?php echo ($datos["empresa"]["riesgo_empresa"]=="III (Riesgo medio)")?"Selected":""; ?>
-                                                                    value="<?php echo $datos["empresa"]["riesgo_empresa"];?>">
+                                                                    value="III (Riesgo medio)">
                                                                     III (Riesgo medio)</option>
                                                                 <option
                                                                     <?php echo ($datos["empresa"]["riesgo_empresa"]=="IV (Riesgo alto)")?"Selected":""; ?>
-                                                                    value="<?php echo $datos["empresa"]["riesgo_empresa"];?>">
+                                                                    value="IV (Riesgo alto)">
                                                                     IV (Riesgo alto)</option>
                                                                 <option
                                                                     <?php echo ($datos["empresa"]["riesgo_empresa"]=="V (Riesgo máximo)")?"Selected":""; ?>
-                                                                    value="<?php echo $datos["empresa"]["riesgo_empresa"];?>">
+                                                                    value="V (Riesgo máximo)">
                                                                     V (Riesgo máximo)</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                                                    <label class="fieldlabels">Número total de trabajadores en la
-                                                        empresa</label>
-                                                    <input type="number" name="nro_trabajadores"
-                                                        value="<?php echo $datos["empresa"]["nro_trabajadores"];?>"
-                                                        required />
-                                                </div>
-
-                                                    </div>
+                                                </div>    
                                         </div>
                                         <button type="button" name="next" class="next action-button" value="Next">
                                             Siguiente</button>
@@ -418,6 +408,13 @@
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                    <label class="fieldlabels">Número total de trabajadores en la
+                                                        empresa</label>
+                                                    <input type="number" name="nro_trabajadores"
+                                                        value="<?php echo $datos["empresa"]["nro_trabajadores"];?>"
+                                                        required />
+                                                </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Número de trabajadores
                                                         dependientes</label>
@@ -425,31 +422,31 @@
                                                         value="<?php echo $datos["empresa"]["nro_trabajadores_dependientes"];?>"
                                                         required />
                                                 </div>
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            </div>
+                                            <div class="row">
+                                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Número de trabajadores
                                                         indendientes</label>
                                                     <input type="number" name="nro_trabajadores_independientes"
                                                         value="<?php echo $datos["empresa"]["nro_trabajadores_independientes"];?>"
                                                         required />
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                                <!-- <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Id sede</label>
                                                     <input type="text" name="id_sede"
                                                         value="<?php echo $datos["sedes"]["id_sede"];?>" required
                                                         readonly="readonly" />
-                                                </div>
+                                                </div> -->
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">La empresa tiene una o más sedes</label>
                                                     <select class="form-control" name="sedes" id="sedes" required>
                                                         <option></option>
                                                         <option
                                                             <?php echo ($datos["empresa"]["sedes"]=="Si")?"Selected":""; ?>
-                                                            value="<?php echo $datos["empresa"]["sedes"];?>">Si</option>
+                                                            value="Si">Si</option>
                                                         <option
                                                             <?php echo ($datos["empresa"]["sedes"]=="No")?"Selected":""; ?>
-                                                            value="<?php echo $datos["empresa"]["sedes"];?>">No</option>
+                                                            value="No">No</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -467,7 +464,7 @@
                                                         <?php 
                                                             foreach($departamentos as $item){
                                                                 $temp="";
-                                                                if($datos["sedes"]["departamento_sede"]==$item[0]){
+                                                                if($datos["empresa"]["departamento_Sede"]==$item[0]){
                                                                     $temp="selected";
                                                                 }else{
                                                                     $temp="";
@@ -486,7 +483,7 @@
                                                         <?php 
                                                             foreach($ciudades as $item){
                                                                 $temp="";
-                                                                if($datos["sedes"]["ciudad_sede"]==$item[0]){
+                                                                if($datos["empresa"]["ciudad_sede"]==$item[0]){
                                                                     $temp="selected";
                                                                 }else{
                                                                     $temp="";
@@ -513,7 +510,7 @@
                                         <div class="form-card">
                                             <br>
                                             <br>
-                                            <h2 class="purple-text text-center"><strong>¡EMPRESA REGISTRADA CON
+                                            <h2 class="purple-text text-center"><strong>¡EMPRESA ACTUALIZADA CON
                                                     EXITO!</strong></h2> <br>
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
