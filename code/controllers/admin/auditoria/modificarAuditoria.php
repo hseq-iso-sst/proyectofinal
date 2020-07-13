@@ -18,7 +18,7 @@ if (strlen($status)){
          $result = $objetoConsultas->modificarAuditorias($id_auditoria, $puntaje_1, $puntaje_2, $id_empresa, $status);
 
         }else{
-                echo "<script>alert('Por favor complete los campos')</script>";
+                echo "<script>alert('POR FAVOR COMPLETE LOS CAMPOS')</script>";
                 echo "<script>location.href='../../../views/admin/auditoria/ListarAuditoria.php'</script>";  
 }
            

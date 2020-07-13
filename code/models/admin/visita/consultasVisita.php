@@ -14,7 +14,7 @@ class consultasVisita{
         $f = $result->fetch();
 
         if ($f) {
-            echo "<script>alert('Número de visita existente')</script>";
+            echo "<script>alert('NÚMERO DE VISITA EXISTENTE')</script>";
             echo '<script>location.href="../../../views/admin/visita/visitas.php"</script>';
         }else{     
             $modelo = new Conexion();
@@ -35,7 +35,7 @@ class consultasVisita{
                 }
                 else{
                     $statement->execute();
-                    echo "<script>alert('Visita Registrada Correctamente')</script>";
+                    echo "<script>alert('VISITA REGISTRADA CORRECTAMENTE')</script>";
                     echo '<script>location.href="../../../views/admin/visita/visita1.php?id_visita='.$conexion->lastInsertId().'"</script>';
                 }
 
@@ -93,7 +93,7 @@ class consultasVisita{
         }
         else{
             $statement->execute();
-            echo "<script>alert('Visita Actualizada Correctamente')</script>";
+            echo "<script>alert('VISITA ACTUALIZADA CORRECTAMENTE')</script>";
             echo '<script>location.href="../../../views/admin/visita/ver-visitas.php"</script>';
         }
 

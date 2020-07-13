@@ -17,7 +17,7 @@ if (($id_visita)>0 && ($id_auditoria)>0 && strlen($id_user)>0 && strlen($nro_vis
     $result = $objetoConsultas->editarVisita($id_visita, $id_auditoria, $id_user, $nro_visita, $fecha_ini, $fecha_fin);
 }
 else{
-    echo "<script>alert('Completar todos los Campos')</script>";
+    echo "<script>alert('COMPLETAR TODOS LOS CAMPOS')</script>";
     echo '<script>location.href="../views/ver-visitas.php"</script>';
 
 } 

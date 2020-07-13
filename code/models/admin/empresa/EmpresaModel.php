@@ -43,7 +43,7 @@ class EmpresaModel
         $sentenciaSql->bindParam(':celular', $datos['celular_empresa']);
 
         if (!$sentenciaSql) {
-            echo "<script>alert('Error al cargar los parametros para crear contacto')</script>";
+            echo "<script>alert('ERROR AL CARGAR LOS PARÁMETROS PARA CREAR CONTACTO')</script>";
         } else {
             if ($sentenciaSql->execute()) {
                 return $conexion->lastInsertId();
@@ -58,7 +58,7 @@ class EmpresaModel
         
         if (!isset($valida_empresa)) {
             
-            echo '<script>alert("La empresa con la identificación ya existe")</script>';
+            echo '<script>alert("LA EMPRESA CON LA IDENTIFICACIÓN YA EXISTE")</script>';
             echo '<script>location.href="../../../views/admin/empresa/registrar-empresa.php"</script>';
         } else {
             // guardar la empresa
@@ -84,7 +84,6 @@ class EmpresaModel
             $sentenciaSql->bindParam(':nro_sucursal', $datos_empresa['nro_sucursal']);
             $sentenciaSql->bindParam(':id_actividad', $datos_empresa['id_actividad']);
             $sentenciaSql->bindParam(':id_actividad2', $datos_empresa['id_actividad2']);
-            //$sentenciaSql->bindParam(':id_contacto', $datos_empresa['id_contacto']);
             $sentenciaSql->bindParam(':correo_representante', $datos_empresa['correo_representante']);
             $sentenciaSql->bindParam(':riesgo_empresa', $datos_empresa['riesgo_empresa']);
             $sentenciaSql->bindParam(':certificaciones', $datos_empresa['certificaciones']);
@@ -93,18 +92,17 @@ class EmpresaModel
             $sentenciaSql->bindParam(':nro_trabajadores_independientes', $datos_empresa['nro_trabajadores_independientes']);
             $sentenciaSql->bindParam(':sedes', $datos_empresa['sedes']);
             $sentenciaSql->bindParam(':nro_sedes', $datos_empresa['nro_sedes']);
-            //$sentenciaSql->bindParam(':id_sede', $datos_empresa['id_sede']);
             $sentenciaSql->bindParam(':departamento_Sede', $datos_empresa['departamento_Sede']);
             $sentenciaSql->bindParam(':ciudad_sede', $datos_empresa['ciudad_sede']);
             $sentenciaSql->bindParam(':prima_empresa', $datos_empresa['prima_empresa']);
 
             if (!$sentenciaSql) {
-                echo "<script>alert('Error al cargar los parametros para crear empresa')</script>";
+                echo "<script>alert('ERROR AL CARGAR LOS PARÁMETROS PARA CREAR EMPRESA')</script>";
             } else {
                 if ($sentenciaSql->execute()) {
                      // guardar contactos
                     $id_contacto = $this->guardar_contacto($datos_contacto,$datos_empresa['id_empresa']);
-                    echo ($id_contacto==0)?"<script>alert('Error al crear el contacto de la empresa')</script>":"";
+                    echo ($id_contacto==0)?"<script>alert('ERROR AL CREAR EL CONTACTO DE LA EMPRESA')</script>":"";
                     // guardar sedes
                     // $id_sede = $this->guardar_sede($datos_sede,$datos_empresa['id_empresa']);
                     // echo ($id_sede==0)?"<script>alert('Error al crear la sede de la empresa')</script>":"";
@@ -115,7 +113,7 @@ class EmpresaModel
                         echo "<script>alert('EMPRESA REGISTRADA EXITOSAMENTE')</script>";
                     // }
                 } else {
-                    echo "<script>alert('Error al guardar la empresa en la BD')</script>";
+                    echo "<script>alert('ERROR AL GUARDAR LA EMPRESA EN LA BD')</script>";
                 }
                 echo '<script>location.href="../../../views/admin/auditoria/index.php"</script>';
             }
@@ -217,7 +215,7 @@ class EmpresaModel
         $sentenciaSql->bindParam(':celular', $datos['celular_contacto']);
 
         if (!$sentenciaSql) {
-            echo "<script>alert('Error al Editar los parametros para crear contacto')</script>";
+            echo "<script>alert('ERROR AL EDITAR LOS PARÁMETROS PARA CREAR CONTACTO')</script>";
         } else {
             if ($sentenciaSql->execute()) {
                 return $conexion->lastInsertId();
@@ -290,13 +288,13 @@ if ($datos_empresa['id_actividad2']=="")
         $sentenciaSql->bindParam(':id_empresa', $datos_empresa['id_empresa']);
         
         if (!$sentenciaSql) {
-            echo "<script>alert('Error al cargar los parametros para editar empresa')</script>";
+            echo "<script>alert('ERROR AL CARGAR LOS PARÁMETROS PARA EDITAR EMPRESA')</script>";
         } else {
             if ($sentenciaSql->execute()) {
                 
                  // guardar contactos
                 $id_contacto = $this->guardar_contacto($datos_contacto,$datos_empresa['id_empresa']);
-                echo ($id_contacto==0)?"<script>alert('Error al editar el contacto de la empresa')</script>":"";
+                echo ($id_contacto==0)?"<script>alert('ERROR AL EDITAR EL CONTACTO DE LA EMPRESA')</script>":"";
                 // guardar sedes
                 // $id_sede = $this->guardar_sede($datos_sede,$datos_empresa['id_empresa']);
                 // echo ($id_sede==0)?"<script>alert('Error al editar la sede de la empresa')</script>":"";
@@ -308,7 +306,7 @@ if ($datos_empresa['id_actividad2']=="")
                     echo "<script>alert('EMPRESA EDITADA EXITOSAMENTE')</script>";
                 // }
             } else {
-                echo "<script>alert('Error al guardar la actualizacion de empresa en la BD')</script>";
+                echo "<script>alert('ERROR AL GUARDAR LA ACTUALIZACIÓN DE EMPRESA EN LA BD')</script>";
             }
            echo '<script>location.href="../../../views/admin/empresa/ver-empresa.php"</script>';
         }

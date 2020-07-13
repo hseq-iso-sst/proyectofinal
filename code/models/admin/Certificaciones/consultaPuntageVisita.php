@@ -9,13 +9,13 @@
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-             $sql= "SELECT id_visita, sum(evaluacion) from evaluacion_visita WHERE id_visita=23 ";
+             $sql= "SELECT id_visita, sum(evaluacion) from evaluacion_visita WHERE id_visita=26 ";
              $statement = $conexion->prepare($sql);
              $statement->execute();
              while($result = $statement->fetch()){
                 $f[] = $result;
                 if ($result >=2) {
-                    echo "<script>alert('SU PUNTAJE ES BAJO')</script>";
+                    echo "<script>alert('SU PUNTAJE ES:')</script>";
                 }else{
                     
                 }
