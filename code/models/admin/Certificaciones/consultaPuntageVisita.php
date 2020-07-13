@@ -9,7 +9,7 @@
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-             $sql= "SELECT id_visita, sum(evaluacion) from evaluacion_visita WHERE id_visita =id_visita";
+             $sql= "SELECT id_visita, sum(evaluacion) from evaluacion_visita WHERE id_visita=23 ";
              $statement = $conexion->prepare($sql);
              $statement->execute();
              while($result = $statement->fetch()){

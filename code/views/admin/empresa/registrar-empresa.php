@@ -224,7 +224,7 @@
                                                 </div>
                                                 <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                     <label class="fieldlabels">Actividad Economica secundaria</label>
-                                                    <select class="form-control" name="id_actividad_2" id="id_actividad_2">
+                                                    <select class="form-control" name="id_actividad2" id="id_actividad2">
                                                         <option selected value="">Seleccione...</option>
                                                         <?php 
                                                             foreach($actividades as $item){
