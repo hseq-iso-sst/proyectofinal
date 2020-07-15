@@ -57,7 +57,7 @@ foreach($result as $f){
                                                         <div class="col text-center align-self-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Actualizar</button>
-                                                            <a href="registrar-user.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                         </div>
                                                     </div>
                                                 </div>

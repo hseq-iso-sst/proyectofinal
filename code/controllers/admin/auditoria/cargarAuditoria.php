@@ -63,7 +63,7 @@ if (isset($_GET['id_auditoria'])){
         <div class="text-center">
                  <button type="submit"
                 class="btn btn-success loginbtn">Actualizar</button>
-                <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
             </div>
             </div>
              </form> 
