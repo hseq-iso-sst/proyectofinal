@@ -88,13 +88,17 @@
                                 aria-expanded="false"><i data-feather="save" class="feather-icon"></i><span
                                     class="hide-menu">Reportes</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><span
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>models/configPDF.php" class="sidebar-link"><span
                                             class="hide-menu">Reporte Usuario
                                         </span></a>
                                 </li>
-                            <li class="sidebar-item"><a href="#" class="sidebar-link"><span
-                                    class="hide-menu">Reporte Empresa</span></a>
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>models/configPDFficha.php" class="sidebar-link"><span
+                                    class="hide-menu">Reporte Ficha</span></a>
                             </li>
+                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>models/configPDFempresa.php" class="sidebar-link"><span
+                                            class="hide-menu">Reporte Empresa
+                                        </span></a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
