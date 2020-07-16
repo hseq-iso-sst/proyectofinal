@@ -13,16 +13,15 @@ for($i=1;$i<=22;$i++){
       
                         if ($resultado) {
                                 $objetoConsultas =new Consultas();
-                                $resultado = $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i],);
+                                $resultado = $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i]);
                             
                         }else{
 
                                 echo "<script>alert('Llene todos los campos')</script>";
                                 echo "<script>window.history.back();</script>";
+        }
     }
- 
 }
-
     if($resultado==0){
             echo "<script>alert('se registro la evalucion de los requisitos')</script>";
             echo '<script>location.href = "../../../views/procesos_certificacion.php"</script>';
