@@ -15,7 +15,7 @@ class Consultas{
         $f = $result->fetch();
 
         if ($f){
-            echo "<script>alert('Identificacion o Email Existente')</script>";
+            echo "<script>alert('IDENTIFICACIÓN O EMAIL EXISTENTE')</script>";
             echo '<script>location.href="../../../views/admin/usuario/registrar-user.php"</script>';
         }else{
             $modelo = new Conexion();
@@ -38,11 +38,11 @@ class Consultas{
             
        
             if (!$statement) {
-                return "Error al Registrar Usuario";
+                return "ERROR AL REGISTRAR USUARIO";
             }
             else{
                 $statement->execute();
-                echo "<script>alert('Usuario Registrado Correctamente')</script>";
+                echo "<script>alert('USUARIO REGISTRADO CORRECTAMENTE')</script>";
                 echo '<script>location.href="../../../views/admin/usuario/registrar-user.php"</script>';
             }
 
@@ -103,11 +103,11 @@ class Consultas{
   
 
     if (!$statement) {
-        return "Error al Actualizar Usuario";
+        return "ERROR AL ACTUALIZAR USUARIO";
     }
     else{
         $statement->execute();
-        echo "<script>alert('Usuario Actualizado Correctamente')</script>";
+        echo "<script>alert('USUARIO ACTUALIZADO CORRECTAMENTE')</script>";
         echo '<script>location.href="../../../views/admin/usuario/ver-user.php"</script>';
     }
 
@@ -127,7 +127,7 @@ class Consultas{
  
     }else{
         $statement->execute();
-        echo "<script>alert('Usuario Eliminado Correctamente')</script>";
+        echo "<script>alert('USUARIO ELIMINADO CORRECTAMENTE')</script>";
         echo '<script>location.href="../views/ver-user.php"</script>';
 
     }

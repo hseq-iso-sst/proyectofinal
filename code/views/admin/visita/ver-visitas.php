@@ -1,7 +1,7 @@
 <?php
 require_once("../../../models/conexion.php");
 require_once("../../../models/admin/visita/consultasVisita.php");
-require_once("../../../controllers/admin/visita/cargarVisita.php");
+require_once("../../../controllers/admin/visita/cargarVisitas.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

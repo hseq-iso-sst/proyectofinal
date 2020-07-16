@@ -13,7 +13,7 @@ class consultaFichas{
             $f=$result->fetch();
 
             if ($f) {
-                echo "<script>alert('identificacion de la ficha existe')</script>";
+                echo "<script>alert('IDENTIFICACIÓN DE LA FICHA EXISTE')</script>";
                 echo '<script>location.href="../../../views/admin/ficha/regFicha.php"</script>';
             }else {
                 $modelo = new Conexion();
@@ -28,17 +28,17 @@ class consultaFichas{
                 $sentenciaSql->bindParam(':fecha_fin',$fecha_fin);
               
                 if (!$sentenciaSql) {
-                    return "Error al cargar los parametros";
+                    return "ERROR AL CARGAR LOS PARÁMETROS";
                 }
                 else{
                     if($sentenciaSql->execute()){
                         echo "<script>alert('FICHA REGISTRADA CON EXITO')</script>";
                         
                     }else{
-                        echo "<script>alert('Error al guardar la ficha en la BD')</script>";
+                        echo "<script>alert('ERROR AL GUARDAR LA FICHA EN LA BD')</script>";
                         
                     }
-                    echo '<script>location.href="../../../views/admin/ficha/regFicha.php"</script>';
+                    echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
                 }
             }
         }
@@ -100,35 +100,11 @@ public function modificarFicha($id_ficha, $nombre_ficha, $fecha_inicio, $fecha_f
     }
     else{
         $statement->execute();
-        echo "<script>alert('Ficha Actualizada Correctamente')</script>";
+        echo "<script>alert('FICHA ACTUALIZADA CORRECTAMENTE')</script>";
         echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
     }
 
 }
-
-/////////////////////actualizar de la ficha///////////////////////////
-/////////////////////eliminar de la ficha///////////////////////////
-// public function eliminarFicha($idEliminar){
-//     $modelo = new Conexion();
-//     $conexion = $modelo->get_conexion();
-  
-//     $sql= "DELETE FROM ficha WHERE id_ficha=:id_ficha";
-//     $statement = $conexion->prepare($sql);
-//     $statement->bindParam(":id_ficha", $idEliminar);
-  
-//     if(!$statement){
-//         echo "<script>alert('ERROR AL ELIMINAR')</script>";
-//         echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
-   
-//       }else{
-//           $statement->execute();
-//           echo "<script>alert('Ficha Eliminada Correctamente')</script>";
-//           echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
-  
-//       }
-  
-//     }
-    /////////////////////fin eliminar de la ficha///////////////////////////
 }
 
 ?>

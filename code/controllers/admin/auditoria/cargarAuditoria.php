@@ -32,17 +32,22 @@ if (isset($_GET['id_auditoria'])){
                 id="id_auditoria"  >
             </div>
                  <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
-                    <label>Puntaje</label>
-            <input type="text" class="form-control" value="'.$f['puntaje'].'" name="puntaje" readonly="readonly
-                 id="puntaje"  >
+                    <label>Puntaje Visita 1</label>
+            <input type="text" class="form-control" value="'.$f['puntaje_1'].'" name="puntaje_1" readonly="readonly
+                 id="puntaje_1"  >
             </div>
              </div>
              <div class="form-row">
             <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
             <label>Identificacion Empresa</label>
-            <input type="text" class="form-control" value="'.$f['nombre_empresa'].'" name="id_empresa" readonly="readonly
+            <input type="text" class="form-control" value="'.$f['id_empresa'].'" name="id_empresa" readonly="readonly
                  id="id_empresa"  >
             
+            </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
+                    <label>Puntaje Visita 2</label>
+            <input type="text" class="form-control" value="'.$f['puntaje_2'].'" name="puntaje_2" readonly="readonly
+                id="puntaje_2"  >
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6 form-group">
             <label>Estado</label>
@@ -58,7 +63,7 @@ if (isset($_GET['id_auditoria'])){
         <div class="text-center">
                  <button type="submit"
                 class="btn btn-success loginbtn">Actualizar</button>
-                <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
             </div>
             </div>
              </form> 

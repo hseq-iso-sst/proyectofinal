@@ -1,18 +1,18 @@
 <?php
 //var_dump($_POST);
 $requeridos = array(
-    'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'telefono_empresa', 'celular_empresa', 'sucursal', 'nro_sucursal', 'id_actividad', 'nombre_contacto', 'cargo_contacto', 'correo_contacto', 'correo_representante', 'riesgo_empresa', 'nro_trabajadores',
-    'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'prima_empresa'
+    'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'telefono_empresa', 'celular_empresa', 'sucursal', 'nro_sucursal', 'id_actividad', 'nombre_contacto', 'cargo_contacto', 'correo_contacto', 'correo_representante', 'riesgo_empresa', 'certificaciones', 'nro_trabajadores',
+    'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'nro_sedes', 'departamento_Sede', 'ciudad_sede', 'prima_empresa'
 );
 $contacto = array('id_empresa','nombre_contacto', 'cargo_contacto', 'correo_contacto', 'telefono_empresa', 'celular_empresa'); //Va de 1er
 
-$sede = array('id_empresa','ciudad_sede', 'departamento_Sede'); //Va de 2do
+// $sede = array('id_empresa','ciudad_sede', 'departamento_Sede'); //Va de 2do
 $empresa = array(
-    'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'sucursal', 'nro_sucursal', 'id_actividad', 'id_sede', 'id_contacto', 'correo_representante', 'riesgo_empresa', 'nro_trabajadores',
-    'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'nro_sedes', 'prima_empresa'
+    'tipo_documento', 'id_empresa', 'nombre_empresa', 'departamento', 'ciudad', 'direccion_empresa', 'sucursal', 'nro_sucursal', 'id_actividad','id_actividad2', 'id_sede', 'id_contacto', 'correo_representante', 'riesgo_empresa', 'certificaciones', 'nro_trabajadores',
+    'nro_trabajadores_dependientes', 'nro_trabajadores_independientes', 'sedes', 'nro_sedes', 'departamento_Sede', 'ciudad_sede','prima_empresa'
 ); //Va 3er
-$actividades[]['id_actividad'] = $_POST['id_actividad'];
-$actividades[]['id_actividad'] = $_POST['id_actividad_2']; //Va 4to
+// $actividades[]['id_actividad'] = $_POST['id_actividad'];
+// $actividades[]['id_actividad'] = $_POST['id_actividad_2']; //Va 4to
 foreach ($_POST as $key => $val) {
     if (in_array($key, $requeridos)) { //Valido los campos obligatorios
         if (strlen($val) == 0) {
@@ -29,11 +29,12 @@ foreach ($_POST as $key => $val) {
     /* if (in_array($key,$actividades)) {
         $actividades[$key]=$val;
     } */
-    if (in_array($key, $sede)) { //Lleno los campos para crear una sede
-        $sede[$key] = $val;
-    }
+    // if (in_array($key, $sede)) { //Lleno los campos para crear una sede
+    //     $sede[$key] = $val;
+    // }
 }
 require_once('../../../models/conexion.php');
 require_once('../../../models/admin/empresa/EmpresaModel.php');
 $empresa_model=new EmpresaModel();
-$empresa_model->guardar_empresa($contacto,$sede,$empresa,$actividades);
+$empresa_model->guardar_empresa($contacto,$empresa);
+?>

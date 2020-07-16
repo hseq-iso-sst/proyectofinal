@@ -13,7 +13,7 @@ class consultaAuditoria{
             $f=$result->fetch();
 
             if ($f) {
-                echo "<script>alert('ya existe existe')</script>";
+                echo "<script>alert('YA EXISTE AUDITORIA')</script>";
                 echo '<script>location.href="../../../views/admin/auditoria/index.php"</script>';
             }else {
                 $modelo = new Conexion();
@@ -27,14 +27,14 @@ class consultaAuditoria{
               
               
                 if (!$sentenciaSql) {
-                    return "Error al cargar los parametros";
+                    return "ERROR AL CARGAR LOS PARÁMETROS";
                 }
                 else{
                     if($sentenciaSql->execute()){
                         echo "<script>alert('AUDITORIA REGISTRADA CON EXITO')</script>";
                         
                     }else{
-                        echo "<script>alert('Error al guardar la auditoria en la BD')</script>";
+                        echo "<script>alert('ERROR AL GUARDAR LA AUDITORIA EN LA BD')</script>";
                         
                     }
                     echo '<script>location.href="../../../views/admin/visita/visitas.php?id_auditoria='.$conexion->lastInsertId().'"</script>';
@@ -48,7 +48,7 @@ class consultaAuditoria{
              $modelo = new Conexion();
              $conexion = $modelo->get_conexion();
          
-            $sql= "SELECT Au.id_auditoria, Au.puntaje, Em.nombre_empresa, Au.status FROM  auditoria Au 
+            $sql= "SELECT Au.id_auditoria, Au.puntaje_1, Au.puntaje_2, Em.nombre_empresa, Au.status FROM  auditoria Au 
             INNER JOIN empresa Em ON Au.id_empresa = Em.id_empresa";
             $statement = $conexion->prepare($sql);
             $statement->bindParam(":id_auditoria", $doc);
@@ -80,26 +80,27 @@ public function cargarAutorias($doc){
     return $f;
 }
 
-public function modificarAuditorias($id_auditoria, $puntaje, $id_empresa, $status){
+public function modificarAuditorias($id_auditoria, $puntaje_1, $puntaje_2,$id_empresa, $status){
     $modelo = new Conexion();
     $conexion = $modelo->get_conexion();
 
-    $sql = "UPDATE auditoria SET id_auditoria=:id_auditoria, puntaje=:puntaje, id_empresa=:id_empresa, status=:status WHERE id_auditoria=:id_auditoria";
+    $sql = "UPDATE auditoria SET id_auditoria=:id_auditoria, puntaje_1=:puntaje_1, puntaje_2=:puntaje_2,id_empresa=:id_empresa, status=:status WHERE id_auditoria=:id_auditoria";
     
     $statement = $conexion->prepare($sql);
    
     $statement->bindParam(':id_auditoria',$id_auditoria);
-    $statement->bindParam(':puntaje',$puntaje);
+    $statement->bindParam(':puntaje_1',$puntaje_1);
+    $statement->bindParam(':puntaje_2',$puntaje_2);
     $statement->bindParam(':id_empresa',$id_empresa);
     $statement->bindParam(':status',$status);
    
 
     if (!$statement) {
-        return "Error al Actualizar Ficha";
+        return "ERROR AL ACTUALIZAR FICHA";
     }
     else{
         $statement->execute();
-        echo "<script>alert('Auditoria Actualizada Correctamente')</script>";
+        echo "<script>alert('AUDITORIA ACTUALIZADA CORRECTAMENTE')</script>";
         echo '<script>location.href="../../../views/admin/auditoria/listarAuditoria.php"</script>';
     }
 

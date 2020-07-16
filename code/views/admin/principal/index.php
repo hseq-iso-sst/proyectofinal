@@ -96,16 +96,14 @@ require_once('../../../models/seguridad_sesion-coordi.php');
 
                         <div class="articulo">
                             <img src="../../../assets/images/icons-hseq/salud.PNG" alt="Salud">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
-                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
+                            <p>Certifica el conjunto de actividades relacionadas a la protección de la salud física, mental y social. <br><br><br><br></p>
                             <a href="#">
                                 <h3>Salud</h3>
                             </a>
                         </div>
                         <div class="articulo ">
                             <img src="../../../assets/images/icons-hseq/seguridad.PNG" alt="Seguridad">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
-                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda..
+                            <p>Certifica el adecuado manejo frente a los riesgos y los peligros de la industria. <br> <br> <br> <br> <br>
                             </p>
                             <a href="../../../views/admin/visita/visitas-general.php">
                                 <h3>Seguridad </h3>
@@ -113,16 +111,15 @@ require_once('../../../models/seguridad_sesion-coordi.php');
                         </div>
                         <div class="articulo ">
                             <img src="../../../assets/images/icons-hseq/medio-ambiente.PNG" alt="Ambiente">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
-                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
+                            <p>Protege el medio ambiente o trabaja por el cuidado de los recursos naturales mediante las acciones que demuestran la conservación de los mismos.</p>
                             <a href="#">
                                 <h3>Ambiente</h3>
                             </a>
                         </div>
                         <div class="articulo ">
                             <img src="../../../assets/images/icons-hseq/calidad.PNG" alt="Calidad">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusantium.
-                                Doloribus, in?Lorem ipsum dolor sit amet, consectesdasda.</p>
+                            <p>Garantiza la calidad de un producto o servicio que ofrece la empresa. 
+                                Mediante procesos que satisfacen las necesidades del consumidor.<br> <br></p>
                             <a href="#">
                                 <h3>Calidad</h3>
                             </a>

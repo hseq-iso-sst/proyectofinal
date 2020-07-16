@@ -135,7 +135,7 @@
                                                     <div class="text-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="../../../index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                     </div>
                                                 </div>
                                             </form>

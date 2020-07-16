@@ -104,7 +104,13 @@ class ConsultarDatos
     function get_contacto_empresa($id_empresa)
     {
         $conexion = $this->db->get_conexion();
-        $sql = "SELECT * FROM contacto where id_empresa=:id_empresa";
+        //$sql = "SELECT * FROM contacto where id_empresa=:id_empresa";
+        $sql = "
+        select * from contacto where id_contacto = (
+            select max(id_contacto) from contacto where id_empresa=:id_empresa
+        	)
+        ";
+
         $result = $conexion->prepare($sql);
         $result->bindParam(':id_empresa', $id_empresa);
         $result->execute();
@@ -138,15 +144,6 @@ class ConsultarDatos
         $requisitos = $result->fetchAll();
         return $requisitos;
     }
-    // function get_usuario()
-    // {
-    //     $conexion = $this->db->get_conexion();
-    //     $sql = "SELECT id_user,nombres_user FROM usuario";
-    //     $result = $conexion->prepare($sql);
-    //     $result->execute();
-    //     $user = $result->fetchAll();
-    //     return $user;
-    // }
     public function get_usuario()
     {
         $f = null;
