@@ -12,7 +12,7 @@ function cargarU(){
     <table id="verUsuarios" class="table table-bordered lista-empresas  ">
     <thead>
        
-        <tr class="head_tabla encabezado table-dark text-center ">
+        <tr class="head_tabla encabezado table table-dark text-center ">
             <th>Identificación</th>
             <th>Nombres</th>
             <th>Apellidos</th>

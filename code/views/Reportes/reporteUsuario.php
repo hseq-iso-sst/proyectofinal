@@ -13,6 +13,7 @@ require_once("../controllers/admin/usuario/cargarUsuarios1.php");
     <LInk rel="stylesheet" href="../dist/css/reportes.css">
 </head>
 <body>
+
 <h1 class="titler">Reporte de Usuario</h1>
 <br>
 
@@ -20,6 +21,23 @@ require_once("../controllers/admin/usuario/cargarUsuarios1.php");
                 cargarU();
               ?>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer text-center text-muted">
+        <h6>Contactenos</h6>
+        <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
+        <a href="https://github.com/" class="icon-social-github">GitHub</a>
+        <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
+        <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
+    </footer>
 
 
 
