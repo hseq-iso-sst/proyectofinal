@@ -80,9 +80,7 @@
                                             class="hide-menu">Lista de visitas
                                         </span></a>
                                 </li>
-                            <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/admin/certificaciones/procesos_certificacion.php" class="sidebar-link"><span
-                                    class="hide-menu">Certificados</span></a>
-                            </li>
+                         
                             </ul>
                             <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="save" class="feather-icon"></i><span
