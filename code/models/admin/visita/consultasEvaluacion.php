@@ -29,7 +29,7 @@ class Consultas{
         $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         
-                $sql ="update auditoria set puntaje_1=:puntaje where id_auditoria=:id)";
+                $sql ="update auditoria set puntaje_1=:puntaje where id_auditoria=:id";
                 
                 $statement = $conexion->prepare($sql);
             
@@ -47,7 +47,7 @@ class Consultas{
         $modelo = new Conexion();
                 $conexion = $modelo->get_conexion();
         
-                $sql ="update auditoria set puntaje_2=:puntaje where id_auditoria=:id)";
+                $sql ="update auditoria set puntaje_2=:puntaje where id_auditoria=:id";
                 
                 $statement = $conexion->prepare($sql);
             

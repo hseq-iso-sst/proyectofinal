@@ -15,11 +15,6 @@ for($i=1;$i<=21;$i++){
         $totalEvaluacion+=$requisitos[$i];
                                 $objetoConsultas =new Consultas();
                                 $resultado+= $objetoConsultas->insertarEvaluacion($id_visita, $i, $requisitos[$i], $comentarios[$i]);
-                                if($nro_visita==1){
-                                    $a=$objetoConsultas->UpdatePuntaje1Auditoria($id_auditoria,$totalEvaluacion);
-                                }else{
-                                    $a=$objetoConsultas->UpdatePuntaje2Auditoria($id_auditoria,$totalEvaluacion);
-                                }
                         
                             }else{
                                 echo "<script>alert('LLENE TODOS LOS CAMPOS')</script>";
@@ -27,7 +22,11 @@ for($i=1;$i<=21;$i++){
                     
         } 
 }
-
+    if($nro_visita==1){
+        $a=$objetoConsultas->UpdatePuntaje1Auditoria($id_auditoria,$totalEvaluacion);
+    }else{
+        $a=$objetoConsultas->UpdatePuntaje2Auditoria($id_auditoria,$totalEvaluacion);
+    }
     if($resultado==0){
             echo "<script>alert('SE REGISTRÓ LA EVALUACIÓN DE LOS REQUISITOS CORRECTAMENTE')</script>";
             echo '<script>location.href = "../../../views/admin/certificaciones/procesos_certificacion.php?id_visita='.$id_visita.'"</script>';
