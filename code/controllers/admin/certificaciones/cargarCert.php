@@ -25,8 +25,8 @@ function PuntageVista(){
             
             
             <div class="text-center">           
-            <button type="submit"
-            class="btn btn-success loginbtn">Finalizar</button> 
+            
+                <a href="../../../views/admin/auditoria/ListarAuditoria.php" type="submit" class="btn btn-success loginbtn">Finalizar</a>
             </div>        
         </div>
     
