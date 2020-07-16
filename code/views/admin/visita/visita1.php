@@ -3,6 +3,8 @@
     require_once('../../../models/admin/visita/consultasRequisitos.php');
     require_once('../../../controllers/admin/visita/cargarRequisitos.php');
     $id_visita=$_GET['id_visita'];
+    $id_auditoria=$_GET['id_auditoria'];
+    $nro_visita=$_GET['nro_visita'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,6 +82,8 @@
                                                     <h4 class="card-title">CRITERIOS DE EVALUACIÓN DEL SISTEMA DE GESTION EN SEGURIDAD Y SALUD EN EL TRABAJO - PYMES</h4>
                                                     <h6>Escriba el valor correspondiente en la columna "criterios de calificación" de acuerdo con el grado de desarrollo de la empresa en el ítem a calificar teniendo en cuenta los siguientes rangos: SI Cumple completamente con el criterio enunciado o No Aplica (1 punto),  Si No Cumple comple completamente o o No cumple (NC) con el criterio enunciado (0 puntos)</h6>
                                                     <input type="hidden" name="id_visita" value="<?php echo $id_visita;?>">
+                                                    <input type="hidden" name="id_auditoria" value="<?php echo $id_auditoria;?>">
+                                                    <input type="hidden" name="nro_visita" value="<?php echo $nro_visita;?>">
                                                 </div>
                                                 <div class="table-responsive">
                                                     <table class="table table-bordered">
