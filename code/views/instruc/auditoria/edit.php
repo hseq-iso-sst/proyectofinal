@@ -1,7 +1,7 @@
 <?php
 require_once("../../../models/conexion.php");
-require_once("../../../models/admin/auditoria/consultaAudito.php");
-require_once("../../../controllers/admin/auditoria/cargarAuditoria.php");
+require_once("../../../models/instruc/auditoria/consultaAudito.php");
+require_once("../../../controllers/instruc/auditoria/cargarAuditoria.php");
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ require_once("../../../controllers/admin/auditoria/cargarAuditoria.php");
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/indexins.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
                                             >Editar Auditoria</a></li>
                                 </ol>
