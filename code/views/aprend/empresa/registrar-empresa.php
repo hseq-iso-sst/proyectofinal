@@ -82,7 +82,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/indexapren.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
                                             href="registrar-empresa.php" class="text-muted">Registrar Empresa</a></li>
                                 </ol>
@@ -103,7 +103,7 @@
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                             <h2 id="heading">REGISTRE LA EMPRESA DESEADA</h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
-                            <form id="msform" action="../../../controllers/admin/empresa/insertar-empresa.php" method="POST" class="wizard">
+                            <form id="msform" action="../../../controllers/aprend/empresa/insertar-empresa.php" method="POST" class="wizard">
                                 <div
                                     class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">
                                     <!-- progressbar -->
