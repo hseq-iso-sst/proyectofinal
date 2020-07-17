@@ -18,7 +18,6 @@ function cargarAuditori(){
             <th>Puntaje 2</th>
             <th>Empresa</th>
             <th>Estado</th> 
-            <th>Visita 2</th>  
             <th>Editar</th>  
               
         </tr>
@@ -33,7 +32,6 @@ function cargarAuditori(){
         <td>'.$f["puntaje_2"].'</td>
         <td>'.$f["nombre_empresa"].'</td>
         <td>'.$f["status"].'</td>
-        <td class="icono"><a href="../../../views/instruc/visita/visitas.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         <td class="icono"><a href="../../../views/instruc/auditoria/edit.php?id_auditoria='.$f["id_auditoria"].'" class="fas fa-edit"></a></td>
         
      

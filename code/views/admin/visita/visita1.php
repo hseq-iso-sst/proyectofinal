@@ -49,7 +49,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
                                             href="ver-visitas.php" class="text-muted">Visitas</a></li>
                                 </ol>
@@ -68,7 +68,7 @@
                 <div class="row justify-content-center body-empresa shadow">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center p-0 mt-3 mb-2">
                         <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                            <h2 id="heading">VISITA</h2>
+                            <h2 id="heading">VISITA <?php echo $nro_visita;?></h2>
                             <p>Rellene todos los campos del formulario para ir al siguiente paso</p>
                             <form  action="../../../controllers/admin/visita/insertarEvaluacion.php" method="POST" enctype="multipart/form-data" id="msform"> 
                                 <div class="offset-1 col-10 offset-1 offset-1 col-sm-10 offset-1 offset-1 col-md-10 offset-1 offset-1 col-lg-10 offset-1 offset-1 col-xl-10 offset-1">

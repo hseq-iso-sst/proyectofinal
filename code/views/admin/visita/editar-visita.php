@@ -81,9 +81,9 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="registrar-empresa.php" class="text-muted">Visitas</a></li>
+                                            href="ver-visitas.php" class="text-muted">Visitas</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -102,7 +102,7 @@
                         <div
                             class="offset-md-2 col-md-8 offset-md-2  col-sm-12 col-xs-12 offset-lg-2 col-lg-8 offset-lg-2">
                             <div class="text-center custom-login">
-                                <h3>Nueva Visita</h3>
+                                <h3>Actualizar Visita</h3>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
