@@ -15,7 +15,7 @@ $pdf->load_html($html);
 $pdf->setPaper("A4","landscape");
 
 $pdf->render();
-$pdf->stream("Reporte Usuario.pdf");
+$pdf->stream("Reporte Auditorias.pdf");
 
 
 ?>

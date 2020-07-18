@@ -1,7 +1,7 @@
 <?php
 require_once("../models/conexion.php");
-require_once("../models/admin/usuario/consultasUsuario.php");
-require_once("../controllers/admin/usuario/cargarUsuarios1.php");
+require_once("../models/admin/auditoria/consultaAudito.php");
+require_once("../controllers/admin/auditoria/cargarAuditorias1.php");
 
 ?>
 <!DOCTYPE html>
@@ -9,16 +9,16 @@ require_once("../controllers/admin/usuario/cargarUsuarios1.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportes Usuario</title>
+    <title>Reportes Auditorias</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <LInk rel="stylesheet" href="../dist/css/reportes.css">
 </head>
 <body>
-<h1 class="titler">Reporte de Usuario</h1>
+<h1 class="titler">Reporte de Auditorias</h1>
 <br>
 
 <?php
-                cargarU();
+                cargarAuditoria();
               ?>
 
 <br>

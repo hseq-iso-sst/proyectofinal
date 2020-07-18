@@ -84,14 +84,54 @@ require_once("../../../controllers/admin/certificaciones/cargarCert.php");
                 </div>
             </div>
 
-            <!-------------*INICIO DEL WRAPPER DE CERTIFICADOS CAMILO*------>
+            <!-------------*INICIO DEL WRAPPER DE CERTIFICADOS*------>
+<div class="container-fluid">
+          
+<div class="row">
 
+
+<div class="col-md-6 form-group">
+
+<h2 class="purple-text text-center" ><strong>Rango de Puntajes</strong></h2> <br>
+            <div class="row justify-content-center"></div>
+<table class="table table-bordered lista-empresas"> 
+<tr class="head_tabla encabezado table table-dark text-center ">
+      <th colspan="1">Calificación</th>
+      <th colspan="1">Puntaje</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BAJO</td>
+      <td>Menor o Igual a 12</td>
+     
+    </tr>
+    <tr>
+      <td>MEDIO</td>
+      <td>Mayo o igual a 13 y Menor o igual a 19</td>
+
+    </tr>
+    <tr>
+
+      <td>ALTO</td>
+      <td>Mayo o igual a 20</td>
+  
+    </tr>
+  </tbody>
+</table>
+   
+    </div>
+
+<div class="col-md-6 form-group">
             <div id="certificado">
             <?php
                 PuntageVista();
               ?>
             </div>
+</div>
 
+</div>
 
 
 
@@ -112,21 +152,25 @@ require_once("../../../controllers/admin/certificaciones/cargarCert.php");
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center text-muted">
-                <h6>Contactenos</h6>
-                <a href="https://www.facebook.com/" class="icon-social-facebook"> Facebook</a>
-                <a href="https://github.com/" class="icon-social-github">GitHub</a>
-                <a href="https://www.linkedin.com/" class="icon-social-linkedin">Linkedin</a>
-                <a href="https://twitter.com/" class="icon-social-twitter">Twitter</a>
-            </footer>
+     
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
+            <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         </div>
+        </div>
+                 <?php include_once('../../../footer.php');?>
+          
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-    </div>
+   
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>

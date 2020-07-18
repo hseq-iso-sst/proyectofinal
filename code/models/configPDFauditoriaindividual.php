@@ -8,14 +8,14 @@ use Dompdf\Dompdf;
 $pdf = new Dompdf();
 
 ob_start();
-include_once "../views/Reportes/reporteAuditoria.php";
+include_once "../views/Reportes/reporteAuditoriaindividual.php";
 $html=ob_get_clean();
 
 $pdf->load_html($html);
 $pdf->setPaper("A4","landscape");
 
 $pdf->render();
-$pdf->stream("Reporte Usuario.pdf");
+$pdf->stream("Reporte Auditoria.pdf");
 
 
 ?>

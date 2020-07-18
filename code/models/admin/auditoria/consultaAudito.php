@@ -63,6 +63,23 @@ class consultaAuditoria{
                 
 /////////////////////fin de la consulta///////////////////////////
 /////////////////////actualizar de la ficha///////////////////////////
+public function cargarAuditoria($doc){
+    $f=null;
+ 
+     $modelo = new Conexion();
+     $conexion = $modelo->get_conexion();
+ 
+    $sql= "SELECT Au.id_auditoria, Au.puntaje_1, Au.puntaje_2, Em.nombre_empresa, Au.status FROM  auditoria Au 
+    INNER JOIN empresa Em ON Au.id_empresa = Em.id_empresa WHERE id_auditoria=:id_auditoria";
+    $statement = $conexion->prepare($sql);
+    $statement->bindParam(":id_auditoria", $doc);
+    $statement->execute();
+
+    while($result = $statement->fetch()){
+        $f[] = $result;
+    }
+    return $f;
+ }
 public function cargarAutorias($doc){
     $f=null;
 

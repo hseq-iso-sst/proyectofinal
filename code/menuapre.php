@@ -69,6 +69,10 @@
                                             class="hide-menu">Reporte Empresa
                                         </span></a>
                                 </li>
+                                <li class="sidebar-item"><a href="<?php echo constant('URL');?>models/configPDFauditoria.php" class="sidebar-link"><span
+                                            class="hide-menu">Reporte Auditoria
+                                        </span></a>
+                                </li>
                         </li>
                     </ul>
                 </nav>
