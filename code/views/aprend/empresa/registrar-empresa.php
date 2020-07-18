@@ -1,6 +1,7 @@
 <?php 
     require_once('../../../models/conexion.php');
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-aprend.php');
     $datos=new ConsultarDatos();
     $departamentos=$datos->get_departamentos();
     $ciudades=$datos->get_ciudades();
@@ -56,7 +57,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navap.php');?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->

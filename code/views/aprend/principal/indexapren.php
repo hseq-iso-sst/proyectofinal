@@ -1,6 +1,6 @@
 <?php
 require_once('../../../config.php');
-require_once('../../../models/seguridad_sesion-coordi.php');
+require_once('../../../models/seguridad_sesion-aprend.php');
 ?> 
 <!DOCTYPE html>
 <html lang="es">
@@ -50,7 +50,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
         <!-- ============================================================== -->
         <!-- NAV -->
         
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navap.php');?>
 
         <!-- ============================================================== -->
         </header>

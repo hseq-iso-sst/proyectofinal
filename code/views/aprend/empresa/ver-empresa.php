@@ -2,6 +2,7 @@
 require_once("../../../models/conexion.php");
 require_once("../../../models/aprend/empresa/EmpresaModel.php");
 require_once("../../../controllers/aprend/empresa/cargarEmpresa.php");
+require_once('../../../models/seguridad_sesion-aprend.php');
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +51,7 @@ require_once("../../../controllers/aprend/empresa/cargarEmpresa.php");
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navap.php');?>
     </header>
     <!-- ============================================================== -->
     <!-- End Topbar header -->
