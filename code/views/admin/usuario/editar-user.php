@@ -3,6 +3,7 @@ require_once("../../../models/conexion.php");
 require_once("../../../models/admin/usuario/consultasUsuario.php");
 require_once("../../../controllers/admin/usuario/cargarUsuario.php");
 include_once('../../../models/ConsultarDatos.php');
+require_once('../../../models/seguridad_sesion-coordi.php');
 $datos=new ConsultarDatos();
 $fichas=$datos->cargarFicha();   
 ?>

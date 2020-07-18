@@ -1,6 +1,6 @@
 <?php
 require_once('../../../config.php');
-require_once('../../../models/seguridad_sesion-coordi.php');
+require_once('../../../models/seguridad_sesion-aprend.php');
 ?> 
 <!DOCTYPE html>
 <html lang="es">
@@ -50,7 +50,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
         <!-- ============================================================== -->
         <!-- NAV -->
         
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navap.php');?>
 
         <!-- ============================================================== -->
         </header>
@@ -72,7 +72,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.php">Inicio</a>
+                                    <li class="breadcrumb-item">Inicio
                                     </li>
                                 </ol>
                             </nav>
@@ -105,7 +105,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
                             <img src="../../../assets/images/icons-hseq/seguridad.PNG" alt="Seguridad">
                             <p>Certifica el adecuado manejo frente a los riesgos y los peligros de la industria. <br> <br> <br> <br> <br>
                             </p>
-                            <a href="../../../views/admin/visita/visitas-general.php">
+                            <a href="../../../views/aprend/principal/modulo-seguridad.php">
                                 <h3>Seguridad </h3>
                             </a>
                         </div>

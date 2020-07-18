@@ -33,10 +33,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="package" class="feather-icon"></i><span
                                     class="hide-menu">Auditorias</span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line"><li class="sidebar-item"><a href="<?php echo constant('URL');?>views/instruc/auditoria/index.php" class="sidebar-link"><span
-                                            class="hide-menu">Programar auditoría
-                                        </span></a>
-                                </li>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
 
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/instruc/auditoria/ListarAuditoria.php" class="sidebar-link"><span
                                             class="hide-menu">Lista Auditorias

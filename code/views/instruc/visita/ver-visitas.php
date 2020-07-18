@@ -1,7 +1,8 @@
 <?php
 require_once("../../../models/conexion.php");
-require_once("../../../models/admin/visita/consultasVisita.php");
-require_once("../../../controllers/admin/visita/cargarVisitas.php");
+require_once("../../../models/instruc/visita/consultasVisita.php");
+require_once("../../../controllers/instruc/visita/cargarVisitas.php");
+require_once('../../../models/seguridad_sesion-Instr.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +50,7 @@ require_once("../../../controllers/admin/visita/cargarVisitas.php");
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-            <?php include_once('../../../nav.php'); ?>
+            <?php include_once('../../../navinst.php'); ?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -75,7 +76,7 @@ require_once("../../../controllers/admin/visita/cargarVisitas.php");
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/indexins.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page">Visitas</li>
                                 </ol>
                             </nav>

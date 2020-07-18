@@ -38,6 +38,7 @@
                                             class="hide-menu">Programar auditoría
                                         </span></a>
                                 </li>
+                            
                                 <li class="sidebar-item"><a href="<?php echo constant('URL');?>views/aprend/auditoria/ListarAuditoria.php" class="sidebar-link"><span
                                             class="hide-menu">Lista Auditorias
                                         </span></a>

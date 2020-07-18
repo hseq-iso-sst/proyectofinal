@@ -2,6 +2,7 @@
 require_once("../../../models/conexion.php");
 require_once("../../../models/admin/ficha/consultaFicha.php");
 require_once("../../../controllers/admin/ficha/cargar-Edi-Ficha.php");
+require_once('../../../models/seguridad_sesion-coordi.php');
 ?>
 
 <!DOCTYPE html>

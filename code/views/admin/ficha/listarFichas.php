@@ -2,6 +2,7 @@
 require_once("../../../models/conexion.php");
 require_once("../../../models/admin/ficha/consultaFicha.php");
 require_once("../../../controllers/admin/ficha/cargarFicha.php");
+require_once('../../../models/seguridad_sesion-coordi.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">

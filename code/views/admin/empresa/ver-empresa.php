@@ -2,6 +2,7 @@
 require_once("../../../models/conexion.php");
 require_once("../../../models/admin/empresa/EmpresaModel.php");
 require_once("../../../controllers/admin/empresa/cargarEmpresa.php");
+require_once('../../../models/seguridad_sesion-coordi.php');
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,7 @@
 <?php 
     require_once('../../../models/conexion.php');
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-aprend.php');
     $datos=new ConsultarDatos();
     $empresas=$datos->consultar_empresas();
     
@@ -56,7 +57,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navap.php');?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -82,7 +83,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="../principal/index.php" class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item"><a href="../principal/indexapren.php" class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
                                             >Registro de auditoría </a></li>
                                 </ol>
@@ -110,7 +111,7 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 form-group">
                                     <div class="hpanel">
                                         <div class="panel-body-user shadow">
-                                        <form action="../../../controllers/admin/auditoria/insertarAuditoria.php" method="POST">
+                                        <form action="../../../controllers/aprend/auditoria/insertarAuditoria.php" method="POST">
                                                 <div class="form-group">
                                                     <div class="row " >
                                                         
@@ -137,7 +138,7 @@
                                                     <div class="text-center">
                                                         <button type="submit"
                                                             class="btn btn-success loginbtn">Registrar</button>
-                                                            <a href="../principal/index.php" type="submit" class="btn btn-danger">Cancelar</a>
+                                                            <a href="../principal/indexapren.php" type="submit" class="btn btn-danger">Cancelar</a>
                                                     </div>
                                                 </div>
                                             </form>

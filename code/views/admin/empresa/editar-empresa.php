@@ -1,6 +1,7 @@
 <?php 
     require_once('../../../models/conexion.php');
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-coordi.php');
     $objDatos=new ConsultarDatos();
     $departamentos=$objDatos->get_departamentos();
     $ciudades=$objDatos->get_ciudades();
@@ -94,7 +95,7 @@
                                     <li class="breadcrumb-item"><a href="../principal/index.php"
                                             class="text-muted">Inicio</a></li>
                                     <li class="breadcrumb-item text-muted active" aria-current="page"><a
-                                            href="editar-empresa.php" class="text-muted">Editar Empresa</a></li>
+                                            href="#" class="text-muted">Editar Empresa</a></li>
                                 </ol>
                             </nav>
                         </div>
