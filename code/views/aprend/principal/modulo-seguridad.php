@@ -113,8 +113,8 @@
                                         <p>A continuacion usted podra optener mas informacion del sistema por medio de nuestros manuales, documentos, etc. </p>
                                         <a href="https://drive.google.com/drive/folders/1D8PjwQ4NjKo7HMoMCyFYsA4gmqNft0GB?usp=sharing" target="_blank" class="btn btn-primary text-center">Manual de entidad corporativa</a>
                                         <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de usuario</a>
-                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de tecnico</a>
-                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de prubas del sistema</a>
+                                        <a href="https://drive.google.com/drive/folders/1L-Hp4RKXOsIWqjKYs7bzH1xSNHxqrgh9?usp=sharing" target="_blank" class="btn btn-primary">Manual de tecnico</a>
+                                        <a href="https://drive.google.com/drive/folders/1nMqcfqosV-u9VLiYoHs2dnmqI3Kr-LRY?usp=sharing" target="_blank" class="btn btn-primary">Manual de prubas del sistema</a>
                                        
                                     </div>
                                 </div>
