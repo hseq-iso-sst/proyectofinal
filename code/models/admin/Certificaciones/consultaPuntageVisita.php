@@ -14,8 +14,8 @@ class consultaPuntageVisita{
          $statement->execute();
          while($result = $statement->fetch()){
             $f[] = $result;
-            if ($result <= 12) {
-                echo "<script>alert('Su puntaje es bajo.')</script>";
+            if ($result <= 21) {
+                echo "<script>alert('Su puntaje es:'.$sql.'')</script>";
             }else{
         }
         

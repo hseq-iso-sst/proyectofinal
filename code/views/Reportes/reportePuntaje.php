@@ -22,10 +22,12 @@ require_once("../controllers/admin/certificaciones/cargarCert1.php");
 .firma .a{
     margin-left: 150px;
     padding: 100px;
+    padding-bottom: -100px;
 }
 .firma .b{
     margin-left: 200px;
     padding: 100px;
+    padding-bottom: -100px;
 }
 </style>
 <div class="row firma text-center">
