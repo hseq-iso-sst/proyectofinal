@@ -18,7 +18,7 @@
                     <div class="navbar-brand">
                         <!-- Logo icon -->
                         <div class="logo-icon">
-                            <a href="<?php echo constant('URL');?>index.php">
+                            <a href="<?php echo constant('URL');?>views/admin/principal/index.php">
                                 <!-- Dark Logo icon -->
                                 <img src="<?php echo constant('URL');?>assets/images/logov2.png" alt="homepage" class="dark-logo" />
                                 <!--End Logo icon -->

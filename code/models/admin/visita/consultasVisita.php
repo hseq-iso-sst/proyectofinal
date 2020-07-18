@@ -35,7 +35,7 @@ class consultasVisita{
                 }
                 else{
                     $statement->execute();
-                    echo "<script>alert('VISITA REGISTRADA CORRECTAMENTE')</script>";
+                    echo "<script>alert('Visita registrada correctamente')</script>";
                     echo '<script>location.href="../../../views/admin/visita/visita1.php?nro_visita='.$nro_visita.'&id_auditoria='.$id_auditoria.'&id_visita='.$conexion->lastInsertId().'"</script>';
                 }
 
@@ -93,7 +93,7 @@ class consultasVisita{
         }
         else{
             $statement->execute();
-            echo "<script>alert('VISITA ACTUALIZADA CORRECTAMENTE')</script>";
+            echo "<script>alert('Visita actualizada correctamente')</script>";
             echo '<script>location.href="../../../views/admin/visita/ver-visitas.php"</script>';
         }
 

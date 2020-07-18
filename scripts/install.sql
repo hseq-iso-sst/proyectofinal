@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2020 a las 02:21:49
+-- Tiempo de generación: 18-07-2020 a las 07:11:22
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -536,44 +536,16 @@ INSERT INTO `actividad_economica` (`id_actividad`, `nombre_actividad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `actividad_empresa`
---
-
-CREATE TABLE `actividad_empresa` (
-  `id_actividad_empresa` int(11) NOT NULL,
-  `id_empresa` bigint(15) NOT NULL,
-  `id_actividad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `actividad_empresa`
---
-
-INSERT INTO `actividad_empresa` (`id_actividad_empresa`, `id_empresa`, `id_actividad`) VALUES
-(1, 123, 161),
-(2, 1075, 122),
-(3, 1075, 124),
-(4, 1075685565, 9700);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `auditoria`
 --
 
 CREATE TABLE `auditoria` (
   `id_auditoria` int(11) NOT NULL,
-  `puntaje` int(11) DEFAULT NULL,
+  `puntaje_1` int(11) DEFAULT NULL,
+  `puntaje_2` int(11) DEFAULT NULL,
   `id_empresa` bigint(15) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL DEFAULT 'En Proceso'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `auditoria`
---
-
-INSERT INTO `auditoria` (`id_auditoria`, `puntaje`, `id_empresa`, `status`) VALUES
-(3, NULL, 1075685565, 'Activo');
 
 -- --------------------------------------------------------
 
@@ -1732,15 +1704,6 @@ CREATE TABLE `contacto` (
   `id_empresa` bigint(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `contacto`
---
-
-INSERT INTO `contacto` (`id_contacto`, `nombre_contacto`, `cargo_contacto`, `correo_contacto`, `telefono_contacto`, `celular_contacto`, `id_empresa`) VALUES
-(6, 'pepito', 'calidad', 'pepito@gmail.com', 123, 1234, 123),
-(12, 'juanito', 'calidad', 'juanito@gmail.com', 345, 89, 1075),
-(13, 'Diego Pachon', 'CALIDAD', 'dpachon@colsof.com.co', 2912000, 2912000, 1075685565);
-
 -- --------------------------------------------------------
 
 --
@@ -1806,24 +1769,20 @@ CREATE TABLE `empresa` (
   `direccion_empresa` varchar(100) NOT NULL,
   `sucursal` varchar(10) NOT NULL,
   `nro_sucursal` int(11) NOT NULL,
+  `id_actividad` int(11) NOT NULL,
+  `id_actividad2` int(11) DEFAULT NULL,
   `correo_representante` varchar(60) NOT NULL,
   `riesgo_empresa` varchar(30) NOT NULL,
+  `certificaciones` varchar(30) NOT NULL,
   `nro_trabajadores` int(11) NOT NULL,
   `nro_trabajadores_dependientes` int(11) NOT NULL,
   `nro_trabajadores_independientes` int(11) NOT NULL,
   `sedes` varchar(10) NOT NULL,
   `nro_sedes` int(11) NOT NULL,
+  `departamento_Sede` int(11) NOT NULL,
+  `ciudad_sede` int(11) NOT NULL,
   `prima_empresa` bigint(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `empresa`
---
-
-INSERT INTO `empresa` (`tipo_documento`, `id_empresa`, `nombre_empresa`, `departamento_empresa`, `ciudad_empresa`, `direccion_empresa`, `sucursal`, `nro_sucursal`, `correo_representante`, `riesgo_empresa`, `nro_trabajadores`, `nro_trabajadores_dependientes`, `nro_trabajadores_independientes`, `sedes`, `nro_sedes`, `prima_empresa`) VALUES
-('C.C', 123, 'HSEQ', 11, 11001, 'CR 4', 'Si', 2, 'representante@gmail.com', 'I (Riesgo mínimo)', 30, 20, 10, 'Si', 2, 10),
-('C.C', 1075, 'colsofp', 11, 11001, 'Cll 9 A #4-78', 'Si', 2, 'representante@gmail.com', 'I (Riesgo mínimo)', 70, 50, 20, 'Si', 2, 1),
-('C.C', 1075685565, 'COLSOF', 11, 11001, 'vereda vuelta grande', 'Si', 5, 'contacto@colsof.com.co', 'V (Riesgo máximo)', 1000, 999, 1, 'No', 0, 1000);
 
 -- --------------------------------------------------------
 
@@ -1849,28 +1808,16 @@ CREATE TABLE `ficha` (
   `id_ficha` bigint(50) NOT NULL,
   `nombre_ficha` varchar(200) NOT NULL,
   `fecha_inicio` date NOT NULL,
-  `fecha_fin` date NOT NULL
+  `fecha_fin` date NOT NULL,
+  `estado_ficha` varchar(10) NOT NULL DEFAULT 'Activo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `ficha`
 --
 
-INSERT INTO `ficha` (`id_ficha`, `nombre_ficha`, `fecha_inicio`, `fecha_fin`) VALUES
-(1804520, 'ADSI', '2020-05-24', '2020-05-30');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `foto`
---
-
-CREATE TABLE `foto` (
-  `id_foto` int(11) NOT NULL,
-  `id_evaluacion_visita` int(11) NOT NULL,
-  `archivo` varchar(300) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `ficha` (`id_ficha`, `nombre_ficha`, `fecha_inicio`, `fecha_fin`, `estado_ficha`) VALUES
+(1804520, 'HSEQ', '2019-02-27', '2020-07-27', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -1914,27 +1861,6 @@ INSERT INTO `requisito` (`id_requisito`, `nombre_requisito`, `status_requisito`)
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sede`
---
-
-CREATE TABLE `sede` (
-  `id_sede` int(11) NOT NULL,
-  `departamento_sede` int(11) NOT NULL,
-  `ciudad_sede` int(11) NOT NULL,
-  `id_empresa` bigint(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `sede`
---
-
-INSERT INTO `sede` (`id_sede`, `departamento_sede`, `ciudad_sede`, `id_empresa`) VALUES
-(2, 11, 11001, 123),
-(3, 25, 25181, 1075);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -1951,6 +1877,15 @@ CREATE TABLE `usuario` (
   `estado_user` varchar(10) NOT NULL DEFAULT 'Activo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_user`, `nombres_user`, `apellidos_user`, `email_user`, `cargo_user`, `telefono_user`, `ficha_user`, `img_user`, `password_user`, `estado_user`) VALUES
+(20449775, 'Ana', 'Mendez', 'anamendez@misena.edu.co', 'Aprendiz', 3133220221, 1804520, '../../../assets/images/users/2.png', '202cb962ac59075b964b07152d234b70', 'Activo'),
+(1075668168, 'Juan', 'Perez', 'juanperez@misena.edu.co', 'Instructor', 3204779391, 1804520, '../../../assets/images/users/1-old.jpg', '202cb962ac59075b964b07152d234b70', 'Activo'),
+(1075685565, 'Jasmin', 'Fuquen', 'jasminfuquen@gmail.com', 'Coordinador', 3132872033, 1804520, '../../../assets/images/users/agent2.jpg', '202cb962ac59075b964b07152d234b70', 'Activo');
+
 -- --------------------------------------------------------
 
 --
@@ -1960,10 +1895,10 @@ CREATE TABLE `usuario` (
 CREATE TABLE `visita` (
   `id_visita` int(11) NOT NULL,
   `id_auditoria` int(11) NOT NULL,
-  `id_usuario` bigint(15) NOT NULL,
+  `id_user` bigint(15) NOT NULL,
   `nro_visita` int(11) NOT NULL,
-  `fecha_ini` timestamp NOT NULL DEFAULT current_timestamp(),
-  `fecha_fin` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha_ini` date NOT NULL DEFAULT current_timestamp(),
+  `fecha_fin` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -1975,14 +1910,6 @@ CREATE TABLE `visita` (
 --
 ALTER TABLE `actividad_economica`
   ADD PRIMARY KEY (`id_actividad`);
-
---
--- Indices de la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  ADD PRIMARY KEY (`id_actividad_empresa`),
-  ADD KEY `id_empresa` (`id_empresa`),
-  ADD KEY `id_actividad` (`id_actividad`);
 
 --
 -- Indices de la tabla `auditoria`
@@ -2017,7 +1944,9 @@ ALTER TABLE `departamento`
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`id_empresa`),
   ADD KEY `departamento_empresa` (`departamento_empresa`),
-  ADD KEY `ciudad_empresa` (`ciudad_empresa`);
+  ADD KEY `ciudad_empresa` (`ciudad_empresa`),
+  ADD KEY `id_actividad` (`id_actividad`),
+  ADD KEY `id_actividad2` (`id_actividad2`);
 
 --
 -- Indices de la tabla `evaluacion_visita`
@@ -2034,26 +1963,10 @@ ALTER TABLE `ficha`
   ADD PRIMARY KEY (`id_ficha`);
 
 --
--- Indices de la tabla `foto`
---
-ALTER TABLE `foto`
-  ADD PRIMARY KEY (`id_foto`),
-  ADD KEY `fk_foto_evaluacion_idx` (`id_evaluacion_visita`);
-
---
 -- Indices de la tabla `requisito`
 --
 ALTER TABLE `requisito`
   ADD PRIMARY KEY (`id_requisito`);
-
---
--- Indices de la tabla `sede`
---
-ALTER TABLE `sede`
-  ADD PRIMARY KEY (`id_sede`),
-  ADD KEY `departamento_sede` (`departamento_sede`),
-  ADD KEY `ciudad_sede` (`ciudad_sede`),
-  ADD KEY `id_empresa` (`id_empresa`);
 
 --
 -- Indices de la tabla `usuario`
@@ -2068,23 +1981,17 @@ ALTER TABLE `usuario`
 ALTER TABLE `visita`
   ADD PRIMARY KEY (`id_visita`),
   ADD KEY `id_auditoria` (`id_auditoria`),
-  ADD KEY `id_usuario` (`id_usuario`);
+  ADD KEY `id_usuario` (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  MODIFY `id_actividad_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
@@ -2096,7 +2003,7 @@ ALTER TABLE `ciudad`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT de la tabla `departamento`
@@ -2108,13 +2015,7 @@ ALTER TABLE `departamento`
 -- AUTO_INCREMENT de la tabla `evaluacion_visita`
 --
 ALTER TABLE `evaluacion_visita`
-  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT de la tabla `foto`
---
-ALTER TABLE `foto`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=536;
 
 --
 -- AUTO_INCREMENT de la tabla `requisito`
@@ -2123,27 +2024,14 @@ ALTER TABLE `requisito`
   MODIFY `id_requisito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT de la tabla `sede`
---
-ALTER TABLE `sede`
-  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT de la tabla `visita`
 --
 ALTER TABLE `visita`
-  MODIFY `id_visita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_visita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  ADD CONSTRAINT `actividad_empresa_ibfk_3` FOREIGN KEY (`id_actividad`) REFERENCES `actividad_economica` (`id_actividad`),
-  ADD CONSTRAINT `actividad_empresa_ibfk_4` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`);
 
 --
 -- Filtros para la tabla `auditoria`
@@ -2168,7 +2056,8 @@ ALTER TABLE `contacto`
 --
 ALTER TABLE `empresa`
   ADD CONSTRAINT `empresa_ibfk_5` FOREIGN KEY (`departamento_empresa`) REFERENCES `departamento` (`id_departamento`),
-  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`ciudad_empresa`) REFERENCES `ciudad` (`id_ciudad`);
+  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`ciudad_empresa`) REFERENCES `ciudad` (`id_ciudad`),
+  ADD CONSTRAINT `empresa_ibfk_7` FOREIGN KEY (`id_actividad`) REFERENCES `actividad_economica` (`id_actividad`);
 
 --
 -- Filtros para la tabla `evaluacion_visita`
@@ -2176,20 +2065,6 @@ ALTER TABLE `empresa`
 ALTER TABLE `evaluacion_visita`
   ADD CONSTRAINT `evaluacion_visita_ibfk_1` FOREIGN KEY (`id_requisito`) REFERENCES `requisito` (`id_requisito`),
   ADD CONSTRAINT `evaluacion_visita_ibfk_2` FOREIGN KEY (`id_visita`) REFERENCES `visita` (`id_visita`);
-
---
--- Filtros para la tabla `foto`
---
-ALTER TABLE `foto`
-  ADD CONSTRAINT `fk_foto_evaluacion` FOREIGN KEY (`id_evaluacion_visita`) REFERENCES `evaluacion_visita` (`id_evaluacion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `sede`
---
-ALTER TABLE `sede`
-  ADD CONSTRAINT `sede_ibfk_1` FOREIGN KEY (`ciudad_sede`) REFERENCES `ciudad` (`id_ciudad`),
-  ADD CONSTRAINT `sede_ibfk_2` FOREIGN KEY (`departamento_sede`) REFERENCES `departamento` (`id_departamento`),
-  ADD CONSTRAINT `sede_ibfk_3` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`);
 
 --
 -- Filtros para la tabla `usuario`
@@ -2202,7 +2077,7 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `visita`
   ADD CONSTRAINT `visita_ibfk_1` FOREIGN KEY (`id_auditoria`) REFERENCES `auditoria` (`id_auditoria`),
-  ADD CONSTRAINT `visita_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_user`);
+  ADD CONSTRAINT `visita_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

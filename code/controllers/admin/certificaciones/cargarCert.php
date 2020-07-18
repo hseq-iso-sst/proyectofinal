@@ -26,8 +26,8 @@ function PuntageVista(){
             
             <div class="row text-center">           
             
-                <a href="../../../views/admin/auditoria/ListarAuditoria.php" type="submit" class="mr-2 ml-3 mt-4 btn btn-success loginbtn">Finalizar</a>
-                <a href="../../../models/configPDFpuntaje.php?id_visita='.$id_visita.'" type="submit" class="mr-2 mt-4 btn btn-success loginbtn">Reporte</a>
+                <a href="../../../views/admin/auditoria/ListarAuditoria.php" type="submit" class="mr-2 ml-5 mt-4 btn btn-secondary loginbtn">Finalizar</a>
+                <a href="../../../models/configPDFpuntaje.php?id_visita='.$id_visita.'" type="submit" class="mr-2 mt-4 btn btn-secondary loginbtn">Reporte</a>
             </div>        
         </div>
     

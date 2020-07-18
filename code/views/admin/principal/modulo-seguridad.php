@@ -111,11 +111,11 @@
                                         <h4 class="card-title text-center">Documentos </h4>
                                         
                                         <p>A continuacion usted podra optener mas informacion del sistema por medio de nuestros manuales, documentos, etc. </p>
-                                        <a href="https://drive.google.com/drive/folders/1D8PjwQ4NjKo7HMoMCyFYsA4gmqNft0GB?usp=sharing" target="_blank" class="btn btn-primary text-center">Manual de entidad corporativa</a>
-                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de usuario</a>
-                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de tecnico</a>
-                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de prubas del sistema</a>
-                                       
+                                        <a href="../../../../docs/Manual_Identidad_Corporativa.pdf" target="_blank" class="btn btn-primary text-center">Manual de entidad corporativa</a>
+                                        <a href="../../../../docs/MANUAL DE USUARIO.pdf" target="_blank" class="btn btn-primary">Manual de usuario</a>
+                                        <a href="../../../../docs/Manual Tecnico.pdf" target="_blank" class="btn btn-primary">Manual de tecnico</a>
+                                        <a href="../../../../docs/Plantilla_Plan de Pruebas HSEQ.pdf" target="_blank" class="btn btn-primary">Manual de pruebas del sistema</a>
+                                        <a href="../../../../docs/Manual-Para-subir-una-aplicacion-a-un-host.pdf" target="_blank" class="btn btn-primary">Manual de instalación</a>
                                     </div>
                                 </div>
                             </div>
