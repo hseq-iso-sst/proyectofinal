@@ -43,90 +43,102 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php'); ?>
-    </header>
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <?php include_once('../../../menu-visita.php');?>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
-    <div class="page-wrapper">
+            <?php include_once('../../../nav.php'); ?>
+        </header>
         <!-- ============================================================== -->
-        <!-- Bread crumb and right sidebar toggle -->
+        <!-- End Topbar header -->
         <!-- ============================================================== -->
-        <div class="page-breadcrumb">
-            <div class="row">
-                <div class="col-7 align-self-center">
-                    <h4 class="page-title text-truncate font-weight-medium mb-1">Visitas</h4>
-                    <div class="d-flex align-items-center">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item"><a href="../../../index.php" class="text-muted">Home</a></li>
-                                <li class="breadcrumb-item text-muted active" aria-current="page">Visitas</li>
-                            </ol>
-                        </nav>
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <?php include_once('../../../menuins.php');?>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-7 align-self-center">
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Seguridad</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="../../../views/instruc/principal/index.php"
+                                            class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Seguridad</li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Bread crumb and right sidebar toggle -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Container fluid  -->
-        <!-- ============================================================== -->
-        <div class="container-fluid">
             <!-- ============================================================== -->
-            <!-- Start Page Content -->
+            <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
-            <!-- Row -->
-            <div class="row">
-                <div class="col-12">
-                    <!-- Row -->
-                    <div class="row">
-                        <!-- column -->
-                        <div class="col-lg-2 col-md-2">
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="../../../assets/images/big/visita1.png"
-                                    alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Visita 1</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk of the card's content.</p>
-                                    <a href="../auditoria/index.php" class="btn btn-primary">Ingresar</a>
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Row -->
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-lg-2 col-md-2">
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <img class="card-img-top img-fluid" src="../../../assets/images/big/hseqBanner.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center">HSEQ </h4>
+                                        
+                                        <p class="card-text">Es una disciplina y especialidad que estudia e implementa
+                                            aspectos prácticos de la protección del medio ambiente y la seguridad en el
+                                            trabajo. En términos simples, es lo que las organizaciones deben hacer para
+                                            asegurarse de que sus actividades no causen daño a nadie.</p>
+                                        <br>
+                                        <h4 class="card-title text-center">Documentos </h4>
+                                        
+                                        <p>A continuacion usted podra optener mas informacion del sistema por medio de nuestros manuales, documentos, etc. </p>
+                                        <a href="https://drive.google.com/drive/folders/1D8PjwQ4NjKo7HMoMCyFYsA4gmqNft0GB?usp=sharing" target="_blank" class="btn btn-primary text-center">Manual de entidad corporativa</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de usuario</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de tecnico</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de prubas del sistema</a>
+                                       
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-            
-           
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <?php include_once('../../../footer.php'); ?>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Container fluid  -->
+        <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <?php include_once('../../../footer.php'); ?>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
     </div>
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
