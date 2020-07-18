@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-05-2020 a las 02:21:49
+-- Tiempo de generación: 18-07-2020 a las 06:32:11
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.4
 
@@ -536,44 +536,37 @@ INSERT INTO `actividad_economica` (`id_actividad`, `nombre_actividad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `actividad_empresa`
---
-
-CREATE TABLE `actividad_empresa` (
-  `id_actividad_empresa` int(11) NOT NULL,
-  `id_empresa` bigint(15) NOT NULL,
-  `id_actividad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `actividad_empresa`
---
-
-INSERT INTO `actividad_empresa` (`id_actividad_empresa`, `id_empresa`, `id_actividad`) VALUES
-(1, 123, 161),
-(2, 1075, 122),
-(3, 1075, 124),
-(4, 1075685565, 9700);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `auditoria`
 --
 
 CREATE TABLE `auditoria` (
   `id_auditoria` int(11) NOT NULL,
-  `puntaje` int(11) DEFAULT NULL,
+  `puntaje_1` int(11) DEFAULT NULL,
+  `puntaje_2` int(11) DEFAULT NULL,
   `id_empresa` bigint(15) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL DEFAULT 'En Proceso'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `auditoria`
 --
 
-INSERT INTO `auditoria` (`id_auditoria`, `puntaje`, `id_empresa`, `status`) VALUES
-(3, NULL, 1075685565, 'Activo');
+INSERT INTO `auditoria` (`id_auditoria`, `puntaje_1`, `puntaje_2`, `id_empresa`, `status`) VALUES
+(32, 0, 0, 1075668168, 'En Proceso'),
+(33, 0, 0, 123, 'Finalizado'),
+(34, 0, 0, 456, 'Finalizado'),
+(35, 0, 0, 123, 'Finalizado'),
+(36, 0, 0, 956, 'Finalizado'),
+(37, 0, 0, 1075668168, 'Finalizado'),
+(38, NULL, NULL, 956, 'En Proceso'),
+(39, 2, NULL, 956, 'En Proceso'),
+(40, 2, 4, 1075668168, 'En Proceso'),
+(41, 1, NULL, 1075668168, 'En Proceso'),
+(42, NULL, 2, 123, 'En Proceso'),
+(43, NULL, NULL, 1075668168, 'En Proceso'),
+(44, 2, NULL, 6780, 'En Proceso'),
+(45, 1, NULL, 908, 'En Proceso'),
+(46, 4, 4, 7889, 'En Proceso');
 
 -- --------------------------------------------------------
 
@@ -1737,9 +1730,24 @@ CREATE TABLE `contacto` (
 --
 
 INSERT INTO `contacto` (`id_contacto`, `nombre_contacto`, `cargo_contacto`, `correo_contacto`, `telefono_contacto`, `celular_contacto`, `id_empresa`) VALUES
-(6, 'pepito', 'calidad', 'pepito@gmail.com', 123, 1234, 123),
-(12, 'juanito', 'calidad', 'juanito@gmail.com', 345, 89, 1075),
-(13, 'Diego Pachon', 'CALIDAD', 'dpachon@colsof.com.co', 2912000, 2912000, 1075685565);
+(105, 'FELIPE RESTREPO', 'SISTEMAS', 'felipe@gmail.com', 3132872033, 3132872033, 1075668168),
+(106, 'JUAN PEREZ', 'SISTEMAS', 'juan@gmail.com', 3132872033, 3132872033, 1075668168),
+(107, 'mercado', 'calidad', 'mercado@gmail.com', 89, 89, 123),
+(108, 'juanito', 'calidad', 'jasminlulu1@gmail.com', 78, 90, 456),
+(109, 'mercado1', 'calidad1', 'mercado1@gmail.com', 899, 899, 123),
+(110, 'abimelec7', 'calidad', 'mercadop@gmail.com', 678, 78, 956),
+(111, 'mercado12', 'calidad12', 'mercado12@gmail.com', 8990, 8990, 123),
+(112, 'juanito', 'calidad', 'pepito@gmail.com', 324, 324, 6780),
+(113, 'juanito1', 'calidad1', 'pepito1@gmail.com', 3241, 3241, 6780),
+(114, 'droxi samuel1', 'calidad', 'jasminlulu1@gmail.com', 6868, 78689, 679),
+(115, 'droxi samuel12', 'calidad1', 'jasminlulu11@gmail.com', 68681, 786891, 679),
+(116, 'droxi samuel12', 'calidad1', 'jasminlulu11@gmail.com', 68681, 786891, 679),
+(117, 'JUAN PEREZ', 'SISTEMAS', 'juan@gmail.com', 3132872033, 3132872033, 1075668168),
+(118, 'pepito3', 'calidad', 'jasminlulu1@gmail.com', 123, 456, 678),
+(119, 'pepito3', 'calidad', 'jasminlulu1@gmail.com', 123, 456, 678),
+(120, 'abimelec3', 'calidad', 'jasminlulu15@gmail.com', 123, 456, 798678),
+(121, 'samis', 'calidad', 'samis@gmail.com', 789, 578, 908),
+(122, 'juanito8', 'calidad', 'abimelec8@gmail.com', 7878, 295, 7889);
 
 -- --------------------------------------------------------
 
@@ -1806,13 +1814,18 @@ CREATE TABLE `empresa` (
   `direccion_empresa` varchar(100) NOT NULL,
   `sucursal` varchar(10) NOT NULL,
   `nro_sucursal` int(11) NOT NULL,
+  `id_actividad` int(11) NOT NULL,
+  `id_actividad2` int(11) DEFAULT NULL,
   `correo_representante` varchar(60) NOT NULL,
   `riesgo_empresa` varchar(30) NOT NULL,
+  `certificaciones` varchar(30) NOT NULL,
   `nro_trabajadores` int(11) NOT NULL,
   `nro_trabajadores_dependientes` int(11) NOT NULL,
   `nro_trabajadores_independientes` int(11) NOT NULL,
   `sedes` varchar(10) NOT NULL,
   `nro_sedes` int(11) NOT NULL,
+  `departamento_Sede` int(11) NOT NULL,
+  `ciudad_sede` int(11) NOT NULL,
   `prima_empresa` bigint(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -1820,10 +1833,17 @@ CREATE TABLE `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`tipo_documento`, `id_empresa`, `nombre_empresa`, `departamento_empresa`, `ciudad_empresa`, `direccion_empresa`, `sucursal`, `nro_sucursal`, `correo_representante`, `riesgo_empresa`, `nro_trabajadores`, `nro_trabajadores_dependientes`, `nro_trabajadores_independientes`, `sedes`, `nro_sedes`, `prima_empresa`) VALUES
-('C.C', 123, 'HSEQ', 11, 11001, 'CR 4', 'Si', 2, 'representante@gmail.com', 'I (Riesgo mínimo)', 30, 20, 10, 'Si', 2, 10),
-('C.C', 1075, 'colsofp', 11, 11001, 'Cll 9 A #4-78', 'Si', 2, 'representante@gmail.com', 'I (Riesgo mínimo)', 70, 50, 20, 'Si', 2, 1),
-('C.C', 1075685565, 'COLSOF', 11, 11001, 'vereda vuelta grande', 'Si', 5, 'contacto@colsof.com.co', 'V (Riesgo máximo)', 1000, 999, 1, 'No', 0, 1000);
+INSERT INTO `empresa` (`tipo_documento`, `id_empresa`, `nombre_empresa`, `departamento_empresa`, `ciudad_empresa`, `direccion_empresa`, `sucursal`, `nro_sucursal`, `id_actividad`, `id_actividad2`, `correo_representante`, `riesgo_empresa`, `certificaciones`, `nro_trabajadores`, `nro_trabajadores_dependientes`, `nro_trabajadores_independientes`, `sedes`, `nro_sedes`, `departamento_Sede`, `ciudad_sede`, `prima_empresa`) VALUES
+('NIT', 123, 'HSEQPRUEBA12', 25, 25126, 'hjk12', 'No', 0, 125, NULL, 'representante12@gmail.com', 'I (Riesgo mínimo)', 'ISO 9001', 8000, 8000, 0, 'Si', 1, 25, 25168, 100),
+('NIT', 456, 'COLSOF', 54, 54250, 'Carrera 4 Zona Industrial Sopó', 'No', 0, 113, 113, 'representantemer@gmail.com', 'II (Riesgo bajo)', 'ISO 14001', 80, 80, 0, 'Si', 1, 50, 50318, 1),
+('NIT', 678, 'ALPINA', 11, 11001, 'vereda vuelta grande', 'No', 0, 113, 127, 'representante@gmail.com', 'I (Riesgo mínimo)', 'ISO 9001', 80, 80, 0, 'Si', 1, 52, 52240, 1),
+('C.C', 679, 'COLSOF1', 25, 25175, 'Carrera 4 Zona Industrial Sopó1', 'Si', 1, 113, 124, 'abimelec1@gmail.com', 'V (Riesgo máximo)', 'ISO 9001', 901, 901, 0, 'Si', 11, 25, 25175, 11),
+('NIT', 908, 'trolli', 47, 47545, 'vereda vueta grande', 'Si', 1, 112, 0, 'representante@gmail.com', 'I (Riesgo mínimo)', 'ISO 9001', 79, 79, 0, 'Si', 1, 44, 44279, 90),
+('NIT', 956, 'mercadolibre', 11, 11001, 'direccioprueba', 'No', 0, 124, 0, 'representantep@gmail.com', 'III (Riesgo medio)', 'BASC', 80, 80, 0, 'Si', 1, 63, 63594, 1),
+('C.C', 6780, 'ALPINA1', 25, 25175, 'vereda vueta grande1', 'Si', 1, 123, 124, 'representantep1@gmail.com', 'V (Riesgo máximo)', 'BASC', 801, 801, 0, 'Si', 2, 11, 11001, 11),
+('NIT', 7889, 'HSEQPRUEBA', 41, 41306, 'vereda vueta grande', 'No', 0, 125, 0, 'representante@gmail.com', 'I (Riesgo mínimo)', 'ISO 9001', 80, 80, 0, 'Si', 1, 44, 44650, 3),
+('NIT', 798678, 'mercadolibre', 11, 11001, 'Cll 9 A #4-78', 'Si', 1, 112, 0, 'representante@gmail.com', 'I (Riesgo mínimo)', 'ISO 9001', 78, 78, 0, 'Si', 1, 44, 44650, 6),
+('NIT', 1075668168, 'SENA', 25, 25175, 'vereda vuelta grande', 'No', 0, 8530, NULL, 'sena@gmail.com', 'III (Riesgo medio)', 'BASC', 1000, 800, 200, 'Si', 15, 25, 25175, 10000);
 
 -- --------------------------------------------------------
 
@@ -1839,6 +1859,369 @@ CREATE TABLE `evaluacion_visita` (
   `comentario` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `evaluacion_visita`
+--
+
+INSERT INTO `evaluacion_visita` (`id_evaluacion`, `id_visita`, `id_requisito`, `evaluacion`, `comentario`) VALUES
+(179, 25, 1, 1, ''),
+(180, 25, 2, 1, ''),
+(181, 25, 3, 1, ''),
+(182, 25, 4, 1, ''),
+(183, 25, 5, 1, ''),
+(184, 25, 6, 0, '6'),
+(185, 25, 7, 1, ''),
+(186, 25, 8, 1, ''),
+(187, 25, 9, 1, ''),
+(188, 25, 10, 1, ''),
+(189, 25, 11, 1, ''),
+(190, 25, 12, 1, ''),
+(191, 25, 13, 1, ''),
+(192, 25, 14, 1, ''),
+(193, 25, 15, 0, '15'),
+(194, 25, 16, 1, ''),
+(195, 25, 17, 1, ''),
+(196, 25, 18, 1, ''),
+(197, 25, 19, 1, ''),
+(198, 25, 20, 1, ''),
+(199, 25, 21, 0, '21'),
+(200, 26, 1, 1, ''),
+(201, 26, 2, 1, ''),
+(202, 26, 3, 1, ''),
+(203, 26, 4, 1, ''),
+(204, 26, 5, 1, ''),
+(205, 26, 6, 1, ''),
+(206, 26, 7, 1, ''),
+(207, 26, 8, 1, ''),
+(208, 26, 9, 1, ''),
+(209, 26, 10, 1, ''),
+(210, 26, 11, 1, ''),
+(211, 26, 12, 1, ''),
+(212, 26, 13, 1, ''),
+(213, 26, 14, 1, ''),
+(214, 26, 15, 1, ''),
+(215, 26, 16, 1, ''),
+(216, 26, 17, 1, ''),
+(217, 26, 18, 1, ''),
+(218, 26, 19, 1, ''),
+(219, 26, 20, 1, ''),
+(220, 26, 21, 0, 'prueba 21 12-07-2020'),
+(221, 27, 1, 1, ''),
+(222, 27, 2, 1, ''),
+(223, 27, 3, 1, ''),
+(224, 27, 4, 1, ''),
+(225, 27, 5, 1, ''),
+(226, 27, 6, 1, ''),
+(227, 27, 7, 1, ''),
+(228, 27, 8, 1, ''),
+(229, 27, 9, 1, ''),
+(230, 27, 10, 1, ''),
+(231, 27, 11, 1, ''),
+(232, 27, 12, 1, ''),
+(233, 27, 13, 1, ''),
+(234, 27, 14, 1, ''),
+(235, 27, 15, 1, ''),
+(236, 27, 16, 1, ''),
+(237, 27, 17, 1, ''),
+(238, 27, 18, 1, ''),
+(239, 27, 19, 1, ''),
+(240, 27, 20, 1, ''),
+(241, 27, 21, 0, 'prueba 15-07-2020'),
+(242, 28, 1, 0, '1'),
+(243, 28, 2, 0, '2'),
+(244, 28, 3, 0, '3'),
+(245, 28, 4, 0, '4'),
+(246, 28, 5, 0, '5'),
+(247, 28, 6, 0, '6'),
+(248, 28, 7, 0, '7'),
+(249, 28, 8, 0, '8'),
+(250, 28, 9, 0, '9'),
+(251, 28, 10, 0, '10'),
+(252, 28, 11, 0, '11'),
+(253, 28, 12, 0, '12'),
+(254, 28, 13, 0, '13'),
+(255, 28, 14, 0, '14'),
+(256, 28, 15, 0, '15'),
+(257, 28, 16, 0, '16'),
+(258, 28, 17, 0, '17'),
+(259, 28, 18, 0, '18'),
+(260, 28, 19, 0, '19'),
+(261, 28, 20, 1, ''),
+(262, 28, 21, 1, ''),
+(263, 31, 1, 0, '1'),
+(264, 31, 2, 0, '2'),
+(265, 31, 3, 0, '3'),
+(266, 31, 4, 0, '4'),
+(267, 31, 5, 0, '5'),
+(268, 31, 6, 0, '6'),
+(269, 31, 7, 0, '7'),
+(270, 31, 8, 0, '8'),
+(271, 31, 9, 0, '9'),
+(272, 31, 10, 0, '10'),
+(273, 31, 11, 0, '11'),
+(274, 31, 12, 0, '12'),
+(275, 31, 13, 0, '13'),
+(276, 31, 14, 0, '14'),
+(277, 31, 15, 0, '15'),
+(278, 31, 16, 0, '16'),
+(279, 31, 17, 0, '17'),
+(280, 31, 18, 0, '18'),
+(281, 31, 19, 1, ''),
+(282, 31, 20, 1, ''),
+(283, 31, 21, 1, ''),
+(284, 31, 1, 0, '1'),
+(285, 31, 2, 0, '2'),
+(286, 31, 3, 0, '3'),
+(287, 31, 4, 0, '4'),
+(288, 31, 5, 0, '5'),
+(289, 31, 6, 0, '6'),
+(290, 31, 7, 0, '7'),
+(291, 31, 8, 0, '8'),
+(292, 31, 9, 0, '9'),
+(293, 31, 10, 0, '10'),
+(294, 31, 11, 0, '11'),
+(295, 31, 12, 0, '12'),
+(296, 31, 13, 0, '13'),
+(297, 31, 14, 0, '14'),
+(298, 31, 15, 0, '15'),
+(299, 31, 16, 0, '16'),
+(300, 31, 17, 0, '17'),
+(301, 31, 18, 0, '18'),
+(302, 31, 19, 1, ''),
+(303, 31, 20, 1, ''),
+(304, 31, 21, 1, ''),
+(305, 32, 1, 0, '1'),
+(306, 32, 2, 0, '2'),
+(307, 32, 3, 0, '3'),
+(308, 32, 4, 0, '4'),
+(309, 32, 5, 0, '5'),
+(310, 32, 6, 0, '6'),
+(311, 32, 7, 0, '7'),
+(312, 32, 8, 0, '8'),
+(313, 32, 9, 0, '9'),
+(314, 32, 10, 0, '10'),
+(315, 32, 11, 0, '11'),
+(316, 32, 12, 0, '12'),
+(317, 32, 13, 0, '13'),
+(318, 32, 14, 0, '14'),
+(319, 32, 15, 0, '15'),
+(320, 32, 16, 0, '16'),
+(321, 32, 17, 0, '17'),
+(322, 32, 18, 0, '18'),
+(323, 32, 19, 0, '19'),
+(324, 32, 20, 0, '20'),
+(325, 32, 21, 1, ''),
+(326, 33, 1, 0, '1'),
+(327, 33, 2, 0, '2'),
+(328, 33, 3, 0, '3'),
+(329, 33, 4, 0, '4'),
+(330, 33, 5, 0, '5'),
+(331, 33, 6, 0, '6'),
+(332, 33, 7, 0, '7'),
+(333, 33, 8, 0, '8'),
+(334, 33, 9, 0, '9'),
+(335, 33, 10, 0, '10'),
+(336, 33, 11, 0, '11'),
+(337, 33, 12, 0, '12'),
+(338, 33, 13, 0, '13'),
+(339, 33, 14, 0, '14'),
+(340, 33, 15, 0, '15'),
+(341, 33, 16, 0, '16'),
+(342, 33, 17, 0, '17'),
+(343, 33, 18, 0, '18'),
+(344, 33, 19, 0, '19'),
+(345, 33, 20, 0, '20'),
+(346, 33, 21, 1, ''),
+(347, 34, 1, 0, ''),
+(348, 34, 2, 0, ''),
+(349, 34, 3, 0, ''),
+(350, 34, 4, 0, ''),
+(351, 34, 5, 0, ''),
+(352, 34, 6, 0, ''),
+(353, 34, 7, 0, ''),
+(354, 34, 8, 0, ''),
+(355, 34, 9, 0, ''),
+(356, 34, 10, 0, ''),
+(357, 34, 11, 0, ''),
+(358, 34, 12, 0, ''),
+(359, 34, 13, 0, ''),
+(360, 34, 14, 0, ''),
+(361, 34, 15, 0, ''),
+(362, 34, 16, 0, ''),
+(363, 34, 17, 0, ''),
+(364, 34, 18, 0, ''),
+(365, 34, 19, 0, ''),
+(366, 34, 20, 0, ''),
+(367, 34, 21, 1, ''),
+(368, 35, 1, 0, ''),
+(369, 35, 2, 0, ''),
+(370, 35, 3, 0, ''),
+(371, 35, 4, 0, ''),
+(372, 35, 5, 0, ''),
+(373, 35, 6, 0, ''),
+(374, 35, 7, 0, ''),
+(375, 35, 8, 0, ''),
+(376, 35, 9, 0, ''),
+(377, 35, 10, 0, ''),
+(378, 35, 11, 0, ''),
+(379, 35, 12, 0, ''),
+(380, 35, 13, 0, ''),
+(381, 35, 14, 0, ''),
+(382, 35, 15, 0, ''),
+(383, 35, 16, 0, ''),
+(384, 35, 17, 0, ''),
+(385, 35, 18, 1, ''),
+(386, 35, 19, 1, ''),
+(387, 35, 20, 1, ''),
+(388, 35, 21, 1, ''),
+(389, 36, 1, 0, ''),
+(390, 36, 2, 0, ''),
+(391, 36, 3, 0, ''),
+(392, 36, 4, 0, ''),
+(393, 36, 5, 0, ''),
+(394, 36, 6, 0, ''),
+(395, 36, 7, 0, ''),
+(396, 36, 8, 0, ''),
+(397, 36, 9, 0, ''),
+(398, 36, 10, 0, ''),
+(399, 36, 11, 0, ''),
+(400, 36, 12, 0, ''),
+(401, 36, 13, 0, ''),
+(402, 36, 14, 0, ''),
+(403, 36, 15, 0, ''),
+(404, 36, 16, 0, ''),
+(405, 36, 17, 0, ''),
+(406, 36, 18, 0, ''),
+(407, 36, 19, 0, ''),
+(408, 36, 20, 1, ''),
+(409, 36, 21, 1, ''),
+(410, 37, 1, 0, ''),
+(411, 37, 2, 0, ''),
+(412, 37, 3, 0, ''),
+(413, 37, 4, 0, ''),
+(414, 37, 5, 0, ''),
+(415, 37, 6, 0, ''),
+(416, 37, 7, 0, ''),
+(417, 37, 8, 0, ''),
+(418, 37, 9, 0, ''),
+(419, 37, 10, 0, ''),
+(420, 37, 11, 0, ''),
+(421, 37, 12, 0, ''),
+(422, 37, 13, 0, ''),
+(423, 37, 14, 0, ''),
+(424, 37, 15, 0, ''),
+(425, 37, 16, 0, ''),
+(426, 37, 17, 0, ''),
+(427, 37, 18, 0, ''),
+(428, 37, 19, 0, ''),
+(429, 37, 20, 0, ''),
+(430, 37, 21, 1, ''),
+(431, 39, 1, 0, ''),
+(432, 39, 2, 0, ''),
+(433, 39, 3, 0, ''),
+(434, 39, 4, 0, ''),
+(435, 39, 5, 0, ''),
+(436, 39, 6, 0, ''),
+(437, 39, 7, 0, ''),
+(438, 39, 8, 0, ''),
+(439, 39, 9, 0, ''),
+(440, 39, 10, 0, ''),
+(441, 39, 11, 0, ''),
+(442, 39, 12, 0, ''),
+(443, 39, 13, 0, ''),
+(444, 39, 14, 0, ''),
+(445, 39, 15, 0, ''),
+(446, 39, 16, 0, ''),
+(447, 39, 17, 0, ''),
+(448, 39, 18, 0, ''),
+(449, 39, 19, 0, ''),
+(450, 39, 20, 1, ''),
+(451, 39, 21, 1, ''),
+(452, 40, 1, 0, ''),
+(453, 40, 2, 0, ''),
+(454, 40, 3, 0, ''),
+(455, 40, 4, 0, ''),
+(456, 40, 5, 0, ''),
+(457, 40, 6, 0, ''),
+(458, 40, 7, 0, ''),
+(459, 40, 8, 0, ''),
+(460, 40, 9, 0, ''),
+(461, 40, 10, 0, ''),
+(462, 40, 11, 0, ''),
+(463, 40, 12, 0, ''),
+(464, 40, 13, 0, ''),
+(465, 40, 14, 0, ''),
+(466, 40, 15, 0, ''),
+(467, 40, 16, 0, ''),
+(468, 40, 17, 0, ''),
+(469, 40, 18, 0, ''),
+(470, 40, 19, 0, ''),
+(471, 40, 20, 1, ''),
+(472, 40, 21, 1, ''),
+(473, 41, 1, 0, ''),
+(474, 41, 2, 0, ''),
+(475, 41, 3, 0, ''),
+(476, 41, 4, 0, ''),
+(477, 41, 5, 0, ''),
+(478, 41, 6, 0, ''),
+(479, 41, 7, 0, ''),
+(480, 41, 8, 0, ''),
+(481, 41, 9, 0, ''),
+(482, 41, 10, 0, ''),
+(483, 41, 11, 0, ''),
+(484, 41, 12, 0, ''),
+(485, 41, 13, 0, ''),
+(486, 41, 14, 0, ''),
+(487, 41, 15, 0, ''),
+(488, 41, 16, 0, ''),
+(489, 41, 17, 0, ''),
+(490, 41, 18, 0, ''),
+(491, 41, 19, 0, ''),
+(492, 41, 20, 0, ''),
+(493, 41, 21, 1, ''),
+(494, 42, 1, 0, ''),
+(495, 42, 2, 0, ''),
+(496, 42, 3, 0, ''),
+(497, 42, 4, 0, ''),
+(498, 42, 5, 0, ''),
+(499, 42, 6, 0, ''),
+(500, 42, 7, 1, ''),
+(501, 42, 8, 0, ''),
+(502, 42, 9, 0, ''),
+(503, 42, 10, 0, ''),
+(504, 42, 11, 0, ''),
+(505, 42, 12, 1, ''),
+(506, 42, 13, 0, ''),
+(507, 42, 14, 0, ''),
+(508, 42, 15, 0, ''),
+(509, 42, 16, 0, ''),
+(510, 42, 17, 1, ''),
+(511, 42, 18, 0, ''),
+(512, 42, 19, 0, ''),
+(513, 42, 20, 0, ''),
+(514, 42, 21, 1, ''),
+(515, 43, 1, 0, ''),
+(516, 43, 2, 0, ''),
+(517, 43, 3, 0, ''),
+(518, 43, 4, 0, ''),
+(519, 43, 5, 0, ''),
+(520, 43, 6, 1, ''),
+(521, 43, 7, 0, ''),
+(522, 43, 8, 1, ''),
+(523, 43, 9, 0, ''),
+(524, 43, 10, 0, ''),
+(525, 43, 11, 0, ''),
+(526, 43, 12, 0, ''),
+(527, 43, 13, 0, ''),
+(528, 43, 14, 0, ''),
+(529, 43, 15, 0, ''),
+(530, 43, 16, 0, ''),
+(531, 43, 17, 0, ''),
+(532, 43, 18, 1, ''),
+(533, 43, 19, 0, ''),
+(534, 43, 20, 0, ''),
+(535, 43, 21, 1, '');
+
 -- --------------------------------------------------------
 
 --
@@ -1849,28 +2232,20 @@ CREATE TABLE `ficha` (
   `id_ficha` bigint(50) NOT NULL,
   `nombre_ficha` varchar(200) NOT NULL,
   `fecha_inicio` date NOT NULL,
-  `fecha_fin` date NOT NULL
+  `fecha_fin` date NOT NULL,
+  `estado_ficha` varchar(10) NOT NULL DEFAULT 'Activo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `ficha`
 --
 
-INSERT INTO `ficha` (`id_ficha`, `nombre_ficha`, `fecha_inicio`, `fecha_fin`) VALUES
-(1804520, 'ADSI', '2020-05-24', '2020-05-30');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `foto`
---
-
-CREATE TABLE `foto` (
-  `id_foto` int(11) NOT NULL,
-  `id_evaluacion_visita` int(11) NOT NULL,
-  `archivo` varchar(300) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `ficha` (`id_ficha`, `nombre_ficha`, `fecha_inicio`, `fecha_fin`, `estado_ficha`) VALUES
+(76, 'HSEQ2', '2020-07-14', '2020-07-29', 'Inactivo'),
+(123, 'HSEQ', '2020-06-01', '2020-06-22', 'Activo'),
+(345, 'HSEQ', '2020-07-16', '2020-07-16', 'Activo'),
+(564, 'HSEQ1', '2020-07-01', '2020-07-31', 'Activo'),
+(689, 'HSEQ7', '2020-07-17', '2020-07-17', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -1914,27 +2289,6 @@ INSERT INTO `requisito` (`id_requisito`, `nombre_requisito`, `status_requisito`)
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sede`
---
-
-CREATE TABLE `sede` (
-  `id_sede` int(11) NOT NULL,
-  `departamento_sede` int(11) NOT NULL,
-  `ciudad_sede` int(11) NOT NULL,
-  `id_empresa` bigint(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `sede`
---
-
-INSERT INTO `sede` (`id_sede`, `departamento_sede`, `ciudad_sede`, `id_empresa`) VALUES
-(2, 11, 11001, 123),
-(3, 25, 25181, 1075);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -1951,6 +2305,16 @@ CREATE TABLE `usuario` (
   `estado_user` varchar(10) NOT NULL DEFAULT 'Activo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_user`, `nombres_user`, `apellidos_user`, `email_user`, `cargo_user`, `telefono_user`, `ficha_user`, `img_user`, `password_user`, `estado_user`) VALUES
+(76, 'samanta', 'Fuquen', 'admin1@gmail.com', 'Coordinador', 78, 76, '../../../assets/images/users/Snapchat-701876083.jpg', '202cb962ac59075b964b07152d234b70', 'Inactivo'),
+(87, 'pepito1', 'Gomez1', 'pepito1@gmail.com', 'Aprendiz', 1233, 76, '../../../assets/images/users/Snapchat-701876083.jpg', '202cb962ac59075b964b07152d234b70', 'Activo'),
+(1075668168, 'Alex', 'Gomez', 'alex@gmail.com', 'Instructor', 3133220221, 345, '../../../assets/images/users/Snapchat-701876083.jpg', '202cb962ac59075b964b07152d234b70', 'Activo'),
+(1075683363, 'Nancy', 'Sarralde', 'nancy@gmail.com', 'Coordinador', 3204779391, 345, '../../../assets/images/users/jasmin.jpg', '202cb962ac59075b964b07152d234b70', 'Activo');
+
 -- --------------------------------------------------------
 
 --
@@ -1960,11 +2324,36 @@ CREATE TABLE `usuario` (
 CREATE TABLE `visita` (
   `id_visita` int(11) NOT NULL,
   `id_auditoria` int(11) NOT NULL,
-  `id_usuario` bigint(15) NOT NULL,
+  `id_user` bigint(15) NOT NULL,
   `nro_visita` int(11) NOT NULL,
-  `fecha_ini` timestamp NOT NULL DEFAULT current_timestamp(),
-  `fecha_fin` timestamp NOT NULL DEFAULT current_timestamp()
+  `fecha_ini` date NOT NULL DEFAULT current_timestamp(),
+  `fecha_fin` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `visita`
+--
+
+INSERT INTO `visita` (`id_visita`, `id_auditoria`, `id_user`, `nro_visita`, `fecha_ini`, `fecha_fin`) VALUES
+(25, 32, 1075683363, 1, '2020-07-12', '2020-07-14'),
+(26, 32, 1075683363, 2, '2020-07-13', '2020-07-28'),
+(27, 33, 1075683363, 1, '2020-07-15', '2020-07-18'),
+(28, 33, 1075683363, 2, '2020-07-15', '2020-07-15'),
+(29, 35, 1075683363, 1, '2020-07-16', '2020-07-16'),
+(30, 36, 1075683363, 1, '2020-07-21', '2020-08-07'),
+(31, 37, 1075683363, 1, '2020-07-16', '2020-07-16'),
+(32, 38, 1075683363, 1, '2020-07-16', '2020-07-16'),
+(33, 39, 1075683363, 2, '2020-07-16', '2020-07-16'),
+(34, 40, 1075683363, 1, '2020-07-16', '2020-07-22'),
+(35, 40, 1075683363, 2, '2020-07-29', '2020-08-05'),
+(36, 39, 1075683363, 1, '2020-07-16', '2020-07-16'),
+(37, 41, 1075683363, 1, '2020-07-16', '2020-07-16'),
+(38, 42, 1075683363, 1, '2020-07-17', '2020-07-17'),
+(39, 42, 1075683363, 2, '2020-07-17', '2020-07-17'),
+(40, 44, 1075683363, 1, '2020-07-18', '2020-07-24'),
+(41, 45, 1075683363, 1, '2020-07-17', '2020-07-17'),
+(42, 46, 1075683363, 1, '2020-07-17', '2020-07-18'),
+(43, 46, 1075683363, 2, '2020-07-17', '2020-07-17');
 
 --
 -- Índices para tablas volcadas
@@ -1975,14 +2364,6 @@ CREATE TABLE `visita` (
 --
 ALTER TABLE `actividad_economica`
   ADD PRIMARY KEY (`id_actividad`);
-
---
--- Indices de la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  ADD PRIMARY KEY (`id_actividad_empresa`),
-  ADD KEY `id_empresa` (`id_empresa`),
-  ADD KEY `id_actividad` (`id_actividad`);
 
 --
 -- Indices de la tabla `auditoria`
@@ -2017,7 +2398,9 @@ ALTER TABLE `departamento`
 ALTER TABLE `empresa`
   ADD PRIMARY KEY (`id_empresa`),
   ADD KEY `departamento_empresa` (`departamento_empresa`),
-  ADD KEY `ciudad_empresa` (`ciudad_empresa`);
+  ADD KEY `ciudad_empresa` (`ciudad_empresa`),
+  ADD KEY `id_actividad` (`id_actividad`),
+  ADD KEY `id_actividad2` (`id_actividad2`);
 
 --
 -- Indices de la tabla `evaluacion_visita`
@@ -2034,26 +2417,10 @@ ALTER TABLE `ficha`
   ADD PRIMARY KEY (`id_ficha`);
 
 --
--- Indices de la tabla `foto`
---
-ALTER TABLE `foto`
-  ADD PRIMARY KEY (`id_foto`),
-  ADD KEY `fk_foto_evaluacion_idx` (`id_evaluacion_visita`);
-
---
 -- Indices de la tabla `requisito`
 --
 ALTER TABLE `requisito`
   ADD PRIMARY KEY (`id_requisito`);
-
---
--- Indices de la tabla `sede`
---
-ALTER TABLE `sede`
-  ADD PRIMARY KEY (`id_sede`),
-  ADD KEY `departamento_sede` (`departamento_sede`),
-  ADD KEY `ciudad_sede` (`ciudad_sede`),
-  ADD KEY `id_empresa` (`id_empresa`);
 
 --
 -- Indices de la tabla `usuario`
@@ -2068,23 +2435,17 @@ ALTER TABLE `usuario`
 ALTER TABLE `visita`
   ADD PRIMARY KEY (`id_visita`),
   ADD KEY `id_auditoria` (`id_auditoria`),
-  ADD KEY `id_usuario` (`id_usuario`);
+  ADD KEY `id_usuario` (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  MODIFY `id_actividad_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT de la tabla `auditoria`
 --
 ALTER TABLE `auditoria`
-  MODIFY `id_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_auditoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
@@ -2096,7 +2457,7 @@ ALTER TABLE `ciudad`
 -- AUTO_INCREMENT de la tabla `contacto`
 --
 ALTER TABLE `contacto`
-  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT de la tabla `departamento`
@@ -2108,13 +2469,7 @@ ALTER TABLE `departamento`
 -- AUTO_INCREMENT de la tabla `evaluacion_visita`
 --
 ALTER TABLE `evaluacion_visita`
-  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT de la tabla `foto`
---
-ALTER TABLE `foto`
-  MODIFY `id_foto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_evaluacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=536;
 
 --
 -- AUTO_INCREMENT de la tabla `requisito`
@@ -2123,27 +2478,14 @@ ALTER TABLE `requisito`
   MODIFY `id_requisito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT de la tabla `sede`
---
-ALTER TABLE `sede`
-  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT de la tabla `visita`
 --
 ALTER TABLE `visita`
-  MODIFY `id_visita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_visita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `actividad_empresa`
---
-ALTER TABLE `actividad_empresa`
-  ADD CONSTRAINT `actividad_empresa_ibfk_3` FOREIGN KEY (`id_actividad`) REFERENCES `actividad_economica` (`id_actividad`),
-  ADD CONSTRAINT `actividad_empresa_ibfk_4` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`);
 
 --
 -- Filtros para la tabla `auditoria`
@@ -2168,7 +2510,8 @@ ALTER TABLE `contacto`
 --
 ALTER TABLE `empresa`
   ADD CONSTRAINT `empresa_ibfk_5` FOREIGN KEY (`departamento_empresa`) REFERENCES `departamento` (`id_departamento`),
-  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`ciudad_empresa`) REFERENCES `ciudad` (`id_ciudad`);
+  ADD CONSTRAINT `empresa_ibfk_6` FOREIGN KEY (`ciudad_empresa`) REFERENCES `ciudad` (`id_ciudad`),
+  ADD CONSTRAINT `empresa_ibfk_7` FOREIGN KEY (`id_actividad`) REFERENCES `actividad_economica` (`id_actividad`);
 
 --
 -- Filtros para la tabla `evaluacion_visita`
@@ -2176,20 +2519,6 @@ ALTER TABLE `empresa`
 ALTER TABLE `evaluacion_visita`
   ADD CONSTRAINT `evaluacion_visita_ibfk_1` FOREIGN KEY (`id_requisito`) REFERENCES `requisito` (`id_requisito`),
   ADD CONSTRAINT `evaluacion_visita_ibfk_2` FOREIGN KEY (`id_visita`) REFERENCES `visita` (`id_visita`);
-
---
--- Filtros para la tabla `foto`
---
-ALTER TABLE `foto`
-  ADD CONSTRAINT `fk_foto_evaluacion` FOREIGN KEY (`id_evaluacion_visita`) REFERENCES `evaluacion_visita` (`id_evaluacion`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `sede`
---
-ALTER TABLE `sede`
-  ADD CONSTRAINT `sede_ibfk_1` FOREIGN KEY (`ciudad_sede`) REFERENCES `ciudad` (`id_ciudad`),
-  ADD CONSTRAINT `sede_ibfk_2` FOREIGN KEY (`departamento_sede`) REFERENCES `departamento` (`id_departamento`),
-  ADD CONSTRAINT `sede_ibfk_3` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`);
 
 --
 -- Filtros para la tabla `usuario`
@@ -2202,7 +2531,7 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `visita`
   ADD CONSTRAINT `visita_ibfk_1` FOREIGN KEY (`id_auditoria`) REFERENCES `auditoria` (`id_auditoria`),
-  ADD CONSTRAINT `visita_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_user`);
+  ADD CONSTRAINT `visita_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
