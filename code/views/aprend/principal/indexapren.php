@@ -105,7 +105,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
                             <img src="../../../assets/images/icons-hseq/seguridad.PNG" alt="Seguridad">
                             <p>Certifica el adecuado manejo frente a los riesgos y los peligros de la industria. <br> <br> <br> <br> <br>
                             </p>
-                            <a href="../../../views/aprend/visita/visitas-general.php">
+                            <a href="../../../views/aprend/principal/modulo-seguridad.php">
                                 <h3>Seguridad </h3>
                             </a>
                         </div>

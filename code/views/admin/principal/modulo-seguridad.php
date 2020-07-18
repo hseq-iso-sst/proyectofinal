@@ -1,9 +1,5 @@
-<?php
-require_once('../../../config.php');
-require_once('../../../models/seguridad_sesion-coordi.php');
-?> 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +8,7 @@ require_once('../../../models/seguridad_sesion-coordi.php');
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/logov2.png">
-    <title>HSEQ (ISO - SST)</title>
+    <title>Visitas</title>
     <!-- Custom CSS -->
     <link href="../../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="../../../assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
@@ -47,17 +43,18 @@ require_once('../../../models/seguridad_sesion-coordi.php');
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <!-- ============================================================== -->
-        <!-- NAV -->
-        
-        <?php include_once('../../../nav.php');?>
-
-        <!-- ============================================================== -->
+            <?php include_once('../../../nav.php'); ?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
         <?php include_once('../../../menu.php');?>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
@@ -68,70 +65,67 @@ require_once('../../../models/seguridad_sesion-coordi.php');
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate font-weight-medium mb-1">Administrador</h3>
+                        <h4 class="page-title text-truncate font-weight-medium mb-1">Seguridad</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.php">Inicio</a>
-                                    </li>
+                                    <li class="breadcrumb-item"><a href="../../../views/admin/principal/index.php"
+                                            class="text-muted">Inicio</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Seguridad</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
-            <!----------------< CAMILO LO HIZO >------------------>
-            <!-- ======================NO TIENE BOOTSTRAP======================================== -->
-
-            <section id="tramites" class="about-us">
-                <div class="contenedor1">
-                    <div class="contenedor-articulo text-center">
-
-                        <div class="articulo">
-                            <img src="../../../assets/images/icons-hseq/salud.PNG" alt="Salud">
-                            <p>Certifica el conjunto de actividades relacionadas a la protección de la salud física, mental y social. <br><br><br><br></p>
-                            <a href="#">
-                                <h3>Salud</h3>
-                            </a>
-                        </div>
-                        <div class="articulo ">
-                            <img src="../../../assets/images/icons-hseq/seguridad.PNG" alt="Seguridad">
-                            <p>Certifica el adecuado manejo frente a los riesgos y los peligros de la industria. <br> <br> <br> <br> <br>
-                            </p>
-                            <a href="../../../views/admin/principal/modulo-seguridad.php">
-                                <h3>Seguridad </h3>
-                            </a>
-                        </div>
-                        <div class="articulo ">
-                            <img src="../../../assets/images/icons-hseq/medio-ambiente.PNG" alt="Ambiente">
-                            <p>Protege el medio ambiente o trabaja por el cuidado de los recursos naturales mediante las acciones que demuestran la conservación de los mismos.</p>
-                            <a href="#">
-                                <h3>Ambiente</h3>
-                            </a>
-                        </div>
-                        <div class="articulo ">
-                            <img src="../../../assets/images/icons-hseq/calidad.PNG" alt="Calidad">
-                            <p>Garantiza la calidad de un producto o servicio que ofrece la empresa. 
-                                Mediante procesos que satisfacen las necesidades del consumidor.<br> <br></p>
-                            <a href="#">
-                                <h3>Calidad</h3>
-                            </a>
-
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Row -->
+                        <div class="row">
+                            <!-- column -->
+                            <div class="col-lg-2 col-md-2">
+                            </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="card">
+                                    <img class="card-img-top img-fluid" src="../../../assets/images/big/hseqBanner.jpg"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center">HSEQ </h4>
+                                        
+                                        <p class="card-text">Es una disciplina y especialidad que estudia e implementa
+                                            aspectos prácticos de la protección del medio ambiente y la seguridad en el
+                                            trabajo. En términos simples, es lo que las organizaciones deben hacer para
+                                            asegurarse de que sus actividades no causen daño a nadie.</p>
+                                        <br>
+                                        <h4 class="card-title text-center">Documentos </h4>
+                                        
+                                        <p>A continuacion usted podra optener mas informacion del sistema por medio de nuestros manuales, documentos, etc. </p>
+                                        <a href="https://drive.google.com/drive/folders/1D8PjwQ4NjKo7HMoMCyFYsA4gmqNft0GB?usp=sharing" target="_blank" class="btn btn-primary text-center">Manual de entidad corporativa</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de usuario</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de tecnico</a>
+                                        <a href="https://drive.google.com/drive/folders/1CLchSU9UKRoSm2MnGLIPT0NHc34DdPSx?usp=sharing" target="_blank" class="btn btn-primary">Manual de prubas del sistema</a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!--============================< HASTA AQUI :)>==================================-->
 
 
+            </div>
+            <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
@@ -146,8 +140,6 @@ require_once('../../../models/seguridad_sesion-coordi.php');
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
     </div>
-
-
     <script src="../../../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
