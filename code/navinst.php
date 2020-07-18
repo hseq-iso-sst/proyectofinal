@@ -2,9 +2,9 @@
  require_once('config.php');
  require_once('models/conexion.php');
  require_once('models/validarSesion.php');
- require_once('models/admin/usuario/consultasUsuario.php');
+ require_once('models/instruc/usuario/consultasUsuario.php');
  require_once('controllers/validarperfil.php');
- require_once('models/seguridad_sesion-coordi.php');
+ require_once('models/seguridad_sesion-Instr.php');
 ?>
 
 <nav class="navbar top-navbar navbar-expand-md">
