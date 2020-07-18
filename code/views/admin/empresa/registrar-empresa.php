@@ -1,6 +1,7 @@
 <?php 
     require_once('../../../models/conexion.php');
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-coordi.php');
     $datos=new ConsultarDatos();
     $departamentos=$datos->get_departamentos();
     $ciudades=$datos->get_ciudades();

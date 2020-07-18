@@ -3,6 +3,7 @@
     require_once("../../../models/admin/visita/consultasVisita.php");
     require_once("../../../controllers/admin/visita/cargarVisita.php");
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-coordi.php');
     $datos=new ConsultarDatos();
     $usuarios=$datos->get_usuario();
 ?>

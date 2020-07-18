@@ -2,6 +2,7 @@
     require_once('../../../models/conexion.php');
     require_once('../../../models/admin/visita/consultasRequisitos.php');
     require_once('../../../controllers/admin/visita/cargarRequisitos.php');
+    require_once('../../../models/seguridad_sesion-coordi.php');
     $id_visita=$_GET['id_visita'];
     $id_auditoria=$_GET['id_auditoria'];
     $nro_visita=$_GET['nro_visita'];

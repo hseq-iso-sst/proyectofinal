@@ -1,3 +1,7 @@
+<?php 
+require_once('../../../models/seguridad_sesion-coordi.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
