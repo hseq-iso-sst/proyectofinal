@@ -32,7 +32,7 @@ class consultaFichas{
                 }
                 else{
                     if($sentenciaSql->execute()){
-                        echo "<script>alert('FICHA REGISTRADA CON EXITO')</script>";
+                        echo "<script>alert('Ficha registrada con exito')</script>";
                         
                     }else{
                         echo "<script>alert('ERROR AL GUARDAR LA FICHA EN LA BD')</script>";
@@ -100,7 +100,7 @@ public function modificarFicha($id_ficha, $nombre_ficha, $fecha_inicio, $fecha_f
     }
     else{
         $statement->execute();
-        echo "<script>alert('FICHA ACTUALIZADA CORRECTAMENTE')</script>";
+        echo "<script>alert('Ficha actualizada correctamente')</script>";
         echo '<script>location.href="../../../views/admin/ficha/listarFichas.php"</script>';
     }
 
