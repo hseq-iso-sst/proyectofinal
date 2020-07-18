@@ -3,6 +3,7 @@
     require_once("../../../models/instruc/visita/consultasVisita.php");
     require_once("../../../controllers/instruc/visita/cargarVisita.php");
     include_once('../../../models/ConsultarDatos.php');
+    require_once('../../../models/seguridad_sesion-Instr.php');
     $datos=new ConsultarDatos();
     $usuarios=$datos->get_usuario();
 ?>
@@ -55,7 +56,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin6">
-        <?php include_once('../../../nav.php');?>
+        <?php include_once('../../../navinst.php');?>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->

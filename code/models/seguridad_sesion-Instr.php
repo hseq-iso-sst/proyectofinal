@@ -8,7 +8,7 @@ if(!isset($_SESSION ['Autenticado'])){
 }
 
 if ($_SESSION['cargo_user']!='Instructor'){
-    echo "<script>alert('Notiene permiso para acceder')</script>";
+    echo "<script>alert('No tiene permiso para acceder')</script>";
     echo '<script>location.href="../views/login.php"</script>';
 }
 
