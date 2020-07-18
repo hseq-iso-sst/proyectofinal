@@ -115,7 +115,7 @@ class EmpresaModel
                 } else {
                     echo "<script>alert('Error al guardar la empresa en la base de datos')</script>";
                 }
-                echo '<script>location.href="../../../views/aprend/auditoria/ListarAuditoria.php"</script>';
+                echo '<script>location.href="../../../views/aprend/auditoria/index.php"</script>';
             }
         }
     }
